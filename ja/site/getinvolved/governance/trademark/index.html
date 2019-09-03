@@ -1,0 +1,638 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGISの商標とブランドのガイドライン</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../../search.html" />
+    <link rel="next" title="Sustaining Membership Program" href="../sustaining_members/index.html" />
+    <link rel="prev" title="プロジェクト紳士録" href="../governance.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../sustaining_members/index.html" title="Sustaining Membership Program"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="../governance.html" title="プロジェクト紳士録"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >参加する / 開発</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">プロジェクト組織</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英語">English</option>
+  <option value="ca" title="カタロニア語">Català</option>
+  <option value="da" title="デンマーク語">Dansk</option>
+  <option value="de" title="ドイツ語">Deutsch</option>
+  <option value="es" title="スペイン語">Español</option>
+  <option value="fa" title="ペルシャ語">فارسی</option>
+  <option value="fi" title="フィンランド語">Suomi</option>
+  <option value="fr" title="フランス語">Français</option>
+  <option value="gl" title="ガリシア語">Galego</option>
+  <option value="id" title="インドネシア語">Bahasa Indonesia</option>
+  <option value="it" title="イタリア語">Italiano</option>
+  <option value="hu" title="ハンガリー語">Magyar</option>
+  <option value="ja" title="日本語">日本語</option>
+  <option value="km_KH" title="クメール語">ភាសាខ្មែរ    </option>
+  <option value="ko" title="韓国語">한국어</option>
+  <option value="lt" title="リトアニア語">Lietuvių</option>
+  <option value="nl" title="ドイツ語">Nederlands</option>
+  <option value="pl" title="ポーランド語">Polski</option>
+  <option value="pt_BR" title="ポルトガル語(ブラジル)">Português (Brasil)</option>
+  <option value="pt_PT" title="ポルトガル語">Português</option>
+  <option value="ro" title="ルーマニア語">Română</option>
+  <option value="tr" title="トルコ語">Türkçe</option>
+  <option value="ru" title="ロシア語">Русский</option>
+  <option value="uk" title="ウクライナ語">Українська</option>
+  <option value="zh-Hans" title="中国語（簡体字）">簡体中文</option>
+  <option value="zh-Hant" title="中国語（繁体字）">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/governance/trademark/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>ありがとうございます！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">いますぐ寄付</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>あなたの寄付をありがとう！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGISは無償であり、私たちの愛の労働を楽しんで、他の人もそれを楽しむことができるように、あなたのダウンロードしたコピーを広範囲に共有して広げることを奨励することを願っています。私たちはとても敬具です！</p>'+
+            '<p id="stripeerr" style="display:none;">残念ながら、寄付の処理中にエラーが発生しました。後でやり直すか、finance@qgis.orgまでご連絡ください。</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../../about/index.html">QGISについて</a></li>
+            <li><a href="../../../forusers/index.html">ユーザー向け情報</a></li>
+            <li><a href="../../index.html">参加する</a></li>
+            <li><a href="../../../../docs/index.html">ドキュメント</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../governance.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../sustaining_members/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">QGISにできること</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forusers/index.html">ユーザー向け情報</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">参加する / 開発</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../document.html">ドキュメントを書く</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate.html">翻訳</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development/index.html">開発</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tests.html">テスト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../daily_reports/index.html">日報</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mailinglists.html">メーリングリスト</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">プロジェクト組織</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../charter.html">Charter of the QGIS.ORG Association</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../governance.html">プロジェクト紳士録</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QGISの商標とブランドのガイドライン</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#country-voting-members">国家投票会員</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples-of-use-that-do-not-require-permission">許可を必要としない使用例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples-of-use-requiring-a-permission">許可を必要とする使用例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prohibited-trademark-uses">禁止されている商標の用途</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#if-in-doubt-find-out"><strong>疑問がある場合は、調べてください！</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#report-abuse">悪用を報告する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frequently-asked-questions">よくある質問</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sustaining_members/index.html">Sustaining Membership Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../annual_general_meetings/index.html">定例年総会のご案内</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../annual_reports/index.html">年間報告</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finance/index.html">財務</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../infrastructure.html">インフラストラクチャー</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeofconduct/codeofconduct.html">行動規範</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeofconduct/diversitystatement.html">多様性声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeofconduct/credits.html">貢献者のためのクレジット</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_meetings/index.html">QGIS開発者会議プログラム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_checklists/index.html">リリースのチェックリスト</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../meetings/index.html">会議</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members/index.html">Sustaining Membership Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../donations.html">寄付</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certification.html">証明書</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../styleguide.html">ビジュアルスタイルガイド</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/index.html">文書</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="qgis-trademark-and-brand-guidelines">
+<h1>QGISの商標とブランドのガイドライン<a class="headerlink" href="#qgis-trademark-and-brand-guidelines" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>QGISプロジェクトまたはQGIS.ORGアソシエーションのいずれかを参照することをお勧めします。また、この言葉を広めていただきありがとうございます。</p>
+<p>このページは、QGISブランドの資産を正しく使用するために必要なすべての情報とリソースを提供することを目的としています。</p>
+<p>QGISの名称とロゴは、商標の無許可かつ紛らわしい使用から欧州法の下で保護されています。商標に関する情報は、  <a class="reference external" href="https://oami.europa.eu/eSearch/#details/trademarks/012702643">OAMI</a> と <a class="reference external" href="https://euipo.europa.eu/eSearch/#details/trademarks/017228222">EUIPO</a> で確認できます。私たちの主な目的は、QGISの名前とロゴを使用してビジネスを行う人々がプロジェクトに積極的に参加し、QGISを改善するのを助けることです。</p>
+<p>QGISの商標、サービスマーク、ロゴ、デザイン、および著作権保護の対象となるその他の著作物（まとめて「マーク」と呼びます）は、QGIS.ORGが保護する必要がある貴重な資産です。 QGIS.ORGはQGISマークのすべての使用を許可するわけではありません。 QGIS.ORGは、これらの商標使用ガイドライン（以下「ガイドライン」といいます）を掲載しています。当社のマークの強みは、部分的には、一貫性のある適切な使用に依存しています。私たちはあなたがこれらのガイドラインに従って私たちのマークを適切に使いそして信用するようお願いします。私達は私達の判断でいつでもこれらのガイドラインを変更する権利を留保します。</p>
+<p>これらのガイドラインは、QGIS.ORGのWebサイトまたはその他のサイトに掲載されているすべてのQGISの規則および方針に沿って従う必要があります。</p>
+<div class="section" id="country-voting-members">
+<h2>国家投票会員<a class="headerlink" href="#country-voting-members" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>QGIS.ORGは、公式 <a class="reference internal" href="../../../forusers/usergroups.html#qgis-usergroups"><span class="std std-ref">QGIS国別ユーザーグループ</span></a> に、QGISロゴを修正し、修正したQGISロゴを非営利のコミュニケーションやプロジェクトに使用することを許可します。この許可は、これらのガイドライン、QGIS商標ガイドライン、およびその他すべての規則および方針への継続的な準拠の対象となります。 QGISは、独自の判断でいつでもこの許可を取り消しまたは変更する権利を留保します。QGISロゴの修正版を使用したい方は、trademark &#64; qgis.orgへ承認のためにご自分の作品を提出してください。承認されると、アートワークの使用を開始する前に署名するための使用許諾契約書が届きます。</p>
+<p>QGIS.ORGはまた、この文書の下の方の規則に従って、公式の国内ユーザーグループがQGISトップレベルドメイン（qgis.ch、qgis.dkなど）を登録することを許可します。</p>
+</div>
+<div class="section" id="examples-of-use-that-do-not-require-permission">
+<h2>許可を必要としない使用例<a class="headerlink" href="#examples-of-use-that-do-not-require-permission" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>公正使用の場合、QGIS.ORGからの明確な許可なしにQGISの商標を使用または参照できます。以下はそのような許可された使用法の例です：</p>
+<ul class="simple">
+<li><strong>書籍、記事、チュートリアル</strong> ：記事、書籍、ブログの記事、チュートリアル、大学の学習教材などを書く場合、QGISの名前を引用したり、その中にロゴを使用する許可は必要ありません</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">ご自分の本、記事などのどこかで、QGISプロジェクトへの <strong>帰属</strong> を与えて、プロジェクトのウェブサイトを参照することを私たちは要求します。これは序論または序文中の短い段落でも可能です。ご自分の作品が公式のQGIS製品であるという印象を与える可能性があるものは避けてください。</p>
+</div>
+<ul class="simple">
+<li><strong>講習、教材</strong> ：QGISに関するコースを提示する場合は、学術的、無料、または商用のいずれのコンテキストであれ、コース資料にロゴと「QGIS」という名前を使用できます。</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">QGISはフリーでオープンソースのソフトウェアであることを教材中で定期的に説明してください。そして直接または間接的に誰かがプロジェクトに貢献することを積極的に奨励してください。</p>
+</div>
+<ul class="simple">
+<li><strong>サービス</strong> ：QGISでサービス（サポート、開発）を提供する場合、誤解を招かない方法でQGISに関連するサービスまたは製品を説明または宣伝するためにQGIS商標を使用できます（下記の製品名についての要件を参照）。</li>
+<li><strong>Linking</strong>: If you use the QGIS logo on a website linking to our websites (<a class="reference external" href="https://QGIS.org">https://QGIS.org</a>) or any of our domains, or github, you do not need special permission.
+<strong>リンク</strong> ：私たちのウェブサイトにリンクしているウェブサイト（<a class="reference external" href="https://QGIS.org">https://QGIS.org</a>）、あるいはgithub上でQGISロゴを使う場合、特別な許可を必要としません。</li>
+<li><strong>商品</strong> ：QGISの商標を使用して、Tシャツ、デスクトップの壁紙、帽子などの商品を非営利目的で作成できます。 またQGIS商標を使用した商品も製造できます。ただし、販売価格の一部がQGISプロジェクトに寄付される場合はそれを顧客に誠実に宣伝すること。 QGISプロジェクトへの寄付方法の詳細については、寄付ページを参照してください。</li>
+</ul>
+</div>
+<div class="section" id="examples-of-use-requiring-a-permission">
+<h2>許可を必要とする使用例<a class="headerlink" href="#examples-of-use-requiring-a-permission" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>商標の使用目的によっては、ユーザーが許可を得る必要があります。許可が必要な場合は、私たちのフォームに記入してください(<a class="reference external" href="https://goo.gl/forms/b57Rg6IyFy0FC47p2">https://goo.gl/forms/b57Rg6IyFy0FC47p2</a>).</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">許可は、そのQGIS関連のプロジェクトの正式な承認ではなく、そのサービスの質についての声明を構成するものでもありません。</p>
+</div>
+<ul class="simple">
+<li><strong>製品名</strong>：「会社名 QGIS」などの語「QGIS」を含む商標または名前を使用しているQGISベースの製品またはサービスを一般市民に販売する予定の場合は、申請する必要があります。 QGISプロジェクト運営委員会（QGIS-PSC）あなたの商標を政府に登録するかどうかに関わらず、これは当てはまります。 QGISベースの製品を開発および宣伝する際には、次のガイドラインに従うようにお願いします。<ol class="arabic">
+<li><strong>自分の作品を私たちの作品として提示しないでください</strong> ：カスタマイズしたQGISバージョンを提供する場合は、製品名に会社名あるいはブランド名、および必要に応じてご自分の製品が派生物であることを説明する付随のテキストを追加して、提供するものが正式なQGISバージョンではなく派生製品であると明確にしてください。</li>
+<li><strong>私たちの作品を自分の作品として提示しないでください。</strong> ：QGISプロジェクトに対してしかるべき功績を認めてください。ご自分の製品がQGISに基づいているという事実を隠さないでください。</li>
+<li><strong>良い製品名の例には次のものがあります</strong> ：<ul>
+<li>YourCompany QGIS</li>
+<li>YourCompany Desktop/Suite powered by QGIS</li>
+<li>YourBrand powered by QGIS</li>
+<li>YourBrand based on QGIS</li>
+</ul>
+</li>
+<li><strong>悪い製品名の例には次のものがあります</strong> ：<ul>
+<li>YourCompany GIS</li>
+<li>QGIS special edition</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">QGISについて言及するときは、主なQGISプロジェクトの有効性を損なわないでください。私たちのソフトウェアパッケージは「公的パッケージ」と呼ぶように、「コミュニティリリース」などとは言わないようにしてください。独自のパッケージを作成する場合は、これらが派生パッケージであり、QGISプロジェクトで作成または承認されていないことを明確にしてください。</p>
+</div>
+<ul class="simple">
+<li><strong>ドメイン名とウェブサイト</strong> ：QGISの製品、サービス、または技術に名前を付ける、または正確に説明するためのウェブサイト上の当社のマークの適切な使用は許可されています。当社のマークの使用は、WebサイトがQGISのスポンサーであるか提携しているのか、あるいは製品、サービスまたは技術がQGISにより提供されているのかについて誤解を招くようなものではない。 不適切であると判断した場合、ドメイン名、Webサイト、または出版物から私たちの商標を削除するようお客様に要求する権利をQGISでは留保します。<ol class="arabic">
+<li><strong>会社、製品、および商業プロジェクトはqgis.tld（トップレベルドメイン）を使用することはできません</strong> ：商業目的の有無にかかわらず、任意のプリンシパルまたはセカンダリレベルドメイン名は、当社のマークと同一または実質的に同一ではいけません。</li>
+<li><strong>会社、製品、商業プロジェクトはなるべく ****qgis****.xxxx</strong> を使用しないでください：当社のマークを含むドメイン名は登録しないでください。ドメイン名に商標または類似の所有権を主張しないでください。たとえば、「QGIStech.com」、「QGIS-group.com」、「QGISexperts.com」は許可を求めない限り許可されません。この方針に違反すると、法的措置が取られる可能性があります。その他の点では、Webサイトはドメイン名登録ポリシーおよび商標権の侵害および希薄化に関する適用法を遵守する必要があります。</li>
+<li><strong>例外</strong>:<ul>
+<li>QGIS.ORG国別投票会員はccTLDを使うべきです(QGIS.ch, QGIS.dk, …)</li>
+<li>非営利プロジェクトではqgis.xxxxx（チュートリアルが無料の場合はqgis.tutorialsがこのカテゴリに入ります）を使用できますが、ドメインを登録する前に許可を求める必要があります。 QGIS.ORGは、ドメインを登録し、それを要求者によって提供されたネームサーバを指すように指示するか、そうするように要求者に指示することができます。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">許可は、QGISプロジェクトの正式なサポートではなく、サービスの品質に関するものではありません。</p>
+</div>
+<ul class="simple">
+<li><strong>ソーシャルメディア</strong></li>
+</ul>
+<p>ソーシャルメディアプラットフォームでのアカウント名、プロフィール、アバター、またはハンドルに関連した当社のマークの使用はすべて、他の使用と同じガイドラインに従います。アカウント名、プロフィール名、アバターとしての使用、またはソーシャルメディアプラットフォームでのハンドル内でのマークの使用には、許可の要求が必要です。</p>
+</div>
+<div class="section" id="prohibited-trademark-uses">
+<h2>禁止されている商標の用途<a class="headerlink" href="#prohibited-trademark-uses" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>QGISは、次の方法で当社のマークを使用することを許可しません。あなた自身の商標の一部として。 QGIS以外の製品、サービス、またはテクノロジを特定する。 QGISの製品、サービス、またはテクノロジと他のエンティティのものとの間で混同を引き起こす可能性が高い方法で。 QGISがあなた自身の活動、製品、サービス、または技術を後援または支持する、あるいはそうでなければ提携していることを不正確に意味するような方法で。 QGISまたはその製品、サービス、または技術を損なうような方法で。当社の判断で、当社の商標におけるのれんを減少させる可能性のある製品、サービスまたは活動に関連して。違法な活動に関連して、または違法な活動を奨励するため。</p>
+<p><strong>許容できない使用例</strong> ：</p>
+<ol class="arabic simple">
+<li><strong>偽の提携/裏書</strong>：QGISの商標を、QGISのプロジェクトやコミュニティとの提携を示唆する方法で使用することはできません。</li>
+<li><strong>会社名</strong>：QGISの商標は、会社名または商業団体名で使用することはできません。</li>
+<li><strong>紛らわしい類似の商標</strong>：QGISの商標と混同しやすい名前は使用できません。</li>
+</ol>
+</div>
+<div class="section" id="if-in-doubt-find-out">
+<h2><strong>疑問がある場合は、調べてください！</strong><a class="headerlink" href="#if-in-doubt-find-out" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>多くの質問は以下のFAQで回答しています。質問に対する回答が見つからない場合は、財務およびマーケティングアドバイザー（<a class="reference external" href="mailto:trademark&#37;&#52;&#48;qgis&#46;org">trademark<span>&#64;</span>qgis<span>&#46;</span>org</a>）までご連絡ください。</p>
+</div>
+<div class="section" id="report-abuse">
+<h2>悪用を報告する<a class="headerlink" href="#report-abuse" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>許可なく商標の一部としてQGISの名前またはロゴを使用している人、団体、または企業を知っている場合、または適切な属性が付いていないQGISへの参照がある場合は、当社の商標について知らせてください。財務・マーケティングアドバイザー（<a class="reference external" href="mailto:trademark&#37;&#52;&#48;qgis&#46;org">trademark<span>&#64;</span>qgis<span>&#46;</span>org</a>）にメールでご連絡いただければ幸いです。</p>
+</div>
+<div class="section" id="frequently-asked-questions">
+<h2>よくある質問<a class="headerlink" href="#frequently-asked-questions" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>Q：</strong> <em>私は適切な帰属を表示する必要がありますか？</em></p>
+<p><strong>答：</strong> 印刷物、インターネット、またはオーディオ放送で用語QGISを使用するときは、常にQGISプロジェクトに適切な帰属を与えてください。詳細については、「商標の帰属」を参照してください。</p>
+<p><strong>Q：</strong> <em>私は、自分の国の商標機関に登録中または登録しています。なおも許可が必要ですか？</em></p>
+<p><strong>答：</strong> はい、あなたの商標に要素QGISが含まれており、ソフトウェア関連の商品やサービスに関連して使用されていると仮定します。QGISの商標は、商標権者に登録されているかどうかにかかわらず、その許可が適用されます。商標としてQGISという用語を使用している場合（登録されているかどうかにかかわらず）、許可を申請する必要があります。</p>
+<p><strong>Q：</strong> <em>私は、ソフトウェア関連の商品やサービスを販売し、その企業の名前中に語「QGIS」という言葉を使用している商業団体（例えば、会社、パートナーシップ、または個人事業主、利益または非営利団体）です。許可を申請する必要がありますか？</em></p>
+<p><strong>答：</strong>  ソフトウェア関連の商品またはサービスに関連してQGISを商標の一部として使用しているため、事業体の名前にQGISを使用することは許可されていません。ソフトウェア関連の商品とは、コンピュータプログラムおよびシステム、あるいはソフトウェア、ツール、ユーティリティ、ハードウェアなどをバンドルしたパッケージです。ソフトウェア関連のサービスとは、コンピュータプログラムおよびシステムの展開、文書化、使用の促進、または強化を行うサービスです。事業体の名前の一部としてQGISを使用しなくても、その事業体がその名前に“ QGIS”を使用する製品またはサービス（売却されているか無料で提供されているかを問わない）を持っている場合は、まだ製品やサービスの名前に単語QGISを使用するための許可が必要です。</p>
+<p><strong>Q：</strong> <em>私の商標の許可を得た場合、QGISは私のマークと同じか紛らわしいマークに類似の許可を与えることを拒否しますか？</em></p>
+<p><strong>答：</strong> いいえ、QGISは、排他性を保証したり、侵害訴訟で商標を保護しようとはしません。QGISは、侵害に対する商標の保護を商標所有者の責任とみなしています。QGISは紛争解決機関ではなく、商標所有者間の紛争に関与しません。</p>
+<p><strong>Q：</strong> <em>商標登録の同意：私の組織は、QGISを要素とするソフトウェア関連の商品またはサービスの商標登録を申請しました。この申請は、QGISの商標との類似による混同の恐れから却下されました。私が許可を得たら、QGISは私の登録に同意しますか？</em></p>
+<p><strong>答：</strong> いいえ。QGISの許可は、他の商標の登録についての同意ではありません。QGISマークを稀釈化から保護するため、私たちはQGISマークと紛らわしく類似していることが判明した商標の登録には同意しません。</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../sustaining_members/index.html" title="Sustaining Membership Program"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="../governance.html" title="プロジェクト紳士録"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >参加する / 開発</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >プロジェクト組織</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">特に明記されていない場合、全てのコンテンツは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 ライセンス（CC BY-SA） </a> の下で提供されています。</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        画像は <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a> から選択しました
+        
+        
+      </p>
+      <p class="credit">
+        翻訳されていないページ？または、翻訳エラーが見つかりました：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">このページを修正</a>
+        <br/>
+        誤ったテキスト、不足しているテキスト、またはあなたがよく知っている：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">このページを修正</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

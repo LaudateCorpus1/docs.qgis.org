@@ -1,0 +1,1152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGISのインストーラー</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ビジュアルチェンジログ" href="visualchangelogs.html" />
+    <link rel="prev" title="QGISのダウンロード" href="download.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="visualchangelogs.html" title="ビジュアルチェンジログ"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="download.html" title="QGISのダウンロード"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >ユーザー向け情報</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="download.html" accesskey="U">QGISのダウンロード</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英語">English</option>
+  <option value="ca" title="カタロニア語">Català</option>
+  <option value="da" title="デンマーク語">Dansk</option>
+  <option value="de" title="ドイツ語">Deutsch</option>
+  <option value="es" title="スペイン語">Español</option>
+  <option value="fa" title="ペルシャ語">فارسی</option>
+  <option value="fi" title="フィンランド語">Suomi</option>
+  <option value="fr" title="フランス語">Français</option>
+  <option value="gl" title="ガリシア語">Galego</option>
+  <option value="id" title="インドネシア語">Bahasa Indonesia</option>
+  <option value="it" title="イタリア語">Italiano</option>
+  <option value="hu" title="ハンガリー語">Magyar</option>
+  <option value="ja" title="日本語">日本語</option>
+  <option value="km_KH" title="クメール語">ភាសាខ្មែរ    </option>
+  <option value="ko" title="韓国語">한국어</option>
+  <option value="lt" title="リトアニア語">Lietuvių</option>
+  <option value="nl" title="ドイツ語">Nederlands</option>
+  <option value="pl" title="ポーランド語">Polski</option>
+  <option value="pt_BR" title="ポルトガル語(ブラジル)">Português (Brasil)</option>
+  <option value="pt_PT" title="ポルトガル語">Português</option>
+  <option value="ro" title="ルーマニア語">Română</option>
+  <option value="tr" title="トルコ語">Türkçe</option>
+  <option value="ru" title="ロシア語">Русский</option>
+  <option value="uk" title="ウクライナ語">Українська</option>
+  <option value="zh-Hans" title="中国語（簡体字）">簡体中文</option>
+  <option value="zh-Hant" title="中国語（繁体字）">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/alldownloads.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>ありがとうございます！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">いますぐ寄付</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>あなたの寄付をありがとう！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGISは無償であり、私たちの愛の労働を楽しんで、他の人もそれを楽しむことができるように、あなたのダウンロードしたコピーを広範囲に共有して広げることを奨励することを願っています。私たちはとても敬具です！</p>'+
+            '<p id="stripeerr" style="display:none;">残念ながら、寄付の処理中にエラーが発生しました。後でやり直すか、finance@qgis.orgまでご連絡ください。</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../about/index.html">QGISについて</a></li>
+            <li><a href="index.html">ユーザー向け情報</a></li>
+            <li><a href="../getinvolved/index.html">参加する</a></li>
+            <li><a href="../../docs/index.html">ドキュメント</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="download.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="visualchangelogs.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">QGISにできること</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ユーザー向け情報</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="download.html">QGISのダウンロード</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QGISのインストーラー</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#debian-ubuntu">Debian/Ubuntu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fedora">Fedora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rhel-centos-scientific-linux">RHEL, CentOS, Scientific Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opensuse">openSUSE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mandriva">Mandriva</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slackware">Slackware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#archlinux">ArchLinux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mac-os-x-macos">Mac OS X / macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-current">QGIS current</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">QGIS安定版</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standalone-installer">スタンドアロンインストーラ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#freebsd">FreeBSD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id23">QGIS安定版</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">QGIS LTR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flatpak">Flatpak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android">Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qgis-testing-warning">QGISテスト警告</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-from-source">ソースからインストールする</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="visualchangelogs.html">ビジュアルチェンジログ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainingmaterial/index.html">トレーニング材料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">サポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usergroups.html">ユーザグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commercial_support.html">商用サポート</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="books/index.html">書籍</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getinvolved/index.html">参加する / 開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/index.html">文書</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="qgis-installers">
+<span id="qgis-download"></span><h1>QGISのインストーラー<a class="headerlink" href="#qgis-installers" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>QGISの入手方法</p>
+<p>QGISはフリーでWindows、Linux、MacOS X、BSD、Androidで利用可能です。</p>
+<p>リリースされているソフトウェア・パッケージからのインストールをお勧めします。</p>
+<p>今後のリリースを検証し、開発者以外も開発をサポートすることができるよう、私たちはテスト版パッケージも提供しています (note the <a class="reference internal" href="#warning">warning</a>).</p>
+<p>リリース前の機能凍結フェーズ ( <a class="reference internal" href="../getinvolved/development/roadmap.html#qgis-release-schedule"><span class="std std-ref">リリースのスケジュール</span></a> 参照) では、これらのパッケージは事実上の <strong>プレリリースとして扱われ、積極的な機能テストが奨励されます。</strong></p>
+</div>
+<div class="section" id="windows">
+<span id="qgis-windows-testing"></span><h1>Windows<a class="headerlink" href="#windows" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ウィンドウズ版インストーラについては <a class="reference external" href="./download.html">メインインストーラページ</a> を参照して下さい。</p>
+<p>新規ユーザの方にはスタンドアロンインストーラを推奨します。</p>
+<p>より高度なQGISのユーザーは、並列に複数のバージョンをインストールすることを可能にするOSGeo4Wパッケージを使用できます。</p>
+<p>OSGeo4Wリポジトリには多くのOSGeoプロジェクトのソフトウェアが含まれています.QGISとそれが依存するPython,GRASS,GDAL等のソフトウェアが含まれています.インストーラを利用するとインターネットからインストールでき必要なパッケージをダウンロードします.ダウンロードされたファイルは次のインストールのためにローカルディレクトリに保存されます.手順は次の通りです:</p>
+<ul>
+<li><p class="first">Download OSGeo4W Installer (<a class="reference external" href="https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe">32 bit</a> or
+<a class="reference external" href="https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">64 bit</a>) and start it</p>
+</li>
+<li><p class="first"><em>Advanced Instal</em> を選択し、</p>
+</li>
+<li><p class="first"><em>Desktop</em> セクションに移動し</p>
+</li>
+<li><p class="first">そして、次のパッケージの一つ以上を選択：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="24%" />
+<col width="15%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">リリース</th>
+<th class="head">バージョン</th>
+<th class="head">パッケージ</th>
+<th class="head">詳細</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">最新のリリース</td>
+<td rowspan="2">3.8.x Zanzibar
+​</td>
+<td>qgis</td>
+<td>リリース</td>
+</tr>
+<tr class="row-odd"><td>qgis-rel-dev <a class="footnote-reference" href="#id5" id="id2">[1]</a></td>
+<td>次バージョンのNightlyビルド</td>
+</tr>
+<tr class="row-even"><td rowspan="2">長期リリースリポジトリ</td>
+<td rowspan="2">3.4.x Madeira
+LTR</td>
+<td>qgis-ltr</td>
+<td>リリース</td>
+</tr>
+<tr class="row-odd"><td>qgis-ltr-dev <a class="footnote-reference" href="#id6" id="id3">[2]</a></td>
+<td>次の長期サポートリリースバージョンのNightlyビルド</td>
+</tr>
+<tr class="row-even"><td>開発版</td>
+<td>3.9 master</td>
+<td>qgis-dev <a class="footnote-reference" href="#id7" id="id4">[3]</a></td>
+<td>開発版のナイトリービルド</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>ナイトリーの最新リリースのSHA値: 32ビット <span class="raw-html"><span id="qgis-rel-dev-x86"> </span></span>, 64ビット <span class="raw-html"><span id="qgis-rel-dev-x86_64"> </span></span></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>最新の長期リリースのナイトリーのSHA値:32 ビット <span class="raw-html"><span id="qgis-ltr-dev-x86"> </span></span>, 64ビット <span class="raw-html"><span id="qgis-ltr-dev-x86_64"> </span></span></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[3]</a></td><td>マスタのナイトリのSHA値: 32ビット <span class="raw-html"><span id="qgis-dev-x86"> </span></span>, 64ビット <span class="raw-html"><span id="qgis-dev-x86_64"> </span></span></td></tr>
+</tbody>
+</table>
+<p id="qgis-windows-weekly">何らかの理由でOSGeo4Wを使用できないユーザーには、またはそれが好きだというだけのユーザーにも、 <em>スタンドアロンインストーラ</em> としてのOSGeo4Wからのqgis​​-devの <a class="reference external" href="https://qgis.org/downloads/weekly/?C=M;O=D">毎週のスナップショット</a> があります（月曜日に撮影）。それは機能凍結フェーズでは <strong>リリース候補</strong> としても機能します。</p>
+<p>WARNING_に注意してください。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">OSGeo4Wをそのままインストールしないようにしてください。QGISと、あなたがインストールしたい機能だけを選択してください。依存関係で必要となる機能は自動的に選択されます。全機能のインストールでは、手動インストール作業が必要となるサードパーティ製もインストールしようとています。これらのコンポーネントをインストールすると、インストールが正常に完了しない可能性があります。</p>
+</div>
+</div>
+<div class="section" id="linux">
+<h1>Linux<a class="headerlink" href="#linux" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ほとんどのLinuxディストリビューションでは、QGISをいくつかのパッケージに分割します。おそらく、QGISとQGIS-pythonのを（プラグインを実行する）必要があります。 qgis-grass（またはqgis-plugin-grass）のようなパッケージには、QGIS-サーバが最初にスキップ、またはそれらを必要とする場合にのみインストールすることができます。</p>
+<p>ディストリビューションごとにインストールするための指示を見つけるには、下記。ほとんどのディストリビューションのための安定したQGISと最先端のQGISのテストビルドを（WARNING_に注意してください）をインストールするための指示をインストールするための命令があります。</p>
+<div class="section" id="debian-ubuntu">
+<h2>Debian/Ubuntu<a class="headerlink" href="#debian-ubuntu" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>DebianとUbuntuのデフォルトリポジトリではしばしばQGISのバージョンが古いことがあります。</p>
+<p>新しいバージョンを取得したい場合は別のリポジトリを追加する必要があります。以下の行から /etc/apt/sources.list ファイルに追加してください。</p>
+<p>私たちの主なリポジトリは、個々のディストリビューションが提供する依存関係に基づく <strong>DebianとUbuntu</strong> のいくつかのバージョンのパッケージの複数の行が含まれています。</p>
+<p>Ubuntuでは、 <a class="reference external" href="https://launchpad.net/~ubuntugis">Ubuntugis</a> に基づいた別のリポジトリに別のパッケージもあります。これは、Ubuntu自体よりも他のGISパッケージのバージョンを保持しています。それらを望む場合は、/etc/apt/sources.listファイルにubuntugis-unstable ppaを含める必要もあります（ <a class="reference external" href="https://trac.osgeo.org/ubuntugis/wiki/UbuntuGISRepository">ubuntugis 文書</a> を参照してください）。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>リリースパッケージは、新しいバージョンがリリースされた直後にのみ生成されます。不安定で、まだリリースされていないDebianのバージョン（テスト）やUbuntugis-unstableはライブラリを変更することがあります。debian、ubuntu、またはUbuntugis-unstableの開発が進行し、パッケージが依存関係として使用されると、 qgisの変更で。このイベントでは、</p>
+<ul class="last simple">
+<li>安定したDebianバージョンに移行し、リリースされたパッケージを使用してください。</li>
+<li>毎月行われる次のポイントリリース（期限 2019-09-13 12:00:00 UTC ）を待って、更新された依存関係を含めます。</li>
+<li>パッケージが定期的に再構築される夜間リポジトリ（** 2 <a href="#id1"><span class="problematic" id="id2">**</span></a>リリースブランチとマスターで利用可能）に切り替わり、更新された依存関係を自動的に取得するか、または</li>
+<li>独自のパッケージセットを構築してください（INSTALL_を参照）。</li>
+</ul>
+</div>
+<p id="qgis-debian-testing">パッケージのライン：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="23%" />
+<col width="25%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">リリース</th>
+<th class="head">バージョン</th>
+<th class="head">詳細</th>
+<th class="head">リポジトリ</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="4">最新のリリース</td>
+<td rowspan="4">3.8.x Zanzibar
+​</td>
+<td><strong>DebianとUbuntu</strong> 用のリリース</td>
+<td><a class="reference external" href="https://qgis.org/debian">https://qgis.org/debian</a>
+<a class="reference external" href="https://qgis.org/ubuntu">https://qgis.org/ubuntu</a></td>
+</tr>
+<tr class="row-odd"><td>Release with
+ubuntugis-unstable dependencies</td>
+<td><a class="reference external" href="https://qgis.org/ubuntugis">https://qgis.org/ubuntugis</a></td>
+</tr>
+<tr class="row-even"><td>DebianとUbuntuの今後のポイントリリースの夜間ビルド</td>
+<td><a class="reference external" href="https://qgis.org/debian-nightly-release">https://qgis.org/debian-nightly-release</a>
+<a class="reference external" href="https://qgis.org/ubuntu-nightly-release">https://qgis.org/ubuntu-nightly-release</a></td>
+</tr>
+<tr class="row-odd"><td>ubuntugis-unstable依存関係を持つ、今後のポイントリリースの夜間ビルド</td>
+<td><a class="reference external" href="https://qgis.org/ubuntugis-nightly-release">https://qgis.org/ubuntugis-nightly-release</a></td>
+</tr>
+<tr class="row-even"><td rowspan="4">長期リリースリポジトリ</td>
+<td rowspan="4">3.4.x Madeira
+LTR</td>
+<td><strong>DebianとUbuntu</strong> 用のリリース</td>
+<td><a class="reference external" href="https://qgis.org/debian-ltr">https://qgis.org/debian-ltr</a>
+<a class="reference external" href="https://qgis.org/ubuntu-ltr">https://qgis.org/ubuntu-ltr</a></td>
+</tr>
+<tr class="row-odd"><td>Release with
+ubuntugis-unstable dependencies</td>
+<td><a class="reference external" href="https://qgis.org/ubuntugis-ltr">https://qgis.org/ubuntugis-ltr</a></td>
+</tr>
+<tr class="row-even"><td>DebianとUbuntuの今後のポイントリリースの夜間ビルド</td>
+<td><a class="reference external" href="https://qgis.org/debian-nightly-ltr">https://qgis.org/debian-nightly-ltr</a>
+<a class="reference external" href="https://qgis.org/ubuntu-nightly-ltr">https://qgis.org/ubuntu-nightly-ltr</a></td>
+</tr>
+<tr class="row-odd"><td>ubuntugis-unstable依存関係を持つ、今後のポイントリリースの夜間ビルド</td>
+<td><a class="reference external" href="https://qgis.org/ubuntugis-nightly-ltr">https://qgis.org/ubuntugis-nightly-ltr</a></td>
+</tr>
+<tr class="row-even"><td rowspan="2">開発バージョン</td>
+<td rowspan="2">3.9 master</td>
+<td><strong>DebianとUbuntu</strong> 用の夜間ビルド</td>
+<td><a class="reference external" href="https://qgis.org/debian-nightly">https://qgis.org/debian-nightly</a>
+<a class="reference external" href="https://qgis.org/ubuntu-nightly">https://qgis.org/ubuntu-nightly</a></td>
+</tr>
+<tr class="row-odd"><td>ubuntugis-unstable依存関係を持つナイトリービルド</td>
+<td><a class="reference external" href="https://qgis.org/ubuntugis-nightly">https://qgis.org/ubuntugis-nightly</a></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">次のポイントリリース： 2019-09-13 12:00:00 UTC</div>
+<div class="line">次のリリース: 2019-10-25 12:00:00 UTC</div>
+<div class="line">（より多くの日付はリリーススケジュールを参照してください:doc:<cite>../getinvolved/development/roadmap</cite> ）</div>
+</div>
+<p>サポートされているディストリビューションのバージョン：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="17%" />
+<col width="25%" />
+<col width="30%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">配布</th>
+<th class="head">バージョン</th>
+<th class="head">コードネーム</th>
+<th class="head">また、ubuntugis-unstable依存関係に基づいて利用できますか？</th>
+<th class="head">with
+3D
+<a class="footnote-reference" href="#id14" id="id8">[6]</a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="3">Debian</td>
+<td>9.x</td>
+<td>stretch <a class="footnote-reference" href="#id12" id="id9">[4]</a></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>10.x</td>
+<td>buster</td>
+<td>&#160;</td>
+<td>はい</td>
+</tr>
+<tr class="row-even"><td>sid</td>
+<td>不安定</td>
+<td>&#160;</td>
+<td>はい</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">Ubuntu</td>
+<td>19.04</td>
+<td>disco</td>
+<td>&#160;</td>
+<td>はい</td>
+</tr>
+<tr class="row-even"><td>18.04 (LTS)</td>
+<td>bionic</td>
+<td>はい</td>
+<td>はい</td>
+</tr>
+<tr class="row-odd"><td>16.04 (LTS)</td>
+<td>xenial <a class="footnote-reference" href="#id12" id="id10">[4]</a> <a class="footnote-reference" href="#id13" id="id11">[5]</a></td>
+<td>はい</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[4]</td><td><em>(<a class="fn-backref" href="#id9">1</a>, <a class="fn-backref" href="#id10">2</a>)</em> 3.4以下に限定 (3.6はQt 5.9以上が必要です)</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id13" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id11">[5]</a></td><td>ubuntugis-unstablでのみインストール可能です (3.4はGDAL2が必要です)</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[6]</a></td><td>3次元にはQt 5.9以上が必要です</td></tr>
+</tbody>
+</table>
+<p>あなたの <code class="docutils literal"><span class="pre">/etc/apt/sources.list</span></code> に一つのリポジトリの行を追加してください:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">deb</span>     <span class="o">*</span><span class="n">repository</span><span class="o">*</span> <span class="o">*</span><span class="n">codename</span><span class="o">*</span> <span class="n">main</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="o">*</span><span class="n">repository</span><span class="o">*</span> <span class="o">*</span><span class="n">codename</span><span class="o">*</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>Debian不安定版の最新リリースの例:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">deb</span>     <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">qgis</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">debian</span> <span class="n">unstable</span> <span class="n">main</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">qgis</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">debian</span> <span class="n">unstable</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>その後、以下のコマンドを入力してQGIS</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">qgis</span> <span class="n">qgis</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">grass</span>
+</pre></div>
+</div>
+<p>In case you would like to install QGIS Server, type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">qgis</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">更新を行う前に他のリポジトリからインストールした全てのQGISとGRASSのパッケージを削除して下さい。</p>
+</div>
+<p>keyserverのエラーが発生する場合、あなたの apt keyring にqgis.prgリポジトリの公開鍵を追加してください。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">qgis</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">qgis</span><span class="o">-</span><span class="mf">2019.</span><span class="n">gpg</span><span class="o">.</span><span class="n">key</span> <span class="o">|</span> <span class="n">gpg</span> <span class="o">--</span><span class="kn">import</span>
+<span class="nn">gpg</span> <span class="o">--</span><span class="n">fingerprint</span> <span class="mi">51</span><span class="n">F523511C7028C3</span>
+</pre></div>
+</div>
+<p>出力はこうなるはず:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pub</span>   <span class="n">rsa4096</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">08</span> <span class="p">[</span><span class="n">SCEA</span><span class="p">]</span> <span class="p">[</span><span class="n">expires</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">08</span><span class="p">]</span>
+      <span class="mi">8</span><span class="n">D5A</span> <span class="mi">5</span><span class="n">B20</span> <span class="mi">3548</span> <span class="n">E500</span> <span class="mi">4487</span>  <span class="n">DD19</span> <span class="mi">51</span><span class="n">F5</span> <span class="mi">2351</span> <span class="mi">1</span><span class="n">C70</span> <span class="mi">28</span><span class="n">C3</span>
+<span class="n">uid</span>           <span class="p">[</span><span class="n">unknown</span><span class="p">]</span> <span class="n">QGIS</span> <span class="n">Archive</span> <span class="n">Automatic</span> <span class="n">Signing</span> <span class="n">Key</span> <span class="p">(</span><span class="mi">2019</span><span class="p">)</span> <span class="o">&lt;</span><span class="n">qgis</span><span class="o">-</span><span class="n">developer</span><span class="nd">@lists</span><span class="o">.</span><span class="n">osgeo</span><span class="o">.</span><span class="n">org</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>指紋を確認した後、あなたはとのaptにキーを追加することができます:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gpg</span> <span class="o">--</span><span class="n">export</span> <span class="o">--</span><span class="n">armor</span> <span class="mi">51</span><span class="n">F523511C7028C3</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
+</pre></div>
+</div>
+<p>別の方法としては、鍵サーバーから鍵をダウンロードして（手動指紋認証なしで）一度にがちにキーを追加することができます:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">keyserver</span><span class="o">.</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">com</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="mi">51</span><span class="n">F523511C7028C3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fedora">
+<h2>Fedora<a class="headerlink" href="#fedora" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Fedoraでのパッケージ取得方法:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">qgis</span> <span class="n">python3</span><span class="o">-</span><span class="n">qgis</span> <span class="n">qgis</span><span class="o">-</span><span class="n">grass</span> <span class="n">qgis</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+<p>デフォルトのFedoraソフトウェアリポジトリには、QGISの古いバージョンが格納されていることがよくあります。</p>
+<p>新しいバージョンを使用するには、インストールするバージョン（安定版、LTR版またはテスト版）に基づいて、別のソフトウェアリポジトリを追加する必要があります。</p>
+<div class="section" id="qgis-stable">
+<h3>QGIS安定版<a class="headerlink" href="#qgis-stable" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>リポジトリを有効にする:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">copr</span> <span class="n">enable</span> <span class="n">dani</span><span class="o">/</span><span class="n">qgis</span>
+</pre></div>
+</div>
+<p>その後、以下のコマンドを入力してQGIS</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">qgis</span> <span class="n">python3</span><span class="o">-</span><span class="n">qgis</span> <span class="n">qgis</span><span class="o">-</span><span class="n">grass</span>
+</pre></div>
+</div>
+<p>QGIS Serverをインストールする場合（クライアントとサーバーの両方のアプリケーションを同じマシンにインストールするのは一般的ではありません）、次のように入力します。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">qgis</span><span class="o">-</span><span class="n">server</span> <span class="n">python3</span><span class="o">-</span><span class="n">qgis</span>
+</pre></div>
+</div>
+<p>このレポジトリには、プロセッシングで互換性のあるSAGA 2.3.1の複製があります。次のコマンドでインストールできます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">saga</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="21%" />
+<col width="22%" />
+<col width="22%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">配布</th>
+<th class="head">バージョン</th>
+<th class="head">QGISバージョン</th>
+<th class="head">GRASS GISのバージョン</th>
+<th class="head">with
+3D</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="3">Fedora</td>
+<td>28</td>
+<td>3.8</td>
+<td>7.4</td>
+<td>はい</td>
+</tr>
+<tr class="row-odd"><td>29</td>
+<td>3.8</td>
+<td>7.4</td>
+<td>はい</td>
+</tr>
+<tr class="row-even"><td>30</td>
+<td>3.8</td>
+<td>7.6</td>
+<td>はい</td>
+</tr>
+</tbody>
+</table>
+<p>より多くの情報は <a class="reference external" href="https://copr.fedorainfracloud.org/coprs/dani/qgis/">https://copr.fedorainfracloud.org/coprs/dani/qgis/</a> で入手可能です</p>
+</div>
+<div class="section" id="qgis-ltr-long-term-release">
+<h3>QGIS LTR（長期リリース）<a class="headerlink" href="#qgis-ltr-long-term-release" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>リポジトリを有効にする:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">copr</span> <span class="n">enable</span> <span class="n">dani</span><span class="o">/</span><span class="n">qgis</span><span class="o">-</span><span class="n">ltr</span>
+</pre></div>
+</div>
+<p>その後、以下のコマンドを入力してQGIS</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">qgis</span> <span class="n">python3</span><span class="o">-</span><span class="n">qgis</span> <span class="n">qgis</span><span class="o">-</span><span class="n">grass</span>
+</pre></div>
+</div>
+<p>QGIS Serverをインストールする場合（クライアントとサーバーの両方のアプリケーションを同じマシンにインストールするのは一般的ではありません）、次のように入力します。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">qgis</span><span class="o">-</span><span class="n">server</span> <span class="n">python3</span><span class="o">-</span><span class="n">qgis</span>
+</pre></div>
+</div>
+<p>このレポジトリには、プロセッシングで互換性のあるSAGA 2.3.1の複製があります。次のコマンドでインストールできます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">saga</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="21%" />
+<col width="22%" />
+<col width="22%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">配布</th>
+<th class="head">バージョン</th>
+<th class="head">QGISバージョン</th>
+<th class="head">GRASS GISのバージョン</th>
+<th class="head">with
+3D</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="3">Fedora</td>
+<td>28</td>
+<td>3.4</td>
+<td>7.4</td>
+<td>はい</td>
+</tr>
+<tr class="row-odd"><td>29</td>
+<td>3.4</td>
+<td>7.4</td>
+<td>はい</td>
+</tr>
+<tr class="row-even"><td>30</td>
+<td>3.4</td>
+<td>7.6</td>
+<td>はい</td>
+</tr>
+</tbody>
+</table>
+<p>より多くの情報は <a class="reference external" href="https://copr.fedorainfracloud.org/coprs/dani/qgis-ltr/">https://copr.fedorainfracloud.org/coprs/dani/qgis-ltr/</a> で入手可能です</p>
+</div>
+<div class="section" id="qgis-testing">
+<h3>QGISテスト版<a class="headerlink" href="#qgis-testing" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>リポジトリを有効にする:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">copr</span> <span class="n">enable</span> <span class="n">dani</span><span class="o">/</span><span class="n">qgis</span><span class="o">-</span><span class="n">testing</span>
+</pre></div>
+</div>
+<p>その後、以下のコマンドを入力してQGIS</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">qgis</span> <span class="n">python3</span><span class="o">-</span><span class="n">qgis</span> <span class="n">qgis</span><span class="o">-</span><span class="n">grass</span>
+</pre></div>
+</div>
+<p>QGIS Serverをインストールする場合（クライアントとサーバーの両方のアプリケーションを同じマシンにインストールするのは一般的ではありません）、次のように入力します。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">qgis</span><span class="o">-</span><span class="n">server</span> <span class="n">python3</span><span class="o">-</span><span class="n">qgis</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="21%" />
+<col width="22%" />
+<col width="22%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">配布</th>
+<th class="head">バージョン</th>
+<th class="head">QGISバージョン</th>
+<th class="head">GRASS GISのバージョン</th>
+<th class="head">with
+3D</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="4">Fedora</td>
+<td>28</td>
+<td>3.9</td>
+<td>7.4</td>
+<td>はい</td>
+</tr>
+<tr class="row-odd"><td>29</td>
+<td>3.9</td>
+<td>7.4</td>
+<td>はい</td>
+</tr>
+<tr class="row-even"><td>30</td>
+<td>3.9</td>
+<td>7.6</td>
+<td>はい</td>
+</tr>
+<tr class="row-odd"><td>rawhide</td>
+<td>3.9</td>
+<td>7.6</td>
+<td>はい</td>
+</tr>
+</tbody>
+</table>
+<p>テストビルドは、毎週更新されます。詳細は <a class="reference external" href="https://copr.fedorainfracloud.org/coprs/dani/qgis-testing/">https://copr.fedorainfracloud.org/coprs/dani/qgis-testing/</a> をご覧ください。</p>
+</div>
+</div>
+<div class="section" id="rhel-centos-scientific-linux">
+<h2>RHEL, CentOS, Scientific Linux<a class="headerlink" href="#rhel-centos-scientific-linux" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="qgis-1-8">
+<h3>QGIS 1.8<a class="headerlink" href="#qgis-1-8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ELGSではEPELレポジトリを有効にする必要があります <a class="reference external" href="http://wiki.osgeo.org/wiki/Enterprise_Linux_GIS#Note_about_Fedora.2C_ELGIS_and_EPEL">http://wiki.osgeo.org/wiki/Enterprise_Linux_GIS#Note_about_Fedora.2C_ELGIS_and_EPEL</a> を参照して下さい</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">ELGSではEPELレポジトリを有効にする必要があります <a class="reference external" href="http://wiki.osgeo.org/wiki/Enterprise_Linux_GIS#Note_about_Fedora.2C_ELGIS_and_EPEL">http://wiki.osgeo.org/wiki/Enterprise_Linux_GIS#Note_about_Fedora.2C_ELGIS_and_EPEL</a> を参照して下さい</p>
+</div>
+</div>
+</div>
+<div class="section" id="opensuse">
+<h2>openSUSE<a class="headerlink" href="#opensuse" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id15">
+<h3>QGIS安定版<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>qgisと呼ばれる最新の安定したopenSUSEパッケージは、13.1,13.2、Leap_42.1、Leap_42.2、およびTumbleweed（32および64bit）で利用できます。次のリポジトリをインストールマネージャに追加します。ここで &lt;VERSION&gt; は例えば 『openSUSE_Tumbleweed』。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Application</span><span class="p">:</span><span class="o">/</span><span class="n">Geo</span><span class="o">/&lt;</span><span class="n">VERSION</span><span class="o">&gt;/</span>
+</pre></div>
+</div>
+<p>すべてのパッケージには GRASS と Pythonのサポートが含まれています。</p>
+</div>
+<div class="section" id="id16">
+<h3>QGIS LTR（長期リリース）<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>qgis-ltrと呼ばれるopenSUSEの長期リリースパッケージは、13.1,13.2、Leap_42.1、Leap_42.2、Tumbleweed（32および64bit）で利用できます。次のリポジトリをインストールマネージャに追加します。ここで &lt;VERSION&gt; は例えば 『openSUSE_Tumbleweed』。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Application</span><span class="p">:</span><span class="o">/</span><span class="n">Geo</span><span class="o">/&lt;</span><span class="n">VERSION</span><span class="o">&gt;/</span>
+</pre></div>
+</div>
+<p>すべてのパッケージには GRASS と Pythonのサポートが含まれています。</p>
+</div>
+<div class="section" id="id17">
+<h3>QGISテスト版<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>qgis-masterという定期的に更新された開発パッケージは、13.1,13.2、Leap_42.1、Leap_42.2、およびTumbleweed（32および64bit）で利用できます。次のリポジトリをインストールマネージャに追加します。ここで &lt;VERSION&gt; は例えば 『openSUSE_Tumbleweed』 です。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Application</span><span class="p">:</span><span class="o">/</span><span class="n">Geo</span><span class="o">/&lt;</span><span class="n">VERSION</span><span class="o">&gt;/</span>
+</pre></div>
+</div>
+<p>すべてのパッケージには GRASS と Pythonのサポートが含まれています。</p>
+</div>
+</div>
+<div class="section" id="mandriva">
+<h2>Mandriva<a class="headerlink" href="#mandriva" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id18">
+<h3>QGIS安定版<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Current:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">urpmi</span> <span class="n">qgis</span><span class="o">-</span><span class="n">python</span> <span class="n">qgis</span><span class="o">-</span><span class="n">grass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="slackware">
+<h2>Slackware<a class="headerlink" href="#slackware" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id19">
+<h3>QGIS安定版<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>パッケージは <a class="reference external" href="http://qgis.gostack.org">http://qgis.gostack.org</a> にあります</p>
+</div>
+</div>
+<div class="section" id="archlinux">
+<h2>ArchLinux<a class="headerlink" href="#archlinux" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id20">
+<h3>QGIS安定版<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Archlinuxは公式リポジトリにあります： <a class="reference external" href="https://www.archlinux.org/packages/community/x86_64/qgis/">https://www.archlinux.org/packages/community/x86_64/qgis/</a></p>
+<p>インストール　 :</p>
+<p>pacman -S qgis</p>
+</div>
+<div class="section" id="qgis-ltr">
+<h3>QGIS LTR<a class="headerlink" href="#qgis-ltr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Qgis長期リリースはAUR（Arch ユーザーリポジトリ）で入手可能です。</p>
+<p>AURをサポートするyaourtか他のパッケージマネージャでインストールしてください。</p>
+<p>yaourt -S qgis-ltr</p>
+<p>バグやその他の振る舞いについては、ここでコメントを読んでください： <a class="reference external" href="https://aur.archlinux.org/packages/qgis-ltr/">https://aur.archlinux.org/packages/qgis-ltr/</a></p>
+</div>
+<div class="section" id="id21">
+<h3>QGISテスト版<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QgisテストはAUR（Archユーザーリポジトリ）で利用可能です。</p>
+<p>AURをサポートするyaourtか他のパッケージマネージャでインストールしてください。</p>
+<p>yaourt -S qgis-git</p>
+<p>バグやその他の振る舞いについては、ここでコメントを読んでください： <a class="reference external" href="https://aur.archlinux.org/packages/qgis-git">https://aur.archlinux.org/packages/qgis-git</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="mac-os-x-macos">
+<h1>Mac OS X / macOS<a class="headerlink" href="#mac-os-x-macos" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>インストール手順は、ディスクイメージのReadMeに記載されています。ダウンロードはQGISのダウンロードページにあります。</p>
+<div class="section" id="qgis-current">
+<h2>QGIS current<a class="headerlink" href="#qgis-current" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>現在のQGISパッケージは、 <a class="reference external" href="http://www.python.org/">python.org Python 3.6</a> 、少なくともバージョン3.6.5、 「macosx10.9」ビルド以外のディストリビューションはサポートされていません。パッケージを番号順にインストールします。特に、GDAL CompleteパッケージとQGISの前にPythonをインストールする必要があります。それ以外の場合は、GDALやPythonモジュールがインストールされません。</p>
+</div>
+<div class="section" id="id22">
+<h2>QGIS安定版<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>安定したパッケージはシステムPython 2.7を使用します - 他の配布はサポートされていません。また、ディスクイメージにNumPyパッケージとMatplotlibパッケージが必要です。パッケージを番号順にインストールします。旧バージョンのメジャーバージョン（2.16以前）をアップグレードする場合は、このバージョンをインストールする前にApplicationsフォルダからQGIS.appを削除してください。</p>
+<p>プラグインを使用するための他のPythonモジュールは、 <a class="reference external" href="http://www.kyngchaos.com/software/python">kyngchaos.com</a> から利用可能です。</p>
+</div>
+<div class="section" id="standalone-installer">
+<h2>スタンドアロンインストーラ<a class="headerlink" href="#standalone-installer" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>スタンドアロンインストーラは <a class="reference external" href="https://lutraconsulting.github.io/qgis-mac-packager/">https://lutraconsulting.github.io/qgis-mac-packager/</a> にあります。</p>
+</div>
+</div>
+<div class="section" id="freebsd">
+<span id="qgis-macos-testing"></span><h1>FreeBSD<a class="headerlink" href="#freebsd" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id23">
+<h2>QGIS安定版<a class="headerlink" href="#id23" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To install QGIS from binary packages type</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="n">qgis</span>
+</pre></div>
+</div>
+<p>Or to customize compilation options, you can build it from FreeBSD ports</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">graphics</span><span class="o">/</span><span class="n">qgis</span>
+<span class="n">make</span> <span class="n">install</span> <span class="n">clean</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>QGIS LTR<a class="headerlink" href="#id24" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To install QGIS from binary packages type</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="n">qgis</span><span class="o">-</span><span class="n">ltr</span>
+</pre></div>
+</div>
+<p>Or to customize compilation options, you can build it from FreeBSD ports</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">graphics</span><span class="o">/</span><span class="n">qgis</span><span class="o">-</span><span class="n">ltr</span>
+<span class="n">make</span> <span class="n">install</span> <span class="n">clean</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="flatpak">
+<h1>Flatpak<a class="headerlink" href="#flatpak" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>QGIS Stable用の <em>実験的</em> QGIS flatpakが入手可能です。</p>
+<p>一般的なLinux Flatpakのインストールノートについては、 <a class="reference external" href="https://flatpak.org/setup/">https://flatpak.org/setup/</a> を参照</p>
+<p>QGIS on Flathub: <a class="reference external" href="https://flathub.org/apps/details/org.qgis.qgis">https://flathub.org/apps/details/org.qgis.qgis</a></p>
+<p>インストールするには:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">flatpak</span> <span class="n">install</span> <span class="o">--</span><span class="kn">from</span>  <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">flathub</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">appstream</span><span class="o">/</span><span class="n">org</span><span class="o">.</span><span class="n">qgis</span><span class="o">.</span><span class="n">qgis</span><span class="o">.</span><span class="n">flatpakref</span>
+</pre></div>
+</div>
+<p>それから実行するには:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">flatpak</span> <span class="n">run</span> <span class="n">org</span><span class="o">.</span><span class="n">qgis</span><span class="o">.</span><span class="n">qgis</span>
+</pre></div>
+</div>
+<p>flatpak QGISをアップデートするには:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">flatpak</span> <span class="n">update</span>
+</pre></div>
+</div>
+<p>Flathubファイル： <a class="reference external" href="https://github.com/flathub/org.qgis.qgis">https://github.com/flathub/org.qgis.qgis</a></p>
+</div>
+<div class="section" id="android">
+<h1>Android<a class="headerlink" href="#android" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>グーグルプレイストアで利用可能な実験的なバージョンがあります。</p>
+<p><a class="reference external" href="https://play.google.com/store/apps/details?id=org.qgis.qgis">https://play.google.com/store/apps/details?id=org.qgis.qgis</a></p>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">Android 5のためのサポートは現在ありません。.ベストサポートはアンドロイド4.3と4.4.x.のために与えられています。これは、QGISデスクトップアプリケーションの直接のポートです。それはわずかにタッチデバイス用に最適化されたので、慎重に日々の使用でその適合性のために評価する必要があります。特にタッチデバイス用に設計され、最適化されている利用可能な他のアプリがあります。</p>
+</div>
+</div>
+<div class="section" id="qgis-testing-warning">
+<h1>QGISテスト警告<a class="headerlink" href="#qgis-testing-warning" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="admonition warning" id="warning">
+<p class="first admonition-title">警告</p>
+<p class="last">QGISのテストパッケージは、QGISの安定版に加えて、いくつかのプラットフォームのために提供されています。QGISのテストは、現在作業している未発表のソフトウェアが含まれています。彼らは唯一のバグが解消されたので、新たなバグが導入されていないことかどうかをチェックするために早期導入にテスト目的のために提供されます。私たちは慎重に破損を回避しようが、それは任意の時点で動作しない場合があります、またはあなたのデータに悪いことを行うことができます。世話をする。あなたは警告されています！</p>
+</div>
+</div>
+<div class="section" id="installing-from-source">
+<h1>ソースからインストールする<a class="headerlink" href="#installing-from-source" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>異なるプラットフォーム用のソースからQGISをビルドしてインストールする方法については、 <a class="reference external" href="http://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html">インストールガイド</a> を参照。</p>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="visualchangelogs.html" title="ビジュアルチェンジログ"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="download.html" title="QGISのダウンロード"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >ユーザー向け情報</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="download.html" >QGISのダウンロード</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">特に明記されていない場合、全てのコンテンツは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 ライセンス（CC BY-SA） </a> の下で提供されています。</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        画像は <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a> から選択しました
+        
+        
+      </p>
+      <p class="credit">
+        翻訳されていないページ？または、翻訳エラーが見つかりました：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">このページを修正</a>
+        <br/>
+        誤ったテキスト、不足しているテキスト、またはあなたがよく知っている：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">このページを修正</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

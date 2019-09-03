@@ -1,0 +1,999 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGIS 2.18の変更履歴</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="QGIS 2.16の変更履歴" href="../visualchangelog216/index.html" />
+    <link rel="prev" title="QGIS 3.0の変更履歴" href="../visualchangelog30/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../visualchangelog216/index.html" title="QGIS 2.16の変更履歴"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog30/index.html" title="QGIS 3.0の変更履歴"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >ユーザー向け情報</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" accesskey="U">ビジュアルチェンジログ</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英語">English</option>
+  <option value="ca" title="カタロニア語">Català</option>
+  <option value="da" title="デンマーク語">Dansk</option>
+  <option value="de" title="ドイツ語">Deutsch</option>
+  <option value="es" title="スペイン語">Español</option>
+  <option value="fa" title="ペルシャ語">فارسی</option>
+  <option value="fi" title="フィンランド語">Suomi</option>
+  <option value="fr" title="フランス語">Français</option>
+  <option value="gl" title="ガリシア語">Galego</option>
+  <option value="id" title="インドネシア語">Bahasa Indonesia</option>
+  <option value="it" title="イタリア語">Italiano</option>
+  <option value="hu" title="ハンガリー語">Magyar</option>
+  <option value="ja" title="日本語">日本語</option>
+  <option value="km_KH" title="クメール語">ភាសាខ្មែរ    </option>
+  <option value="ko" title="韓国語">한국어</option>
+  <option value="lt" title="リトアニア語">Lietuvių</option>
+  <option value="nl" title="ドイツ語">Nederlands</option>
+  <option value="pl" title="ポーランド語">Polski</option>
+  <option value="pt_BR" title="ポルトガル語(ブラジル)">Português (Brasil)</option>
+  <option value="pt_PT" title="ポルトガル語">Português</option>
+  <option value="ro" title="ルーマニア語">Română</option>
+  <option value="tr" title="トルコ語">Türkçe</option>
+  <option value="ru" title="ロシア語">Русский</option>
+  <option value="uk" title="ウクライナ語">Українська</option>
+  <option value="zh-Hans" title="中国語（簡体字）">簡体中文</option>
+  <option value="zh-Hant" title="中国語（繁体字）">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/visualchangelog218/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>ありがとうございます！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">いますぐ寄付</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>あなたの寄付をありがとう！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGISは無償であり、私たちの愛の労働を楽しんで、他の人もそれを楽しむことができるように、あなたのダウンロードしたコピーを広範囲に共有して広げることを奨励することを願っています。私たちはとても敬具です！</p>'+
+            '<p id="stripeerr" style="display:none;">残念ながら、寄付の処理中にエラーが発生しました。後でやり直すか、finance@qgis.orgまでご連絡ください。</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">QGISについて</a></li>
+            <li><a href="../index.html">ユーザー向け情報</a></li>
+            <li><a href="../../getinvolved/index.html">参加する</a></li>
+            <li><a href="../../../docs/index.html">ドキュメント</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../visualchangelog30/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../visualchangelog216/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">QGISにできること</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ユーザー向け情報</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">QGISのダウンロード</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualchangelogs.html">ビジュアルチェンジログ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog38/index.html">Changelog for QGIS 3.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog36/index.html">QGIS 3.6 の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog34/index.html">QGIS 3.4 LTRの変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog32/index.html">QGIS 3.2の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog30/index.html">QGIS 3.0の変更履歴</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QGIS 2.18の変更履歴</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sponsors-for-qgis-version-2-18-0">QGISバージョン2.18.0のスポンサー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general">一般</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">シンボロジー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelling">ラベリング</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rendering">レンダリング</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-management">データ管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#forms-and-widgets">フォームとウィジェット</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-composer">地図コンポーザ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing">プロセッシング</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-providers">データプロバイダ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-server">QGISサーバー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plugins">プラグイン</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmability">プログラマビリティ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feature-new-pyqgis-classes-in-2-18">機能：2.18の新しいPyQGISクラス</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feature-new-expression-functions">機能：新しい式の関数</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog216/index.html">QGIS 2.16の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog214/index.html">QGIS 2.14の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog212/index.html">QGIS 2.12の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog210/index.html">QGIS 2.10の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog28/index.html">QGIS 2.8の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog260/index.html">QGIS 2.6の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog240/index.html">QGIS 2.4の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog220/index.html">QGIS 2.2の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog200/index.html">QGIS 2.0の変更履歴</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">トレーニング材料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">サポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">ユーザグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">商用サポート</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../books/index.html">書籍</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">参加する / 開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">文書</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="changelog-for-qgis-2-18">
+<span id="changelog218"></span><h1>QGIS 2.18の変更履歴<a class="headerlink" href="#changelog-for-qgis-2-18" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><img alt="image1" src="../../../_images/ac3b0a08203e87505a823b0d8a0895d44489f916.png" /></p>
+<p>これは2.xシリーズの最後のリリースです。現在のロングタームリリース（LTR）はバージョン2.14.xのままです。このリリースでは、以前のリリースよりも漸進的な改良が施されています。活動の大部分は、現在、2017年の第1四半期末に予定されている次世代リリースであるQGIS 3.0の開発に焦点を当てています。</p>
+<p><strong>感謝</strong></p>
+<p>We would like to thank the developers, documenters, testers and all the many folks out there who volunteer their time and effort (or fund people to do so). From the QGIS community we hope you enjoy this release! If you wish to donate time, money or otherwise get involved in making QGIS more awesome, please wander along to <a class="reference external" href="https://qgis.org">qgis.org</a> and lend a hand!</p>
+<p>QGIS is supported by donors and sponsors. A current list of donors who have made financial contributions large and small to the project can be seen on our <a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#list-of-donors">donors list</a>. If you would like to become and official project sponsor, please visit <a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#sponsorship">our sponsorship page</a> for details. Sponsoring QGIS helps us to fund our six monthly developer meetings, maintain project infrastructure and fund bug fixing efforts. A complete list of current sponsors is provided below - our very great thank you to all of our sponsors!</p>
+<p>QGISはフリーソフトウェアであり、使用するために何かを支払う義務はありません。実際、財務的または社会的地位にかかわらず、遠くから広く人々にそれを使用するよう奨励したいと考えています。すべての人類にとってより良い社会をもたらします。</p>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><a class="reference internal" href="#sponsors-for-qgis-version-2-18-0" id="id5">QGISバージョン2.18.0のスポンサー</a></li>
+<li><a class="reference internal" href="#general" id="id6">一般</a><ul>
+<li><a class="reference internal" href="#feature-automatic-links-in-identify-results" id="id7">機能：識別結果の中の自動リンク</a></li>
+<li><a class="reference internal" href="#feature-mouse-wheel-over-color-dialog-sliders" id="id8">機能：マウスホイールをカラーダイアログのスライダーに重ねる</a></li>
+<li><a class="reference internal" href="#feature-add-custom-color-schemes-to-color-button-drop-down-menu" id="id9">機能：カスタムカラースキームをカラーボタンドロップダウンメニューに追加する</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symbology" id="id10">シンボロジー</a><ul>
+<li><a class="reference internal" href="#feature-color-picker-is-now-embedded-in-layer-style-panel" id="id11">機能：レイヤースタイルのパネルにカラーピッカーが埋め込まれました</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labelling" id="id12">ラベリング</a><ul>
+<li><a class="reference internal" href="#feature-substitution-list-support-for-labeling" id="id13">機能：ラベル付けの代替リストサポート</a></li>
+<li><a class="reference internal" href="#feature-improved-line-label-placement-algorithm" id="id14">機能：改良されたラインラベル配置アルゴリズム</a></li>
+<li><a class="reference internal" href="#feature-label-polygons-using-curved-labels-along-perimeter" id="id15">機能：周囲に沿って曲線ラベルを使用してポリゴンにラベルを付ける</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rendering" id="id16">レンダリング</a><ul>
+<li><a class="reference internal" href="#feature-preview-of-raster-tiles-wmts-and-xyz-layers" id="id17">機能：ラスタータイルのプレビュー（WMTSおよびXYZレイヤー）</a></li>
+<li><a class="reference internal" href="#feature-cancellable-rendering-of-rasters-wms-wmts-wcs-and-xyz-layers" id="id18">機能：ラスター（WMS、WMTS、WCS、XYZレイヤー）のキャンセル可能なレンダリング</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-management" id="id19">データ管理</a><ul>
+<li><a class="reference internal" href="#feature-add-flag-to-only-copy-selected-features" id="id20">機能：選択した機能のみをコピーするフラグを追加する</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#forms-and-widgets" id="id21">フォームとウィジェット</a><ul>
+<li><a class="reference internal" href="#feature-allow-controlling-labels-for-individual-edit-widgets" id="id22">機能：個々の編集ウィジェットのラベルを制御できるようにする</a></li>
+<li><a class="reference internal" href="#feature-conditional-visibility-for-tabs-and-group-boxes" id="id23">機能：タブとグループボックスの条件付き可視性</a></li>
+<li><a class="reference internal" href="#feature-client-side-default-field-values" id="id24">機能：クライアント側のデフォルトのフィールド値</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-composer" id="id25">地図コンポーザ</a><ul>
+<li><a class="reference internal" href="#feature-true-north-arrows" id="id26">機能：真北矢印</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processing" id="id27">プロセッシング</a><ul>
+<li><a class="reference internal" href="#feature-point-on-surface-algorithm" id="id28">機能：表面上のポイントアルゴリズム</a></li>
+<li><a class="reference internal" href="#feature-processing-dissolve-algorithm-accepts-multiple-fields" id="id29">機能：処理ディゾルブアルゴリズムは複数のフィールドを受け入れます</a></li>
+<li><a class="reference internal" href="#feature-optimised-processing-clip-algorithm" id="id30">機能：最適化処理クリップアルゴリズム</a></li>
+<li><a class="reference internal" href="#feature-bounding-boxes-algorithm" id="id31">機能：バウンディングボックスアルゴリズム</a></li>
+<li><a class="reference internal" href="#feature-merge-connected-lines-algorithm" id="id32">機能：連結線アルゴリズムをマージする</a></li>
+<li><a class="reference internal" href="#feature-geometry-boundary-algorithm" id="id33">機能：幾何境界アルゴリズム</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-providers" id="id34">データプロバイダ</a><ul>
+<li><a class="reference internal" href="#feature-native-support-of-xyz-tile-layers" id="id35">機能：XYZタイルレイヤーのネイティブサポート</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qgis-server" id="id36">QGISサーバー</a><ul>
+<li><a class="reference internal" href="#feature-possibility-to-segmentize-feature-info-geometry-in-server" id="id37">機能：サーバ内の地物情報ジオメトリをセグメント化する可能性</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins" id="id38">プラグイン</a><ul>
+<li><a class="reference internal" href="#feature-db-manager-add-the-ability-to-update-sql-layer" id="id39">機能：DBマネージャー：SQLレイヤーを更新する機能を追加する</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmability" id="id40">プログラマビリティ</a><ul>
+<li><a class="reference internal" href="#feature-expose-geos-linear-referencing-function-to-qgsgeometry" id="id41">機能：GEOS線形参照関数をQgsGeometryに公開する</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feature-new-pyqgis-classes-in-2-18" id="id42">機能：2.18の新しいPyQGISクラス</a><ul>
+<li><a class="reference internal" href="#new-core-classes" id="id43">新しいコアクラス</a></li>
+<li><a class="reference internal" href="#new-gui-classes-reusable-widgets" id="id44">新しいGUIクラス、再利用可能なウィジェット</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feature-new-expression-functions" id="id45">機能：新しい式の関数</a></li>
+</ul>
+</div>
+<div class="section" id="sponsors-for-qgis-version-2-18-0">
+<h2><a class="toc-backref" href="#id5">QGISバージョン2.18.0のスポンサー</a><a class="headerlink" href="#sponsors-for-qgis-version-2-18-0" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>私たちは毎年、私たちがやっていることを評価して、プロジェクトに取り込まれる持続的な開発努力を促進しようとしてくれる様々な組織からの支援を受けています。これらのスポンサーを感謝とともに以下に記します。</p>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">ゴールドスポンサー（9000ユーロ）</span><a class="headerlink" href="#id2" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../../_images/gold.png"><img alt="gold" src="../../../_images/gold.png" style="width: 100px;" /></a> <a class="reference internal" href="../../../_images/qgis-ch.png"><img alt="qgis-ch" src="../../../_images/qgis-ch.png" style="width: 200px;" /></a>
+<a class="reference external" href="https://www.qgis.ch/">QGIS Usergroup Switzerland</a>, Switzerland</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id3">
+<caption><span class="caption-text">シルバースポンサー（3000ユーロ）</span><a class="headerlink" href="#id3" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/5f50b148aecade6339b100f1ad30897b81ca9a09.jpg.150x50_q85.jpg"><img alt="Land Vorarlberg" src="../../../_images/5f50b148aecade6339b100f1ad30897b81ca9a09.jpg.150x50_q85.jpg" style="width: 175px;" /></a> <a class="reference external" href="http://www.vorarlberg.at/">State of Vorarlberg</a> 、オーストリア</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <img alt="Office of Public Works, Flood Risk Management and Data Management Section" src="../../../_images/35602d87c0858381e9a95a481808b27249f0f592.jpg.150x50_q85.jpg" /> <a class="reference external" href="http://www.opw.ie/">Office of Public Works, Ireland</a> 、アイルランド</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/f6379f3083e612fd47917e1f948d795b6951dde9.png.150x50_q85.png"><img alt="GAIA mbH" src="../../../_images/f6379f3083e612fd47917e1f948d795b6951dde9.png.150x50_q85.png" style="width: 150px;" /></a> <a class="reference external" href="http://www.gaia-mbh.de">GAIA mbh</a> 、ドイツ</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/sourcepole.png"><img alt="sourcepole" src="../../../_images/sourcepole.png" style="width: 150px;" /></a> <a class="reference external" href="http://www.sourcepole.com/">Sourcepole AG</a> 、スイス</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <img alt="QGISusergroupGermany" src="../../../_images/be6891585ad856e8c2bbbba4b78e37d303f10d72.png.150x50_q85.png" /> <a class="reference external" href="http://www.qgis.de/">ドイツQGIS ユーザーグループ</a> 、ドイツ</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id4">
+<caption><span class="caption-text">ブロンズスポンサー（500ユーロ）</span><a class="headerlink" href="#id4" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="2D3D.GIS" src="../../../_images/b3196a2b5781e788e6adac40ecf6964eddc4d38e.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.2d3d-gis.com/">2D3D.GIS</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Lutra Consulting" src="../../../_images/0d5fea827c8bfc486877065e21d3e28f89788e78.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Ager Technology" src="../../../_images/7ab30679cc486ecb9981c8c02a6d6ba1fb6ca2c7.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.agertechnology.com/">Ager Technology</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="MappingGIS" src="../../../_images/775de328b2774c112cc73fb5aaaee9696220649b.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.mappinggis.com/">MappingGIS</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Asociación Geoinnova" src="../../../_images/bba9a55eb7e288e622e7bf40ee85326c28cf09f3.jpg.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://geoinnova.org/">Asociación Geoinnova</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Molitec" src="../../../_images/5a65a575314f063d065ef84840e734e411c770f2.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.molitec.it/">Molitec</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="BGEO Open GIS, SL" src="../../../_images/c8dbccba699fc2f34ef61b034f7b86adfd96f4c4.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.bgeo.es">BGEO Open GIS, SL</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="NCC Roads AB" src="../../../_images/d31441980fc90fb15735df8509527e6a1badce72.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.ncc.se/en/">NCC Roads AB</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Cawdor Forestry" src="../../../_images/1789f70f1058ee18570638070439a8082b91dca8.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.cawdorforestry.com/">Cawdor Forestry</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="National Parks UK" src="../../../_images/6e9c4de359ddbda8ed0b144478e7fa001e22ba63.jpg.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.nationalparks.gov.uk/">National Parks UK</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Urbsol" src="../../../_images/af9b8c3a4363482f12c7b2dff14659fd9ff6240c.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.urbsol.com.au/">Urbsol</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="QGIS user group Denmark" src="../../../_images/95cd3d2f589a180ebea3b5f31e5fd17a753f6774.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.qgis.dk/">QGIS user group Denmark</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Dr. Kerth + Lampe Geo-Infometric GmbH" src="../../../_images/8d0653a46046e8d43a28d4ea3466633f15d17636.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.dr-kerth-lampe.de/">Dr. Kerth + Lampe Geo-Infometric GmbH</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="QGIS user group Portugal" src="../../../_images/207dd8769c4926452e07e39d88716ec518ff5f3a.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.qgis.pt/">QGIS user group Portugal</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="FORNAT AG" src="../../../_images/e24951be1e5ff2d6fd591f9760871e38a684bed0.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.fornat.ch/">FORNAT AG</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Royal Borough of Windsor and Maidenhead" src="../../../_images/25ce8c01cf28046bac3866b5649d269138d257a4.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.rbwm.gov.uk/">Royal Borough of Windsor and Maidenhead</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="GEPOL Ltd." src="../../../_images/95966a3500fe4f686b531f05fcf85f59ed0dcb93.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.gepol.com.pl/">GEPOL Ltd.</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="SOLTIG (Soluciones en Tecnologías de Información Geográfica)" src="../../../_images/0baa83c55c7c6194627e87ca81c9dffd4eee9ad1.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.soltig.net/">SOLTIG (Soluciones en Tecnologías de Información Geográfica)</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="GFI - Gesellschaft für Informationstechnologie mbH" src="../../../_images/44113fc21a8e2cd84d93459d0f00b3a64850095c.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.gfi-gis.de/">GFI - Gesellschaft für Informationstechnologie mbH</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Septima" src="../../../_images/037aae845f0e3957e65624216eb71b51d8c7c59c.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.septima.dk/">Septima</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="GIS Support Sp. z o.o." src="../../../_images/879213e1d9dd7d4e4adb87abf81c96c26c25cd36.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.gis-support.com/">GIS Support Sp. z o.o.</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="TYC GIS" src="../../../_images/e2c84a2441203bc48c9ceaf96e7e7dcec0f8942f.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://tycgis.com/">TYC GIS</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="GKG Kassel, (Dr.-Ing. Claas Leiner)" src="../../../_images/035ade9287e0bae1ddf62a00a52519f028a18e7f.png.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.gkg-kassel.de/">GKG Kassel, (Dr.-Ing. Claas Leiner)</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Teaching Jobs with Footprints" src="../../../_images/46d3e22cccef65fc941eaf0d080fcabbe29d3aff.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.footprintsrecruiting.com/teaching-jobs-abroad">Teaching Jobs with Footprints</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Gaia3D, Inc." src="../../../_images/9d30ee055aaea7ef42b807b1b4fcd22566eef69d.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.gaia3d.com/">Gaia3D, Inc.</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="TerreLogiche" src="../../../_images/9e23fb4e1f0416131843750f07e75a9f9d1e724d.jpg.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.terrelogiche.com/">TerreLogiche</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Gis3W" src="../../../_images/69f8dd7f727158ebeb6bcbdce6fef4cb313ad9f9.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.gis3w.it/">Gis3W</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="Trage Wegen vzw" src="../../../_images/1607f4bc4a24d0e6aabe5e8e424b93b40b83be3a.png.150x50_q85.png" /></p>
+<p class="last"><a class="reference external" href="http://www.tragewegen.be/">Trage Wegen vzw</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="KBB Underground Technologies GmbH" src="../../../_images/69255208cf440914eb947bf6dce5cee1c78455ba.jpg.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://www.kbbnet.de/">KBB Underground Technologies GmbH</a></p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <img alt="WhereGroup GmbH &amp; Co. KG" src="../../../_images/0eb2c265017956fb6b15cb9a098f8d27928152e8.jpg.150x50_q85.jpg" /></p>
+<p class="last"><a class="reference external" href="http://wheregroup.com/">WhereGroup GmbH &amp; Co. KG</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id6">一般</a><a class="headerlink" href="#general" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-automatic-links-in-identify-results">
+<h3><a class="toc-backref" href="#id7">機能：識別結果の中の自動リンク</a><a class="headerlink" href="#feature-automatic-links-in-identify-results" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>属性値内の <code class="docutils literal"><span class="pre">http</span></code> または <code class="docutils literal"><span class="pre">mailto</span></code> のリンクは、結果の確認パネル内のクリック可能なリンクに自動的に変換されるようになりました。</p>
+<p><img alt="image58" src="../../../_images/eab95eb0acb92a68edeee71a13ea23d77b88d307.png.400x300_q85_crop.png" /></p>
+<p>この機能は <a class="reference external" href="https://sourcepole.ch/">Sandro Mani（Sourcepole）</a> によって開発されました</p>
+</div>
+<div class="section" id="feature-mouse-wheel-over-color-dialog-sliders">
+<h3><a class="toc-backref" href="#id8">機能：マウスホイールをカラーダイアログのスライダーに重ねる</a><a class="headerlink" href="#feature-mouse-wheel-over-color-dialog-sliders" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.18では、カラーピッカーダイアログ内のいずれかのスライダ上でマウスホイールをスクロールして、値を少しずつ増やすことができます。これは、色のコンポーネントを微調整するための便利なショートカットです。</p>
+<p><img alt="image59" src="../../../_images/ab472e2c8270ba64bee64bbbf8c9f5104edc79de.gif" /></p>
+<p>この機能は、 <a class="reference external" href="http://northroadroad.com">Nyall Dawson（North Road）</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-add-custom-color-schemes-to-color-button-drop-down-menu">
+<h3><a class="toc-backref" href="#id9">機能：カスタムカラースキームをカラーボタンドロップダウンメニューに追加する</a><a class="headerlink" href="#feature-add-custom-color-schemes-to-color-button-drop-down-menu" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.18では、ユーザーが作成したカラースキームをカラーボタンのドロップダウンメニューに表示するかどうかをユーザーが設定できるようになりました。この設定は、リストタブのカラーピッカーダイアログで制御します。新しいカラースキームを追加して、スキームメニューから新しい 「show in buttons」オプションを選択してください。一般的なパレットのセットを持っていて、カラーメニューから即座に使用できるようにするには便利なショートカットです。</p>
+<p><img alt="image60" src="../../../_images/9453954d199c4950d7aecf153b6d5e53f820ff19.PNG.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="symbology">
+<h2><a class="toc-backref" href="#id10">シンボロジー</a><a class="headerlink" href="#symbology" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-color-picker-is-now-embedded-in-layer-style-panel">
+<h3><a class="toc-backref" href="#id11">機能：レイヤースタイルのパネルにカラーピッカーが埋め込まれました</a><a class="headerlink" href="#feature-color-picker-is-now-embedded-in-layer-style-panel" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.18では、レイヤースタイルパネル内のカラーボタンをクリックすると、別のダイアログとしてではなく、スタイルパネル自体でカラーピッカーダイアログが開きます。これにより、色をインタラクティブに変更して結果を即座にプレビューできます。</p>
+<p><img alt="image42" src="../../../_images/3af7533f5148810d0c26a221d7acdccaf1d7a835.png.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="labelling">
+<h2><a class="toc-backref" href="#id12">ラベリング</a><a class="headerlink" href="#labelling" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-substitution-list-support-for-labeling">
+<h3><a class="toc-backref" href="#id13">機能：ラベル付けの代替リストサポート</a><a class="headerlink" href="#feature-substitution-list-support-for-labeling" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ラベルテキストに適用するテキスト置換のリストを指定する機能を追加します。例：通りの種類を省略します。</p>
+<p>ユーザーは代替品のリストをエクスポートおよびインポートして、再利用および共有を容易にすることができます。</p>
+<p><img alt="image43" src="../../../_images/a73aec5fad4c5e39800e462bbac6dd2597f98cba.png.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-improved-line-label-placement-algorithm">
+<h3><a class="toc-backref" href="#id14">機能：改良されたラインラベル配置アルゴリズム</a><a class="headerlink" href="#feature-improved-line-label-placement-algorithm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ラインレイヤーのパラレルラベリングモードは大幅に改善されました。新しいアルゴリズムにより、地物ジオメトリのジグザグ部分にラベルを配置することはありません。</p>
+<p><img alt="image44" src="../../../_images/5b77d12263e0dabfb0649f27d92188613796f409.png.400x300_q85_crop.png" /></p>
+<p>この機能は、Andreas Neumannによって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-label-polygons-using-curved-labels-along-perimeter">
+<h3><a class="toc-backref" href="#id15">機能：周囲に沿って曲線ラベルを使用してポリゴンにラベルを付ける</a><a class="headerlink" href="#feature-label-polygons-using-curved-labels-along-perimeter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これにより、ポリゴンの外周に曲線ラベルを使用してラベルを付ける新しいモードが追加されます。</p>
+<p><img alt="image45" src="../../../_images/c7a28cf09a0f1646210faaae85a56c2209ee15e9.PNG.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="rendering">
+<h2><a class="toc-backref" href="#id16">レンダリング</a><a class="headerlink" href="#rendering" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-preview-of-raster-tiles-wmts-and-xyz-layers">
+<h3><a class="toc-backref" href="#id17">機能：ラスタータイルのプレビュー（WMTSおよびXYZレイヤー）</a><a class="headerlink" href="#feature-preview-of-raster-tiles-wmts-and-xyz-layers" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGISの以前のバージョンでは、結果の地図を表示するために、レイヤーのすべてのタイルのダウンロードが完了するまで待つ必要がありました。これは今修正され、地図のキャンバスにタイルがダウンロードされるとすぐに表示され、何かが表示されるまでの時間を大幅に短縮することでユーザーエクスペリエンスが向上します。さらに、より低い解像度またはより高い解像度からの以前にダウンロードされたタイルは、正しい解像度を有するタイルがまだダウンロードされていない領域のプレビュー機能に使用されてもよい。</p>
+<p><img alt="image46" src="../../../_images/007bf6d09a1f67e0c0c4ee71d48081185c0c5c84.gif" /></p>
+<p>この機能は、 <a class="reference external" href="http://www.linz.govt.nz/">土地情報ニュージーランド</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://www.lutraconsulting.co.uk/">Martin Dobias（Lutra Consulting）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-cancellable-rendering-of-rasters-wms-wmts-wcs-and-xyz-layers">
+<h3><a class="toc-backref" href="#id18">機能：ラスター（WMS、WMTS、WCS、XYZレイヤー）のキャンセル可能なレンダリング</a><a class="headerlink" href="#feature-cancellable-rendering-of-rasters-wms-wmts-wcs-and-xyz-layers" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>この機能強化により、リモートサーバーからのラスターレイヤーを操作する際のユーザーエクスペリエンスが向上します。以前は、ユーザーインターフェースがその間に凍っていたので、地図を再びズームまたはパンできるように、ダウンロードが完全に完了するまで待つ必要がありました。これは、ラスターレイヤーのレンダリングがいつでもキャンセルできるという事実によって修正されています。</p>
+<p>この機能は、 <a class="reference external" href="http://www.linz.govt.nz/">土地情報ニュージーランド</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://www.lutraconsulting.co.uk/">Martin Dobias（Lutra Consulting）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="data-management">
+<h2><a class="toc-backref" href="#id19">データ管理</a><a class="headerlink" href="#data-management" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-add-flag-to-only-copy-selected-features">
+<h3><a class="toc-backref" href="#id20">機能：選択した機能のみをコピーするフラグを追加する</a><a class="headerlink" href="#feature-add-flag-to-only-copy-selected-features" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>オフライン編集プラグインは、QGISに同梱されているデフォルトのプラグインで、リモートデータセット（データベースなど）をオフライン化してフィールドで編集し、オフィスに戻ったときに再同期化することができます。これにより、オフライン編集の可能性が拡張され、大きなレイヤーのサブセットでしか動作しません。</p>
+<p><img alt="image47" src="../../../_images/ec977674f356d5376d19be49534818a4cc830c64.png.400x300_q85_crop.png" /></p>
+<p>この機能は、DB Fahrwegdienste GmbHによって資金提供されました。</p>
+<p>この機能は <a class="reference external" href="http://www.opengis.ch/">Matthias Kuhn（OPENGIS.ch）</a> によって開発されました</p>
+</div>
+</div>
+<div class="section" id="forms-and-widgets">
+<h2><a class="toc-backref" href="#id21">フォームとウィジェット</a><a class="headerlink" href="#forms-and-widgets" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-allow-controlling-labels-for-individual-edit-widgets">
+<h3><a class="toc-backref" href="#id22">機能：個々の編集ウィジェットのラベルを制御できるようにする</a><a class="headerlink" href="#feature-allow-controlling-labels-for-individual-edit-widgets" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>フォーム内の個々の編集ウィジェットのラベルを制御できるようにする。ドラッグアンドドロップデザイナーでは、項目をダブルクリックすると、各項目ごとにラベルを個別に表示するかどうかを制御できます。</p>
+<p>さらに、リンク/リンク解除ボタンが関係参照ウィジェットに表示されているかどうかを設定することができます。これは、親がなくても子が存在しない1：n関係を隠すのに便利です。</p>
+<p><img alt="image48" src="../../../_images/6d827c6b286f137ec9de1d97a15c745764494d0a.png.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://geo.zg.ch/">Kanton Zug、GIS-Fachstelle</a> によって資金提供されました</p>
+<p>この機能は <a class="reference external" href="http://www.opengis.ch/">Matthias Kuhn（OPENGIS.ch）</a> によって開発されました</p>
+</div>
+<div class="section" id="feature-conditional-visibility-for-tabs-and-group-boxes">
+<h3><a class="toc-backref" href="#id23">機能：タブとグループボックスの条件付き可視性</a><a class="headerlink" href="#feature-conditional-visibility-for-tabs-and-group-boxes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これにより、タブとグループボックスをドラッグアンドドロップデザイナーフォームで条件付きで表示または非表示にするための新しい設定オプションが追加されました。</p>
+<p>設定は、フィールドコンフィグレーションインターフェイスのデザイナツリーでダブルクリックして行います。</p>
+<p>可視性を制御する式を入力できます。この式は、フォームの変更時に毎回値が再評価され、それに応じて表示/非表示のタブまたはグループボックスが再評価されます。</p>
+<p><img alt="image49" src="../../../_images/8adda1d639ba9b46b15f8a70b38c6cfd407d2515.png.400x300_q85_crop.png" /></p>
+<p>この機能は <a class="reference external" href="http://www.opengis.ch/">Matthias Kuhn（OPENGIS.ch）</a> によって開発されました</p>
+</div>
+<div class="section" id="feature-client-side-default-field-values">
+<h3><a class="toc-backref" href="#id24">機能：クライアント側のデフォルトのフィールド値</a><a class="headerlink" href="#feature-client-side-default-field-values" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>このフィールドのデフォルト値を評価するために使用されるベクターレイヤーフィールドに式を設定できるようにします。デフォルト値式は、デジタル化されたジオメトリなど、呼び出し時に存在する地物のプロパティを利用できます。式変数はデフォルト値式でも使用できるため、ユーザー名、現在の日時、プロジェクトのパスなどを簡単に挿入できます。</p>
+<p><img alt="image50" src="../../../_images/49a9d8a5c38f04d96cf37ad190a97dd4dc4b5025.png.400x300_q85_crop.png" /></p>
+<p>この機能は、DB Fahrwegdienste GmbHによって資金提供されました。</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="map-composer">
+<h2><a class="toc-backref" href="#id25">地図コンポーザ</a><a class="headerlink" href="#map-composer" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-true-north-arrows">
+<h3><a class="toc-backref" href="#id26">機能：真北矢印</a><a class="headerlink" href="#feature-true-north-arrows" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.18では、コンポーザの北矢印を真北に向けるサポートが追加されました。以前はすべての矢印がグリッド北に整列されていましたが、これは極地または非北上の投影（南アフリカの一部の投影システムなど）には適していません。今度は、矢印を北または真北に向けるように選択できます。オプションのオフセット角度もあり、グリッドのコンバージェンスを指定して矢印を磁北に向けることができます。</p>
+<p><img alt="image51" src="../../../_images/b36b83066c2361e4a9647ee830b55b01a04ce4c5.png.400x300_q85_crop.png" /></p>
+<p>この機能は <a class="reference external" href="http://quantarctica.npolar.no">ノルウェー極地研究所のQuantarcticaプロジェクト</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="processing">
+<h2><a class="toc-backref" href="#id27">プロセッシング</a><a class="headerlink" href="#processing" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-point-on-surface-algorithm">
+<h3><a class="toc-backref" href="#id28">機能：表面上のポイントアルゴリズム</a><a class="headerlink" href="#feature-point-on-surface-algorithm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>この新しいアルゴリズムは重心アルゴリズムに似ていますが、重心が対応する地物の外にある場合、 『Point on surface』 アルゴリズムは、対応するポリゴン地物の内部にあるポイントを作成することが保証されています（または、ラインレイヤの対応するライン地物にタッチする ）。</p>
+<p><img alt="image52" src="../../../_images/133a854441e2ade7bec91a48e9a1f1d4b1d012ac.png.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-processing-dissolve-algorithm-accepts-multiple-fields">
+<h3><a class="toc-backref" href="#id29">機能：処理ディゾルブアルゴリズムは複数のフィールドを受け入れます</a><a class="headerlink" href="#feature-processing-dissolve-algorithm-accepts-multiple-fields" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ディゾルブアルゴリズムでは、複数のフィールド値に基づいてディゾルブできるようになりました。以前のQGISのバージョンでは、ディゾルブは地物を単一のフィールド値でグループ化することしかできませんでした。</p>
+<p><img alt="image53" src="../../../_images/a75b372f431c98592bdaccbc0bf4e90654969fa2.PNG.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-optimised-processing-clip-algorithm">
+<h3><a class="toc-backref" href="#id30">機能：最適化処理クリップアルゴリズム</a><a class="headerlink" href="#feature-optimised-processing-clip-algorithm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>処理クリップアルゴリズムは、一般的な使用シナリオに対して最適化されており、結果としてクリッピング操作のスピードアップが大幅に向上しました。例えば：</p>
+<p><strong>2つのポリゴンに対して100万行の道路レイヤをクリッピングする</strong></p>
+<div class="line-block">
+<div class="line"><strong>以前のバージョン：</strong> 5分30秒</div>
+<div class="line">** QGIS 2.18：** 10秒</div>
+</div>
+<p>** 2つのポリゴンに対して500万ポイントのアドレスレイヤをクリッピングする**</p>
+<div class="line-block">
+<div class="line"><strong>以前のバージョン：</strong> 50分</div>
+<div class="line">** QGIS 2.18：** 30秒</div>
+</div>
+<p><img alt="image54" src="../../../_images/f975cb641b319e952264dc1e706deafdfd2b7496.png.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-bounding-boxes-algorithm">
+<h3><a class="toc-backref" href="#id31">機能：バウンディングボックスアルゴリズム</a><a class="headerlink" href="#feature-bounding-boxes-algorithm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>この新しいアルゴリズムは、入力レイヤーの各地物のバウンディングボックス（エンベロープ）を計算します。</p>
+<p><img alt="image55" src="../../../_images/398557f0cfe897a227fea70ceef700f9ab048e2d.png.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-merge-connected-lines-algorithm">
+<h3><a class="toc-backref" href="#id32">機能：連結線アルゴリズムをマージする</a><a class="headerlink" href="#feature-merge-connected-lines-algorithm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>このアルゴリズムは、MultiLineStringジオメトリのすべての接続部分を単一のLineStringジオメトリに結合します。入力されたMultiLineStringジオメトリのいずれかの部分が接続されていない場合、合成ジオメトリは、マージ可能な線や接続されていない線部分を含むMultiLineStringになります。</p>
+<p><img alt="image56" src="../../../_images/7ebf10a71a1c3f28d48a2c19f7ad1f08ca75bf80.PNG.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+<div class="section" id="feature-geometry-boundary-algorithm">
+<h3><a class="toc-backref" href="#id33">機能：幾何境界アルゴリズム</a><a class="headerlink" href="#feature-geometry-boundary-algorithm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>この新しいアルゴリズムは、入力ジオメトリ（すなわちジオメトリのトポロジカル境界）のコンビナトリアル境界のクロージャを返します。たとえば、ポリゴンジオメトリにはポリゴンの各リングの線ストリングで構成される境界があり、線のジオメトリには線の開始点と終了点からなる境界があります。このアルゴリズムはポリゴンまたはラインレイヤーにのみ有効です。</p>
+<p><img alt="image57" src="../../../_images/907b7b5c36af36547f10f33f65e9655a5cbe5a67.png.400x300_q85_crop.png" /></p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="data-providers">
+<h2><a class="toc-backref" href="#id34">データプロバイダ</a><a class="headerlink" href="#data-providers" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-native-support-of-xyz-tile-layers">
+<h3><a class="toc-backref" href="#id35">機能：XYZタイルレイヤーのネイティブサポート</a><a class="headerlink" href="#feature-native-support-of-xyz-tile-layers" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>XYZ形式のラスタータイルがWMSデータプロバイダ内でネイティブにサポートされ、QuickMapServicesやOpenLayersなどのサードパーティのプラグインを使用しなくても、他のソースからのベースマップを表示できます。</p>
+<p>XYZレイヤーへの接続を追加するには、ブラウザドックウィジェットを開き、「タイルサーバー（XYZ）」という項目を探して右クリックして、「新規接続」アクションのポップアップメニューを表示します。 <code class="docutils literal"><span class="pre">{x}</span></code> 、 <code class="docutils literal"><span class="pre">{y}</span></code> 、 <code class="docutils literal"><span class="pre">{z}</span></code> が現在の地図ビューに従って実際のタイル番号に置き換えられるURLを求められます。たとえば、OpenStreetMapベースマップを追加するには、次のURLを使用します： <code class="docutils literal"><span class="pre">http://c.tile.openstreetmap.org/{z}/{x}/{y}.png</span></code></p>
+<p>データプロバイダは、Bingが使用する「クワッドキー」へのXYZタイル番号のエンコードもサポートしています。URLに <code class="docutils literal"><span class="pre">{x}</span></code> 、 <code class="docutils literal"><span class="pre">{y}</span></code> や <code class="docutils literal"><span class="pre">{z}</span></code> の代わりに <code class="docutils literal"><span class="pre">{q}</span></code> を使うだけです。</p>
+<p><img alt="image61" src="../../../_images/f69a3601e9201e38f9a561d40807512035da2298.gif" /></p>
+<p>この機能は <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://www.lutraconsulting.co.uk/">Martin Dobias（Lutra Consulting）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="qgis-server">
+<h2><a class="toc-backref" href="#id36">QGISサーバー</a><a class="headerlink" href="#qgis-server" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-possibility-to-segmentize-feature-info-geometry-in-server">
+<h3><a class="toc-backref" href="#id37">機能：サーバ内の地物情報ジオメトリをセグメント化する可能性</a><a class="headerlink" href="#feature-possibility-to-segmentize-feature-info-geometry-in-server" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>曲線（CircularArc、CompoundCurve、CurvePolygon）を含むジオメトリでは必要ですが、Webクライアント（QGIS Webクライアントなど）ではこれらのジオメトリタイプの表示を処理できません。</p>
+<p>この機能は、[プロジェクトプロパティ]ダイアログの[OWSサーバー]タブで有効にすることができます。</p>
+<p><img alt="image62" src="../../../_images/f4b9cf3ba10669b933eb3f3a5c401f675ad76533.png.400x300_q85_crop.png" /></p>
+<p>この機能は、Andreas Neumannによって資金提供されました</p>
+<p>この機能は <a class="reference external" href="http://www.sourcepole.ch/">Marco Hugentobler（Sourcepole）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2><a class="toc-backref" href="#id38">プラグイン</a><a class="headerlink" href="#plugins" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-db-manager-add-the-ability-to-update-sql-layer">
+<h3><a class="toc-backref" href="#id39">機能：DBマネージャー：SQLレイヤーを更新する機能を追加する</a><a class="headerlink" href="#feature-db-manager-add-the-ability-to-update-sql-layer" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>この機能を使用すると、SQLリクエストに基づいている場合、レイヤー・データソースを更新できます。</p>
+<p>この機能は <a class="reference external" href="http://wwz.ifremer.fr">Ifremer</a> によって資金提供されました</p>
+<p>この機能は <a class="reference external" href="http://3liz.com">3Liz</a> によって開発されました</p>
+</div>
+</div>
+<div class="section" id="programmability">
+<h2><a class="toc-backref" href="#id40">プログラマビリティ</a><a class="headerlink" href="#programmability" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-expose-geos-linear-referencing-function-to-qgsgeometry">
+<h3><a class="toc-backref" href="#id41">機能：GEOS線形参照関数をQgsGeometryに公開する</a><a class="headerlink" href="#feature-expose-geos-linear-referencing-function-to-qgsgeometry" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>新しい関数 <code class="docutils literal"><span class="pre">QgsGeometry::lineLocatePoint()</span></code> が追加され、線ストリングに沿った線ストリング上の最も近い位置から所定の点までの距離を取得します。</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">North Road</a> によって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+<div class="section" id="feature-new-pyqgis-classes-in-2-18">
+<h2><a class="toc-backref" href="#id42">機能：2.18の新しいPyQGISクラス</a><a class="headerlink" href="#feature-new-pyqgis-classes-in-2-18" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="new-core-classes">
+<h3><a class="toc-backref" href="#id43">新しいコアクラス</a><a class="headerlink" href="#new-core-classes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://qgis.org/api/classQgsAnnotation.html">QgsAnnotation</a> - an interface for annotation items which are drawn over a map</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsFeedback.html">QgsFeedback</a> - a base class for feedback objects to be used for cancellation of something running in a worker thread</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsOptionalExpression.html">QgsOptionalExpression</a> - an expression with an additional enabled flag</li>
+</ul>
+</div>
+<div class="section" id="new-gui-classes-reusable-widgets">
+<h3><a class="toc-backref" href="#id44">新しいGUIクラス、再利用可能なウィジェット</a><a class="headerlink" href="#new-gui-classes-reusable-widgets" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://qgis.org/api/classQgsExpressionLineEdit.html">QgsExpressionLineEdit</a> - includes a line edit for entering expressions together with a button to open the expression creation dialog. This widget is designed for use in contexts where no layer fields are available for use in an expression and space is constrained.</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsTabWidget.html">QgsTabWidget</a> - similar to QTabWidget but with additional methods to temporarily hide/show tabs</li>
+</ul>
+</div>
+</div>
+<div class="section" id="feature-new-expression-functions">
+<h2><a class="toc-backref" href="#id45">機能：新しい式の関数</a><a class="headerlink" href="#feature-new-expression-functions" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>QGIS 2.18には、角度/距離補間の関数を含むいくつかの新しい式関数が追加されています。</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">line_merge</span></code> ：MultiLineStringジオメトリを接続されたLineStringsにマージします。</li>
+<li><code class="docutils literal"><span class="pre">boundary</span></code> ：ジオメトリのトポロジカルな境界を返します。つまり、ポリゴンの場合、これはポリゴンのリングを表すMultiLineStringです</li>
+<li><code class="docutils literal"><span class="pre">angle_at_vertex</span></code> ：指定された頂点インデックスのジオメトリに対する平均（二等分線）の角度を返します</li>
+<li><code class="docutils literal"><span class="pre">distance_to_vertex</span></code> ：指定された頂点インデックスまでのジオメトリに沿った距離を返します</li>
+<li><code class="docutils literal"><span class="pre">line_interpolate_angle</span></code> ：ジオメトリに沿って指定された距離でジオメトリに平行な角度を計算します</li>
+<li><code class="docutils literal"><span class="pre">line_interpolate_point</span></code> ：距離のあるライン上のポイントを返します。</li>
+<li><code class="docutils literal"><span class="pre">line_locate_point</span></code> ：指定された点に最も近い最も近い行位置へのラインに沿った距離を返します</li>
+</ul>
+<p>この機能は、Andreas Neumannによって資金提供されました</p>
+<p>この機能は、 <a class="reference external" href="http://north-road.com">Nyall Dawson（North Road）</a> によって開発されました。</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../visualchangelog216/index.html" title="QGIS 2.16の変更履歴"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog30/index.html" title="QGIS 3.0の変更履歴"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >ユーザー向け情報</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" >ビジュアルチェンジログ</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">特に明記されていない場合、全てのコンテンツは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 ライセンス（CC BY-SA） </a> の下で提供されています。</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        画像は <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a> から選択しました
+        
+        
+      </p>
+      <p class="credit">
+        翻訳されていないページ？または、翻訳エラーが見つかりました：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">このページを修正</a>
+        <br/>
+        誤ったテキスト、不足しているテキスト、またはあなたがよく知っている：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">このページを修正</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

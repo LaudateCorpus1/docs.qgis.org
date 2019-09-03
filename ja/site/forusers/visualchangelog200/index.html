@@ -1,0 +1,1008 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGIS 2.0の変更履歴</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" />
+    <link rel="next" title="トレーニング材料" href="../trainingmaterial/index.html" />
+    <link rel="prev" title="QGIS 2.2の変更履歴" href="../visualchangelog220/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../trainingmaterial/index.html" title="トレーニング材料"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog220/index.html" title="QGIS 2.2の変更履歴"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >ユーザー向け情報</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" accesskey="U">ビジュアルチェンジログ</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英語">English</option>
+  <option value="ca" title="カタロニア語">Català</option>
+  <option value="da" title="デンマーク語">Dansk</option>
+  <option value="de" title="ドイツ語">Deutsch</option>
+  <option value="es" title="スペイン語">Español</option>
+  <option value="fa" title="ペルシャ語">فارسی</option>
+  <option value="fi" title="フィンランド語">Suomi</option>
+  <option value="fr" title="フランス語">Français</option>
+  <option value="gl" title="ガリシア語">Galego</option>
+  <option value="id" title="インドネシア語">Bahasa Indonesia</option>
+  <option value="it" title="イタリア語">Italiano</option>
+  <option value="hu" title="ハンガリー語">Magyar</option>
+  <option value="ja" title="日本語">日本語</option>
+  <option value="km_KH" title="クメール語">ភាសាខ្មែរ    </option>
+  <option value="ko" title="韓国語">한국어</option>
+  <option value="lt" title="リトアニア語">Lietuvių</option>
+  <option value="nl" title="ドイツ語">Nederlands</option>
+  <option value="pl" title="ポーランド語">Polski</option>
+  <option value="pt_BR" title="ポルトガル語(ブラジル)">Português (Brasil)</option>
+  <option value="pt_PT" title="ポルトガル語">Português</option>
+  <option value="ro" title="ルーマニア語">Română</option>
+  <option value="tr" title="トルコ語">Türkçe</option>
+  <option value="ru" title="ロシア語">Русский</option>
+  <option value="uk" title="ウクライナ語">Українська</option>
+  <option value="zh-Hans" title="中国語（簡体字）">簡体中文</option>
+  <option value="zh-Hant" title="中国語（繁体字）">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/visualchangelog200/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>ありがとうございます！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">いますぐ寄付</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>あなたの寄付をありがとう！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGISは無償であり、私たちの愛の労働を楽しんで、他の人もそれを楽しむことができるように、あなたのダウンロードしたコピーを広範囲に共有して広げることを奨励することを願っています。私たちはとても敬具です！</p>'+
+            '<p id="stripeerr" style="display:none;">残念ながら、寄付の処理中にエラーが発生しました。後でやり直すか、finance@qgis.orgまでご連絡ください。</p>'+
+            '<p>QGISチーム</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">このメッセージを閉じる</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">QGISについて</a></li>
+            <li><a href="../index.html">ユーザー向け情報</a></li>
+            <li><a href="../../getinvolved/index.html">参加する</a></li>
+            <li><a href="../../../docs/index.html">ドキュメント</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="検索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../visualchangelog220/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../trainingmaterial/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">QGISにできること</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">ユーザー向け情報</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">QGISのダウンロード</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualchangelogs.html">ビジュアルチェンジログ</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog38/index.html">Changelog for QGIS 3.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog36/index.html">QGIS 3.6 の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog34/index.html">QGIS 3.4 LTRの変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog32/index.html">QGIS 3.2の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog30/index.html">QGIS 3.0の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog218/index.html">QGIS 2.18の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog216/index.html">QGIS 2.16の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog214/index.html">QGIS 2.14の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog212/index.html">QGIS 2.12の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog210/index.html">QGIS 2.10の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog28/index.html">QGIS 2.8の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog260/index.html">QGIS 2.6の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog240/index.html">QGIS 2.4の変更履歴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog220/index.html">QGIS 2.2の変更履歴</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QGIS 2.0の変更履歴</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#analysis-tools">解析ツール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#application-and-project-options">アプリケーションとプロジェクトオプション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#browser">ブラウザ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-providers">データプロバイダ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general">一般情報</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelling">ラベリング</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layer-legend">レイヤ凡例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-composer">マップコンポーザ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plugins">プラグイン</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmability">プログラマビリティ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">シンボロジ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-interface">ユーザーインターフェース</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">トレーニング材料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">サポート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">ユーザグループ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">商用サポート</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../books/index.html">書籍</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">参加する / 開発</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">文書</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="changelog-for-qgis-2-0">
+<span id="changelog20"></span><h1>QGIS 2.0の変更履歴<a class="headerlink" href="#changelog-for-qgis-2-0" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><a class="reference internal" href="#analysis-tools" id="id2">解析ツール</a><ul>
+<li><a class="reference internal" href="#feature-processing-commander" id="id3">機能：プロセッシングコマンダー</a></li>
+<li><a class="reference internal" href="#feature-heatmap-plugin-improvements" id="id4">機能：ヒートマッププラグインの改善</a></li>
+<li><a class="reference internal" href="#feature-processing-support" id="id5">機能：プロセッシングサポート</a></li>
+<li><a class="reference internal" href="#feature-processing-modeller" id="id6">機能: プロセッシングモデラー</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#application-and-project-options" id="id7">アプリケーションとプロジェクトオプション</a><ul>
+<li><a class="reference internal" href="#feature-define-default-startup-project-and-project-templates" id="id8">機能: デフォルトの起動プロジェクト指定とプロジェクトテンプレート</a></li>
+<li><a class="reference internal" href="#feature-system-environment-variables" id="id9">機能：システム環境変数</a></li>
+<li><a class="reference internal" href="#feature-user-defined-zoom-scales" id="id10">機能：ユーザー定義のズーム縮尺</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#browser" id="id11">ブラウザ</a><ul>
+<li><a class="reference internal" href="#feature-improvements-to-in-app-browser-panel" id="id12">機能:アプリ内ブラウザパネルの改善</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-providers" id="id13">データプロバイダ</a><ul>
+<li><a class="reference internal" href="#feature-raster-data-provider-overhaul" id="id14">機能：ラスターデータプロバイダーオーバーホール</a></li>
+<li><a class="reference internal" href="#feature-oracle-spatial-support" id="id15">機能：Oracle Spatialのサポート</a></li>
+<li><a class="reference internal" href="#feature-web-coverage-service-provider-added" id="id16">機能：ウェブカバレッジサービスプロバイダが追加されました</a></li>
+<li><a class="reference internal" href="#feature-raster-2-cumulative-cut-by-default" id="id17">機能：デフォルトでラスター2％累積カット</a></li>
+<li><a class="reference internal" href="#feature-wms-identify-format" id="id18">機能：フォーマットを識別するWMS</a></li>
+<li><a class="reference internal" href="#feature-wmts-support" id="id19">機能: WMTS のサポート</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general" id="id20">一般情報</a><ul>
+<li><a class="reference internal" href="#feature-quantum-gis-is-now-known-only-as-qgis" id="id21">機能：Quantum GISは今や 『QGIS』 という名前のみ利用しています.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labelling" id="id22">ラベリング</a><ul>
+<li><a class="reference internal" href="#feature-new-labelling-system" id="id23">機能：新しいラベリングシステム</a></li>
+<li><a class="reference internal" href="#feature-expression-based-label-properties" id="id24">機能：式ベースのラベルプロパティ</a></li>
+<li><a class="reference internal" href="#feature-older-labelling-engine-deprecated" id="id25">機能: 古いラベルエンジンは廃止されました</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-legend" id="id26">レイヤ凡例</a><ul>
+<li><a class="reference internal" href="#feature-legend-visual-feedback-and-options" id="id27">特集：凡例のビジュアルフィードバックとオプション</a></li>
+<li><a class="reference internal" href="#feature-duplicate-existing-map-layer" id="id28">機能：既存の地図レイヤーを複製する</a></li>
+<li><a class="reference internal" href="#feature-multi-layer-toggle-editing-commands" id="id29">機能：マルチレイヤー編集コマンドの切り替え</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-composer" id="id30">マップコンポーザ</a><ul>
+<li><a class="reference internal" href="#feature-html-map-items" id="id31">機能: HTML マップアイテム</a></li>
+<li><a class="reference internal" href="#feature-multipage-support" id="id32">機能：複数ページのサポート</a></li>
+<li><a class="reference internal" href="#feature-expressions-in-composer-labels" id="id33">機能:コンポーザラベルで式を利用できるようになりました</a></li>
+<li><a class="reference internal" href="#feature-auto-snap-lines" id="id34">機能：オートスナップ線</a></li>
+<li><a class="reference internal" href="#feature-manual-snap-lines" id="id35">機能：手動スナップ線</a></li>
+<li><a class="reference internal" href="#feature-map-series-generation" id="id36">機能：地図シリーズ生成</a></li>
+<li><a class="reference internal" href="#feature-automatic-overview-support-in-map-frame" id="id37">機能：地図フレームでの自動概要サポート</a></li>
+<li><a class="reference internal" href="#feature-layer-blending" id="id38">機能:レイヤの混合</a></li>
+<li><a class="reference internal" href="#feature-html-label-support" id="id39">機能:HTMLラベルサポート</a></li>
+<li><a class="reference internal" href="#feature-multicolumn-composer-legend" id="id40">機能:コンポーザの凡例でマルチカラムのサポート</a></li>
+<li><a class="reference internal" href="#feature-updates-to-map-composer-management" id="id41">機能：マップ・コンポーザー管理の更新</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins" id="id42">プラグイン</a><ul>
+<li><a class="reference internal" href="#feature-revamped-plugin-manager" id="id43">機能：プラグインマネージャの再構築</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmability" id="id44">プログラマビリティ</a><ul>
+<li><a class="reference internal" href="#feature-new-python-console" id="id45">機能:新しいPythonコンソール</a></li>
+<li><a class="reference internal" href="#feature-even-more-expression-functions" id="id46">機能：より多くの式関数</a></li>
+<li><a class="reference internal" href="#feature-custom-expression-functions" id="id47">機能:特別な式の関数</a></li>
+<li><a class="reference internal" href="#feature-new-cleaner-python-api" id="id48">機能:新しいクリーナーPython API</a></li>
+<li><a class="reference internal" href="#feature-code-compatibility-with-version-1-x-releases" id="id49">機能:バージョン1.xリリースとのコード互換性</a></li>
+<li><a class="reference internal" href="#feature-python-project-macros" id="id50">機能:Pythonプロジェクトマクロ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symbology" id="id51">シンボロジ</a><ul>
+<li><a class="reference internal" href="#feature-data-defined-properties" id="id52">機能：データで定義されたプロパティ</a></li>
+<li><a class="reference internal" href="#feature-improved-symbol-layer-management" id="id53">機能：シンボルレイヤー管理の改善</a></li>
+<li><a class="reference internal" href="#feature-support-for-transparency-in-colour-definitions" id="id54">機能：カラー定義の透過性のサポート</a></li>
+<li><a class="reference internal" href="#feature-color-control-for-raster-layers" id="id55">機能：ラスターレイヤーのカラーコントロール</a></li>
+<li><a class="reference internal" href="#feature-copy-symbology-between-layers" id="id56">機能：レイヤー間でシンボロジをコピーする</a></li>
+<li><a class="reference internal" href="#feature-save-styles-in-your-database" id="id57">機能：データベースにスタイルを保存する</a></li>
+<li><a class="reference internal" href="#feature-colour-ramp-support" id="id58">機能：カラーランプのサポート</a></li>
+<li><a class="reference internal" href="#feature-set-custom-default-styles-for-all-layer-types" id="id59">機能：すべてのレイヤータイプのカスタムデフォルトスタイルを設定する</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-interface" id="id60">ユーザーインターフェース</a><ul>
+<li><a class="reference internal" href="#feature-new-icon-theme" id="id61">機能：新しいアイコンテーマ</a></li>
+<li><a class="reference internal" href="#feature-side-tabs-collapsable-groups" id="id62">機能：サイドタブ、折りたたみ可能なグループ</a></li>
+<li><a class="reference internal" href="#feature-soft-notifications" id="id63">機能：ソフト通知</a></li>
+<li><a class="reference internal" href="#feature-application-custom-font-and-qt-stylesheet" id="id64">機能：アプリケーションのカスタムフォントとQtスタイルシート</a></li>
+<li><a class="reference internal" href="#feature-live-color-chooser-dialogs-and-buttons" id="id65">機能:ライブカラー選択ダイアログとボタン</a></li>
+<li><a class="reference internal" href="#feature-svg-annotations" id="id66">機能:SVG注記</a></li>
+<li><a class="reference internal" href="#feature-drag-and-drop-form-builder" id="id67">機能：ドラッグアンドドロップフォームビルダ</a></li>
+<li><a class="reference internal" href="#feature-default-action-tool" id="id68">機能：デフォルトのアクションツール</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="analysis-tools">
+<h2><a class="toc-backref" href="#id2">解析ツール</a><a class="headerlink" href="#analysis-tools" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-processing-commander">
+<h3><a class="toc-backref" href="#id3">機能：プロセッシングコマンダー</a><a class="headerlink" href="#feature-processing-commander" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ジオプロセシング機能に素早くアクセスするために、単に処理司令官（はCtrl + Alt + M）を起動し、あなたが探しているツールの名前を入力し始めます。司令官はあなたに利用可能なオプションを表示し、あなたのためにそれらを起動します。これ以上のツールを見つけるために、メニューを検索しません。彼らはあなたの指先に今あります。</p>
+<p><img alt="image1" src="../../../_images/processing_commander_2.png" /></p>
+</div>
+<div class="section" id="feature-heatmap-plugin-improvements">
+<h3><a class="toc-backref" href="#id4">機能：ヒートマッププラグインの改善</a><a class="headerlink" href="#feature-heatmap-plugin-improvements" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ヒートマッププラグインは、ヒートマップのはるかに高速に作成して、その結果、多くの改良と最適化を見てきました。また、今、カーネル関数は、ヒートマップを作成するために使用されているのかを選択できます。</p>
+<p><img alt="image2" src="../../../_images/Selection_027.png" /></p>
+</div>
+<div class="section" id="feature-processing-support">
+<h3><a class="toc-backref" href="#id5">機能：プロセッシングサポート</a><a class="headerlink" href="#feature-processing-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SEXTANTEプロジェクトは、コア機能としてQGISに移植され、組み込まれています。 SEXTANTEは「プロセッシング」に改名され、QGISの新しいメニューが導入され、豊富な空間解析ツールのツールボックスにアクセスできます。 処理ツールボックスには、GRASS、OTB、SAGAなどの多くの一般的なオープンソースツールの解析機能へのアクセスを提供するために、新しいツールやフックを簡単に追加できるようにするPythonプログラミングAPIが用意されています。</p>
+<p><img alt="image3" src="../../../_images/Selection_028.png" /></p>
+</div>
+<div class="section" id="feature-processing-modeller">
+<h3><a class="toc-backref" href="#id6">機能: プロセッシングモデラー</a><a class="headerlink" href="#feature-processing-modeller" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>新しい処理フレームワークの大きな特徴の1つは、ツールをグラフィカルに組み合わせる機能です。** Processing Modeller <a href="#id1"><span class="problematic" id="id2">**</span></a>を使用すると、一連の小さな単一目的モジュールから複雑な分析を構築できます。これらのモデルを保存し、より複雑なモデルのビルディングブロックとして使用することができます。すばらしいパワーがQGISに統合され、使いやすい！</p>
+<p><img alt="image4" src="../../../_images/Processing_modeler_029.png" /></p>
+</div>
+</div>
+<div class="section" id="application-and-project-options">
+<h2><a class="toc-backref" href="#id7">アプリケーションとプロジェクトオプション</a><a class="headerlink" href="#application-and-project-options" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-define-default-startup-project-and-project-templates">
+<h3><a class="toc-backref" href="#id8">機能: デフォルトの起動プロジェクト指定とプロジェクトテンプレート</a><a class="headerlink" href="#feature-define-default-startup-project-and-project-templates" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.0を使用すると、QGISを起動すると、最後に実行したプロジェクトが読み込まれます。 on）、 `` Specific``（QGIS起動時に常に特定のプロジェクトを読み込みます）。プロジェクトテンプレートディレクトリを使用して、テンプレートプロジェクトを保存する場所を指定することができます。そのディレクトリに格納されているプロジェクトは `` Project  - &gt; New from template``メニューを呼び出すときにテンプレートとして利用できます。</p>
+<p><img alt="image5" src="../../../_images/Screen_Shot_2013-09-12_at_11.23.02_PM.png" /></p>
+</div>
+<div class="section" id="feature-system-environment-variables">
+<h3><a class="toc-backref" href="#id9">機能：システム環境変数</a><a class="headerlink" href="#feature-system-environment-variables" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>現在のシステム環境変数は、アプリケーションの[オプション]ダイアログで表示および設定することができるようになりました。GUIアプリケーションが必ずしもユーザーのシェル環境を継承しないMacなどのプラットフォームに役立ちます。また、SAGA、GRASSなどの処理ツールボックスで制御される外部ツールセットの環境変数の設定や表示にも便利です。ソースコードの特定のセクションのデバッグ出力をオンにするために使用します。</p>
+<p><img alt="image6" src="../../../_images/changelog-2.0_sys-env-options.png" /></p>
+</div>
+<div class="section" id="feature-user-defined-zoom-scales">
+<h3><a class="toc-backref" href="#id10">機能：ユーザー定義のズーム縮尺</a><a class="headerlink" href="#feature-user-defined-zoom-scales" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これで、アプリケーション用にズームスケールのリストを構成できるようになりました。オプションで、プロジェクトごとにオーバーライドできます。このリストはメインウィンドウのステータスバーの `` Scale``ポップアップコンボボックスに表示され、現在のデータソースを効率よく表示したり操作したりするための既知のスケールにすばやくアクセスできます。定義されたスケールは、他のプロジェクトまたは別のQGISアプリケーションにインポートできるXMLファイルにエクスポートできます。</p>
+<p><img alt="image7" src="../../../_images/changelog-2.0_predefined-scales.png" /></p>
+</div>
+</div>
+<div class="section" id="browser">
+<h2><a class="toc-backref" href="#id11">ブラウザ</a><a class="headerlink" href="#browser" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-improvements-to-in-app-browser-panel">
+<h3><a class="toc-backref" href="#id12">機能:アプリ内ブラウザパネルの改善</a><a class="headerlink" href="#feature-improvements-to-in-app-browser-panel" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li>ワイルドカードまたは正規表現でディレクトリをフィルタできます</li>
+<li>新しい <a href="#id1"><span class="problematic" id="id2">``</span></a>プロジェクトホーム <a href="#id3"><span class="problematic" id="id4">``</span></a>（現在のプロジェクトの親ディレクトリ）</li>
+<li>ダイアログで選択したディレクトリの `` Properties``を表示します</li>
+<li>どのディレクトリを <code class="docutils literal"><span class="pre">Fast</span> <span class="pre">scan</span></code> するか選択して下さい</li>
+<li>ファイルシステムのブラウズダイアログで `` Favourites``に直接 <a href="#id1"><span class="problematic" id="id2">``</span></a>ディレクトリを追加する <a href="#id3"><span class="problematic" id="id4">``</span></a>を選択する</li>
+<li>Macにおける新しい <code class="docutils literal"><span class="pre">/Volumes</span></code>  (外部ドライブアクセス用の隠しディレクトリ)</li>
+<li>新しい `` OWS``グループ（使用可能なマップサーバ接続の照合）</li>
+<li>ブラウザパネル間のドラッグアンドドロップ操作のための2番目のブラウザを開きます（ `` View  - &gt; Panels  - &gt; Browser（2） <a href="#id1"><span class="problematic" id="id2">``</span></a>）</li>
+<li>アイコンがアイテムグループタイプ（ファイルシステム、データベース、マップサーバ）でソートされました</li>
+<li>レイヤー `` Properties``のビジュアルレイアウトが改善されました</li>
+</ul>
+<p><img alt="image8" src="../../../_images/changelog-2.0_browser.png" /></p>
+</div>
+</div>
+<div class="section" id="data-providers">
+<h2><a class="toc-backref" href="#id13">データプロバイダ</a><a class="headerlink" href="#data-providers" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-raster-data-provider-overhaul">
+<h3><a class="toc-backref" href="#id14">機能：ラスターデータプロバイダーオーバーホール</a><a class="headerlink" href="#feature-raster-data-provider-overhaul" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ラスターデータプロバイダーシステムは完全にオーバーホールされました。この作業から生まれた最も優れた新機能の1つは、新しいレイヤーとしてラスターレイヤーを保存するために、[レイヤー -&gt;名前を付けて保存]機能です。このプロセスでは、レイヤーをクリップ、再サンプリング、および新しい[座標参照系]に再投影できます。ラスタレイヤーをレンダリング画像として保存することもできます。たとえば、カラーパレットを適用した単一バンドラスターを使用する場合、レンダリングレイヤーをジオリファレンスされたRGBレイヤーに保存できます。</p>
+<p><img alt="image9" src="../../../_images/Selection_017.png" /></p>
+</div>
+<div class="section" id="feature-oracle-spatial-support">
+<h3><a class="toc-backref" href="#id15">機能：Oracle Spatialのサポート</a><a class="headerlink" href="#feature-oracle-spatial-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.0にはOracle Spatialのサポートが追加されました。</p>
+<p><img alt="image10" src="../../../_images/oracle.png" /></p>
+</div>
+<div class="section" id="feature-web-coverage-service-provider-added">
+<h3><a class="toc-backref" href="#id16">機能：ウェブカバレッジサービスプロバイダが追加されました</a><a class="headerlink" href="#feature-web-coverage-service-provider-added" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGISはWeb Coverage Serviceレイヤーのネイティブサポートを提供します.WCSを追加するプロセスは、WMSレイヤーまたはWFSレイヤーを追加するプロセスに似ています。</p>
+</div>
+<div class="section" id="feature-raster-2-cumulative-cut-by-default">
+<h3><a class="toc-backref" href="#id17">機能：デフォルトでラスター2％累積カット</a><a class="headerlink" href="#feature-raster-2-cumulative-cut-by-default" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>多くのラスター画像製品は、外見が洗い流された画像をもたらす多数の異常値を有する。QGIS 2.0では、画像の色空間を決定する際にデフォルトで2％〜98％の累積カットを使用するなど、ラスターのレンダリング動作に対して、より詳細な制御が可能です。ここの画像は、デフォルト設定で同じ画像をレンダリングするときのQGIS 1.8（左）対QGIS 2.0（右）を示しています。</p>
+<p><img alt="image11" src="../../../_images/Selection_023.png" /></p>
+</div>
+<div class="section" id="feature-wms-identify-format">
+<h3><a class="toc-backref" href="#id18">機能：フォーマットを識別するWMS</a><a class="headerlink" href="#feature-wms-identify-format" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>複数の既知のフォーマットがサーバーによってサポートされている場合、WMSレイヤーの識別ツールの結果のフォーマットを選択できるようになりました。サポートされるフォーマットは、HTML、地物（GML）、およびプレーンテキストです。地物（GML）フォーマットが選択されている場合、結果はベクターレイヤーと同じ形式になり、ジオメトリが強調表示され、属性とジオメトリを含む地物がクリップボードにコピーされ、別のレイヤーに貼り付けられます。</p>
+<p><img alt="image12" src="../../../_images/wms-identify.png" /></p>
+</div>
+<div class="section" id="feature-wmts-support">
+<h3><a class="toc-backref" href="#id19">機能: WMTS のサポート</a><a class="headerlink" href="#feature-wmts-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGISのWMSクライアントは、タイムスライスなどのサブデータセットの選択を含むWMTS（Web Mapping Tile Service）をサポートするようになりました。準拠しているサーバーからWMSレイヤーを追加する場合は、表示するタイムスライスを選択するよう求められます。</p>
+<p><img alt="image13" src="../../../_images/Selection_035.png" /></p>
+</div>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id20">一般情報</a><a class="headerlink" href="#general" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-quantum-gis-is-now-known-only-as-qgis">
+<h3><a class="toc-backref" href="#id21">機能：Quantum GISは今や 『QGIS』 という名前のみ利用しています.</a><a class="headerlink" href="#feature-quantum-gis-is-now-known-only-as-qgis" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>「Quantum GIS」の「Quantum」は決して特別な意味を持ちませんでした。私たちのプロジェクトを「Quantum GIS」と「QGIS」の両方として引用することの二重性は混乱を招いていました。私たちはプロジェクトを合理化しており、そのプロセスの一環として正式に「クォンタム」という言葉の使用をやめています。以来、「QGIS」（大文字のすべての文字で綴られています）としてのみ知られています。これを反映するため、コードと広報資料をすべて更新します。</p>
+<p><img alt="image14" src="../../../_images/qgis.png" /></p>
+</div>
+</div>
+<div class="section" id="labelling">
+<h2><a class="toc-backref" href="#id22">ラベリング</a><a class="headerlink" href="#labelling" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-new-labelling-system">
+<h3><a class="toc-backref" href="#id23">機能：新しいラベリングシステム</a><a class="headerlink" href="#feature-new-labelling-system" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ラベリングシステムは完全に改良されました。これには、ドロップシャドウ、ハイウェイシールド、より多くのデータバインドオプション、さまざまなパフォーマンス強化など、多くの新機能が追加されました。私たちはゆっくりと「古いラベル」システムをやっていますが、このリリースで利用可能な機能はまだありますが、フォローアップリリースでは消えてしまうはずです。</p>
+<p><img alt="image15" src="../../../_images/Layer_labeling_settings_003_1.png" /></p>
+</div>
+<div class="section" id="feature-expression-based-label-properties">
+<h3><a class="toc-backref" href="#id24">機能：式ベースのラベルプロパティ</a><a class="headerlink" href="#feature-expression-based-label-properties" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ラベルのプロパティには、通常のラベルとルール式のフルパワーを使用できるようになりました。ほぼすべてのプロパティを式またはフィールド値で定義して、ラベル結果をより詳細に制御できます。式はフィールドを参照することができます（たとえば、フォントサイズをフィールド 『font’の値に設定することもできます）。より複雑なロジックを含めることもできます。</p>
+<p>バインド可能なプロパティの例を次に示します。</p>
+<ul class="simple">
+<li>フォント</li>
+<li>サイズ</li>
+<li>スタイル</li>
+<li>バッファサイズ</li>
+</ul>
+<p><img alt="image16" src="../../../_images/2013-09-05_09_44_59-qgis-dev-bin.png" /></p>
+</div>
+<div class="section" id="feature-older-labelling-engine-deprecated">
+<h3><a class="toc-backref" href="#id25">機能: 古いラベルエンジンは廃止されました</a><a class="headerlink" href="#feature-older-labelling-engine-deprecated" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS &lt;= 1.8で利用可能な古いラベル付けエンジンの使用は現在推奨されていませんが、廃止されていません。これは、ユーザーが既存のプロジェクトを古いラベルエンジンから新しいラベルエンジンに移行できるようにするためです。</p>
+<p>以下のガイドラインはQGIS2.0で利用されている古いエンジン用です:</p>
+<ul class="simple">
+<li>廃止予定のラベリングタブは、新規プロジェクトまたはそのラベリングエンジンを使用しない古いオープンプロジェクトの「ベクターレイヤープロパティー」ダイアログから削除されます。</li>
+<li>Deprecated tab remains active for older opened projects, if any layer
+uses them, and does not go away even if saving the project with no
+layers having the older labelling engine enabled.</li>
+</ul>
+<p>非推奨のラベリングタブは、現在のプロジェクトでPythonコンソールコマンドを使用して有効/無効にすることができます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">writeEntry</span><span class="p">(</span><span class="s1">&#39;DeprecatedLabels&#39;</span><span class="p">,</span> <span class="s1">&#39;/Enabled&#39;</span><span class="p">,</span> <span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">)</span>
+<span class="go"># or</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">removeEntry</span><span class="p">(</span><span class="s1">&#39;DeprecatedLabels&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>注意</strong>：QGISの次の安定リリースの前に廃止予定のラベルエンジンが完全に削除される可能性が非常に高い* <a href="#id1"><span class="problematic" id="id2">*</span></a>があります。古いプロジェクトを移行してください。</p>
+<p><img alt="image17" src="../../../_images/changelog-2.0_labels-deprecated.png" /></p>
+</div>
+</div>
+<div class="section" id="layer-legend">
+<h2><a class="toc-backref" href="#id26">レイヤ凡例</a><a class="headerlink" href="#layer-legend" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-legend-visual-feedback-and-options">
+<h3><a class="toc-backref" href="#id27">特集：凡例のビジュアルフィードバックとオプション</a><a class="headerlink" href="#feature-legend-visual-feedback-and-options" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li>レイヤー内の地物とシンボルごとの合計数</li>
+<li>編集モードのベクターレイヤーには、コミットされていない（保存されていない）編集を示す赤い鉛筆が表示されるようになりました</li>
+<li>アクティブレイヤーには下線が引かれ、マルチレイヤーの選択や選択がない場合に表示されます</li>
+<li>非リスト項目の空白をクリックすると、選択項目がクリアされるようになりました</li>
+<li>`` Right-clicks``はコンテキストメニューを表示する前に <a href="#id1"><span class="problematic" id="id2">``</span></a>左クリック 『』として扱われ、2回ではなく1回のクリックが可能です</li>
+<li>グループとレイヤーは、オプションで太字のフォントスタイルにすることができます</li>
+<li>このようなレンダリングが遅いかもしれないプロジェクトでは、ラスターレイヤーで生成されたプレビューアイコンをオフにできるようになりました</li>
+</ul>
+<p><img alt="image18" src="../../../_images/changelog-2.0_visual-options.png" /></p>
+</div>
+<div class="section" id="feature-duplicate-existing-map-layer">
+<h3><a class="toc-backref" href="#id28">機能：既存の地図レイヤーを複製する</a><a class="headerlink" href="#feature-duplicate-existing-map-layer" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>地図レイヤーの凡例で、選択したベクターレイヤーとラスターレイヤーを複製します。同じデータソースを別のレイヤーとして再度インポートするのと同様に、スタイルとシンボル属性をコピー/貼り付けます。</p>
+<p><img alt="image19" src="../../../_images/changelog-2.0_dup-layer_1.png" /></p>
+</div>
+<div class="section" id="feature-multi-layer-toggle-editing-commands">
+<h3><a class="toc-backref" href="#id29">機能：マルチレイヤー編集コマンドの切り替え</a><a class="headerlink" href="#feature-multi-layer-toggle-editing-commands" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>凡例で複数のレイヤーを選択できるようになり、編集モードのベクタレイヤーのいずれかがある場合は、現在のコミットされていない編集を保存、ロールバック、またはキャンセルすることを選択できます。ユーザーは、選択に関係なく、すべてのレイヤーでこれらのアクションを適用することもできます。</p>
+<p><img alt="image20" src="../../../_images/changelog-2.0_current-edits.png" /></p>
+</div>
+</div>
+<div class="section" id="map-composer">
+<h2><a class="toc-backref" href="#id30">マップコンポーザ</a><a class="headerlink" href="#map-composer" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-html-map-items">
+<h3><a class="toc-backref" href="#id31">機能: HTML マップアイテム</a><a class="headerlink" href="#feature-html-map-items" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>html要素をマップに配置できるようになりました。</p>
+<p><img alt="image21" src="../../../_images/Composer_1_006.png" /></p>
+</div>
+<div class="section" id="feature-multipage-support">
+<h3><a class="toc-backref" href="#id32">機能：複数ページのサポート</a><a class="headerlink" href="#feature-multipage-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>単一のコンポーザウィンドウは現在は複数のページを持つことができます.</p>
+<p><img alt="image22" src="../../../_images/2013-09-08_22_31_33-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-expressions-in-composer-labels">
+<h3><a class="toc-backref" href="#id33">機能:コンポーザラベルで式を利用できるようになりました</a><a class="headerlink" href="#feature-expressions-in-composer-labels" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>1.8の作曲者ラベル項目はかなり限定されており、$ CURRENT _DATEという単一のトークンしか使用できませんでした。2.0では完全な表現のサポートが追加され、最終ラベルのパワーとコントロールが大きくなりました。</p>
+<p>次のような式を持つラベル。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This was printed on: [% format_date( $now, &#39;dd.MM.yyyy&#39;)%]
+</pre></div>
+</div>
+<p>印刷時間(と表示時間）は調べられて以下の表示があります:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">was</span> <span class="n">printed</span> <span class="n">on</span><span class="p">:</span> <span class="mf">06.09</span><span class="o">.</span><span class="mi">2013</span>
+</pre></div>
+</div>
+<p>地図帳の生成が有効になっている場合、現在アクティブな地物の属性値には次のような式を使用できるようになります。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Asset</span> <span class="n">ID</span> <span class="p">[</span><span class="o">%</span> <span class="s2">&quot;ID&quot;</span> <span class="o">%</span><span class="p">]</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">Tree</span> <span class="n">Type</span> <span class="ow">is</span> <span class="p">[</span><span class="o">%</span> <span class="s2">&quot;TreeType&quot;</span> <span class="o">%</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="image23" src="../../../_images/2013-09-06_09_53_30-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-auto-snap-lines">
+<h3><a class="toc-backref" href="#id34">機能：オートスナップ線</a><a class="headerlink" href="#feature-auto-snap-lines" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>すばらしい印刷地図を作成するには、マップ項目をきちんと整列させることが重要です。オブジェクトを別のオブジェクトの近くにドラッグするだけで、簡単に作曲者のオブジェクトを整列させることができる自動スナップラインが追加されました。</p>
+<p><img alt="image24" src="../../../_images/2013-09-05_10_05_01-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-manual-snap-lines">
+<h3><a class="toc-backref" href="#id35">機能：手動スナップ線</a><a class="headerlink" href="#feature-manual-snap-lines" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>時には、オブジェクトをカーテンディスタンスに合わせる必要があります。新しいマニュアルスナップラインを使用すると、手動スナップ線を追加することができます。これにより、共通のアライメントを使用してオブジェクトを整列させることができます。トップまたはサイドルーラーからドラッグして新しいガイドラインを追加するだけです。</p>
+<p><img alt="image25" src="../../../_images/2013-09-05_10_09_41-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-map-series-generation">
+<h3><a class="toc-backref" href="#id36">機能：地図シリーズ生成</a><a class="headerlink" href="#feature-map-series-generation" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これまで地図シリーズを生成する必要がありましたか？もちろんあります。コンポーザには、地図帳機能を使用した地図シリーズ生成機能が組み込まれています。カバレッジレイヤーはポイント、ライン、ポリゴンにすることができ、現在の地物属性データは、その場で値置換のためのラベルで使用できます。</p>
+<p><img alt="image26" src="../../../_images/Picture1.png" /></p>
+</div>
+<div class="section" id="feature-automatic-overview-support-in-map-frame">
+<h3><a class="toc-backref" href="#id37">機能：地図フレームでの自動概要サポート</a><a class="headerlink" href="#feature-automatic-overview-support-in-map-frame" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>メインの地図フレームの現在のエリアをより小さなオーバービューウィンドウに表示する必要があります。さあ、できます。マップフレームには、他の範囲を表示する機能が含まれており、移動すると更新されます。これをアトラス世代の特徴と共に使用することで、コンポーザの中核はいくらか滑らかなマップ生成を可能にします。概要フレームスタイルは、通常のマップポリゴンオブジェクトと同じスタイリングを使用しており、創造性は決して制限されません。</p>
+<p><img alt="image27" src="../../../_images/Picture1_1.png" /></p>
+</div>
+<div class="section" id="feature-layer-blending">
+<h3><a class="toc-backref" href="#id38">機能:レイヤの混合</a><a class="headerlink" href="#feature-layer-blending" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>レイヤブレンドを使用すると、レイヤを新しくエキサイティングな方法で組み合わせることができます。古いバージョンでは、レイヤーを透明にするだけでしたが、 「乗算する」、 「暗くなるだけ」などのより高度なオプションを選択できるようになりました。</p>
+<p>ブレンドは、通常の地図ビューや印刷コンポーザーで使用できます。プリントコンポーザーでのブレンドを使って背景画像を最大限に活用する方法についての短いチュートリアルについては、「QGISを使ったビンテージマップデザイン」を参照してください。 &lt;<a class="reference external" href="http://anitagraser.com/2013/07/29/vintage-map-design">http://anitagraser.com/2013/07/29/vintage-map-design</a> -using-qgis /&gt;`__ です。</p>
+<p><img alt="image28" src="../../../_images/printcomposer_blending_1.png" /></p>
+</div>
+<div class="section" id="feature-html-label-support">
+<h3><a class="toc-backref" href="#id39">機能:HTMLラベルサポート</a><a class="headerlink" href="#feature-html-label-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>HTMLサポートには、マップ・コンポーザーのラベル項目が追加され、最終的なマップをさらに詳細に制御できます。HTMLラベルはCSSスタイルシート、html、さらにはjavascriptをサポートしています。</p>
+<p><img alt="image29" src="../../../_images/html.png" /></p>
+</div>
+<div class="section" id="feature-multicolumn-composer-legend">
+<h3><a class="toc-backref" href="#id40">機能:コンポーザの凡例でマルチカラムのサポート</a><a class="headerlink" href="#feature-multicolumn-composer-legend" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コンポーザーの凡例は複数の列をサポートするようになりました。多くのクラスを持つ単一のレイヤーを複数の列に分割することはオプションです。単一シンボルレイヤーは、デフォルトでは単一のラインアイテムとして追加されるようになりました。レイヤー/グループタイトルにグループ、サブグループ、または非表示の3種類のスタイルを割り当てることができます。タイトルスタイルはアイテムの任意の視覚的なグループ分けを可能にする。例えば、1つのシンボルレイヤーを1つのラインアイテムまたはレイヤータイトル（1.8のように）で表示し、複数のレイヤーからのシンボルを1つのグループ（タイトルを隠す）にグループ化することができます。</p>
+<p><img alt="image30" src="../../../_images/multicolumn-legend.png" /></p>
+</div>
+<div class="section" id="feature-updates-to-map-composer-management">
+<h3><a class="toc-backref" href="#id41">機能：マップ・コンポーザー管理の更新</a><a class="headerlink" href="#feature-updates-to-map-composer-management" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>マップコンポーザの管理に次のような改善が作成されました:</p>
+<ul class="simple">
+<li>コンポーザの名前は作成時に指定できます,オプションで他のコンポーザ名からの選択もできます</li>
+<li>コンポーザを多重化できます</li>
+<li><code class="docutils literal"><span class="pre">テンプレートから新規作成</span></code>  と <code class="docutils literal"><span class="pre">指定</span></code> (コンポーザマネージャ内) を使うとファイルシステムのどこかにあるテンプレートを使ってコンポーザを作成することができます</li>
+<li>親プロジェクトをコンポーザの作業スペースから直接保存できるようになりました</li>
+<li>すべてのコンポーザの管理作業は、コンポーザの作業スペースから直接アクセスできるようになりました</li>
+</ul>
+<p><img alt="image31" src="../../../_images/changelog-2.0_composer-mngmnt.png" /></p>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2><a class="toc-backref" href="#id42">プラグイン</a><a class="headerlink" href="#plugins" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-revamped-plugin-manager">
+<h3><a class="toc-backref" href="#id43">機能：プラグインマネージャの再構築</a><a class="headerlink" href="#feature-revamped-plugin-manager" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 1.xではプラグインの管理に2つのインタフェースが混乱していました.1つはすでにインストールされているプラ​​グインを管理するためのものと、1つのプラグインリポジトリからのPythonプラグインの取得用のものです。QGIS 2.0では、プラグインをダウンロード、有効/無効、一般的に管理するためのワンストップショップ*を提供するプラグインマネージャー**を新たに導入しました。ああ、ユーザーインターフェースもサイドタブで分かりやすく、アイコンを簡単に認識できます！</p>
+<p><img alt="image32" src="../../../_images/Plugin_Manager_024.png" /></p>
+</div>
+</div>
+<div class="section" id="programmability">
+<h2><a class="toc-backref" href="#id44">プログラマビリティ</a><a class="headerlink" href="#programmability" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-new-python-console">
+<h3><a class="toc-backref" href="#id45">機能:新しいPythonコンソール</a><a class="headerlink" href="#feature-new-python-console" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>新しいPythonコンソールはさらに強力な機能を提供します。今では、自動完全サポート、構文の強調表示、調整可能なフォント設定を備えています。サイドコードエディタを使用すると、QGISセッションでPythonファイルを開いて実行できるように、より大きなコードブロックを簡単に入力できます。</p>
+<p><img alt="image33" src="../../../_images/pyconsole.png" /></p>
+</div>
+<div class="section" id="feature-even-more-expression-functions">
+<h3><a class="toc-backref" href="#id46">機能：より多くの式関数</a><a class="headerlink" href="#feature-even-more-expression-functions" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>表現エンジンは、式ベースのラベルやシンボルのようなものを可能にするためにQGISをますます使用していますが、より多くの関数が式ビルダーに追加されており、式ビルダーを通してすべてアクセス可能です。すべての機能には、使いやすさのための包括的なヘルプと使用ガイドが含まれています。</p>
+<p><img alt="image34" src="../../../_images/2013-09-06_09_10_49-Expression_based_label.png" /></p>
+</div>
+<div class="section" id="feature-custom-expression-functions">
+<h3><a class="toc-backref" href="#id47">機能:特別な式の関数</a><a class="headerlink" href="#feature-custom-expression-functions" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>エクスプレッション・エンジンに必要な機能がない場合。心配無用。新しい関数は、単純なPython APIを使用してプラグインを介して追加することができます。</p>
+<p><img alt="image35" src="../../../_images/2013-09-06_09_14_58-untitled__routing_-_Sublime_Text_UNREGISTERED.png" /></p>
+</div>
+<div class="section" id="feature-new-cleaner-python-api">
+<h3><a class="toc-backref" href="#id48">機能:新しいクリーナーPython API</a><a class="headerlink" href="#feature-new-cleaner-python-api" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Python APIは、より洗練されたPythonのプログラミング体験を可能にするように改良されました。QGIS 2.0 APIはSIP V2を使用しています。このV2は、値を扱う際に必要とされる乱雑なtoString（）、toInt（）ロジックを削除します。型は、はるかに良いAPIを作るネイティブのPython型に変換されました。属性へのアクセスは、単純なキールックアップ、それ以上の索引ルックアップおよび属性マップを使用しないで、地物自体に対して行われます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;mycolumn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;mycolumn&#39;</span><span class="p">]</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>機能をレイヤーから読み取る方法も改良されており、将来のバージョンではマルチスレッドが可能です。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">():</span>
+       <span class="nb">print</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;mycolumn&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="image36" src="../../../_images/2013-09-06_09_28_08-untitled__routing_-_Sublime_Text_UNREGISTERED.png" /></p>
+</div>
+<div class="section" id="feature-code-compatibility-with-version-1-x-releases">
+<h3><a class="toc-backref" href="#id49">機能:バージョン1.xリリースとのコード互換性</a><a class="headerlink" href="#feature-code-compatibility-with-version-1-x-releases" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これはメジャーリリースであるため、以前の1.xリリースと完全に互換性のあるAPIではありません。 ほとんどの場合、あなたのコードを移植するのはかなり簡単です。使い始めるには <a class="reference external" href="http://hub.qgis.org/wiki/quantum-gis/Python_plugin_API_changes_from_18_to_20">このガイド</a> を使うことができます。 さらに詳しいヘルプが必要な場合は、開発者メーリングリストを使用してください。</p>
+<p><img alt="image37" src="../../../_images/Selection_021.png" /></p>
+</div>
+<div class="section" id="feature-python-project-macros">
+<h3><a class="toc-backref" href="#id50">機能:Pythonプロジェクトマクロ</a><a class="headerlink" href="#feature-python-project-macros" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>project.qgsファイルに保存されたPythonモジュールをロードして、次のプロジェクトイベントで特定の関数を実行できます。</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">openProject()</span></code></li>
+<li><code class="docutils literal"><span class="pre">saveProject()</span></code></li>
+<li><code class="docutils literal"><span class="pre">closeProject()</span></code></li>
+</ul>
+<p>マクロを実行するかどうかは、アプリケーションオプションで設定できます。</p>
+<p><img alt="image38" src="../../../_images/changelog-2.0_project-macros_w-setttings.png" /></p>
+</div>
+</div>
+<div class="section" id="symbology">
+<h2><a class="toc-backref" href="#id51">シンボロジ</a><a class="headerlink" href="#symbology" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-data-defined-properties">
+<h3><a class="toc-backref" href="#id52">機能：データで定義されたプロパティ</a><a class="headerlink" href="#feature-data-defined-properties" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>新しいデータ定義プロパティでは、シンボルのタイプ、サイズ、色、回転、およびその他の多くのプロパティを地物属性を使用して制御できます。</p>
+<p><img alt="image39" src="../../../_images/datadefinedproperties2.png" /></p>
+</div>
+<div class="section" id="feature-improved-symbol-layer-management">
+<h3><a class="toc-backref" href="#id53">機能：シンボルレイヤー管理の改善</a><a class="headerlink" href="#feature-improved-symbol-layer-management" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>新しいシンボルレイヤの概要では、すべてのシンボルレイヤに簡単かつ迅速にアクセスできる明確なツリー構造のレイアウトが使用されています。</p>
+<p><img alt="image40" src="../../../_images/symbollayertree.png" /></p>
+</div>
+<div class="section" id="feature-support-for-transparency-in-colour-definitions">
+<h3><a class="toc-backref" href="#id54">機能：カラー定義の透過性のサポート</a><a class="headerlink" href="#feature-support-for-transparency-in-colour-definitions" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>色を選択するほとんどの場所で、QGISではアルファチャンネルを指定できるようになりました（どの色が透明であるかが決まります）。これにより、見栄えの良い地図を作成したり、ユーザーに見せたくないデータを簡単に隠すことができます。</p>
+<p><img alt="image41" src="../../../_images/Layer_Properties_-_nat_026_1.png" /></p>
+</div>
+<div class="section" id="feature-color-control-for-raster-layers">
+<h3><a class="toc-backref" href="#id55">機能：ラスターレイヤーのカラーコントロール</a><a class="headerlink" href="#feature-color-control-for-raster-layers" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.0では、ラスターレイヤの表示方法を正確に制御することができます。ラスターレイヤーの輝度、コントラスト、彩度を完全に制御できます。ラスタをグレースケールで表示したり、指定した色で色付けすることもできます。</p>
+<p><img alt="image42" src="../../../_images/Layer_Properties_-_blue_marble_032.png" /></p>
+</div>
+<div class="section" id="feature-copy-symbology-between-layers">
+<h3><a class="toc-backref" href="#id56">機能：レイヤー間でシンボロジをコピーする</a><a class="headerlink" href="#feature-copy-symbology-between-layers" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>1つのレイヤーから別のレイヤーにシンボロジをコピーするのがとても簡単になりました。いくつかの類似したレイヤーで作業している場合は、あるレイヤーで単に <a href="#id1"><span class="problematic" id="id2">``</span></a>右クリック `` し、コンテキストメニューから <a href="#id3"><span class="problematic" id="id4">``</span></a>コピースタイル `` を選び、別のレイヤーで <a href="#id5"><span class="problematic" id="id6">``</span></a>ペーストスタイル `` を指定して下さい。</p>
+<p><img alt="image43" src="../../../_images/Selection_034.png" /></p>
+</div>
+<div class="section" id="feature-save-styles-in-your-database">
+<h3><a class="toc-backref" href="#id57">機能：データベースにスタイルを保存する</a><a class="headerlink" href="#feature-save-styles-in-your-database" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>データベースベクタデータストアを使用している場合は、レイヤスタイル定義を直接データベースに格納できます。これにより、エンタープライズまたはマルチユーザー環境でスタイル付きレイヤーを簡単に共有できます。</p>
+<p><img alt="image44" src="../../../_images/Selection_037.png" /></p>
+</div>
+<div class="section" id="feature-colour-ramp-support">
+<h3><a class="toc-backref" href="#id58">機能：カラーランプのサポート</a><a class="headerlink" href="#feature-colour-ramp-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGISシンボル設定の多くの場所でカラーランプが使用可能になり、豊富で拡張可能なカラーランプセットが搭載されたQGISが出荷されます。また、自分でデザインすることもできますし、多くの <a href="#id1"><span class="problematic" id="id2">`</span></a>cpt-city &lt;<a class="reference external" href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/">http://soliton.vm.bytemark.co.uk/pub/cpt-city/</a>&gt;`テーマがQGISに含まれています。カラーランプは透過性を完全にサポートしています。</p>
+<p><img alt="image45" src="../../../_images/Selection_038.png" /></p>
+</div>
+<div class="section" id="feature-set-custom-default-styles-for-all-layer-types">
+<h3><a class="toc-backref" href="#id59">機能：すべてのレイヤータイプのカスタムデフォルトスタイルを設定する</a><a class="headerlink" href="#feature-set-custom-default-styles-for-all-layer-types" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGISでは、既存の `` .qml``スタイルが定義されていないときに、新しいレイヤーを描画する方法を制御できます。新しいレイヤーのデフォルトの透明度レベルと、シンボルにランダムな色を割り当てる必要があるかどうかを設定することもできます。</p>
+<p><img alt="image46" src="../../../_images/Screen_Shot_2013-09-12_at_11.18.52_PM.png" /></p>
+</div>
+</div>
+<div class="section" id="user-interface">
+<h2><a class="toc-backref" href="#id60">ユーザーインターフェース</a><a class="headerlink" href="#user-interface" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="feature-new-icon-theme">
+<h3><a class="toc-backref" href="#id61">機能：新しいアイコンテーマ</a><a class="headerlink" href="#feature-new-icon-theme" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>私たちはQGISのユーザーインターフェイスに一貫性とプロフェッショナリズムのレベルを向上させる「GIS」テーマを使用するためのアイコンテーマを更新しました。</p>
+<p><img alt="image47" src="../../../_images/Selection_001_1.png" /></p>
+</div>
+<div class="section" id="feature-side-tabs-collapsable-groups">
+<h3><a class="toc-backref" href="#id62">機能：サイドタブ、折りたたみ可能なグループ</a><a class="headerlink" href="#feature-side-tabs-collapsable-groups" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>私たちは、タブのレイアウトを標準化し、折り畳み可能なグループボックスを多くのダイアログに導入し、さまざまなオプションをより簡単にナビゲートし、画面の不動産をより有効に活用しました。</p>
+<p><img alt="image48" src="../../../_images/Selection_005.png" /></p>
+</div>
+<div class="section" id="feature-soft-notifications">
+<h3><a class="toc-backref" href="#id63">機能：ソフト通知</a><a class="headerlink" href="#feature-soft-notifications" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>多くの場合、私たちはあなたに何かを伝えたいが、私たちはあなたの仕事をやめて行きたいとは思わない。新しい通知システムでは、QGISは地図キャンバスの上部に表示される黄色のメッセージバーを介して重要な情報を知らせることができますが、何か他のことをしているときにはそれに対処する必要はありません。プログラマーはPython APIを使用しても（プラグインなどから）これらの通知を作成できます。</p>
+<p><img alt="image49" src="../../../_images/Selection_030.png" /></p>
+</div>
+<div class="section" id="feature-application-custom-font-and-qt-stylesheet">
+<h3><a class="toc-backref" href="#id64">機能：アプリケーションのカスタムフォントとQtスタイルシート</a><a class="headerlink" href="#feature-application-custom-font-and-qt-stylesheet" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>アプリケーションのユーザーインターフェイスに使用されるシステムフォントを設定できるようになりました。QGIS GUIアプリケーションの子であるか、アプリケーションのGUIスタイルシートをコピー/適用したC ++またはPythonプラグインは、そのスタイルを継承することができます。これは、プラットフォーム間のGUI修正や、QgsCollapsibleGroupBoxなどのカスタムQGIS Qtウィジェットを使用する場合に便利です。 。</p>
+<p>現在のプラットフォーム用に生成されたQGIS GUIアプリケーションスタイルシートは、（PyQGISで）起動した後にアクセスできます。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">qgis</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">mainWindow</span><span class="p">()</span><span class="o">.</span><span class="n">styleSheet</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image50" src="../../../_images/changelog-2.0_app-font.png" /></p>
+</div>
+<div class="section" id="feature-live-color-chooser-dialogs-and-buttons">
+<h3><a class="toc-backref" href="#id65">機能:ライブカラー選択ダイアログとボタン</a><a class="headerlink" href="#feature-live-color-chooser-dialogs-and-buttons" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>インターフェース全体の各カラーチューザーボタンが更新され、現在の色が透明か、「アルファ」なコンポーネントかを視覚的にフィードバックするようになりました。新しいカラーボタンで開かれたカラーチューザーは、常にオペレーティングシステムのデフォルトになりました。ユーザが <code class="docutils literal"><span class="pre">Options</span> <span class="pre">-&gt;</span> <span class="pre">General</span> <span class="pre">-&gt;</span> <span class="pre">Application</span></code> の下で  <code class="docutils literal"><span class="pre">Live-updating</span> <span class="pre">color</span> <span class="pre">chooserダイアログを使用する</span></code> をチェックしている場合、カラーチューザの変更は、すぐにカラーボタンに表示され現在編集中の項目がある場合は適用されます。</p>
+<p><img alt="image51" src="../../../_images/changelog-2.0_live-color-dlgs.png" /></p>
+</div>
+<div class="section" id="feature-svg-annotations">
+<h3><a class="toc-backref" href="#id66">機能:SVG注記</a><a class="headerlink" href="#feature-svg-annotations" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.0を使用すると、マップキャンバス上の特定の場所または相対位置に固定されたSVGアノテーションをマップに追加できるようになりました。</p>
+<p><img alt="image52" src="../../../_images/Screen_Shot_2013-09-14_at_9.39.11_AM.png" /></p>
+</div>
+<div class="section" id="feature-drag-and-drop-form-builder">
+<h3><a class="toc-backref" href="#id67">機能：ドラッグアンドドロップフォームビルダ</a><a class="headerlink" href="#feature-drag-and-drop-form-builder" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>QGIS 2.0は、データ入力フォームを作成するためのすばらしい新しいシステムをサポートしています。ドラッグアンドドロップフォームデザイナーを使用すると、スマートな外観のフォームをタブで作成して、共通フィールドをまとめてグループ化することができます。これで、ユーザーのデータ入力の操作を簡単に制御できます。</p>
+<p><img alt="image53" src="../../../_images/Screen_Shot_2013-09-14_at_2.17.27_PM.png" /></p>
+</div>
+<div class="section" id="feature-default-action-tool">
+<h3><a class="toc-backref" href="#id68">機能：デフォルトのアクションツール</a><a class="headerlink" href="#feature-default-action-tool" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ベクターレイヤーアクションのユーザー（機能をクリックしたときに実行できる小さなタスク）は、ツールバーの新しいアクションツールが大好きです。それを使用すると、アクティブなアクションを選択し、そのアクションを呼び出すためにあなたの地物をクリックすることができます。</p>
+<p><img alt="image54" src="../../../_images/Screen_Shot_2013-09-14_at_2.27.03_PM.png" /></p>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../trainingmaterial/index.html" title="トレーニング材料"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog220/index.html" title="QGIS 2.2の変更履歴"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >ユーザー向け情報</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" >ビジュアルチェンジログ</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">特に明記されていない場合、全てのコンテンツは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 ライセンス（CC BY-SA） </a> の下で提供されています。</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        画像は <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a> から選択しました
+        
+        
+      </p>
+      <p class="credit">
+        翻訳されていないページ？または、翻訳エラーが見つかりました：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">このページを修正</a>
+        <br/>
+        誤ったテキスト、不足しているテキスト、またはあなたがよく知っている：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">このページを修正</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
