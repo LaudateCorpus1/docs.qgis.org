@@ -1,0 +1,744 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pobierz QGIS</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Indeks" href="../../genindex.html" />
+    <link rel="search" title="Szukaj" href="../../search.html" />
+    <link rel="next" title="Instalatory QGIS" href="alldownloads.html" />
+    <link rel="prev" title="Dla użytkowników" href="index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Nawigacja</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Indeks ogólny"
+             accesskey="I">indeks</a></li>
+        <li class="right" >
+          <a href="alldownloads.html" title="Instalatory QGIS"
+             accesskey="N">dalej</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Dla użytkowników"
+             accesskey="P">wstecz</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Dla użytkowników</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="angielski">English</option>
+  <option value="ca" title="kataloński">Català</option>
+  <option value="da" title="duński">Dansk</option>
+  <option value="de" title="niemiecki">Deutsch</option>
+  <option value="es" title="hiszpański">Español</option>
+  <option value="fa" title="perski">فارسی</option>
+  <option value="fi" title="fiński">Suomi</option>
+  <option value="fr" title="francuski">Français</option>
+  <option value="gl" title="Galician">Galego</option>
+  <option value="id" title="indonezyjski">Bahasa Indonesia</option>
+  <option value="it" title="włoski">Italiano</option>
+  <option value="hu" title="węgierski">Magyar</option>
+  <option value="ja" title="japoński">日本語</option>
+  <option value="km_KH" title="kmerski">ភាសាខ្មែរ    </option>
+  <option value="ko" title="koreański">한국어</option>
+  <option value="lt" title="litewski">Lietuvių</option>
+  <option value="nl" title="holenderski">Nederlands</option>
+  <option value="pl" title="polski">Polski</option>
+  <option value="pt_BR" title="portugalski (Brazylia)">Português (Brasil)</option>
+  <option value="pt_PT" title="portugalski">Português</option>
+  <option value="ro" title="rumuński">Română</option>
+  <option value="tr" title="turecki">Türkçe</option>
+  <option value="ru" title="rosyjski">Русский</option>
+  <option value="uk" title="ukraiński">Українська</option>
+  <option value="zh-Hans" title="Chinese (Simplified)">簡体中文</option>
+  <option value="zh-Hant" title="Chinese (Traditional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/download.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Dziękujemy!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Zespół QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Wesprzyj teraz</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Zamknij ten komunikat</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Thank you for your donation!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is free of charge and we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p id="stripeerr" style="display:none;">Unfortunately there was an error processing your Donation. Please try again later, or contact us via finance@qgis.org</p>'+
+            '<p>Zespół QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Zamknij ten komunikat</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../about/index.html">Odkrywaj QGIS</a></li>
+            <li><a href="index.html">Dla użytkowników</a></li>
+            <li><a href="../getinvolved/index.html">Działaj z nami</a></li>
+            <li><a href="../../docs/index.html">Dokumentacja</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Szukaj" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="alldownloads.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <section class="intro">
+    <div class="container">
+        <h2>Pobierz QGIS na swój system operacyjny</h2>
+        <p class="main">Binary packages (installers) are available from this page.</p>
+        <p class="main">Bieżąca wersja QGIS 3.8.2 'Zanzibar' została wydana w 16.08.2019.</p>
+        <p class="main">The long-term repositories currently offer QGIS 3.4.11 'Madeira'.</p>
+        <p class="main">QGIS jest dostępne na systemy Windows, MacOS X, Linux i Android.</p>
+
+    </div>
+</section>
+<section class="content">
+    <div class="container">
+        <ul class="nav nav-tabs" id="tabs">
+          <li class="active"><a href="#tab1">Pobieranie instalatorów</a></li>
+          <li><a href="#tab2">Wszystkie wydania</a></li>
+          <li><a href="#tab3">Źródła</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+          <!-- Tab 1 -->
+          <div class="tab-pane active" id="tab1">
+            <!-- Downloads Accordion -->
+              <a name="windows"></a>
+              <div class="accordion" id="downloads">
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#downloads" href="#windows">
+                      <h4>Pobierz na system Windows <i class="icon-chevron-down pull-right"></i></h4>
+                    </a>
+                  </div>
+                  <div id="windows" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <div>
+                        <h5>QGIS in OSGeo4W:</h5>
+                        <a href="https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe" class="reference external">
+                        <ul class="inline download-row">
+                          <li><i class="icon-large icon-download-alt"></i></li>
+                          <li class="osgeo-download"></li>
+                          <li class="download-text">Instalator sieciowy OSGeo4W (64 bit)</li>
+                        </ul>
+                        </a>
+                        <a href="https://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe" class="reference external">
+                        <ul class="inline download-row">
+                          <li><i class="icon-large icon-download-alt"></i></li>
+                          <li class="osgeo-download"></li>
+                          <li class="download-text">Instalator sieciowy OSGeo4W (32 bit)</li>
+                        </ul>
+                        </a>
+                        <p>W instalatorze wybierz opcję <strong>Desktop Express Install</strong> i wybierz <strong>QGIS</strong> to install the <em>latest release</em>.<br/>
+                        To get the <em>long term release</em> (that is not also the latest release) choose <strong>Advanced Install</strong> i wybierz <strong>qgis-ltr-full</strong><br/>
+                        To get the <em>bleeding-edge development build</em> choose <strong>Advanced Install</strong> i wybierz <strong>qgis-dev-full</strong>
+                      <br/>
+                      </div>
+                      <div>
+                        <h5>Standalone installers from OSGeo4W packages</h5>
+                        <h6>Latest release (richest on features):</h6>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.8.2-1-Setup-x86_64.exe" class="reference external">
+                          <ul class="inline download-row">
+                              <li><i class="icon-download-alt icon-large"></i></li>
+                              <li class="qgis-download"></li>
+                              <li class="download-text">Samodzielny instalator, wersja 3.8 (64-bitowa)</li>
+                          </ul>
+                        </a>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.8.2-1-Setup-x86_64.exe.sha256sum" class="reference external button">
+                          <ul class="inline download-row">
+                              <li></li>
+                              <li></li>
+                              <li class="download-text">sha256</li>
+                          </ul>
+                        </a>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.8.2-1-Setup-x86.exe" class="reference external">
+                          <ul class="inline download-row">
+                              <li><i class="icon-download-alt icon-large"></i></li>
+                              <li class="qgis-download"></li>
+                              <li class="download-text">Samodzielny instalator, wersja 3.8 (32-bitowa)</li>
+                          </ul>
+                        </a>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.8.2-1-Setup-x86.exe.sha256sum" class="reference external button">
+                          <ul class="inline download-row">
+                              <li></li>
+                              <li></li>
+                              <li class="download-text">sha256</li>
+                          </ul>
+                        </a>
+                        <h6>Long term release repository (most stable):</h6>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.4.11-1-Setup-x86_64.exe" class="reference external">
+                          <ul class="inline download-row">
+                              <li><i class="icon-download-alt icon-large"></i></li>
+                              <li class="qgis-download"></li>
+                              <li class="download-text">Samodzielny instalator, wersja 3.4 (64-bitowa)</li>
+                          </ul>
+                        </a>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.4.11-1-Setup-x86_64.exe.sha256sum" class="reference external button">
+                          <ul class="inline download-row">
+                              <li></li>
+                              <li></li>
+                              <li class="download-text">sha256</li>
+                          </ul>
+                        </a>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.4.11-1-Setup-x86.exe" class="reference external">
+                          <ul class="inline download-row">
+                              <li><i class="icon-download-alt icon-large"></i></li>
+                              <li class="qgis-download"></li>
+                              <li class="download-text">Samodzielny instalator, wersja 3.4 (32-bitowa)</li>
+                          </ul>
+                        </a>
+                        <a href="https://qgis.org/downloads/QGIS-OSGeo4W-3.4.11-1-Setup-x86.exe.sha256sum" class="reference external button">
+                          <ul class="inline download-row">
+                              <li></li>
+                              <li></li>
+                              <li class="download-text">sha256</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a name="mac"></a>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#downloads" href="#mac">
+                      <h4>Pobierz na system Mac OS X <i class="icon-chevron-down pull-right"></i></h4>
+                    </a>
+                  </div>
+                  <div id="mac" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <h4>Official All-in-one, signed installers</h4>
+                      <p>Mac Installer Packages for macOS High Sierra (10.13) and newer.</p>
+                      <h6>Latest release (richest on features):</h6>
+                      <a href="https://qgis.org/downloads/macos/qgis-macos-pr.dmg">
+                        <ul class="inline download-row">
+                          <li><i class="icon-download-alt icon-large"></i></li>
+                          <li class="qgis-download"></li>
+                          <li class="download-text">QGIS macOS Installer Version 3.8</li>
+                        </ul>
+                      </a>
+                      <h6>Long term release (most stable):</h6>
+                      <a href="https://qgis.org/downloads/macos/qgis-macos-ltr.dmg">
+                        <ul class="inline download-row">
+                          <li><i class="icon-download-alt icon-large"></i></li>
+                          <li class="qgis-download"></li>
+                          <li class="download-text">QGIS macOS Installer Version 3.4</li>
+                        </ul>
+                      </a>
+                      <h4>Alternative build</h4>
+
+                      <p>Mac Installer Packages for macOS El Capitan (10.11) and newer.</p>
+                      <p>Installation instructions are in the Read Me on the disk image. These packages use the  <a href="http://www.python.org/" class="reference external">python.org Python 3</a>, version 3.6, the "macosx10.9" build - other distributions are not supported. Install Python before installing QGIS.</p>
+                      <p>Additional GDAL format plugins and PROJ grids are available at  <a href="https://www.kyngchaos.com/frameworks/" class="reference external">kyngchaos.com</a>.</p>
+                      <a href="https://www.kyngchaos.com/software/qgis/">
+                        <ul class="inline download-row">
+                          <li><i class="icon-download-alt icon-large"></i></li>
+                          <li class="qgis-download"></li>
+                          <li class="download-text">macOS Installers</li>
+                        </ul>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <a name="linux"></a>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#downloads" href="#linux">
+                      <h4>Pobierz na system Linux <i class="icon-chevron-down pull-right"></i></h4>
+                    </a>
+                  </div>
+                  <div id="linux" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <p>Dla wielu odmian systemu GNU/Linux są dostępne pakiety binarne (rpm i deb) lub repozytoria oprogramowania (do dodania do swojego menedżera pakietów). Proszę wybrać swoją dystrybucję:</p>
+                      <ul>
+                      <li><a href="alldownloads.html#debian-ubuntu">Debian/Ubuntu</a></li>
+                      <li><a href="alldownloads.html#fedora">Fedora</a></li>
+                      <li><a href="alldownloads.html#opensuse">openSUSE</a></li>
+                      <li><a href="alldownloads.html#rhel-centos-scientific-linux">RHEL, CentOS, Scientific Linux, ...</a></li>
+                      <li><a href="alldownloads.html#mandriva">Mandriva</a></li>
+                      <li><a href="alldownloads.html#slackware">Slackware</a></li>
+                      <li><a href="alldownloads.html#archlinux">ArchLinux</a></li>
+                      <li><a href="alldownloads.html#flatpak">Flatpak</a></li>
+                      </ul>
+                      <p class="download-text"><a href="alldownloads.html#linux">Instrukcje instalacyjne dla Linux</a></p>
+                    </div>
+                  </div>
+                </div>
+                <a name="bsd"></a>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#downloads" href="#bsd">
+                      <h4>Pobierz na system BSD <i class="icon-chevron-down pull-right"></i></h4>
+                    </a>
+                  </div>
+                  <div id="bsd" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <p class="download-text"><a href="alldownloads.html#freebsd">Instrukcje instalacyjne dla BSD </a></p>
+                    </div>
+                  </div>
+                </div>
+                <a name="android"></a>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#downloads" href="#android">
+                      <h4>Pobierz na system Android <i class="icon-chevron-down pull-right"></i></h4>
+                    </a>
+                  </div>
+                  <div id="android" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <p>Wydanie eksperymentalne można znaleźć w<a href="https://play.google.com/store/apps/details?id=org.qgis.qgis" class="reference external" ><strong>Play Store</strong></a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion -->
+
+              <h4><a href="alldownloads.html">Wszystkie instalatory</a></h4>
+              <p>
+                Szczegółowe informacje o pobieraniu stabilnej lub rozwojowej wersji QGIS można znaleźć na podstronie <a href="alldownloads.html">Wszystkie instalatory</a>.
+              </p>
+
+              <h4><a href="http://docs.qgis.org/3.8/pl/docs/user_manual/introduction/getting_started.html">Zestawy danych</a></h4>
+              <p>Żeby testować i uczyć się <a href="http://docs.qgis.org/3.8/pl/docs/user_manual/introduction/getting_started.html#sample-data"><strong>próbny zestaw danych jest dostępny</strong></a>, który zawiera kolekcję danych z różnych źródeł i w różnych formatach.</p>
+
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="tab-pane" id="tab2">
+              <p>Previous releases of QGIS are still available <a href="https://qgis.org/downloads">tutaj</a>  - including older releases for OS X 
+              <a href="https://qgis.org/downloads/macOS/">tutaj</a>.</p>
+              <p>More older releases are available <a href="http://download.osgeo.org/qgis/" class="reference external">tutaj</a> and
+              for OS X  <a href="http://www.kyngchaos.com/software/archive/" class="reference external">tutaj</a>.</p>
+              <p>Wtyczki do QGIS są również dostępne<a href="http://plugins.qgis.org/plugins/" class="reference external">tutaj</a>.</p>
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="tab-pane" id="tab3">
+              <p>QGIS to oprogramowanie open source dostępne na <b>Powszechna Licencja Publiczna GNU</b> co oznacza, że ich kod źródłowy może być pobrany z repozytorium git.</p>
+              <p>Kod źródłowy QGIS jest dostępny
+                 <a href="https://qgis.org/downloads/qgis-latest.tar.bz2">tutaj (najnowsze wydanie)</a> and
+                 <a href="https://qgis.org/downloads/qgis-latest-ltr.tar.bz2">tutaj (wydanie długoterminowe)</a></p>
+              <p>Zapoznaj się z dokumentem INSTALL dotyczącym kompilacji QGIS ze źródeł na różnych platformach: <a href="http://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html"  class="reference external">tutaj</a></p>
+              <p>Można również zainstalować wersję programistyczną z poziomu instalatora wybierając zwykłe pobieranie dla swojej platformy. <a class="caption-link" href="#" target="_blank">tutaj</a></p>
+              <p>Wtyczki do QGIS są również dostępne<a href="http://plugins.qgis.org/plugins/" class="reference external">tutaj</a>.</p>
+          </div>
+        </div>
+
+        <script>
+
+          $(function () {
+            $('#tabs a').click(function (e) {
+              e.preventDefault();
+              $(this).tab('show');
+            });
+
+            // Detect browser and open accordion tab for that os
+            var os = "unknown";
+			if (navigator.platform.toUpperCase().indexOf("WIN")!=-1) os="windows";
+			if (navigator.platform.toUpperCase().indexOf("MAC")!=-1) os="mac";
+			if (navigator.platform.toUpperCase().indexOf("X11")!=-1) os="unix";
+			if (navigator.platform.toUpperCase().indexOf("LINUX")!=-1) os="linux";
+			if (navigator.platform.toUpperCase().indexOf("BSD")!=-1) os="bsd";
+			if (navigator.platform.toUpperCase().indexOf("ANDROID")!=-1) os="android";
+
+            // Add handler for accordion toggles
+            $('.accordion-toggle').click(function(){
+                var el = $(this).find("i");
+                if (el.hasClass("icon-chevron-down")) {
+                  el.removeClass("icon-chevron-down")
+                    .addClass("icon-chevron-left");
+                } else {
+                  el.removeClass("icon-chevron-left")
+                    .addClass("icon-chevron-down");
+                }
+            });
+
+            // Close unrelated if 1. hash tag is detected or 2. os is detected
+            var url = window.location.hash;
+            var hash = url.substring(url.lastIndexOf('#'), url.length);
+            var look_for = (hash == "" || hash == -1) ? os : hash.substring(1, hash.length);
+
+            $('.accordion-body').each(function(){
+              if ($(this).attr('id').toLowerCase() !== look_for) {
+                $(this).prev().children(":first-child").click();
+              }
+            });
+
+
+          })
+        </script>
+    </div>
+</section>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Nawigacja</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Indeks ogólny"
+             >indeks</a></li>
+        <li class="right" >
+          <a href="alldownloads.html" title="Instalatory QGIS"
+             >dalej</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Dla użytkowników"
+             >wstecz</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Dla użytkowników</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Jeśli nie zaznaczono inaczej, cała zawartość jest objęta licencją <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Wybrane grafiki z <a href="http://thenounproject.com" target="_blank">kolekcji The Noun Project</a>
+        
+        
+      </p>
+      <p class="credit">
+        Nieprzetłumaczona strona lub znalazłeś błąd w tłumaczeniu:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">popraw</a>
+        <br/>
+        Błąd w tekście, brakujący tekst lub sformułowałbyś to lepiej:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">popraw</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
