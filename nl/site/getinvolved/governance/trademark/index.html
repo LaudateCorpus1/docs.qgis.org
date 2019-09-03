@@ -1,0 +1,637 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Richtlijnen voor handelsmerk en merk QGIS</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Zoek" href="../../../../search.html" />
+    <link rel="next" title="Programma voor dragende leden" href="../sustaining_members/index.html" />
+    <link rel="prev" title="Wie is wie in het project" href="../governance.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="Algemene index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../sustaining_members/index.html" title="Programma voor dragende leden"
+             accesskey="N">volgende</a> |</li>
+        <li class="right" >
+          <a href="../governance.html" title="Wie is wie in het project"
+             accesskey="P">vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Doe mee / Ontwikkeling</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">Projectorganisatie</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engels">English</option>
+  <option value="ca" title="Catalaans">Català</option>
+  <option value="da" title="Deens">Dansk</option>
+  <option value="de" title="Duits">Deutsch</option>
+  <option value="es" title="Spaans">Español</option>
+  <option value="fa" title="Perzisch">فارسی</option>
+  <option value="fi" title="Fins">Suomi</option>
+  <option value="fr" title="Frans">Français</option>
+  <option value="gl" title="Galicisch">Galego</option>
+  <option value="id" title="Indonesisch">Bahasa Indonesia</option>
+  <option value="it" title="Italiaans">Italiano</option>
+  <option value="hu" title="Hongaars">Magyar</option>
+  <option value="ja" title="Japans">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Koreaans">한국어</option>
+  <option value="lt" title="Litouws">Lietuvių</option>
+  <option value="nl" title="Nederlands">Nederlands</option>
+  <option value="pl" title="Pools">Polski</option>
+  <option value="pt_BR" title="Portugees (Brazilie)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugees">Português</option>
+  <option value="ro" title="Roemeens">Română</option>
+  <option value="tr" title="Turks">Türkçe</option>
+  <option value="ru" title="Russisch">Русский</option>
+  <option value="uk" title="Oekrains">Українська</option>
+  <option value="zh-Hans" title="Chinees (Vereenvoudigd)">簡体中文</option>
+  <option value="zh-Hant" title="Chinees (Traditioneel)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/governance/trademark/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Bedankt!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Doneer nu!</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Dank u voor uw donatie!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is gratis en we hopen dat ons werk u bevalt en hopen dat u de door u gedownloade kopie ver en breed deelt en verspreid, zodat anderen er ook de vruchten van plukken. Onze beste groeten!</p>'+
+            '<p id="stripeerr" style="display:none;">Helaas trad er een fout op bij het verwerken van uw donatie. probeer het later opnieuw of neem contact met ons op via finance@qgis.org</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../../about/index.html">Ontdek QGIS</a></li>
+            <li><a href="../../../forusers/index.html">Voor gebruikers</a></li>
+            <li><a href="../../index.html">Help mee</a></li>
+            <li><a href="../../../../docs/index.html">Documentatie</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Zoek" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../governance.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../sustaining_members/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">Ontdek QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forusers/index.html">Voor gebruikers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Doe mee / Ontwikkeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../document.html">Documentatie schrijven</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate.html">Vertaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development/index.html">Ontwikkeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tests.html">Testen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../daily_reports/index.html">Dagelijkse rapporten</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mailinglists.html">Mailinglijsten</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Projectorganisatie</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../charter.html">Statuten van de QGIS.ORG Association</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../governance.html">Wie is wie in het project</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Richtlijnen voor handelsmerk en merk QGIS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#country-voting-members">Stemmende leden voor landen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples-of-use-that-do-not-require-permission">Voorbeelden van gebruik die geen toestemming vereisen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples-of-use-requiring-a-permission">Voorbeelden van gebruik die toestemming vereisen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prohibited-trademark-uses">Verboden gebruik van handelsmerk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#if-in-doubt-find-out">Indien u twijfelt, zoek het op!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#report-abuse">Misbruik melden</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frequently-asked-questions">Vaak gestelde vragen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sustaining_members/index.html">Programma voor dragende leden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../annual_general_meetings/index.html">Jaarlijkse algemene vergaderingen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../annual_reports/index.html">Jaarlijkse rapporten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finance/index.html">Financiën</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../infrastructure.html">Infrastructuur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeofconduct/codeofconduct.html">Gedragscode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeofconduct/diversitystatement.html">Beleid voor diversiteit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeofconduct/credits.html">Vermeldingen voor bijdragen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_meetings/index.html">Het programma van bijeenkomsten voor QGIS-ontwikkelaars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_checklists/index.html">Release controlelijst</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../meetings/index.html">Bijeenkomsten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members/index.html">Programma voor dragende leden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../donations.html">Donaties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../certification.html">Certificering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../styleguide.html">Visuele stijlgids</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/index.html">Documentatie</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="qgis-trademark-and-brand-guidelines">
+<h1>Richtlijnen voor handelsmerk en merk QGIS<a class="headerlink" href="#qgis-trademark-and-brand-guidelines" title="Permalink naar deze titel">¶</a></h1>
+<p>We vinden het fantastisch als u wilt verwijzen naar ofwel het project QGIS of de gemeenschap QGIS.ORG en waarderen uw hulp bij het bekend maken ervan bijzonder.</p>
+<p>Deze pagina richt zich op het aan u verschaffen van alle informatie en bronnen die u nodig hebt voor het juiste gebruik van de onderdelen van het merk QGIS.</p>
+<p>De naam QGIS en het logo zijn beschermd onder de Europese wet tegen niet geautoriseerd en verwarrend gebruik van het handelsmerk. U kunt informatie over ons handelsmerk vinden op <a class="reference external" href="https://oami.europa.eu/eSearch/#details/trademarks/012702643">OAMI</a> en <a class="reference external" href="https://euipo.europa.eu/eSearch/#details/trademarks/017228222">EUIPO</a>. Ons belangrijkste doel is mensen, die zaken drijven met behulp van de naam QGIS en het logo, aan te moedigen om actief deel te nemen in het project, en ons te helpen QGIS te verbeteren.</p>
+<p>QGIS handelsmerken, merken voor diensten, logo’s en ontwerpen, als ook andere auteursrechtelijke werken die vallen onder de auteursrechtelijke bescherming (collectief genaamd “Marks”) zijn waardevolle onderdelen die QGIS.ORG dient te beschermen. QGIS.ORG staat niet al het gebruik van QGIS Marks toe. QGIS.ORG heeft deze Trademark Usage Guidelines (“richtlijnen”) gemaakt om u te helpen om onze merken op de juiste manier te gebruiken in de specifieke gevallen die we wel toestaan. De kracht van onze Marks is, gedeeltelijk, afhankelijk van consistent en juist gebruik. We vragen van u dat u onze Marks op de juiste wijze gebruikt en daarnaar verwijst in overeenstemming met deze richtlijnen. We behouden ons het recht voor om deze richtlijnen op elk moment te wijzigen, geheel naar ons eigen inzicht.</p>
+<p>Deze richtlijnen zouden moeten worden gevolgd naast alle andere regels en beleid van QGIS, vermeld op de website van QGIS.ORG of elders.</p>
+<div class="section" id="country-voting-members">
+<h2>Stemmende leden voor landen<a class="headerlink" href="#country-voting-members" title="Permalink naar deze titel">¶</a></h2>
+<p>QGIS.ORG staat officeel <a class="reference internal" href="../../../forusers/usergroups.html#qgis-usergroups"><span class="std std-ref">QGIS landelijke gebruikers groepen</span></a>, toe om het QGIS-logo aan te passen en het anagepaste logo van QGIS voor niet-commerciële communicatie en projecten. Deze toestemming is onderwerp van doorlopend voldoen aan deze richtlijnen, richtlijnen voor het handelmerk QGIS en alle andere regels en beleid. QGIS behoudt zich het recht voor om deze toestemming op elk moment en te annuleren of te wijzigen, geheel naar eigen inzicht. Als u een aangepaste versie van het logo van QGIS wilt gebruiken, dien uw kuntswerken dan in voor toestemming op <a class="reference external" href="mailto:trademark&#37;&#52;&#48;qgis&#46;org">trademark<span>&#64;</span>qgis<span>&#46;</span>org</a>. Bij toestemming zult u een licentieovereenkomst ontvangen die u dient te ondertekenen vóórdat u het kunstwerk begint te gebruiken.</p>
+<p>QGIS.ORG staat zijn landelijke gebruikersgroepen ook toe om een topniveau QGIS-domein (qgis.ch, qgis.dk etc.) te registreren overeenkomstig de verder in dit document vermelde regels.</p>
+</div>
+<div class="section" id="examples-of-use-that-do-not-require-permission">
+<h2>Voorbeelden van gebruik die geen toestemming vereisen<a class="headerlink" href="#examples-of-use-that-do-not-require-permission" title="Permalink naar deze titel">¶</a></h2>
+<p>In gevallen van goed gebruik mag u het QGIS handelsmerk gebruiken zonder toestemming van QHIS.ORG. De volgende gevallen zijn voorbeelden van dergelijk toegstaan gebruik:</p>
+<ul class="simple">
+<li><strong>Boeken, artikelen, handleidingen</strong>: Als u artikelen, boeken, blogartikelen, handleidingen, studiemateriaal voor universitair gebruik, en soortgelijke dingen schrijft heeft u geen toestemming nodig om de naam QGIS te vermelden en het logo er in te gebruiken</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Notitie</p>
+<p class="last">We eisen van u dat u <strong>erkenning geeft</strong> aan het project QGIS en ergens in uw boek, artikel, etc. verwijst naar de website van het project. Dit zou een korte alinea mogen zijn in de Introductie of het Voorwoord. Vermijd alles dat de indruk kan geven dat uw werk een officieel product van QGIS is.</p>
+</div>
+<ul class="simple">
+<li><strong>Cursussen, trainingen</strong>: Wanneer u een cursus over QGIS geeft, dan wel academisch, gratis, of commercieel, mag u het logo en de naam ‘QGIS’ in uw cursusmateriaal gebruiken.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Notitie</p>
+<p class="last">Verklaar routinematig in uw cursusmateriaal dat QGIS gratis en open source software is, en moedig iedereen actief aan om deel te nemen, direct of indirect, aan het project.</p>
+</div>
+<ul class="simple">
+<li><strong>Diensten</strong>: Als u diensten verschaft (ondersteuning, ontwikkeling) voor QGIS, mag u het handelsmerk van QGIS gebruiken om uw diensten of producten te beschrijven of te adverteren in relatie tot QGIS, vooropgesteld dat dit op een manier gebeurt die niet misleidend is (bekijk de vereisten voor productnamen hieronder.)</li>
+<li><strong>Linken</strong>: Als u het logo van QGIS gebruikt op een website als koppeling naar onze websites (<a class="reference external" href="https://QGIS.org">https://QGIS.org</a>) of een van onze domeinen, of GIThub, heeft u geen toestemming nodig.</li>
+<li><strong>Merchandise</strong>: U mag T-shirts, achtergronden voor desktops, petjes, of andere merchandise maken met het handelsmerk voor QGIS voor niet-commercieel gebruik. U mag merchandise maken met het handelsmerk voor QGIS voor commercieel gebruik, met dien verstande dat u aan de gebruikers naar waarheid vermeld welk gedeelte van de verkoopprijs, indien van toepassing, zal worden gedoneerd aan het project QGIS. Bekijk onze pagina over donaties voor meer informatie over hoe te doneren aan het project QGIS</li>
+</ul>
+</div>
+<div class="section" id="examples-of-use-requiring-a-permission">
+<h2>Voorbeelden van gebruik die toestemming vereisen<a class="headerlink" href="#examples-of-use-requiring-a-permission" title="Permalink naar deze titel">¶</a></h2>
+<p>Sommige gebruiksvormen van ons handelsmerk vereisen dat de gebruiker toestemming verkrijgt. Indien u toestemming nodig hebt, vul dan ons formulier in  (<a class="reference external" href="https://goo.gl/forms/b57Rg6IyFy0FC47p2">https://goo.gl/forms/b57Rg6IyFy0FC47p2</a>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Notitie</p>
+<p class="last">Toestemming is geen formele aanbeveling van uw aan QGIS gerelateerde project en zegt niets over de kwaliteit van uw dienst.</p>
+</div>
+<ul class="simple">
+<li><strong>Productnamen</strong>: Als u van plan bent om een product of dienst, gebaseerd op QGIS, op de markt te brengen met behulp van een handelsmerk of naam dat het woord “QGIS” bevat, zoals “Uw bedrijf QGIS” dient u toestemming aan te vragen en te verkrijgen van het QGIS Project Steering Committee (QGIS-PSC). Dit is altijd van toepassing, of u nu wel of niet wilt aanvragen om uw handelsmerk bij een overheid te registeren. Bij het ontwikkelen en adverteren van op QGIS gebaseerde producten, vragen we u om de volgende richtlijnen in acht nemen:<ol class="arabic">
+<li><strong>Presenteer uw werk niet als ons werk</strong>: Als u een aangepaste versie van QGIS verschaft, maak dan duidelijk dat uw aanbieding een afgeleid product is, en niet de officiële versie van QGIS door de naam van uw bedrijf of merk aan de productnaam toe te voegen en vergeze;f te laten gaan van tekst die, waar nodig, uitlegt dat uw product een afgeleid product is.</li>
+<li><strong>Presenteer ons werk niet als uw werk</strong>: Geef het project QGIS, daar waar nodig, de benodigde erkenning. Probeer niet het feit te verhullen dat uw product is gebaseerd op QGIS.</li>
+<li><strong>Goede voorbeelden van productnamen omvatten</strong>:<ul>
+<li>Uw bedrijf QGIS</li>
+<li>Uw bedrijf Desktop/Suite gebaseerd op QGIS</li>
+<li>Uw merk, gebaseerd op QGIS</li>
+<li>Uw merk, gebaseerd op QGIS</li>
+</ul>
+</li>
+<li><strong>Slechte voorbeelden van productnamen omvatten</strong>:<ul>
+<li>Uw bedrijf QGIS</li>
+<li>QGIS speciale uitgave</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Notitie</p>
+<p class="last">Bij het verwijzen naar QGIS ondermijn dan niet de geldigheid van het hoofdproject van QGIS. We hechten eraan dat u naar onze softwarepakketten verwijst als “Officiële pakketten” en niet als “Uitgave van de gemeenschap” of soortgelijk. Als u uw eigen pakketten maakt, zorg er dan voor dat het duidelijk is dat dat afgeleide producten zijn en niet zijn gemaakt door of aanbevolen door het project QGIS.</p>
+</div>
+<ul class="simple">
+<li><strong>Domeinnamen en websites</strong>: Gebruik van onze merken op websites op juiste wijze is toegestaan om producten, diensten of technologie van QGIS te benoemen of nauwkeurig te beschrijven. Het gebruiken van onze merken mag niet misleidend zijn of aanlediing geven tot verwarring met betrekking tot het feit dat de website wordt gesponsord door of is verbonden aan QGIS of met betrekking tot het feit dat de producten, diensten of technologie worden aangeboden door QGIS.  QGIS behoudt zich het recht voor om u te verzoeken ons merk van uw domeinnaam, website of publicatie te verwijderen als wij van mening zijn dat het gebruik ondeugdelijk is.<ol class="arabic">
+<li><strong>Bedrijven, producten en commerciële projecten mogen geen qgis.tld (top level domein) gebruiken</strong>: Elke principale of secundaire niveau domeinnaam, met of zonder commerciële bedoeling, zou niet identiek of virtueel identiek moeten zijn aan een van onze merken.</li>
+<li><strong>Bedrijven, producten en commerciële projecten zouden bij voorkeur geen ****qgis****.xxxx gebruiken</strong>: De eigenaar van de website zou geen domeinnaam moeten registreren die onze merken bevat en zou ngeen handelsmerk of soortgelijke eigenaarsrechten moeten claimen in de domeinnaam. Bijvoorbeeld “QGIStech.com”, “QGIS-group.com”, “QGISexperts.com” zijn niet toegestaan zonder toestemming aarvoor te vragen. Elke overtreding van dit beleid zou tot gerechtelijke acties kunnen leiden. De website zou anders ook moeten voldoen aan beleid voor het registreren van domeinnamen en van toepassing zijnde wettelijke bepalingen met betrekking tot handelsmerken en het aan kracht inboeten daarvan.</li>
+<li><strong>Uitzonderingen</strong>:<ul>
+<li>QGIS.ORG landelijk stemmende leden mogen ccTLD (QGIS.ch, QGIS.dk, …) gebruiken.</li>
+<li>Niet-commerciële projecten mogen qgis.xxxxx gebruiken (qgis.tutorials zou in deze categorie vallem al;s de handleidingen gratis zijn) maar zou toestemming moeten vragen vóór het diomein te registreren. QGIS.ORG mag het domein registreren en naar de naamservers verwijzen, verschgaft door de verzoeker of de verzoeker instrueren dat zo te doen.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Notitie</p>
+<p class="last">Toestemming is geen formele aanbeveling van het project QGIS en zegt niets over de kwaliteit van de dienst.</p>
+</div>
+<ul class="simple">
+<li><strong>Sociale media</strong></li>
+</ul>
+<p>Elk en alle gebruik van onze merken in verbinding met accountnamen, profielen, avatars of afhandeling op platforms voor sociale media is onderworpen aan dezelfde richtlijnen als hiervoor vermeld, net als voor elk ander gebruik. Het gebruiken van enig van onze merken in een accountnaam, profielnaam, als een avatar, of in de afhandeling op platforms voor sociale media vereist een verzoek voor toestemming.</p>
+</div>
+<div class="section" id="prohibited-trademark-uses">
+<h2>Verboden gebruik van handelsmerk<a class="headerlink" href="#prohibited-trademark-uses" title="Permalink naar deze titel">¶</a></h2>
+<p>QGIS staat het gebruik van enig van onze merken op de volgende manieren niet toe: als deel van uw eigen handelsmerk; om niet-QGIS-producten, diensten of technologie te identificeren; op een manier die het in zich heeft om tot verwarring te leiden tussen producten, diensten of technologie van QGIS en die van enige andere entiteit; op een manier die onnauwkeurig impliceert dat QGIS uw eigen activiteiten, producten, diensten of technologie sponsort of daarmee instemt of op enige andere wijze daarmee is verbonden; op een manier die zich laatdunkend uitlaat over QGIS of zijn producten, diensten of technologie; in verbinding met producten, diensten of activiteiten die, naar ons inzicht, de goede naam van onze merken in het geding brengen; in verbinding met illegale activiteiten of het aanzetten tot illegale activiteiten.</p>
+<p><strong>Voorbeelden van onacceptabel gebruik</strong>:</p>
+<ol class="arabic simple">
+<li><strong>Valse verbondenheid/aanbeveling</strong>: U mag het handelsmerk QGIS niet op een manier gebruiken die een verbinding met of aanbeveling door het project QGIS of de gemeenschap suggereert, als dat niet waar is.</li>
+<li><strong>Bedrijfsnamen</strong>: U mag het handelsmerk QGIS niet gebruiken in een bedrijfsnaam of de naam van een commerciële organisatie.</li>
+<li><strong>Verwarrende soortgelijke handelsmerken</strong>: U mag geen naam gebruiken die verwarrend soortgelijk is aan het handelsmerk QGIS.</li>
+</ol>
+</div>
+<div class="section" id="if-in-doubt-find-out">
+<h2>Indien u twijfelt, zoek het op!<a class="headerlink" href="#if-in-doubt-find-out" title="Permalink naar deze titel">¶</a></h2>
+<p>Vele vragen worden in de FAQ hieronder beantwoord. Als u geen antwoord op uw vraag kunt vinden, neem dan contact op met onze Financial and Marketing Advisor (<a class="reference external" href="mailto:trademark&#37;&#52;&#48;qgis&#46;org">trademark<span>&#64;</span>qgis<span>&#46;</span>org</a>).</p>
+</div>
+<div class="section" id="report-abuse">
+<h2>Misbruik melden<a class="headerlink" href="#report-abuse" title="Permalink naar deze titel">¶</a></h2>
+<p>Als u mensen, organisaties of bedrijven kent die de naam QGIS of het logo als deel van een handelsmerk gebruiken zonder toestemming, of als u verwijzingen naar QGIS ziet zonder de juiste erkenningen, laat hen dan weten van ons handelsmerk. We zouden het op prijs stellen als u ons daarvan in kennis wilt stellen door middel van een e-mail aan onze Financial and Marketing Advisor (<a class="reference external" href="mailto:trademark&#37;&#52;&#48;qgis&#46;org">trademark<span>&#64;</span>qgis<span>&#46;</span>org</a>).</p>
+</div>
+<div class="section" id="frequently-asked-questions">
+<h2>Vaak gestelde vragen<a class="headerlink" href="#frequently-asked-questions" title="Permalink naar deze titel">¶</a></h2>
+<p><strong>V:</strong> <em>Wanneer moet ik de juiste erkenning weergeven?</em></p>
+<p><strong>A:</strong> Altijd en overal waar u de term QGIS gebruikt in drukwerk, op het Internet, of in audioweergaven, zou u altijd de juiste erkenning moeten geven aan het project QGIS. Zie voor meer informatie “Trademark Attribution.”</p>
+<p><strong>Q:</strong> <em>Ik heb of laat een handelsmerk registreren bij de autoriteit voor handelsmerken in mijn land. Heb ik nog steeds toestemming nodig?</em></p>
+<p><strong>A:</strong> Ja, er van uitgaande dat uw handelsmerk het element QGIS omvat en dat het wordt gebruikt in combinatie met software-gerelateerde goederen en diensten. Onthoud dat de toestemming van toepassing is op het handelsmerk QGIS of die nu al dan niet zijn geregistreerd bij een autoriteit voor handelsmerken. Als u de term QGIS gebruikt als een handelsmerk (al dan niet geregistreerd), dient u toestemming aan te vragen.</p>
+<p><strong>V:</strong> <em>Ik ben een commerciële entiteit (bijvoorbeeld een bedrijf, partners of zelfstandig ondernemer, zakelijk of non-profit) die software-gerelateerde goederen of diensten verkoopt en het woord “QGIS” in de naam van de entiteit gebruikt. Moet ik toestemming aanvragen?</em></p>
+<p><strong>A:</strong> Ja, omdat u QGIS gebruikt als deel van een handelsmerk in combinatie met software-gerelateerde goederen of diensten. Software-gerelateerde goederen zijn computerprogramma’s en -systemen, of gebundelde pakketten met gereedschappen, utilities, hardware, etc. Software-gerelateerde diensten zijn diensten die computerprogramma’s en - systemen uitrollen, documenteren, het gebruik ervan faciliteren, of verbeteren. Zelfs als u QGIS niet gebruikt als deel van de naam van de entiteit, als de entiteiy een product of dienst heeft (dan wel verkocht of gratis weggeven) die “QGIS” in zijn naam gebruikt, heeft u nog syeeds toestemming nodig voor het gebruiken van het woord QGIS in de naam van de producten of diensten.</p>
+<p><strong>V:</strong> <em>Als ik toestemming krijg voor mijn handelsmerk, zal QGIS dan weigeren om soortgelijke toestemmingen aan merken die hetzelfde zijn als het mijne, of soortgelijk verwarrend aan mijn merk, toe te kennen?</em></p>
+<p><strong>A:</strong> Nee, QGIS zal niet proberen exclusiviteit te verzekeren of merken beschermen tegen misbruik. QGIS beschouwt het beschermen tegen misbruik van handelsmerken als de verantwoordelijkheid van de eigenaar van het handelsmerk. QGIS is geen autoriteit voor het beslechten van disputen, en zal niet betrokken worden bij disputen tussen eigenaren van handelsmerken.</p>
+<p><strong>V:</strong> <em>Trademark Registration Consent: Mijn organisatie heeft registratie aangevraagd voor een handelsmerk voor software-gerelateerde goederen of diensten die QGIS als een element bevatten. De aanvraag werd geweigerd wegens verwarrende soortgelijkheid aan het handelsmerk QGIS. Als ik toestemming aanvraag zal QGIS dan instemmen met mijn registratie?</em></p>
+<p><strong>A:</strong> Nee. De toestemming van QGIS is geen instemming voor de registratie van andere handelsmerken. We stemmen niet in met de registratie van handelsmerken die verwarrend soortgelijk zijn aan het merk QGIS om het merk QGIS te beschermen tegen het aan kracht inboeten.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="Algemene index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../sustaining_members/index.html" title="Programma voor dragende leden"
+             >volgende</a> |</li>
+        <li class="right" >
+          <a href="../governance.html" title="Wie is wie in het project"
+             >vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Doe mee / Ontwikkeling</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Projectorganisatie</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Indien niet anders aangegeven valt de inhoud onder de volgende licentie:  <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Gebruikte symbologie voor selectie zijn afkomstig van <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Niet vertaalde pagina? Of zag u een fout in de vertaling:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">repareer mij</a>
+        <br/>
+        Fout in de tekst, ontbrekende tekst of u weet het beter:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">repareer mij</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

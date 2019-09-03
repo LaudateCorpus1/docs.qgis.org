@@ -1,0 +1,998 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Log met wijzigingen voor QGIS 2.8</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Zoek" href="../../../search.html" />
+    <link rel="next" title="Log met wijzigingen voor QGIS 2.6" href="../visualchangelog260/index.html" />
+    <link rel="prev" title="Log met wijzigingen voor QGIS 2.10" href="../visualchangelog210/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Algemene index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../visualchangelog260/index.html" title="Log met wijzigingen voor QGIS 2.6"
+             accesskey="N">volgende</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog210/index.html" title="Log met wijzigingen voor QGIS 2.10"
+             accesskey="P">vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Voor gebruikers</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" accesskey="U">Visueel log met wijzigingen</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engels">English</option>
+  <option value="ca" title="Catalaans">Català</option>
+  <option value="da" title="Deens">Dansk</option>
+  <option value="de" title="Duits">Deutsch</option>
+  <option value="es" title="Spaans">Español</option>
+  <option value="fa" title="Perzisch">فارسی</option>
+  <option value="fi" title="Fins">Suomi</option>
+  <option value="fr" title="Frans">Français</option>
+  <option value="gl" title="Galicisch">Galego</option>
+  <option value="id" title="Indonesisch">Bahasa Indonesia</option>
+  <option value="it" title="Italiaans">Italiano</option>
+  <option value="hu" title="Hongaars">Magyar</option>
+  <option value="ja" title="Japans">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Koreaans">한국어</option>
+  <option value="lt" title="Litouws">Lietuvių</option>
+  <option value="nl" title="Nederlands">Nederlands</option>
+  <option value="pl" title="Pools">Polski</option>
+  <option value="pt_BR" title="Portugees (Brazilie)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugees">Português</option>
+  <option value="ro" title="Roemeens">Română</option>
+  <option value="tr" title="Turks">Türkçe</option>
+  <option value="ru" title="Russisch">Русский</option>
+  <option value="uk" title="Oekrains">Українська</option>
+  <option value="zh-Hans" title="Chinees (Vereenvoudigd)">簡体中文</option>
+  <option value="zh-Hant" title="Chinees (Traditioneel)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/visualchangelog28/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Bedankt!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Doneer nu!</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Dank u voor uw donatie!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is gratis en we hopen dat ons werk u bevalt en hopen dat u de door u gedownloade kopie ver en breed deelt en verspreid, zodat anderen er ook de vruchten van plukken. Onze beste groeten!</p>'+
+            '<p id="stripeerr" style="display:none;">Helaas trad er een fout op bij het verwerken van uw donatie. probeer het later opnieuw of neem contact met ons op via finance@qgis.org</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">Ontdek QGIS</a></li>
+            <li><a href="../index.html">Voor gebruikers</a></li>
+            <li><a href="../../getinvolved/index.html">Help mee</a></li>
+            <li><a href="../../../docs/index.html">Documentatie</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Zoek" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../visualchangelog210/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../visualchangelog260/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Ontdek QGIS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Voor gebruikers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">Download QGIS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualchangelogs.html">Visueel log met wijzigingen</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog38/index.html">Log met wijzigingen voor QGIS 3.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog36/index.html">Log met wijzigingen voor QGIS 3.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog34/index.html">Log met wijzigingen voor QGIS 3.4 LTR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog32/index.html">Log met wijzigingen voor QGIS 3.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog30/index.html">Log met wijzigingen voor QGIS 3.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog218/index.html">Log met wijzigingen voor QGIS 2.18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog216/index.html">Log met wijzigingen voor QGIS 2.16</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog214/index.html">Log met wijzigingen voor QGIS 2.14</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog212/index.html">Log met wijzigingen voor QGIS 2.12</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog210/index.html">Log met wijzigingen voor QGIS 2.10</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Log met wijzigingen voor QGIS 2.8</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">Algemeen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#analysis-tools">Analyse-gereedschap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#browser">Browser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-providers">Gegevensproviders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-management">Gegevensbeheer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitising">Digitaliseren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layer-legend">Legenda van laag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-composer">Printvormgeving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plugins">Plug-ins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing">Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmability">Programmeerbaarheid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-server">QGIS Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">Symbologie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-interface">Gebruikersinterface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog260/index.html">Log met wijzigingen voor QGIS 2.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog240/index.html">Log met wijzigingen voor QGIS 2.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog220/index.html">Log met wijzigingen voor QGIS 2.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog200/index.html">Log met wijzigingen voor QGIS 2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">Trainingsmateriaal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">Ondersteuning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">Gebruikersgroepen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">Commerciële ondersteuning</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../books/index.html">Boeken</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Doe mee / Ontwikkeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentatie</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="changelog-for-qgis-2-8">
+<span id="changelog28"></span><h1>Log met wijzigingen voor QGIS 2.8<a class="headerlink" href="#changelog-for-qgis-2-8" title="Permalink naar deze titel">¶</a></h1>
+<p>Dit is het log met wijzigingen voor de volgende uitgave van QGIS - versie 2.8 ‘ Wien’. Wien is Duits voor ‘Wenen’ - gastheer voor de ontmoeting van de ontwikkelaars in november 2009 en opnieuw in maart 2014.</p>
+<p><strong>Long Term Release</strong></p>
+<p>Dit  is een speciale uitgave omdat het is aangewezen als een ‘LTR’ (Long Term Release). LTR-uitgaven zullen worden ondersteund met achterwaarts ondersteunende probleemoplossingen voor één jaar, en zullen een permanente bevriezingsfase hebben (d.i. er zullen geen nieuwe mogelijkheden worden toegevoegd, alleen probleemoplossingen en kleinere updates).</p>
+<p>Het doel van LTR-uitgaven is om een stabiel en minder vaak wijzigend platform te verschaffen voor bedrijven en organisaties die zich niet meer dan eenmaal per jaar willen bezighouden met het bijscholen van gebruikers, trainingsmateriaal etc.  Het succes van de LTR hangt heel veel van u, onze geliefde gebruikers, af, we hebben uw ondersteuning nodig om ons probleemoplossingen aan te reiken en er voor zorgend dat u in uw ondersteuningscontracten met verleners van ondersteuning specificeert dat probleemoplossingen die voor u worden toegepast ook worden toegepast op de tak van de LTR als ook op onze normale takken voor ontwikkeling.</p>
+<p>Als een LTR belangrijk voor u is, overweeg dan ook directe ondersteuning voor het project QGIS, of moedig uw zakelijke dienstverlener aan om de LTR als basis te gebruiken voor uw zakelijke oplossing zodat iedereen kan profiteren van een stabiel platform dat doorlopend wordt verbeterd en verfijnd. Onthoud dat voor gebruikers en organisaties die graag de grenzen verkennen, onze viermaandelijkse uitgaven ongewijzigd door blijven gaan.</p>
+<p><strong>Nieuwe mogelijkheden</strong></p>
+<p>QGIS 2.8 is ook een speciale uitgave omdat het zoveel fantastische nieuwe mogelijkheden bevat, wijzigingen en verbeteringen om het het meest populaire vrije desktop GIS te maken, zelfs meer gevuld met mogelijkheden en nuttig.</p>
+<p>Wanneer aan software nieuwe mogelijkheden worden toegevoegd introduceren die de mogelijkheid tot het ontstaan van nieuwe problemen - als u in deze uitgave nieuwe problemen tegenkomt, vul dan een ticket in <a class="reference external" href="http://hub.qgis.org">op de QGIS Bug Tracker</a>.</p>
+<p><strong>Dankwoord</strong></p>
+<p>We willen de ontwikkelaars, schrijvers van documentatie, testers en alle andere vele mensen bedanken die vrijwillig hun tijd en inspanningen bijdragen (of mensen ondersteunen om dat te doen).</p>
+<p>From the QGIS community we hope you enjoy this release! If you wish to
+donate time, money or otherwise get involved in making QGIS more
+awesome, please wander along to <a class="reference external" href="https://qgis.org">qgis.org</a> and lend a
+hand!</p>
+<p>Tenslotte willen we onze officiële sponsoren bedanken voor de onschatbare financiële ondersteuning die zij aan dit project verlenen:</p>
+<ul class="simple">
+<li><strong>GOUDEN sponsor: Asia Air Survey, Japan</strong> <a class="reference external" href="http://www.asiaairsurvey.com/">http://www.asiaairsurvey.com/</a></li>
+<li>ZILVEREN sponsor: <a class="reference external" href="http://www.sourcepole.com/">Sourcepole AG, Switzerland</a></li>
+<li>ZILVEREN sponsor: <a class="reference external" href="http://www.vorarlberg.at/">State of Vorarlberg, Austria</a></li>
+<li>ZILVEREN sponsor: <a class="reference external" href="http://www.opw.ie/">Office of Public Works, Ireland, Ireland</a></li>
+<li>BRONZEN Sponsor: <a class="reference external" href="http://www.gis3w.it/">GIS3W, Italië</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.molitec.it/">www.molitec.it, Italy</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.argusoft.de">www.argusoft.de, Germany</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.openrunner.com">www.openrunner.com, France</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.gkg-kassel.de/">GKG Kassel,(Dr.-Ing. Claas Leiner), Duitsland</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.customeranalytics.com/">Customer Analytics, USA</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.urbsol.com.au/">Urbsol, Australia</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.mappinggis.com/">MappingGIS, Spain</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting, UK</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.adlares.com/">ADLARES GmbH, Germany</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.avioportolano.it/">Avioportolano Italia, Italy</a></li>
+<li>BRONZEN sponsor: <a class="reference external" href="http://www.wggios.agh.edu.pl/en">Faculty of Geology, Geophysics and Environmental Protection, AGH, ​University of Science and Technology, Poland</a></li>
+</ul>
+<p>A current list of donors who have made financial contributions large and
+small to the project can be seen on our <a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#list-of-donors">donors
+list</a>.
+If you would like to become an official project sponsor, please visit
+<a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#sponsorship">our sponsorship
+page</a> for
+details. Sponsoring QGIS helps us to fund our six monthly developer
+meetings, maintain project infrastructure and fund bug fixing efforts.</p>
+<p>If you enjoy using QGIS, please consider making a donation to support
+the project - either
+<a class="reference external" href="https://qgis.org/en/site/getinvolved/donations.html">financial</a> or of
+<a class="reference external" href="https://qgis.org/en/site/getinvolved/index.html">your time and skills</a>! Lastly we
+would like to also take a moment to encourage you to fund a <a class="reference external" href="http://blog.vitu.ch/10102014-1046/crowdfunding-initiative-automated-testing">special
+campaign</a>
+by one of our QGIS developers to get a working test suite for QGIS so
+that we can improve out quality assurance process and deliver you the
+best possible releases.</p>
+<p>QGIS is gratis software en u bent niet verplicht om maar iets te betalen voor het gebruiken ervan - in feite willen we mensen, wijd en zijd verspreid, aanmoedigen om het te gebruiken ongeacht uw financiële of sociale status - wij geloven dat het uitrusten van mensen met gereedschappen voor het maken van ruimtelijke beslissingen zal resulteren in een betere wereld voor de gehele mensheid.</p>
+<div class="contents local topic" id="inhoud">
+<ul class="simple">
+<li><a class="reference internal" href="#general" id="id7">Algemeen</a><ul>
+<li><a class="reference internal" href="#feature-enter-expressions-into-spin-boxes" id="id8">Mogelijkheid: Expressies invoeren in draaivelden</a></li>
+<li><a class="reference internal" href="#feature-bookmarks-can-be-imported-exported" id="id9">Mogelijkheid: Favoriete plaatsen kunnen worden geïmporteerd/geëxporteerd</a></li>
+<li><a class="reference internal" href="#feature-improvements-to-expressions" id="id10">Mogelijkheid: Verbeteringen aan expressies</a></li>
+<li><a class="reference internal" href="#feature-continuous-testing-framework-and-qa-improvements" id="id11">Mogelijkheid: Doorlopend framework voor testen en verbeteringen in QA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-tools" id="id12">Analyse-gereedschap</a><ul>
+<li><a class="reference internal" href="#feature-measure-dialog-improvements" id="id13">Mogelijkheid: Verbeteringen aan dialoogvenster Meten</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#browser" id="id14">Browser</a><ul>
+<li><a class="reference internal" href="#more-responsive-browser" id="id15">Meer responderende browser</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-providers" id="id16">Gegevensproviders</a><ul>
+<li><a class="reference internal" href="#feature-support-for-contextual-wms-legend-graphics" id="id17">Mogelijkheid: Ondersteuning voor contextuele afbeeldingen van legenda’s van WMS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-management" id="id18">Gegevensbeheer</a><ul>
+<li><a class="reference internal" href="#feature-custom-prefix-for-joins" id="id19">Mogelijkheid: Aangepast voorvoegsel voor joins</a></li>
+<li><a class="reference internal" href="#feature-support-for-creation-of-temporary-memory-layers" id="id20">Mogelijkheid: Ondersteuning voor het maken van tijdelijke geheugenlagen</a></li>
+<li><a class="reference internal" href="#feature-support-for-calculations-on-selected-rows" id="id21">Mogelijkheid: Ondersteuning voor berekeningen op geselecteerde rijen</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#digitising" id="id22">Digitaliseren</a><ul>
+<li><a class="reference internal" href="#feature-advanced-digitizing-tools" id="id23">Mogelijkheid: Gereedschap Geavanceerd digitaliseren</a></li>
+<li><a class="reference internal" href="#feature-improved-simplify-tool" id="id24">Mogelijkheid: Verbeterd gereedschap Vereenvoudigen</a></li>
+<li><a class="reference internal" href="#feature-snapping-improvements" id="id25">Mogelijkheid: Verbeteringen voor snappen</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-legend" id="id26">Legenda van laag</a><ul>
+<li><a class="reference internal" href="#feature-show-rule-based-renderer-s-legend-as-a-tree" id="id27">Mogelijkheid: Legenda van Regel gebaseerde-renderer las een boom weergeven</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-composer" id="id28">Printvormgeving</a><ul>
+<li><a class="reference internal" href="#feature-composer-gui-improvements" id="id29">Mogelijkheid: Verbeteringen GUI Printvormgeving</a></li>
+<li><a class="reference internal" href="#feature-grid-improvements" id="id30">Mogelijkheid: Verbeteringen voor raster</a></li>
+<li><a class="reference internal" href="#feature-label-item-margins" id="id31">Mogelijkheid: Marges voor items Label</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins" id="id32">Plug-ins</a><ul>
+<li><a class="reference internal" href="#feature-python-console-improvements" id="id33">Mogelijkheid: Verbeteringen voor console Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processing" id="id34">Processing</a><ul>
+<li><a class="reference internal" href="#feature-new-geometric-predicate-parameter-type" id="id35">Mogelijkheid: Nieuw type parameter geometrisch predikaat</a></li>
+<li><a class="reference internal" href="#feature-new-algorithms" id="id36">Mogelijkheid: Nieuwe algoritmen</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmability" id="id37">Programmeerbaarheid</a><ul>
+<li><a class="reference internal" href="#feature-add-comment-functionality-to-expressions" id="id38">Mogelijkheid: Functionaliteit voor opmerkingen bij expressies toegevoegd</a></li>
+<li><a class="reference internal" href="#feature-custom-expression-function-editor" id="id39">Mogelijkheid: Aangepaste functiebewerker voor expressies</a></li>
+<li><a class="reference internal" href="#feature-qt5-support" id="id40">Mogelijkheid: Ondersteuning voor Qt5</a></li>
+<li><a class="reference internal" href="#feature-bulk-loading-spatial-index" id="id41">Mogelijkheid: Bulk-laden van ruimtelijke index</a></li>
+<li><a class="reference internal" href="#feature-run-only-the-selected-part-of-a-sql-query" id="id42">Mogelijkheid: Alleen het geselecteerde deel van een query in SQL uitvoeren</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qgis-server" id="id43">QGIS Server</a><ul>
+<li><a class="reference internal" href="#feature-server-python-plugins" id="id44">Mogelijkheid: Python plug-ins voor server</a></li>
+<li><a class="reference internal" href="#feature-support-for-layer-styles" id="id45">Mogelijkheid: Ondersteuning voor laagstijlen</a></li>
+<li><a class="reference internal" href="#feature-add-describelayer-method-to-wms" id="id46">Mogelijkheid: Methode DescribeLayer aan WMS toegevoegd</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symbology" id="id47">Symbologie</a><ul>
+<li><a class="reference internal" href="#feature-raster-image-fill-type" id="id48">Mogelijkheid: Type vulling voor rasterafbeelding</a></li>
+<li><a class="reference internal" href="#feature-live-heatmap-renderer" id="id49">Mogelijkheid: Live renderer Heatmap</a></li>
+<li><a class="reference internal" href="#feature-multiple-styles-per-layer" id="id50">Mogelijkheid: Meerdere stijlen per laag</a></li>
+<li><a class="reference internal" href="#feature-more-data-defined-symbology-settings" id="id51">Mogelijkheid: Meer instellingen voor gegevens-gedefinieerde symbologie</a></li>
+<li><a class="reference internal" href="#feature-dxf-export-improve-marker-symbol-export" id="id52">Mogelijkheid: exporteren DXF: exporteren van markeringssymbool verbeterd</a></li>
+<li><a class="reference internal" href="#feature-map-rotation-in-canvas-improved-rotation-in-composer" id="id53">Mogelijkheid: Roteren van kaart in kaartvenster, verbeterde rotatie in Printvormgeving</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-interface" id="id54">Gebruikersinterface</a><ul>
+<li><a class="reference internal" href="#feature-improved-consistent-projection-selection" id="id55">Mogelijkheid: Verbeterde/consistente selectie van projectie</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id7">Algemeen</a><a class="headerlink" href="#general" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-enter-expressions-into-spin-boxes">
+<h3><a class="toc-backref" href="#id8">Mogelijkheid: Expressies invoeren in draaivelden</a><a class="headerlink" href="#feature-enter-expressions-into-spin-boxes" title="Permalink naar deze titel">¶</a></h3>
+<p>Bij het bewerken van attributen in de <strong>attributentabel of formulieren</strong>, kunt u nu direct expressies invoeren in draaivelden, bijv. <code class="docutils literal"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">2.5</span></code> en zij zullen automatisch worden geëvalueerd.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/e094287244ee1fe161c8ca95951c2d11ca1e6cdd.png" />
+</div>
+</div>
+<div class="section" id="feature-bookmarks-can-be-imported-exported">
+<h3><a class="toc-backref" href="#id9">Mogelijkheid: Favoriete plaatsen kunnen worden geïmporteerd/geëxporteerd</a><a class="headerlink" href="#feature-bookmarks-can-be-imported-exported" title="Permalink naar deze titel">¶</a></h3>
+<p>Het is nu mogelijk om uw Favoriete plaatsen naar/vanuit een bestand op te slaan/te laden. Dit maakt het eenvoudiger om locaties van Favoriete plaatsen te delen, of ze tussen computers uit te wisselen.</p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> Salvatore Larosa</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/e3d35c32da659821bc0c657b8e7ba40587a1bfb2.jpg" />
+</div>
+</div>
+<div class="section" id="feature-improvements-to-expressions">
+<h3><a class="toc-backref" href="#id10">Mogelijkheid: Verbeteringen aan expressies</a><a class="headerlink" href="#feature-improvements-to-expressions" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li><strong>Delen van een integer produceert een double indien vereist</strong>: Eerder zou het delen van twee integers integers in een expressie altijd resulteren in een waarde integer, d.i. <code class="docutils literal"><span class="pre">5</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">2</span></code>. Nu zal het resultaat, indien vereist, altijd een double zijn, dus <code class="docutils literal"><span class="pre">5</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">2.5</span></code>, wat veel meer wordt verwacht door gebruikers. Een nieuwe operator voor het delen van integer - <code class="docutils literal"><span class="pre">//</span></code> is toegevoegd om het oude gedrag na te bootsen, d.i. <code class="docutils literal"><span class="pre">5</span> <span class="pre">//</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">2</span></code>.</li>
+<li><strong>Nieuwe functie ‘if()’</strong>: Er is nu een nieuwe expressie <code class="docutils literal"><span class="pre">if(cond,</span> <span class="pre">true,</span> <span class="pre">false)</span></code></li>
+<li><strong>Trage evaluatie van expressies</strong></li>
+<li><strong>Geometrie verkrijgen en transformeren toegevoegd</strong>: Deze nieuwe sleutelwoorden kunnen worden gebruikt met <code class="docutils literal"><span class="pre">getFeature</span></code> voor enkele testen van geometrie zoals intersects, crosses, contains, etc.</li>
+<li><code class="docutils literal"><span class="pre">geometry</span></code> - geeft de geometrie van het object terug</li>
+<li><code class="docutils literal"><span class="pre">transform</span></code> - geeft de getransformeerde geometrie terug</li>
+</ul>
+<div class="figure align-center">
+<img alt="" src="../../../_images/ec56f9b8331e619ad1a44970fde655b68125f9d8.png" />
+</div>
+</div>
+<div class="section" id="feature-continuous-testing-framework-and-qa-improvements">
+<h3><a class="toc-backref" href="#id11">Mogelijkheid: Doorlopend framework voor testen en verbeteringen in QA</a><a class="headerlink" href="#feature-continuous-testing-framework-and-qa-improvements" title="Permalink naar deze titel">¶</a></h3>
+<p>In onze doorlopende zoektocht naar het verbeteren van de stabiliteit en kwaliteit van QGIS, wordt elke bijdrage nu getest tegen een groeiende testsuite om regressies automatisch te identificeren. In de afbeelding rechts ziet u in de lijst met inkomende pull requests op onze pagina van GitHub page dat zij nu automatisch geannoteerd met een vinkje of een kruis, gebaseerd op of onze testsuite al dan niet succesvol werd uitgevoerd op <a class="reference external" href="https://travis-ci.org/qgis/QGIS">Travis.ci</a> toen het pull request werd gemaakt of werd bijgewerkt.</p>
+<p>We voeren nu ook regelmatig Coverity-scans uit op de codebasis van QGIS. Als resultaat hiervan hebben we meer dan 1000 gevlagde problemen geïdentificeerd en opgelost, inclusief lekken in het geheugen en potentiële crashes. QGIS heeft een dichtheid voor defecten van 0.01 waar het gemiddelde, voor programma’s met een soortgelijke grootte, ongeveer 1.0 is.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/4ec86080ff150743f1bdc88d3ac7881a6cd405de.png" />
+</div>
+</div>
+</div>
+<div class="section" id="analysis-tools">
+<h2><a class="toc-backref" href="#id12">Analyse-gereedschap</a><a class="headerlink" href="#analysis-tools" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-measure-dialog-improvements">
+<h3><a class="toc-backref" href="#id13">Mogelijkheid: Verbeteringen aan dialoogvenster Meten</a><a class="headerlink" href="#feature-measure-dialog-improvements" title="Permalink naar deze titel">¶</a></h3>
+<p>Het gereedschap voor meten is verbeterd zodat u nu kunt kiezen welke eenheden in het dialoogvenster meten zouden moeten worden gebruikt. Er is ook een nieuw gedeelte informatie in het dialoogvenster dat weergeeft welke instellingen worden gebruikt gedurende de berekeningen van de metingen.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/67a001d3d800feec8805de698ed364e91d00daab.png" />
+</div>
+</div>
+</div>
+<div class="section" id="browser">
+<h2><a class="toc-backref" href="#id14">Browser</a><a class="headerlink" href="#browser" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="more-responsive-browser">
+<h3><a class="toc-backref" href="#id15">Meer responderende browser</a><a class="headerlink" href="#more-responsive-browser" title="Permalink naar deze titel">¶</a></h3>
+<p>In de QGIS Browser worden items nu in hun eigen threads uitgevouwen, wat de tijd voor laden van de browser versnelt en de browser meer reagerend maakt. Navigeren door bronnen van PostGIS is nu veel sneller in de browser. De geanimeerde schermafbeelding rechts (klik op de afbeelding om de animatie te zien) geeft het laden van twee trage servers van WMS parallel weer. De status van de browser (uitbreiding boom) wordt hersteld bij opstarten.</p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> Radim Blazek</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/c8df646572084b8f12027fd54c1210f14c80c8e1.gif" />
+</div>
+</div>
+</div>
+<div class="section" id="data-providers">
+<h2><a class="toc-backref" href="#id16">Gegevensproviders</a><a class="headerlink" href="#data-providers" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-support-for-contextual-wms-legend-graphics">
+<h3><a class="toc-backref" href="#id17">Mogelijkheid: Ondersteuning voor contextuele afbeeldingen van legenda’s van WMS</a><a class="headerlink" href="#feature-support-for-contextual-wms-legend-graphics" title="Permalink naar deze titel">¶</a></h3>
+<p>Als uw server van WMS contextuele legenda’s ondersteunt, kunt u daar nu ook in QGIS gebruik van maken. Contextuele legenda’s zijn verzoeken getLegendGraphic die alleen de relevante legenda voor uw huidig bereik van de weergave teruggeven, en dus geen items voor de legenda bevatten voor dingen die u in de huidige kaart niet kunt zien.</p>
+<p><strong>Dit werd mogelijk gemaakt door:</strong> <a class="reference external" href="http://www.regione.toscana.it/">Regione Toscana</a></p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http://www.faunalia.eu/">Faunalia</a></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/e516a25492b547113c487d00475cfe07bc7b131e.png" />
+</div>
+</div>
+</div>
+<div class="section" id="data-management">
+<h2><a class="toc-backref" href="#id18">Gegevensbeheer</a><a class="headerlink" href="#data-management" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-custom-prefix-for-joins">
+<h3><a class="toc-backref" href="#id19">Mogelijkheid: Aangepast voorvoegsel voor joins</a><a class="headerlink" href="#feature-custom-prefix-for-joins" title="Permalink naar deze titel">¶</a></h3>
+<p>U kunt nu een aangepast voorvoegsel definiëren in het beheer van joins in het dialoogvenster Laag-eigenschappen. Bij het gebruiken van een voorvoegsel, zal de attributentabel nu namen van samengevoegde attributen weergeven met het voorvoegsel van uw voorkeur.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/372e6561a4db3ed3ca3d418c946f81bce0d0d134.png" />
+</div>
+</div>
+<div class="section" id="feature-support-for-creation-of-temporary-memory-layers">
+<h3><a class="toc-backref" href="#id20">Mogelijkheid: Ondersteuning voor het maken van tijdelijke geheugenlagen</a><a class="headerlink" href="#feature-support-for-creation-of-temporary-memory-layers" title="Permalink naar deze titel">¶</a></h3>
+<p>Deze uitgave voegt ondersteuning toe voor het maken van nieuwe tijdelijke tekenlagen binnen de bron van QGIS. Tekenlagen kunnen worden gemaakt via de menuoptie <code class="docutils literal"><span class="pre">Kaartlagen</span> <span class="pre">--&gt;</span> <span class="pre">Laag</span> <span class="pre">maken</span> <span class="pre">--&gt;</span> <span class="pre">Nieuwe</span> <span class="pre">tijdelijke</span> <span class="pre">tekenlaag</span></code>.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/bddbbd6cb55e9a19441ea564275dd480661e61de.png" />
+</div>
+</div>
+<div class="section" id="feature-support-for-calculations-on-selected-rows">
+<h3><a class="toc-backref" href="#id21">Mogelijkheid: Ondersteuning voor berekeningen op geselecteerde rijen</a><a class="headerlink" href="#feature-support-for-calculations-on-selected-rows" title="Permalink naar deze titel">¶</a></h3>
+<p>In de attributentabel kunt u nu berekeningen doen op alleen de geselecteerde rijen dankzij de nieuwe knop die is toegevoegd op de balk Veldberekening.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/1b7ead001901ed4242d26556abac055834e367b2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="digitising">
+<h2><a class="toc-backref" href="#id22">Digitaliseren</a><a class="headerlink" href="#digitising" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-advanced-digitizing-tools">
+<h3><a class="toc-backref" href="#id23">Mogelijkheid: Gereedschap Geavanceerd digitaliseren</a><a class="headerlink" href="#feature-advanced-digitizing-tools" title="Permalink naar deze titel">¶</a></h3>
+<p>Indien u ooit wilde dat u  in QGIS lijnen kon digitaliseren exact parallel of in rechte hoeken, lijnen zou kunnen vastzetten onder specifieke hoeken, enzovoort, nu kunt u dat! Het gereedschap Geavanceerd digitaliseren is een port van de plug-in CADinput en voegt een nieuw paneel toe aan QGIS. Het paneel wordt actief bij het vastleggen van nieuwe geometrieën of delen van geometrieén</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/50f726e5899eb72dcec76e4bed1936bcf957e75f.jpg" />
+</div>
+</div>
+<div class="section" id="feature-improved-simplify-tool">
+<h3><a class="toc-backref" href="#id24">Mogelijkheid: Verbeterd gereedschap Vereenvoudigen</a><a class="headerlink" href="#feature-improved-simplify-tool" title="Permalink naar deze titel">¶</a></h3>
+<p>Het gereedschap vereenvoudigen is bewerkt, toegevoegd:</p>
+<ul class="simple">
+<li>ondersteuning voor opnieuw projecteren van OTF</li>
+<li>gebruiker kan de exacte tolerantie specificeren (niet slechts onzinnige relatieve waarde)</li>
+<li>tolerantie mag worden gespecificeerd in of kaarteenheden, laageenheden of pixels</li>
+<li>instellingen voor tolerantie worden opgeslagen in de instellingen</li>
+<li>meerdere objecten in één keer vereenvoudigen (sleep een rechthoek in plaats van slechts te klikken)</li>
+<li>ondersteuning voor meerdelige objecten</li>
+<li>statistieken over de reductie van het aantal punten</li>
+</ul>
+<p><strong>Dit werd mogelijk gemaakt door:</strong> <a class="reference external" href="http://tracks4africa.com/">Tracks for Africa</a></p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> in samenwerking met  <a class="reference external" href="http://kartoza.com/">Kartoza</a></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/20b7f96ffc7d37b8c2ae09189d7957a929a716e5.png" />
+</div>
+</div>
+<div class="section" id="feature-snapping-improvements">
+<h3><a class="toc-backref" href="#id25">Mogelijkheid: Verbeteringen voor snappen</a><a class="headerlink" href="#feature-snapping-improvements" title="Permalink naar deze titel">¶</a></h3>
+<p>er is een nieuwe modus voor snappen : <strong>snappen aan alle lagen</strong> wat het inschakelen van snappen tussen alle lagen sneller maakt. ook is de onderliggende architectuur voor snappen in QGIS bijgewerkt wat snappen op grotere projecten sneller maakt en de precisie waarmee snappen wordt uitgevoerd verbeterd. ​Er is ook minder verwarring tussen toleranties voor snappen in kaarteenheden of laageenheden, dus de verwachte toleranties van 1 meter worden geen toleranties van 1 graad zonder dat u dat weet.</p>
+<p><strong>Dit werd mogelijk gemaakt door:</strong> ` Ville de Vevey, SITNyon &lt;<a class="reference external" href="http://www.vevey.ch/">http://www.vevey.ch/</a>&gt;`_ en <a class="reference external" href="http://www.qgis.ch/">QGIS Usergroup Switzerland</a></p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/8454af2743154585eb82325ab2694e50e7d9efcd.jpg" />
+</div>
+</div>
+</div>
+<div class="section" id="layer-legend">
+<h2><a class="toc-backref" href="#id26">Legenda van laag</a><a class="headerlink" href="#layer-legend" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-show-rule-based-renderer-s-legend-as-a-tree">
+<h3><a class="toc-backref" href="#id27">Mogelijkheid: Legenda van Regel gebaseerde-renderer las een boom weergeven</a><a class="headerlink" href="#feature-show-rule-based-renderer-s-legend-as-a-tree" title="Permalink naar deze titel">¶</a></h3>
+<p>Gevorderde gebruikers die gebruiken maken van het systeem van Regel-gebaseerde-renderer in QGIS zullen blij zijn te zien dat de regels nu worden gepresenteerd als een boom in de Legenda. Beter nog, elke knoop in de <strong>boom</strong> kan individueel worden <strong>in/uit geschakeld</strong> wat grote flexibiliteit verschaft voor hoe sublagen worden gerenderd in uw kaart.</p>
+<p><strong>Dit werd mogelijk gemaakt door:</strong> <a class="reference external" href="http://www.sige.ch/">SIGE</a></p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> in samenwerking met  <a class="reference external" href="http://kartoza.com/">Kartoza</a></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/0d39448aa0893d7a71c5241aa2181750535e62c3.png" />
+</div>
+</div>
+</div>
+<div class="section" id="map-composer">
+<h2><a class="toc-backref" href="#id28">Printvormgeving</a><a class="headerlink" href="#map-composer" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-composer-gui-improvements">
+<h3><a class="toc-backref" href="#id29">Mogelijkheid: Verbeteringen GUI Printvormgeving</a><a class="headerlink" href="#feature-composer-gui-improvements" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>Menuoptie voor weergave om <strong>begrenzingsvakken te verbergen</strong>. Dit stelt gebruikers in staat de begrenzingsvakken van in de compositie geselecteerde items te verbergen. Het is een handige mogelijkheid voor het toestaan van interactie met items terwijl de voorvertoning exact laat zien hoe ze eruit komen te zien wanneer de compositie wordt geëxporteerd, zonder dat grote blokken de weergave blokkeren.</li>
+<li><strong>Modus Volledig scherm voor Printvormgeving</strong></li>
+<li>Optie om <strong>de weergave van panelen in/uit te schakelen</strong> in Printvormgeving, beschikbaar in zowel het <code class="docutils literal"><span class="pre">menu</span> <span class="pre">Beeld</span></code>, met behulp van de sneltoets <code class="docutils literal"><span class="pre">F10</span></code> en door op <code class="docutils literal"><span class="pre">Tab</span></code> te drukken wanneer het kaartvenster in printvormgeving is geselecteerd. Het is nuttig voor het maximaliseren van de ruimte bij het plannen van een lay-out voor een kaart.</li>
+</ul>
+<div class="figure align-center">
+<img alt="" src="../../../_images/10677c6e1612a4392e8bca0a9cbe31126426becf.png" />
+</div>
+</div>
+<div class="section" id="feature-grid-improvements">
+<h3><a class="toc-backref" href="#id30">Mogelijkheid: Verbeteringen voor raster</a><a class="headerlink" href="#feature-grid-improvements" title="Permalink naar deze titel">¶</a></h3>
+<p>In de Printvormgeving heeft u nu fijnere controle over de weergave van frame en annotatie. Eerder zou, voor geroteerde kaarten of opnieuw geprojecteerde rasters, de Printvormgeving alle coördinaten voor elke zijde van de kaart tekenen. Dit resulteerde in een weergave van mix van latitude/Y- en longitude/X-coördinaten op één kant. Nu kunt u beheren of u alle coördinaten, alleen latitude of alleen longitude wilt voor elke kant van het kaartframe. Soortgelijke opties zijn ook toegevoegd voor het beheren van hoe een frame voor het kaartraster zal worden opgedeeld.</p>
+<p>Nieuwe verticale aflopende richting voor annotaties. Deze wijziging voegt een nieuwe modus aflopende verticale richting toe voor annotaties in het kaartraster. Eerder werd alleen oplopende tekst ondersteund voor verticale annotaties.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/288d533cbed1f6beeef17004897060c8639bbbb4.png" />
+</div>
+</div>
+<div class="section" id="feature-label-item-margins">
+<h3><a class="toc-backref" href="#id31">Mogelijkheid: Marges voor items Label</a><a class="headerlink" href="#feature-label-item-margins" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>U kunt nu zowel horizontale als verticale <strong>marges voor label</strong>-items beheren. Eerder zou alleen één enkele instelling voor de marge gelden voor zowel de horizontale als de verticale marges. Deze wijziging maakt het voor gebruikers mogelijk verschillende horizontale en verticale marges te specificeren.</li>
+<li>U kunt nu negatieve marges specificeren voor items Label, <strong>toestaan dat tekst enigszins buiten de grenzen van het item label wordt getekend</strong>. Dit is gewenst voor het uitlijnen van items Label met andere items terwijl een optische uitlijning van de marge voor het type label wordt toegestaan.</li>
+</ul>
+<div class="figure align-center">
+<img alt="" src="../../../_images/7f4905d74ca140ed369bea8866357b9d952ee212.png" />
+</div>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2><a class="toc-backref" href="#id32">Plug-ins</a><a class="headerlink" href="#plugins" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-python-console-improvements">
+<h3><a class="toc-backref" href="#id33">Mogelijkheid: Verbeteringen voor console Python</a><a class="headerlink" href="#feature-python-console-improvements" title="Permalink naar deze titel">¶</a></h3>
+<p>U kunt nu scripts voor Python in het venster van QGIS slepen en laten vallen en zij zullen automatisch worden uitgevoerd. We hebben ook een pictogram voor de werkbalk toegevoegd aan de werkbalk Plug-ins en een sneltoets ( <code class="docutils literal"><span class="pre">Ctrl-Alt-P</span></code> ) voor snelle toegang tot de console voor Python.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/03be8f30ce341816bd3bcd1a58f3b913ddcea07c.png" />
+</div>
+</div>
+</div>
+<div class="section" id="processing">
+<h2><a class="toc-backref" href="#id34">Processing</a><a class="headerlink" href="#processing" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-new-geometric-predicate-parameter-type">
+<h3><a class="toc-backref" href="#id35">Mogelijkheid: Nieuw type parameter geometrisch predikaat</a><a class="headerlink" href="#feature-new-geometric-predicate-parameter-type" title="Permalink naar deze titel">¶</a></h3>
+<p>met dit nieuwe type parameter, gebruikt in de algoritmen <strong>Select by location, Extract by location</strong> en <strong>Join attributes by location</strong>, kan de gebruiker precies de te gebruiken ruimtelijke operator selecteren.</p>
+<p><strong>Dit werd mogelijk gemaakt door:</strong> <a class="reference external" href="http://www.developpement-durable.gouv.fr/">French Ministry of Ecology, Sustainable Development and Energy</a></p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http//www.camptocamp.com">Camptocamp</a></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/cd198b98cf28e611f5c2e3be93bc5ec90dd0a5b4.png" />
+</div>
+</div>
+<div class="section" id="feature-new-algorithms">
+<h3><a class="toc-backref" href="#id36">Mogelijkheid: Nieuwe algoritmen</a><a class="headerlink" href="#feature-new-algorithms" title="Permalink naar deze titel">¶</a></h3>
+<p>Een aantal nieuwe algoritmen zijn toegevoegd aan het framework Processing:</p>
+<ul class="simple">
+<li><strong>Regular points</strong> algorithm (addresses #5953)</li>
+<li>algoritme <strong>Symetrical difference</strong> (adresseert #5953)</li>
+<li>algoritme <strong>Vector split</strong> (adresseert #5953)</li>
+<li>algoritme <strong>Vector grid</strong> (adresseert #5953)</li>
+<li>algoritme voor berekening <strong>Hypsometric curves</strong></li>
+<li><strong>Split lines with lines</strong></li>
+<li>algoritme <strong>Refactor fields</strong> voor manipuleren van attributen</li>
+</ul>
+<div class="figure align-center">
+<img alt="" src="../../../_images/b2403fae20cd24cfb1883d24e97de6fc51e40c88.png" />
+</div>
+</div>
+</div>
+<div class="section" id="programmability">
+<h2><a class="toc-backref" href="#id37">Programmeerbaarheid</a><a class="headerlink" href="#programmability" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-add-comment-functionality-to-expressions">
+<h3><a class="toc-backref" href="#id38">Mogelijkheid: Functionaliteit voor opmerkingen bij expressies toegevoegd</a><a class="headerlink" href="#feature-add-comment-functionality-to-expressions" title="Permalink naar deze titel">¶</a></h3>
+<p>Opmerkingen kunnen nu aan expressies worden toegevoegd met behulp van een SQL-stijl <code class="docutils literal"><span class="pre">--</span></code>-voorvoegsel.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/e1579eec6d8ab74330fb2f784c68ed16c83bb79d.jpg" />
+</div>
+</div>
+<div class="section" id="feature-custom-expression-function-editor">
+<h3><a class="toc-backref" href="#id39">Mogelijkheid: Aangepaste functiebewerker voor expressies</a><a class="headerlink" href="#feature-custom-expression-function-editor" title="Permalink naar deze titel">¶</a></h3>
+<p>U kunt nu aangepaste functies voor expressies definiëren in het widget Expressie. Zie <a class="reference external" href="http://nathanw.net/2015/01/19/function-editor-for-qgis-expressions/">deze blogpost</a> voor meer details.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/503dd9dadec4fb85ee5ab6335e4f03979a8e7d77.jpg" />
+</div>
+</div>
+<div class="section" id="feature-qt5-support">
+<h3><a class="toc-backref" href="#id40">Mogelijkheid: Ondersteuning voor Qt5</a><a class="headerlink" href="#feature-qt5-support" title="Permalink naar deze titel">¶</a></h3>
+<p>QGIS kan nu worden gebouwd met behulp van bibliotheken voor Qt5. Onthoud dat momenteel de meeste binaries nog steeds standaard Qt4 hebben.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/c702d89260cbab35323c052a15ab5c5728fc71151.png" />
+</div>
+</div>
+<div class="section" id="feature-bulk-loading-spatial-index">
+<h3><a class="toc-backref" href="#id41">Mogelijkheid: Bulk-laden van ruimtelijke index</a><a class="headerlink" href="#feature-bulk-loading-spatial-index" title="Permalink naar deze titel">¶</a></h3>
+<p>In de API hebben we ondersteuning toegevoegd voor het in bulk laden van ruimtelijke index. Dit is een veel snellere manier van het initialiseren van ene ruimtelijke index. vanuit Python is het zo eenvoudig als:</p>
+<p><code class="docutils literal"><span class="pre">index</span> <span class="pre">=</span> <span class="pre">QgsSpatialIndex(</span> <span class="pre">layer.getFeatures()</span> <span class="pre">)</span></code></p>
+<p>Uit een eenvoudige test met 50K aan punten in een geheugenlaag:</p>
+<p><strong>bulk loading ~ 100 ms</strong></p>
+<p>inserting features ~ 600 ms</p>
+<p>De boom voor de index zou in theorie ook beter moeten zijn geconstrueerd en zou kunnen resulteren in snellere acties voor opzoeken.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/80cea18c68b7885cb71c1682ca3777caa048ff9e.png" />
+</div>
+</div>
+<div class="section" id="feature-run-only-the-selected-part-of-a-sql-query">
+<h3><a class="toc-backref" href="#id42">Mogelijkheid: Alleen het geselecteerde deel van een query in SQL uitvoeren</a><a class="headerlink" href="#feature-run-only-the-selected-part-of-a-sql-query" title="Permalink naar deze titel">¶</a></h3>
+<p>In de SQL-bewerker van DB Manager is het nu mogelijk om een deel van de SQL te accentueren en alleen dat gedeelte zal dan worden uitgevoerd als u drukt op <code class="docutils literal"><span class="pre">F5</span></code> of klikt op de knop <code class="docutils literal"><span class="pre">Uitvoeren</span></code></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/0d1343e84aa0946becab1e37880a58ceeffbd491.jpg" />
+</div>
+</div>
+</div>
+<div class="section" id="qgis-server">
+<h2><a class="toc-backref" href="#id43">QGIS Server</a><a class="headerlink" href="#qgis-server" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-server-python-plugins">
+<h3><a class="toc-backref" href="#id44">Mogelijkheid: Python plug-ins voor server</a><a class="headerlink" href="#feature-server-python-plugins" title="Permalink naar deze titel">¶</a></h3>
+<p>Ondersteuning van Python plug-ins voor QGIS server brengt de kracht van Python naar de kant van de server, hetgeen snelle en efficiënte ontwikkeling toestaat alsmede het uitrollen van nieuwe mogelijkheden.</p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http://www.itopen.it/">Alessandro Pasotti (ItOpen)</a></p>
+</div>
+<div class="section" id="feature-support-for-layer-styles">
+<h3><a class="toc-backref" href="#id45">Mogelijkheid: Ondersteuning voor laagstijlen</a><a class="headerlink" href="#feature-support-for-layer-styles" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>QGIS Server ondersteund nu vooraf gedefinieerde laagstijlen in verzoeken GetMap</li>
+<li>QGIS Server ondersteunt nu meerdere stijlen in het verzoek GetStyles (zie gedeelte Symbologie hieronder)</li>
+</ul>
+</div>
+<div class="section" id="feature-add-describelayer-method-to-wms">
+<h3><a class="toc-backref" href="#id46">Mogelijkheid: Methode DescribeLayer aan WMS toegevoegd</a><a class="headerlink" href="#feature-add-describelayer-method-to-wms" title="Permalink naar deze titel">¶</a></h3>
+<p><strong>profiel Styled Layer Descriptor van de Web Map Service : DescribeLayer</strong></p>
+<p><a class="reference external" href="http://www.opengeospatial.org/standards/sld">http://www.opengeospatial.org/standards/sld</a></p>
+<p>Definiëren van een gebruikergedefinieerde stijl vereist informatie over de te symboliseren objecten, of ten minste hun type object/bedekking. Omdat gebruikergedefinieerde stijlen kunnen worden toegepast op ene benoemde laag, dient er een mechanisme te zijn waarmee een cliënt de informatie voor een type object/bedekking voor een benoemde laag kan verkrijgen. Dit is een ander voorbeeld van het overbruggen van het gat tussen de concepten van WMS voor lagen en stijlen en concepten van WFS/WCS zoals type object en bedekkingslaag. Een WMS kan, optioneel, het verzoek <strong>DescribeLayer</strong> ondersteunen om dit mogelijk te maken.</p>
+<p>Van de methode DescribeLayer wordt gedacht dat het een betere benadering is dan het document voor de WMS-capabilities nog meer te belasten.</p>
+<p>Voor elke benoemde laag zou de beschrijving moeten aangeven of het inderdaad is gebaseerd op gegevens van ene object en als dat zo is zou het de WFS/WCS moeten aangeven (door een voorvoegsel URL) en de typen object/bedekking. Onthoud dat dit perfect geldig is voor een benoemde laag om niet te beschrijven te zijn op deze manier.</p>
+</div>
+</div>
+<div class="section" id="symbology">
+<h2><a class="toc-backref" href="#id47">Symbologie</a><a class="headerlink" href="#symbology" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-raster-image-fill-type">
+<h3><a class="toc-backref" href="#id48">Mogelijkheid: Type vulling voor rasterafbeelding</a><a class="headerlink" href="#feature-raster-image-fill-type" title="Permalink naar deze titel">¶</a></h3>
+<p>Dit nieuwe type symboollaag maakt het mogelijk polygonen te vullen met een (getegelde) rasterafbeelding.</p>
+<p>Opties omvatten (gegevens gedefinieerde) bestandsnaam, doorzicht, grootte afbeelding (in pixels, mm of kaarteenheden), modus coördinaten (object of  weergave), en rotatie.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/3c372b247f1f5583768532c2be96f169dcff1e8f.png" />
+</div>
+</div>
+<div class="section" id="feature-live-heatmap-renderer">
+<h3><a class="toc-backref" href="#id49">Mogelijkheid: Live renderer Heatmap</a><a class="headerlink" href="#feature-live-heatmap-renderer" title="Permalink naar deze titel">¶</a></h3>
+<p>De nieuwe renderer voor Heatmap vectorlagen maakt het mogelijk live, dynamische heatmaps voor puntlagen te maken.</p>
+<p>Opties omvatten het specificeren van de straal voor de heatmap in pixels, mm of kaarteenheden, keuze voor ene kleurenbalk, gewogen punten op veld, en een schuifbalk voor het selecteren van een wisselwerking tussen snelheid van renderen en kwaliteit.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/a13862e4cf8707ec70ddb37a8e3e824db6af883d.png" />
+</div>
+</div>
+<div class="section" id="feature-multiple-styles-per-layer">
+<h3><a class="toc-backref" href="#id50">Mogelijkheid: Meerdere stijlen per laag</a><a class="headerlink" href="#feature-multiple-styles-per-layer" title="Permalink naar deze titel">¶</a></h3>
+<p>Het is nu mogelijk om meerdere stijlen voor ene laag in te stellen en dan eenvoudig daartussen te schakelen. Deze functionaliteit is beschikbaar in het <code class="docutils literal"><span class="pre">contextmenu</span> <span class="pre">Legenda</span> <span class="pre">--&gt;</span> <span class="pre">submenu</span> <span class="pre">Stijlen</span></code> waar het mogelijk is stijlen toe te voegen/te verwijderen en daar snel tussen te schakelen. Sets van lagen onthouden stijlen, en verschillende stijlen kunnen ook worden toegepast op individuele kaartitems in Printvormgeving. De gedefinieerde meerdere stijlen zijn ook beschikbaar als het project wordt gebruikt via QGIS Server als een laag voor WMS. Voor meer informatie hierover, zie ook deze <a class="reference external" href="http://www.lutraconsulting.co.uk/blog/2015/02/19/towering-qgis-release/">blogpost</a>.</p>
+<p><strong>Dit werd mogelijk gemaakt door:</strong> <a class="reference external" href="http://www.regione.toscana.it/">Regione Toscana</a></p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http://www.gis3w.it/">Gis3W</a>, <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/e6d0058bbae51c52fb9fffc79d4cc459fbaf853b.png" />
+</div>
+</div>
+<div class="section" id="feature-more-data-defined-symbology-settings">
+<h3><a class="toc-backref" href="#id51">Mogelijkheid: Meer instellingen voor gegevens-gedefinieerde symbologie</a><a class="headerlink" href="#feature-more-data-defined-symbology-settings" title="Permalink naar deze titel">¶</a></h3>
+<p>De gebruikersinterface voor instellingen van gegevens-gedefinieerde symbologie is verbeterd - de optie gegevens-gedefinieerd is verplaatst tot naast elke voor gegevens te definiëren eigenschap (in overeenstemming met andere delen van QGIS zoals de eigenschappen voor labelen). Ook zijn vele nieuwe eigenschappen voor gegevens te definiëren gemaakt voor symbologie. Deze verbetering van de gebruikersinterface verschaft ook een manier om onmiddellijk te zien of een gegevens-gedefinieerde voorrang is gedefinieerd als ook eenvoudiger toegang tot gegevens-gedefinieerde instellingen.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/1af9b133ea80a4469e9be81107449b0e22df442b.png" />
+</div>
+</div>
+<div class="section" id="feature-dxf-export-improve-marker-symbol-export">
+<h3><a class="toc-backref" href="#id52">Mogelijkheid: exporteren DXF: exporteren van markeringssymbool verbeterd</a><a class="headerlink" href="#feature-dxf-export-improve-marker-symbol-export" title="Permalink naar deze titel">¶</a></h3>
+<p>De functionaliteit exporteren voor bestanden van DXF is verbeterd, met betere trouw van de geëxporteerde markeringssymbolen aan de originele symbologie van QGIS.</p>
+</div>
+<div class="section" id="feature-map-rotation-in-canvas-improved-rotation-in-composer">
+<h3><a class="toc-backref" href="#id53">Mogelijkheid: Roteren van kaart in kaartvenster, verbeterde rotatie in Printvormgeving</a><a class="headerlink" href="#feature-map-rotation-in-canvas-improved-rotation-in-composer" title="Permalink naar deze titel">¶</a></h3>
+<p>Deze uitgave omvat voorlopige ondersteuning voor het roteren in het kaartvenster. U kunt het kaartvenster roteren met behulp van het nieuwe widget voor roteren in de Statusbalk. Ondersteuning voor roteren is ook uitgebreid naar de Printvormgeving zodat  het labelen en symbologie etc. juist afhandelt.</p>
+<p><strong>Deze mogelijkheid werd financieel mogelijk gemaakt door:</strong> <a class="reference external" href="http://www.spaceimaging.co.jp/">Japan Space Imaging Corporation (JSI)</a></p>
+<p><strong>Deze mogelijkheid werd ontwikkeld door:</strong> <a class="reference external" href="http://www.faunalia.eu/">Faunalia</a></p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/b655549a3336c2fb16eef87f6f30fe50f5abe9f9.png" />
+</div>
+</div>
+</div>
+<div class="section" id="user-interface">
+<h2><a class="toc-backref" href="#id54">Gebruikersinterface</a><a class="headerlink" href="#user-interface" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="feature-improved-consistent-projection-selection">
+<h3><a class="toc-backref" href="#id55">Mogelijkheid: Verbeterde/consistente selectie van projectie</a><a class="headerlink" href="#feature-improved-consistent-projection-selection" title="Permalink naar deze titel">¶</a></h3>
+<p>Alle dialoogvensters gebruiken nu een consistent widget voor selectie van projectie, wat het snel selecteren van recent gebruikte en standaard project-/QGIS-projecties.</p>
+<div class="figure align-center">
+<img alt="" src="../../../_images/7a9b103d6b537f8fd6d2c53b81dc4f9a2e3f736c.png" />
+</div>
+<p>.</p>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Algemene index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../visualchangelog260/index.html" title="Log met wijzigingen voor QGIS 2.6"
+             >volgende</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog210/index.html" title="Log met wijzigingen voor QGIS 2.10"
+             >vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Voor gebruikers</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" >Visueel log met wijzigingen</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Indien niet anders aangegeven valt de inhoud onder de volgende licentie:  <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Gebruikte symbologie voor selectie zijn afkomstig van <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Niet vertaalde pagina? Of zag u een fout in de vertaling:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">repareer mij</a>
+        <br/>
+        Fout in de tekst, ontbrekende tekst of u weet het beter:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">repareer mij</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

@@ -1,0 +1,592 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Commerciële ondersteuning</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Zoek" href="../../search.html" />
+    <link rel="next" title="Boeken" href="books/index.html" />
+    <link rel="prev" title="Gebruikersgroepen" href="usergroups.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Algemene index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="books/index.html" title="Boeken"
+             accesskey="N">volgende</a> |</li>
+        <li class="right" >
+          <a href="usergroups.html" title="Gebruikersgroepen"
+             accesskey="P">vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Voor gebruikers</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engels">English</option>
+  <option value="ca" title="Catalaans">Català</option>
+  <option value="da" title="Deens">Dansk</option>
+  <option value="de" title="Duits">Deutsch</option>
+  <option value="es" title="Spaans">Español</option>
+  <option value="fa" title="Perzisch">فارسی</option>
+  <option value="fi" title="Fins">Suomi</option>
+  <option value="fr" title="Frans">Français</option>
+  <option value="gl" title="Galicisch">Galego</option>
+  <option value="id" title="Indonesisch">Bahasa Indonesia</option>
+  <option value="it" title="Italiaans">Italiano</option>
+  <option value="hu" title="Hongaars">Magyar</option>
+  <option value="ja" title="Japans">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Koreaans">한국어</option>
+  <option value="lt" title="Litouws">Lietuvių</option>
+  <option value="nl" title="Nederlands">Nederlands</option>
+  <option value="pl" title="Pools">Polski</option>
+  <option value="pt_BR" title="Portugees (Brazilie)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugees">Português</option>
+  <option value="ro" title="Roemeens">Română</option>
+  <option value="tr" title="Turks">Türkçe</option>
+  <option value="ru" title="Russisch">Русский</option>
+  <option value="uk" title="Oekrains">Українська</option>
+  <option value="zh-Hans" title="Chinees (Vereenvoudigd)">簡体中文</option>
+  <option value="zh-Hant" title="Chinees (Traditioneel)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/commercial_support.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Bedankt!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Doneer nu!</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Dank u voor uw donatie!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is gratis en we hopen dat ons werk u bevalt en hopen dat u de door u gedownloade kopie ver en breed deelt en verspreid, zodat anderen er ook de vruchten van plukken. Onze beste groeten!</p>'+
+            '<p id="stripeerr" style="display:none;">Helaas trad er een fout op bij het verwerken van uw donatie. probeer het later opnieuw of neem contact met ons op via finance@qgis.org</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../about/index.html">Ontdek QGIS</a></li>
+            <li><a href="index.html">Voor gebruikers</a></li>
+            <li><a href="../getinvolved/index.html">Help mee</a></li>
+            <li><a href="../../docs/index.html">Documentatie</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Zoek" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="usergroups.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="books/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">Ontdek QGIS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Voor gebruikers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="download.html">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualchangelogs.html">Visueel log met wijzigingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainingmaterial/index.html">Trainingsmateriaal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Ondersteuning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usergroups.html">Gebruikersgroepen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Commerciële ondersteuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-contributors">Core contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contributors">Contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#others">Overige</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="books/index.html">Boeken</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getinvolved/index.html">Doe mee / Ontwikkeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/index.html">Documentatie</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="commercial-support">
+<span id="qgis-commercial-support"></span><h1>Commerciële ondersteuning<a class="headerlink" href="#commercial-support" title="Permalink naar deze titel">¶</a></h1>
+<p>Wilt u QGIS in uw organisatie of bedrijf gebruiken, maar maakt u zich zorgen over de beschikbaarheid van commerciële ondersteuning? Hier volgt een alfabetische lijst van bedrijven die commerciële ondersteuning bieden, verdeeld over verschillende categoriëen.</p>
+<div class="admonition note">
+<p class="first admonition-title">Notitie</p>
+<p class="last">we nemen alleen verantwoordelijkheid voor de accuraatheid, betrouwbaarheid en volledigheid van de gegeven informatie voor de <strong>Core contributors</strong>, bedrijven die bijdragen aan de ontwikkeling van QGIS Core.</p>
+</div>
+<div class="section" id="core-contributors">
+<h2>Core contributors<a class="headerlink" href="#core-contributors" title="Permalink naar deze titel">¶</a></h2>
+<p>In lexicografische volgorde:</p>
+<p><a class="reference internal" href="../../_images/3liz.png"><img alt="3liz" src="../../_images/3liz.png" style="height: 100px;" /></a> <a class="reference external" href="http://www.3liz.com/">3liz</a> (uit Frankrijk) bied een volledige range van diensten aan rond QGIS, aan alle software gebruikers, van beginners tot gevorderden. Afhankelijk van uw behoeften, geeft 3Liz trainingssessies over QGIS, en biedt het Web mapping portaal LizMap — gebasseerd op QGIS Desktop &amp; QGIS Server — die eenvoudige publicatie van gegevens op het web mogelijk maakt, en biedt ook ondersteuning, ontwikkeling en adviesdiensten voor QGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/camptocamp.png"><img alt="camptocamp" src="../../_images/camptocamp.png" style="width: 150px;" /></a> <a class="reference external" href="http://www.camptocamp.com/en/geospatial-solutions">Camptocamp</a> (gevestigd in Frankrijk, Duitsland en Zwitserland) Open Source specialist, Camptocamp is een innovatief bedrijf in de implementatie van software voor geografische informatiesystemen (GIS), zakelijk beheer (ERP) en het beheren van servers. Camptocamp bouwt aangepaste oplossingen gebaseerd op de beste technologieën van Open Source om uw meest ambitieuze projecten te implementeren.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/faunalia.png"><img alt="faunalia" src="../../_images/faunalia.png" style="height: 100px;" /></a> <a class="reference external" href="http://www.faunalia.eu/">Faunalia</a> (gevestigd in Italië en wereldwijd aktief) biedt als ontwikkeldiensten (van zowel bron als plug-ins), training en commerciële ondersteuning voor QGIS, GRASS, GDAL/OGR en PostgreSQL/PostGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/gbd-consult.png"><img alt="gbd-consult" src="../../_images/gbd-consult.png" style="width: 158px;" /></a> <a class="reference external" href="http://www.gbd-consult.de/">Geoinformatikbüro Dassau</a> (gevestigd in Düsseldorf, Duitsland) levert commerciële consultatie, training, ondersteuning en programmeren voor QGIS, GRASS en andere toepassingen van FOSS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/itopen.png"><img alt="itopen" src="../../_images/itopen.png" style="width: 200px;" /></a> <a class="reference external" href="http://www.itopen.it/">It Open</a> (basis in Italië) verschaft commerciële ondersteuning en C++/Python ontwikkelingsservices voor QGIS Desktop en Server, PostGIS, Django en andere vrije en open source-softwarepakketten voor zowel web- als serverside.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/kartoza.png"><img alt="kartoza" src="../../_images/kartoza.png" style="width: 200px;" /></a> <a class="reference external" href="http://kartoza.com">Kartoza (Pty) Ltd.</a> (met kantoren in Stellenbosch en Johannesburg, Zuid-Afrika). We verschaffen commerciële ondersteuning en training voor QGIS Desktop en Server en voeren ontwikkeling van objecten voor QGIS uit op contractbasis. We ontwikkelen ook plug-ins in Python en C++ voor QGIS. <strong>Opmerking:</strong> Kartoza was eerder bekend als Linfiniti Consulting.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/lutra_consulting.png"><img alt="lutra_consulting" src="../../_images/lutra_consulting.png" style="width: 200px;" /></a> <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> (uit het Verenigd Koninkrijk ) biedt opleidingen, ondersteuning en op maat ontwikkelingsdiensten voor QGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/naturalgis.png"><img alt="naturalgis" src="../../_images/naturalgis.png" style="height: 100px;" /></a> <a class="reference external" href="http://www.naturalgis.pt/">NaturalGIS</a> (gevestigd in Portugal) biedt training, ontwikkeling en commerciële ondersteuning voor een aantal Open Source GIS software. We specialiseren ons in QGIS (Desktop, Server en Web), PostGIS en aangepaste ontwikkeling voor WebGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/norbit.png"><img alt="norbit" src="../../_images/norbit.png" style="width: 100px;" /></a> <a class="reference external" href="http://www.norbit.de/64">norBIT GmbH</a> (gevestigd in Norden, Duitsland; opgericht in 1989) verschaft voornamelijk oplossingen voor lokale overheden, gemeentelijke diensten en waterschappen in verbinding met QGIS.  Aanvullend verschaffen we training, commerciële ondersteuning en aangepast programmeren voor QGIS en dragen actief bij aan het project QGIS sinds 2007.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/north_road.png"><img alt="north_road" src="../../_images/north_road.png" style="width: 250px;" /></a> <a class="reference external" href="http://north-road.com/">North Road</a> (gevestigd in Australië) specialiseert zich in aangepaste ontwikkelingsoplossingen voor mogelijkheden voor QGIS en oplossingen, en biedt ook training en commerciële ondersteuning in het veld van georuimtelijke open bron. North Road heeft een bewezen geschiedenis in kwaliteit en is verantwoordelijk voor duizenden mogelijkheden en oplossingen in de basis van de code voor QGIS sinds 2013.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/opengisch-logo.png"><img alt="opengisch" src="../../_images/opengisch-logo.png" style="width: 200px;" /></a> <a class="reference external" href="http://opengis.ch/">OPENGIS.ch</a> (gevestigd nabij Bern en Chur, Zwitserland, wereldwijd actief) verschaft ondersteuning, training en ontwikkeling voor uw open source GIS. Onze QGIS bronontwikkelaars zijn bekwaam in C++, Python, SQL, georuimtelijke analyse, mobiele ontwikkeling (inclusief Android) en meer.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/oslandia.png"><img alt="oslandia" src="../../_images/oslandia.png" style="height: 100px;" /></a> <a class="reference external" href="http://www.oslandia.com/?page_id=20">Oslandia</a> (gevestigd in Frankrijk) biedt services aan voor open source GIS. Oslandia geeft als diensten trainingen, ondersteuning, ontwikkeling en advies, voornamelijk voor QGIS en PostGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/sourcepole.gif"><img alt="sourcepole" src="../../_images/sourcepole.gif" style="width: 200px;" /></a> <a class="reference external" href="http://www.sourcepole.com/">Sourcepole</a> (uit Zurich, Zwitserland maar wereldwijd actief) geeft FOSSGIS opleidingen, commerciële ondersteuning, onderhoudscontracten en Geo Hosting diensten in de cloud aan voor QGIS. Met drie leidende ontwikkelaars aan QGIS Core is Sourcepole in staat om geavanceerde ontwikkeldiensten voor QGIS te leveren.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/terglobo.png"><img alt="terglobo" src="../../_images/terglobo.png" style="width: 75px;" /></a> <a class="reference external" href="https://www.terglobo.nl/">Terglobo</a> (gevestigd in ‘s-Hertogenbosch) verschaft commerciële diensten en training voor QGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/zuidt.png"><img alt="zuidtlogo" src="../../_images/zuidt.png" style="width: 75px;" /></a> <a class="reference external" href="http://zuidt.nl/">Zuidt</a>  (gevestigd in Haarlem, Nederland) wil dat geografische informatie open en eenvoudig is. Zuidt wil DE Nederlandse (internationale) QGIS-specialist zijn, en verschaft advies, coderen van plug-ins en trainingsdiensten.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink naar deze titel">¶</a></h2>
+<p>In lexicografische volgorde:</p>
+<p><a class="reference internal" href="../../_images/cartoexpert.gif"><img alt="cartoexpert" src="../../_images/cartoexpert.gif" style="width: 75px;" /></a> <a class="reference external" href="http://www.cartoexpert.com/index.php/formations/qgis-formation-quantum-gis.html">CartoExpert</a>  (gevestigd in Frankrijk) is een geomatisch competentiecentrum dat zowel nationale als internationale services biedt, consultaties in cartografie en ook in geografische informatiesystemen. CartoExpert verschaft technische ondersteuning voor QGIS, assistentie bij het implementeren van QGIS binnen uw organisatie, als ook training in GIS op QGIS (Initiatie, Verbetering, workshops, mobiel etc).</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/gaia3d.png"><img alt="gaia3d" src="../../_images/gaia3d.png" style="width: 150px;" /></a> <a class="reference external" href="http://www.gaia3d.com/">Gaia3D, Inc.</a> (gevestigd in Zuid Korea) is een leidend open source GIS-bedrijf in Korea. Gaia3D bied professionele ontwikkeldiensten, training, advies en ondersteuning voor QGIS, PostGIS, GeoServer en OpenLayers</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/nextgis.gif"><img alt="nextgis" src="../../_images/nextgis.gif" style="width: 200px;" /></a> <a class="reference external" href="http://nextgis.org/">NextGIS</a> (uit Moskou, Rusland) biedt commerciële ondersteuning, de ontwikkeling van maatwerk en opleidingen voor QGIS, PostGIS en GRASS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/septima_small.png"><img alt="septima" src="../../_images/septima_small.png" style="width: 150px;" /></a> <a class="reference external" href="https://www.septima.dk/">Septima</a> (gevestigd in Denemarken). Bij Septima verschaffen we training, ondersteuning, consultatie en ontwikkeling binnen een het bereik van open bron georuimtelijke projecten. We hebben uitgebreide ervaring met de ontwikkeling van plug-ins voor QGIS, QGIS-server en het integreren van QGIS met andere producten.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="others">
+<h2>Overige<a class="headerlink" href="#others" title="Permalink naar deze titel">¶</a></h2>
+<p><a class="reference internal" href="../../_images/astun.jpg"><img alt="astun" src="../../_images/astun.jpg" style="width: 75px;" /></a> <a class="reference external" href="http://astuntechnology.com/">Astun Technology</a> werd opgericht in 2005 om open bron en web-gebaseerde GIS-diensten te verschaffen aan lokale en centrale overheden.  Vandaag de dag, omdat alle organisaties zich de technische en financiële voordelen realiseren van het gebruiken van oplossingen in de cloud om hun cruciale GEO-diensten te maken, te beheren en af te leveren, blijft de vraag naar Astun’s kennis en ervaring voor het leveren van marktleidende, volledig beheerde AWS-gebaseerde GIS-oplossingen voor de cloud, groeien. Bezoek, voor meer informatie: <a class="reference external" href="https://astuntechnology.com/">https://astuntechnology.com/</a></p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/agx.gif"><img alt="agx" src="../../_images/agx.gif" style="width: 75px;" /></a> <a class="reference external" href="http://www.adventgx.com/">AdventGX</a> (uit College Station, Texas, Verenigde Staten) biedt installatie, opleidingen en ondersteuning bij de implementatie van QGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/bev.gif"><img alt="bev" src="../../_images/bev.gif" style="width: 75px;" /></a> <a class="reference external" href="http://www.birdseyeviewgis.com/">Bird’s Eye View GIS</a> (Uit Albuquerque, Nieuw Mexico, Verenigde Staten) biedt commerciële GIS diensten en ondersteuning en opleidingen in QGIS, GRASS GIS en overige FOSS GIS applicaties.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/clear_mapping_co.jpg"><img alt="clear_mapping_co" src="../../_images/clear_mapping_co.jpg" style="width: 75px;" /></a> <a class="reference external" href="http://www.clearmapping.co.uk/">Clear Mapping Co</a> (gevestigd in Penryn, Cornwall, VK) is een prijswinnende internationale cartografische ontwerpconsultant. We maken prachtige kaarten om de effectiviteit op de werkplek te verbeteren met een inclusieve en duurzame focus in het ontwerp. Onze op maat gemaakte GIS trainingscursussen in QGIS en andere GISsoftware bieden de mogelijkheid tot het efficiënt afhandelen van ruimtelijke gegevens en het maken van heldere kaarten.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/esdm.png"><img alt="esdm" src="../../_images/esdm.png" style="width: 85px;" /></a> <a class="reference external" href="https://www.esdm.co.uk/">exeGesIS SDM Ltd</a> is gevestigd in Zuid-Wales in het VK. We bieden ondersteuning en trainingscursussen op verscheidene niveaus, publiek of privaat, naast met op maat gemaakte workshops en mentoren. We kunnen assisteren met de transitie van alternatieve GIS-oplossingen naar QGIS, als ook met de ontwikkeling van plug-ins om te voldoen aan uw zakelijke vereisten.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/geoicon.png"><img alt="geoicon" src="../../_images/geoicon.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.geoicon.com/">GeoICON</a> (gevestigd in Singapore en werkzaam in Zuidoost Azië) werkt al langer dan 10 jaar voor overheidsorganisaties en biedt een breed scala aan diensten voor QGIS aan inclusief training en commerciële ondersteuning.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/gis3w.png"><img alt="gis3w" src="../../_images/gis3w.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.gis3w.it/">GIS3W</a> (gevestigd in Italië) biedt geographische en ecologische analyse diensten en ondersteuning en assistentie met QGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/claasleiner.png"><img alt="claasleiner" src="../../_images/claasleiner.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.gkg-kassel.de/">GKG Kassel, Germany (Dr.-Ing. Claas Leiner)</a> Geeft trainingen en ondersteuning rondom de  vrije geographische informatie systemen QGIS, GRASS, SAGA en PostGIS maar ook beheer van ruimtelijke gegevens, analyse en cartografie.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/imt.png"><img alt="imt" src="../../_images/imt.png" style="width: 75px;" /></a> <a class="reference external" href="http://learninggis.com/">The Institute For Mapping Technology</a> (uit Austin, Texas, Verenigde Staten) biedt ondersteuning en opleidingen voor QGIS en PostGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/karttakeskus.png"><img alt="karttakeskus" src="../../_images/karttakeskus.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.karttakeskus.fi/">Karttakeskus</a> (uit Finland) biedt commerciële ondersteuning en opleidingen voor QGIS en open spatiale data.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/liviostump.png"><img alt="liviostump" src="../../_images/liviostump.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.liviostump.ch">Livio Stump</a> (gevestigd in Lucerne, Zwitserland) biedt commerciële GIS-diensten, ondersteuning en training in QGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/MIERUNE.png"><img alt="mierune" src="../../_images/MIERUNE.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.mierune.co.jp/">Mierune Inc.</a> (gevestigd in Japan) verschaft commerciéle consultatie, training, ondersteuning en aanpassen van QGIS en FOSS4G-software. We organiseren ook hands-on workshops met deze programma’s. Neem contact met ons op als u vragen heeft met betrekking tot systeemontwikkeling, visualisatie of analyses die gegevens met posities vereisen.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/ngnuity.png"><img alt="ngnuity" src="../../_images/ngnuity.png" style="width: 75px;" /></a> <a class="reference external" href="http://ngnuity.net/">nGNUity.net-</a> Voorstander van FOSS uit de filipijnen biedt commerciële GIS diensten, opleidingen en advies voor QGIS. Assisteert sinds 2007, lokale overheid en organisaties zonder winstoogmerk, en onderzoeksinstituten bij de visualisatie van spatiale data. Biedt ook verschillende manieren voor het verzamelen van data op data en kaarteringsdiensten gebruik makend van Open Data Kit / KoBo Toolbox software stack.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/northriver.jpg"><img alt="northriver" src="../../_images/northriver.jpg" style="width: 75px;" /></a> <a class="reference external" href="http://www.northrivergeographic.com/">North River Geographic Systems, Inc</a> is een klein GIS adviesburo gesitueerd in het Zuidoosten van de Verenigde Staten. Wij bieden Geospatiale diensten zoals data conversie, ESRI en FOSS4G software ondersteuning, cartografie en data analyse.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/soltig.png"><img alt="soltig" src="../../_images/soltig.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.soltig.net/">Soluciones en Tecnologías de Información Geográfica (SOLTIG)</a> (gevestigd in Costa Rica) verschaft training, ondersteuning, advies en programmeren voor QGIS en andere toepassingen van FOSS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/sungis.png"><img alt="sungis" src="../../_images/sungis.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.sungis.lv/">SunGIS</a> (uit Valmiera, Letland) biedt commerciële diensten, advies, dataverwerking en maatwerk ontwikkeling voor QGIS, GRASS GIS en FOSS GIS gebaseerde SDI oplossingen.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/sygif.jpg"><img alt="sygif" src="../../_images/sygif.jpg" style="width: 75px;" /></a> <a class="reference external" href="http://www.sygif.qc.ca/">Le Groupe SYGIF Inc.</a> (gevestigd in Rimouski (Quebec), Canada) specialiseert zich in de ontwikkeling van informatietechnologieën (GIS) gericht op geïntegreerd landbeheer. Het bedrijf ontwikkelt en ondersteunt aanvullende gereedschappen voor QGIS en MapServer en heeft ook een erkenning van het bedrijf ESRI als ontwikkelaar en verkoper van hun producten.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/taxusit.png"><img alt="taxusit" src="../../_images/taxusit.png" style="width: 75px;" /></a> <a class="reference external" href="http://taxusit.com.pl">TAXUS IT</a> (Uit Warschau, Polen) biedt commerciële GIS diensten, ondersteuning en training in QGIS en GRASS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/terraplan.png"><img alt="terraplan" src="../../_images/terraplan.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.terraplan.com/">Terraplan</a> (Schallstadt/Freiburg, Duitsland) verschaft training en consulteren van GIS voor QGIS. De focus ligt op consulteren van gemeenten, variërend van het introduceren van QGIS tot het volledig vervangen van andere commerciële oplossingen voor GIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/terrestris.png"><img alt="terrestris" src="../../_images/terrestris.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.terrestris.de/dienstleistungen/schulungen/">Terrestris</a> (uit Bonn, Duitsland) biedt commerciële diensten en opleidingen voor QGIS.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/thinkwhere.png"><img alt="thinkwhere" src="../../_images/thinkwhere.png" style="width: 75px;" /></a> <a class="reference external" href="http://www.thinkwhere.com/">thinkWhere</a> (Stirling, Scotland) thinkWhere is een van de leidende onafhankelijke GIS-consultancys in het VK. We verschaffen een breed scala aan innovatieve GIS-producten en services inclusief “Location Centre” (een gehost, op de Cloud-gebaseerd, GIS, gebouwd uit technologieën van OpenSource). Als een site voor QGIS, gebruikt ons team van georuimtelijke experts QGIS op een dagelijkse basis en verschaffen ondersteuning voor QGIS aan klanten.  We voeren ook regelmatig trainingscursussen voor QGIS en PostGIS uit.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="../../_images/whg.jpg"><img alt="whg" src="../../_images/whg.jpg" style="width: 100px;" /></a> <a class="reference external" href="http://www.wheregroup.com/">WhereGroup</a> (Bonn, Duitsland) verschaft commerciële diensten en training voor QGIS.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Algemene index"
+             >index</a></li>
+        <li class="right" >
+          <a href="books/index.html" title="Boeken"
+             >volgende</a> |</li>
+        <li class="right" >
+          <a href="usergroups.html" title="Gebruikersgroepen"
+             >vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Voor gebruikers</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Indien niet anders aangegeven valt de inhoud onder de volgende licentie:  <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Gebruikte symbologie voor selectie zijn afkomstig van <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Niet vertaalde pagina? Of zag u een fout in de vertaling:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">repareer mij</a>
+        <br/>
+        Fout in de tekst, ontbrekende tekst of u weet het beter:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">repareer mij</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

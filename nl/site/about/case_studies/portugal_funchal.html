@@ -1,0 +1,555 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Een gratis GIS gebruiken op Jaime Moniz Secondary School: QGIS</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Zoek" href="../../../search.html" />
+    <link rel="next" title="QGIS en GRASS voor het in kaart brengen van het gevaar voor bosbranden voor de lokale overheid" href="australia_queens.html" />
+    <link rel="prev" title="Het gebruiken van QGIS in de infrastructuur voor geogegevens in de stad Uster" href="suisse_uster.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Algemene index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="australia_queens.html" title="QGIS en GRASS voor het in kaart brengen van het gevaar voor bosbranden voor de lokale overheid"
+             accesskey="N">volgende</a> |</li>
+        <li class="right" >
+          <a href="suisse_uster.html" title="Het gebruiken van QGIS in de infrastructuur voor geogegevens in de stad Uster"
+             accesskey="P">vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Ontdek QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Praktijkvoorbeelden</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engels">English</option>
+  <option value="ca" title="Catalaans">Català</option>
+  <option value="da" title="Deens">Dansk</option>
+  <option value="de" title="Duits">Deutsch</option>
+  <option value="es" title="Spaans">Español</option>
+  <option value="fa" title="Perzisch">فارسی</option>
+  <option value="fi" title="Fins">Suomi</option>
+  <option value="fr" title="Frans">Français</option>
+  <option value="gl" title="Galicisch">Galego</option>
+  <option value="id" title="Indonesisch">Bahasa Indonesia</option>
+  <option value="it" title="Italiaans">Italiano</option>
+  <option value="hu" title="Hongaars">Magyar</option>
+  <option value="ja" title="Japans">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Koreaans">한국어</option>
+  <option value="lt" title="Litouws">Lietuvių</option>
+  <option value="nl" title="Nederlands">Nederlands</option>
+  <option value="pl" title="Pools">Polski</option>
+  <option value="pt_BR" title="Portugees (Brazilie)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugees">Português</option>
+  <option value="ro" title="Roemeens">Română</option>
+  <option value="tr" title="Turks">Türkçe</option>
+  <option value="ru" title="Russisch">Русский</option>
+  <option value="uk" title="Oekrains">Українська</option>
+  <option value="zh-Hans" title="Chinees (Vereenvoudigd)">簡体中文</option>
+  <option value="zh-Hant" title="Chinees (Traditioneel)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/about/case_studies/portugal_funchal.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Bedankt!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Doneer nu!</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Dank u voor uw donatie!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is gratis en we hopen dat ons werk u bevalt en hopen dat u de door u gedownloade kopie ver en breed deelt en verspreid, zodat anderen er ook de vruchten van plukken. Onze beste groeten!</p>'+
+            '<p id="stripeerr" style="display:none;">Helaas trad er een fout op bij het verwerken van uw donatie. probeer het later opnieuw of neem contact met ons op via finance@qgis.org</p>'+
+            '<p>Het QGIS Team</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Sluit deze melding</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">Ontdek QGIS</a></li>
+            <li><a href="../../forusers/index.html">Voor gebruikers</a></li>
+            <li><a href="../../getinvolved/index.html">Help mee</a></li>
+            <li><a href="../../../docs/index.html">Documentatie</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Zoek" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="suisse_uster.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="australia_queens.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Ontdek QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Toepassingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html">Voorbeelden van kaarten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html#screenshots">Schermafdrukken</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Praktijkvoorbeelden</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">2017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">2015</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id5">2014</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">2013</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">2012</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id8">2011</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="argentinia_chubut.html">[2011/09] QGIS at high school --- urban green spaces in Rada Tilly Coastal Town, Argentina by Mauro Novara and Alberto Vázquez</a></li>
+<li class="toctree-l4"><a class="reference internal" href="suisse_uster.html">[2011/04] The use of QGIS in the Geodata Infrastructure of the City of Uster by Andreas Neumann</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">[2011/03] Using a free GIS at Jaime Moniz Secondary School: QGIS by Fátima Vale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="australia_queens.html">[2011/01] QGIS and GRASS in Local Government Bushfire Hazard Mapping by Nathan Woodrow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id9">2010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id10">2009</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members.html">Dragende leden, sponsoren en donoren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shop_goodies.html">Winkel</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://planet.qgis.org">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Voor gebruikers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Doe mee / Ontwikkeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentatie</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="using-a-free-gis-at-jaime-moniz-secondary-school-qgis">
+<h1>Een gratis GIS gebruiken op Jaime Moniz Secondary School: QGIS<a class="headerlink" href="#using-a-free-gis-at-jaime-moniz-secondary-school-qgis" title="Permalink naar deze titel">¶</a></h1>
+<p>Er zal democratisch onderwijs worden gegeven in onze scholen of bij het onderwijzen van gemeenschappen als we het gebtuiken van Open Source software algemeen maken. Dit vraagt niet alleen een wijziging in de manier van denken van mensen (soms versmolten met advertenties), maar ook een duurzaam beheer van uitgaven en, indirect, het vechten tegen softwarepiraterij. Deze voordelen die inherent zijn aan de filosofie van Open Source software zullen het te volgen model zijn als we onderwijs met kwaliteit willen, zonder grenzen of afhankelijkheden van enige soort. Vanuit dit perspectief, gebruikt klas 35 van de 12e graad, behorende tot de technologische cursus van gebied en milieu aan de Jaime Moniz Secondary School, QGIS om activiteiten te ontwikkelen die worden voorgesteld in Geographical Information Systems, Toegepaste informatiesystemen en gedurende hun trainingsperiode. Binnen het bereik van opties voor gratis GIS, waren er drie onderliggende redenen voor de keuze van de selectie voor Open Source: de gebruikersvriendelijke en intuïtieve benadering, ondersteund door online informatie verschaft door forums; de verscheidene software plug-ins en de kwaliteit van het product in zijn uiteindelijke vorm. (Men zou moeten weten dat deze academische werken werden uitgevoerd door studenten in een zeer jonge leeftijdscategorie.)</p>
+<div class="section" id="the-project-expectation">
+<h2>Het project — Verwachtingen<a class="headerlink" href="#the-project-expectation" title="Permalink naar deze titel">¶</a></h2>
+<p>Verwachting was het meest dominerende gevoel in de eerste lessen! De groep studenten had alleen een theoretische en enigszins vage kennis over GIS. Het was daarom noodzakelijk om praktische activiteiten te koppelen aan die theoretische kennis - als eerste, door het verzamelen van geografische informatie door middel van een kaart ter ondersteuning, binnen de omgeving van de school, en later door middel van een GPS, met betrekking tot de wijdere omgeving rondom de school. In de afbeeldingen 1 en 2 is het mogelijk enkele van de activiteiten te bekijken die werden ontwikkeld in de klas.</p>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/portugal_funchal1.jpg"><img alt="Distribution of dustbins (green) and garden benches (yellow)" src="../../../_images/portugal_funchal1.jpg" style="width: 329.0px; height: 232.39999999999998px;" /></a>
+<p class="caption"><span class="caption-text">Verdeling van afvalbakken (groen) en tuinbanken (geel) bij de Jaime Moniz Secondary School</span></p>
+</div>
+<p>Momenteel gebruiken sommige studenten nog steeds QGIS om verschillende werkplannen te maken gedurende hun trainingsperiode. In figure 3, is het vwerk van een student opgenomen: het is gerelateerd aan de verdeling van het aantal inwoners van Santo António, inclusief een voorstel voor het plaatsen van containers voor recycling, in een wijk van Funchal.</p>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../_images/portugal_funchal2.jpg"><img alt="Functional map of an area in the old part of the town of Funchal" src="../../../_images/portugal_funchal2.jpg" style="width: 329.0px; height: 232.39999999999998px;" /></a>
+<p class="caption"><span class="caption-text">Functionele kaart van een gebied in het oude deel van de stand Funchal, rondom Jaime Moniz Secondary School</span></p>
+</div>
+</div>
+<div class="section" id="decision-for-qgis">
+<h2>Keuze voor QGIS<a class="headerlink" href="#decision-for-qgis" title="Permalink naar deze titel">¶</a></h2>
+<p>Over het algemeen verlichtte QGIS de studenten: “om basisfuncties van GIS te voltooien door middle van associaties van oefeningen met grafische en niet-grafische elementen”; “om alfanumerieke gegevens te uploaden”; “functies te gebruiken voor ruimtelijke analyses”; “om thematische kaarten te maken”; “om een Digital Elevation Model te maken” en, laatste maar niet de minste, “om de relevantie van een gratis GIS vo het analyseren van geografische  informatie te herkennen, als ook voor het duurzame beheer van het gebied”. Deze theoretische en praktische doelen werden naast andere doelen bereikt, extreem belangrijk in de context van onderwijs, zoals: “maken van een diverse onderwijskundige ervaring”; “in contact zijn met de lokale realiteit” en “ontwikkelen van een constructieve, positieve en kritische geest”.</p>
+</div>
+<div class="section" id="from-the-class-room-to-the-education-community">
+<h2>Van de klas tot een de gemeenschap voor onderwijs<a class="headerlink" href="#from-the-class-room-to-the-education-community" title="Permalink naar deze titel">¶</a></h2>
+<p>Het idee van het maken van een website: <a class="reference external" href="http://www.sig-na-jaime-moniz.webnode.pt">http://www.sig-na-jaime-moniz.webnode.pt</a> diende twee belangrijke doelen: “verspreiden van de bekendheid van projectwerk, gemaakt door studenten” en tegelijkertijd “de belangrijkheid van Open Source QGIS laten zien voor het voltooien van deze werken voor school”. Momenteel is de website een bron van motivatie voor de opvolging van het gehele onderwijsproces.</p>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../_images/portugal_funchal3.jpg"><img alt="Placement proposal for recycle containers in the parish of Santo António Funchal" src="../../../_images/portugal_funchal3.jpg" style="width: 282.0px; height: 199.79999999999998px;" /></a>
+<p class="caption"><span class="caption-text">Voorstel tot plaatsing van containers voor recycling in de wijk Santo António</span></p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusie<a class="headerlink" href="#conclusion" title="Permalink naar deze titel">¶</a></h2>
+<p>In een analyse van het gehele proces voel ik dat de keuze voor het gebruiken van QGIS, as gereedschap, om enkele doelen voor onderwijs te bereiken, een uitstekende keuze was. Ten eerste betrof het gebruiken ervan heel veel verwachting. Ik had nog nooit daarvoor een GIS gebruikt en daarom was aan het leren en onderwijzen tegelijk. Het feit dat het GIS uitermate gebruikersvriendelijk bleek, tezamen met de beschikbare informatie online, was een zegen voor mij. Meer nog: de school hoefde niet te betalen voor andere licenties voor software noch was die afhankelijk van vernieuwingen van licenties, wat de kwaliteit van het onderwijs substantieel verbeterde, zonder extra uitgaven. Momenteel gebruiken studenten QGIS bijna zelfstandig om hun verschillende werkplannen te maken. Ik hoop dat het uiteindelijke resultaat de inspanningen weergeeft die betrokken zijn bij het gehele leerproces.</p>
+</div>
+<div class="section" id="references">
+<h2>Verwijzingen<a class="headerlink" href="#references" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://sitio.dgidc.min-edu.pt">http://sitio.dgidc.min-edu.pt</a></li>
+<li><a class="reference external" href="http://www.sres.pt/?page=drgc_loc_atend&amp;separador=6&amp;buttons=1">http://www.sres.pt/?page=drgc_loc_atend&amp;separador=6&amp;buttons=1</a></li>
+<li><a class="reference external" href="http://www.sig-na-jaime-moniz.webnode.pt">http://www.sig-na-jaime-moniz.webnode.pt</a></li>
+</ul>
+</div>
+<div class="section" id="author">
+<h2>Auteur<a class="headerlink" href="#author" title="Permalink naar deze titel">¶</a></h2>
+<div class="figure align-left" id="id4">
+<a class="reference internal image-reference" href="../../../_images/portugal_funchalaut.png"><img alt="Fátima Vale" src="../../../_images/portugal_funchalaut.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-text">Fátima Vale</span></p>
+</div>
+<p>Dit artikel werd bijgedragen in maart 2011 door Fátima Vale met ondersteuning van Luís Antunes (supervisor van de studenten in de DRIGOT). Op dat moment was zij leraar aan de Jaime Moniz Secondary School en supervisor gedurende de trainingsperiode van de studenten in de verschillende instituten.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigatie</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Algemene index"
+             >index</a></li>
+        <li class="right" >
+          <a href="australia_queens.html" title="QGIS en GRASS voor het in kaart brengen van het gevaar voor bosbranden voor de lokale overheid"
+             >volgende</a> |</li>
+        <li class="right" >
+          <a href="suisse_uster.html" title="Het gebruiken van QGIS in de infrastructuur voor geogegevens in de stad Uster"
+             >vorige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Ontdek QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Praktijkvoorbeelden</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Indien niet anders aangegeven valt de inhoud onder de volgende licentie:  <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Gebruikte symbologie voor selectie zijn afkomstig van <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Niet vertaalde pagina? Of zag u een fout in de vertaling:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">repareer mij</a>
+        <br/>
+        Fout in de tekst, ontbrekende tekst of u weet het beter:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">repareer mij</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
