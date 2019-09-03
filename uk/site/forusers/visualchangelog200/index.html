@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Візуальний список змін для версії 2.0</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Індекс" href="../../../genindex.html" />
+    <link rel="search" title="Пошук" href="../../../search.html" />
+    <link rel="next" title="Навчальні матеріали" href="../trainingmaterial/index.html" />
+    <link rel="prev" title="Візуальний список змін для версії 2.2" href="../visualchangelog220/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навігація</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Загальний індекс"
+             accesskey="I">індекс</a></li>
+        <li class="right" >
+          <a href="../trainingmaterial/index.html" title="Навчальні матеріали"
+             accesskey="N">наступний</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog220/index.html" title="Візуальний список змін для версії 2.2"
+             accesskey="P">попередній</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Користувачу</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" accesskey="U">Візуальні списки змін</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="English">English</option>
+  <option value="ca" title="Catalan">Català</option>
+  <option value="da" title="Danish">Dansk</option>
+  <option value="de" title="German">Deutsch</option>
+  <option value="es" title="Spanish">Español</option>
+  <option value="fa" title="Persian">فارسی</option>
+  <option value="fi" title="Finnish">Suomi</option>
+  <option value="fr" title="French">Français</option>
+  <option value="gl" title="Galician">Galego</option>
+  <option value="id" title="Indonesian">Bahasa Indonesia</option>
+  <option value="it" title="Italian">Italiano</option>
+  <option value="hu" title="Hungarian">Magyar</option>
+  <option value="ja" title="Japanese">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Korean">한국어</option>
+  <option value="lt" title="Lithuanian">Lietuvių</option>
+  <option value="nl" title="Dutch">Nederlands</option>
+  <option value="pl" title="Polish">Polski</option>
+  <option value="pt_BR" title="Portuguesei (Brazil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portuguese">Português</option>
+  <option value="ro" title="Romanian">Română</option>
+  <option value="tr" title="Turkish">Türkçe</option>
+  <option value="ru" title="Russian">Русский</option>
+  <option value="uk" title="Українська">Українська</option>
+  <option value="zh-Hans" title="Chinese (Simplified)">簡体中文</option>
+  <option value="zh-Hant" title="Chinese (Traditional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/visualchangelog200/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Дякуємо!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Команда QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Зробіть пожертву зараз</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Закрити вікно</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Thank you for your donation!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is free of charge and we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p id="stripeerr" style="display:none;">Unfortunately there was an error processing your Donation. Please try again later, or contact us via finance@qgis.org</p>'+
+            '<p>Команда QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Закрити вікно</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">Знайомство</a></li>
+            <li><a href="../index.html">Користувачам</a></li>
+            <li><a href="../../getinvolved/index.html">Приєднатися</a></li>
+            <li><a href="../../../docs/index.html">Документація</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Пошук" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../visualchangelog220/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../trainingmaterial/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Знайомство с QGIS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Користувачу</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">Завантажити QGIS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualchangelogs.html">Візуальні списки змін</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog38/index.html">Changelog for QGIS 3.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog36/index.html">Changelog for QGIS 3.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog34/index.html">Changelog for QGIS 3.4 LTR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog32/index.html">Changelog for QGIS 3.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog30/index.html">Changelog for QGIS 3.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog218/index.html">Changelog for QGIS 2.18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog216/index.html">Changelog for QGIS 2.16</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog214/index.html">Changelog for QGIS 2.14</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog212/index.html">Changelog for QGIS 2.12</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog210/index.html">Changelog for QGIS 2.10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog28/index.html">Список змін у QGIS 2.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog260/index.html">Список змін для QGIS 2.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog240/index.html">Список змін для QGIS 2.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog220/index.html">Візуальний список змін для версії 2.2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Візуальний список змін для версії 2.0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#analysis-tools">Інструменти аналізу</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#application-and-project-options">Програма та проекти</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#browser">Оглядач</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-providers">Провайдери даних</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general">Загальні</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelling">Підписи</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layer-legend">Список шарів</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-composer">Редактор макетів</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plugins">Плагіни</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmability">Програмування та розробка</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">Символіка</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-interface">Графічний інтерфейс</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">Навчальні матеріали</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">Підтримка</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">Групи користувачів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">Комерційна підтримка</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../books/index.html">Книги</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Взяти участь / Розробка</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Документація</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="changelog-for-qgis-2-0">
+<span id="changelog20"></span><h1>Візуальний список змін для версії 2.0<a class="headerlink" href="#changelog-for-qgis-2-0" title="Постійне посилання на цей заголовок">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#analysis-tools" id="id1">Інструменти аналізу</a><ul>
+<li><a class="reference internal" href="#feature-processing-commander" id="id2">Processing Commander</a></li>
+<li><a class="reference internal" href="#feature-heatmap-plugin-improvements" id="id3">Вдосконалення плаґіна «Теплокарта»</a></li>
+<li><a class="reference internal" href="#feature-processing-support" id="id4">Інтеграція Processing</a></li>
+<li><a class="reference internal" href="#feature-processing-modeller" id="id5">Редактор моделей Processing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#application-and-project-options" id="id6">Програма та проекти</a><ul>
+<li><a class="reference internal" href="#feature-define-default-startup-project-and-project-templates" id="id7">Стартовий проект та шаблони проектів</a></li>
+<li><a class="reference internal" href="#feature-system-environment-variables" id="id8">Системні змінні оточення</a></li>
+<li><a class="reference internal" href="#feature-user-defined-zoom-scales" id="id9">Користувацькі набори масштабів</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#browser" id="id10">Оглядач</a><ul>
+<li><a class="reference internal" href="#feature-improvements-to-in-app-browser-panel" id="id11">Вдосконалення вбудованого оглядача</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-providers" id="id12">Провайдери даних</a><ul>
+<li><a class="reference internal" href="#feature-raster-data-provider-overhaul" id="id13">Оновлення растрового провайдера</a></li>
+<li><a class="reference internal" href="#feature-oracle-spatial-support" id="id14">Підтримка Oracle Spatial</a></li>
+<li><a class="reference internal" href="#feature-web-coverage-service-provider-added" id="id15">Провайдер Web Coverage Service</a></li>
+<li><a class="reference internal" href="#feature-raster-2-cumulative-cut-by-default" id="id16">Зріз 2% для растрів за замовчанням</a></li>
+<li><a class="reference internal" href="#feature-wms-identify-format" id="id17">Формат результатів визначення WMS</a></li>
+<li><a class="reference internal" href="#feature-wmts-support" id="id18">Підтримка WMTS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general" id="id19">Загальні</a><ul>
+<li><a class="reference internal" href="#feature-quantum-gis-is-now-known-only-as-qgis" id="id20">Quantum GIS тепер просто «QGIS»</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labelling" id="id21">Підписи</a><ul>
+<li><a class="reference internal" href="#feature-new-labelling-system" id="id22">Нова система підписування</a></li>
+<li><a class="reference internal" href="#feature-expression-based-label-properties" id="id23">Параметри підписів на основі виразів</a></li>
+<li><a class="reference internal" href="#feature-older-labelling-engine-deprecated" id="id24">Стара система підписів не підтримується</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-legend" id="id25">Список шарів</a><ul>
+<li><a class="reference internal" href="#feature-legend-visual-feedback-and-options" id="id26">Нові можливості списку шарів</a></li>
+<li><a class="reference internal" href="#feature-duplicate-existing-map-layer" id="id27">Клонування шару</a></li>
+<li><a class="reference internal" href="#feature-multi-layer-toggle-editing-commands" id="id28">Редагування декількох шарів</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-composer" id="id29">Редактор макетів</a><ul>
+<li><a class="reference internal" href="#feature-html-map-items" id="id30">Елемент HTML</a></li>
+<li><a class="reference internal" href="#feature-multipage-support" id="id31">Підтримка багатосторінкових макетів</a></li>
+<li><a class="reference internal" href="#feature-expressions-in-composer-labels" id="id32">Вирази в підписах макету</a></li>
+<li><a class="reference internal" href="#feature-auto-snap-lines" id="id33">Автоматичні направляючі</a></li>
+<li><a class="reference internal" href="#feature-manual-snap-lines" id="id34">Користувацькі направляючі</a></li>
+<li><a class="reference internal" href="#feature-map-series-generation" id="id35">Генерація послідовностей карт</a></li>
+<li><a class="reference internal" href="#feature-automatic-overview-support-in-map-frame" id="id36">Підтримка оглядових карт</a></li>
+<li><a class="reference internal" href="#feature-layer-blending" id="id37">Змішування шарів</a></li>
+<li><a class="reference internal" href="#feature-html-label-support" id="id38">Підтримка HTML у підписах</a></li>
+<li><a class="reference internal" href="#feature-multicolumn-composer-legend" id="id39">Багатоколоночна легенда</a></li>
+<li><a class="reference internal" href="#feature-updates-to-map-composer-management" id="id40">Вдосконалення в управлінні макетами</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins" id="id41">Плагіни</a><ul>
+<li><a class="reference internal" href="#feature-revamped-plugin-manager" id="id42">Оновлений менеджер плаґінів</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmability" id="id43">Програмування та розробка</a><ul>
+<li><a class="reference internal" href="#feature-new-python-console" id="id44">Нова консоль Python</a></li>
+<li><a class="reference internal" href="#feature-even-more-expression-functions" id="id45">Розширений набір виразів</a></li>
+<li><a class="reference internal" href="#feature-custom-expression-functions" id="id46">Користувацькі функції</a></li>
+<li><a class="reference internal" href="#feature-new-cleaner-python-api" id="id47">Нове Python API</a></li>
+<li><a class="reference internal" href="#feature-code-compatibility-with-version-1-x-releases" id="id48">Сумісність коду з серією 1.х</a></li>
+<li><a class="reference internal" href="#feature-python-project-macros" id="id49">Макроси проекту</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symbology" id="id50">Символіка</a><ul>
+<li><a class="reference internal" href="#feature-data-defined-properties" id="id51">Перевизначення параметрів</a></li>
+<li><a class="reference internal" href="#feature-improved-symbol-layer-management" id="id52">Вдосконалення в управлінні символами</a></li>
+<li><a class="reference internal" href="#feature-support-for-transparency-in-colour-definitions" id="id53">Підтримка прозорості у діалогах вибору кольору</a></li>
+<li><a class="reference internal" href="#feature-color-control-for-raster-layers" id="id54">Управління кольорами для растрів</a></li>
+<li><a class="reference internal" href="#feature-copy-symbology-between-layers" id="id55">Копіювання символіки між шарами</a></li>
+<li><a class="reference internal" href="#feature-save-styles-in-your-database" id="id56">Збереження стилів у базі даних</a></li>
+<li><a class="reference internal" href="#feature-colour-ramp-support" id="id57">Підтримка кольорових шкал</a></li>
+<li><a class="reference internal" href="#feature-set-custom-default-styles-for-all-layer-types" id="id58">Стилі за замовчанням</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-interface" id="id59">Графічний інтерфейс</a><ul>
+<li><a class="reference internal" href="#feature-new-icon-theme" id="id60">Нова тема іконок</a></li>
+<li><a class="reference internal" href="#feature-side-tabs-collapsable-groups" id="id61">Бічні панелі та групи, що згортаються</a></li>
+<li><a class="reference internal" href="#feature-soft-notifications" id="id62">Спливаючі повідомлення</a></li>
+<li><a class="reference internal" href="#feature-application-custom-font-and-qt-stylesheet" id="id63">Користувацький шрифт і таблиці стилів Qt</a></li>
+<li><a class="reference internal" href="#feature-live-color-chooser-dialogs-and-buttons" id="id64">Нові діалоги вибору кольору</a></li>
+<li><a class="reference internal" href="#feature-svg-annotations" id="id65">SVG-анотації</a></li>
+<li><a class="reference internal" href="#feature-drag-and-drop-form-builder" id="id66">Інтерактивний редактор форм</a></li>
+<li><a class="reference internal" href="#feature-default-action-tool" id="id67">Інструмент дія за замовчанням</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="analysis-tools">
+<h2><a class="toc-backref" href="#id1">Інструменти аналізу</a><a class="headerlink" href="#analysis-tools" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-processing-commander">
+<h3><a class="toc-backref" href="#id2">Processing Commander</a><a class="headerlink" href="#feature-processing-commander" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Зручний інструмент для швидкого доступу до можливостей просторової обробки. Запустіть Commander (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">M</span></code>) та почніть набирати назву інструмента. Commander покаже наявні варіанти та запустить вказаний. Більше не треба блукати по меню в пошуках інструментів.</p>
+<p><img alt="image1" src="../../../_images/processing_commander_2.png" /></p>
+</div>
+<div class="section" id="feature-heatmap-plugin-improvements">
+<h3><a class="toc-backref" href="#id3">Вдосконалення плаґіна «Теплокарта»</a><a class="headerlink" href="#feature-heatmap-plugin-improvements" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Значно вдосконалено плаґін «Теплокарта», в результаті чого підвищилась швидкість генерації теплокарт. Крім того, з’явилась можливість вибору функції ядра для побудови теплокарти.</p>
+<p><img alt="image2" src="../../../_images/Selection_027.png" /></p>
+</div>
+<div class="section" id="feature-processing-support">
+<h3><a class="toc-backref" href="#id4">Інтеграція Processing</a><a class="headerlink" href="#feature-processing-support" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Бібліотека просторового аналізу SEXTANTE була адаптована та інтегрована в QGIS. В процесі адаптації її перейменували у Processing. Панель інструментів Processing має багатий функціонал та надає доступ до багатьох популярних інструментів просторового аналізу, таким як GRASS, OTB, SAGA та інші. Крім того, розвинене API дозволяє користувачам створювати власні алгоритми.</p>
+<p><img alt="image3" src="../../../_images/Selection_028.png" /></p>
+</div>
+<div class="section" id="feature-processing-modeller">
+<h3><a class="toc-backref" href="#id5">Редактор моделей Processing</a><a class="headerlink" href="#feature-processing-modeller" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p><strong>Редактор моделей</strong> Processing дозволяє легко та швидко створювати складні алгоритми обробки та аналізу шляхом з’єднання між собою простих блоків. Створені моделі можна зберігати та використовувати повторно, а також застосовувати в якості складових у більш складних моделях.</p>
+<p><img alt="image4" src="../../../_images/Processing_modeler_029.png" /></p>
+</div>
+</div>
+<div class="section" id="application-and-project-options">
+<h2><a class="toc-backref" href="#id6">Програма та проекти</a><a class="headerlink" href="#application-and-project-options" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-define-default-startup-project-and-project-templates">
+<h3><a class="toc-backref" href="#id7">Стартовий проект та шаблони проектів</a><a class="headerlink" href="#feature-define-default-startup-project-and-project-templates" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>З’явилась можливість налаштування поведінки QGIS після старту: <code class="docutils literal"><span class="pre">Новий</span> <span class="pre">проект</span></code> (за замовчанням, створювати новий проект), <code class="docutils literal"><span class="pre">Останній</span></code> (після запуску QGIS буде відкрито останній проект з яким ви працювали), <code class="docutils literal"><span class="pre">Вказаний</span></code> (завжди відкривати вказаний проект). Також можна вказати каталог шаблонів проектів, будь-який проект, збережений у цьому каталозі, може використовуватися в якості шаблону, коли створюється новий проект через <span class="menuselection">Проект -&gt; Новий на основі шаблону</span>.</p>
+<p><img alt="image5" src="../../../_images/Screen_Shot_2013-09-12_at_11.23.02_PM.png" /></p>
+</div>
+<div class="section" id="feature-system-environment-variables">
+<h3><a class="toc-backref" href="#id8">Системні змінні оточення</a><a class="headerlink" href="#feature-system-environment-variables" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>З’явилась можливість переглядати та редагувати змінні оточення. Особливо корисною ця можливість буде на таких системах як MacOS, де графічні програми не обов’язково успадковують оточення користувача. Також може використовуватися для налаштування/перегляду змінних оточення сторонніх програм, що використовуються у бібліотеці просторового аналізу Processing (наприклад, SAGA, GRASS).</p>
+<p><img alt="image6" src="../../../_images/changelog-2.0_sys-env-options.png" /></p>
+</div>
+<div class="section" id="feature-user-defined-zoom-scales">
+<h3><a class="toc-backref" href="#id9">Користувацькі набори масштабів</a><a class="headerlink" href="#feature-user-defined-zoom-scales" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Список масштабів тепер редагується на глобальному рівні та може бути перевизначений на рівні проекту. Масштаби будуть відображатися у випадаючому списку <code class="docutils literal"><span class="pre">Масштаб</span></code> у панелі статусу. Підтримується імпорт та експорт списку масштабів.</p>
+<p><img alt="image7" src="../../../_images/changelog-2.0_predefined-scales.png" /></p>
+</div>
+</div>
+<div class="section" id="browser">
+<h2><a class="toc-backref" href="#id10">Оглядач</a><a class="headerlink" href="#browser" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-improvements-to-in-app-browser-panel">
+<h3><a class="toc-backref" href="#id11">Вдосконалення вбудованого оглядача</a><a class="headerlink" href="#feature-improvements-to-in-app-browser-panel" title="Постійне посилання на цей заголовок">¶</a></h3>
+<ul class="simple">
+<li>Можливість фільтрації каталогів за маскою або регулярним виразом</li>
+<li>Новий елемент <code class="docutils literal"><span class="pre">Project</span> <span class="pre">home</span></code> (кореневий каталог поточного проекту)</li>
+<li>Перегляд інформації про вказаний каталог</li>
+<li>Вибір каталогів для швидкого пошуку</li>
+<li>Можливість додати каталог до <code class="docutils literal"><span class="pre">Вибраного</span></code> безпосередньо з оглядача</li>
+<li>Новий елемент <code class="docutils literal"><span class="pre">/Volumes</span></code> на Mac (прихований каталог для доступу до зовнішніх накопичувачів)</li>
+<li>Нова група <code class="docutils literal"><span class="pre">OWS</span></code> (всі доступні підключення до картографічних сервісів)</li>
+<li>Можливість відкрити другу панель оглядача (<span class="menuselection">View -&gt; Panels -&gt; Browser (2)</span>) та перетягувати шари між цими панелями</li>
+<li>Іконки сортуються за типом елемента (файлова система, бази даних, картографічні сервіси)</li>
+<li>Вдосконалено вигляд діалогу властивостей шару</li>
+</ul>
+<p><img alt="image8" src="../../../_images/changelog-2.0_browser.png" /></p>
+</div>
+</div>
+<div class="section" id="data-providers">
+<h2><a class="toc-backref" href="#id12">Провайдери даних</a><a class="headerlink" href="#data-providers" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-raster-data-provider-overhaul">
+<h3><a class="toc-backref" href="#id13">Оновлення растрового провайдера</a><a class="headerlink" href="#feature-raster-data-provider-overhaul" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Повністю перероблено растрову підсистему. Одним з результатів стала можливість збереження відкритих растрів у будь-якому форматі, що підтримується бібліотекою GDAL. В процесі збереження можна змінити роздільну здатність растру, виконати обрізку та перепроектування. Крім того, можна зберегти растр у тому вигляді, в якому він відображається у ГІС, наприклад, якщо до одноканального растру було застосовано палітру, його можна зберегти як прив’язаний RGB-растр.</p>
+<p><img alt="image9" src="../../../_images/Selection_017.png" /></p>
+</div>
+<div class="section" id="feature-oracle-spatial-support">
+<h3><a class="toc-backref" href="#id14">Підтримка Oracle Spatial</a><a class="headerlink" href="#feature-oracle-spatial-support" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>В QGIS 2.0 з’явилась підтримка Oracle Spatial.</p>
+<p><img alt="image10" src="../../../_images/oracle.png" /></p>
+</div>
+<div class="section" id="feature-web-coverage-service-provider-added">
+<h3><a class="toc-backref" href="#id15">Провайдер Web Coverage Service</a><a class="headerlink" href="#feature-web-coverage-service-provider-added" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>У QGIS з’явилась підтримка шарів Web Coverage Service —  процес додавання таких шарів нічим не відрізняється від додавання шарів WMS або WFS.</p>
+</div>
+<div class="section" id="feature-raster-2-cumulative-cut-by-default">
+<h3><a class="toc-backref" href="#id16">Зріз 2% для растрів за замовчанням</a><a class="headerlink" href="#feature-raster-2-cumulative-cut-by-default" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Растри часто мають велику кількість викидів, що призводить до некоректного відображення. QGIS 2.0 використовує більш гнучкий та надійний алгоритм відображення растрів, включаючи використання зрізу 2% - 98% з накопиченням за замовчанням. Нижче показано відображення одного й того ж растру в QGIS 1.8 (зліва) та QGIS 2.0 (справа) з використанням налаштувань за замовчанням.</p>
+<p><img alt="image11" src="../../../_images/Selection_023.png" /></p>
+</div>
+<div class="section" id="feature-wms-identify-format">
+<h3><a class="toc-backref" href="#id17">Формат результатів визначення WMS</a><a class="headerlink" href="#feature-wms-identify-format" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Реалізовано можливість вибору формату відображення результатів визначення об’єктів у шарах WMS, якщо така можливість надається сервером. Підтримуються наступні формати: HTML, GML та простий текст. Якщо вибрано формат GML, результат буде таким же як і при визначенні об’єктів у векторному шарі: об’єкт на карті підсвічується, а його геометрію та атрибути можна скопіювати у буфер обміну та вставити в інший шар.</p>
+<p><img alt="image12" src="../../../_images/wms-identify.png" /></p>
+</div>
+<div class="section" id="feature-wmts-support">
+<h3><a class="toc-backref" href="#id18">Підтримка WMTS</a><a class="headerlink" href="#feature-wmts-support" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Клієнт WMS у QGIS тепер підтримує WMTS (Web Mapping Tile Service), включаючи вибір вкладених наборів даних, таких як часові зрізі. Під час додавання шару з серверу ви зможете вибрати який саме часовий зріз відображати.</p>
+<p><img alt="image13" src="../../../_images/Selection_035.png" /></p>
+</div>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id19">Загальні</a><a class="headerlink" href="#general" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-quantum-gis-is-now-known-only-as-qgis">
+<h3><a class="toc-backref" href="#id20">Quantum GIS тепер просто «QGIS»</a><a class="headerlink" href="#feature-quantum-gis-is-now-known-only-as-qgis" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Слово «Quantum» у «Quantum GIS» ніколи не мало особливого значення, а одночасне використання <code class="docutils literal"><span class="pre">Quantum</span> <span class="pre">GIS</span></code> та <code class="docutils literal"><span class="pre">QGIS</span></code> дуже часто було джерелом плутанини. Ми вдосконалюємо проект і частиною цього процесу стала офіційна відмова від використання слова <code class="docutils literal"><span class="pre">Quantum</span></code> — відтепер ми відомі лише як <code class="docutils literal"><span class="pre">QGIS</span></code> (великими буквами). Ми оновлюємо вихідні коди та всі публічні матеріали відповідно до цієї зміни.</p>
+<p><img alt="image14" src="../../../_images/qgis.png" /></p>
+</div>
+</div>
+<div class="section" id="labelling">
+<h2><a class="toc-backref" href="#id21">Підписи</a><a class="headerlink" href="#labelling" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-new-labelling-system">
+<h3><a class="toc-backref" href="#id22">Нова система підписування</a><a class="headerlink" href="#feature-new-labelling-system" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Підсистема підписування була повністю оновлена — з’явилось багато нових можливостей, таких як тіні, «highway shields», параметри, залежні від даних, та підвищення продуктивності. Ми поступово відмовляємось від «старої» системи підписування, і хоча вона поки доступна, і одному з наступних випусків її буде повністю видалено.</p>
+<p><img alt="image15" src="../../../_images/Layer_labeling_settings_003_1.png" /></p>
+</div>
+<div class="section" id="feature-expression-based-label-properties">
+<h3><a class="toc-backref" href="#id23">Параметри підписів на основі виразів</a><a class="headerlink" href="#feature-expression-based-label-properties" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Тепер можна використовувати всі можливості виразів QGIS для налаштування параметрів підписів. Практично всі параметри можна задавати з використанням виразів або значень атрибутів. Вирази можуть просто посилатися на поле (наприклад, встановити розмір шрифту рівний значенню поля «font») або включати більш складу логіку.</p>
+<p>В якості прикладів можна навести наступні параметри, що підтримують вирази:</p>
+<ul class="simple">
+<li>шрифт</li>
+<li>розмір</li>
+<li>стиль</li>
+<li>розмір буфера</li>
+</ul>
+<p><img alt="image16" src="../../../_images/2013-09-05_09_44_59-qgis-dev-bin.png" /></p>
+</div>
+<div class="section" id="feature-older-labelling-engine-deprecated">
+<h3><a class="toc-backref" href="#id24">Стара система підписів не підтримується</a><a class="headerlink" href="#feature-older-labelling-engine-deprecated" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Використання старої системи підписування, яка була в QGIS &lt;= 1.8 не рекомендується, хоча вона ще не видалена. Це дозволить користувачам перевести свої проекти на використання нової системи підписування.</p>
+<p>Порядок роботи зі старою системою підписів у QGIS 2.0:</p>
+<ul class="simple">
+<li>Стара вкладка підписів не відображається у діалозі властивостей векторного шару в нових проектах та в старих проектах, що не використовують стару підсистему.</li>
+<li>Стара вкладка відображається для проектів, в яких хоча б один шар використовує старі підписи, і не буде схована навіть якщо проект перевести на використання нової системи.</li>
+</ul>
+<p>Стару вкладку можна включити або виключити для поточного проекту за допомогою наступних команд:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">writeEntry</span><span class="p">(</span><span class="s1">&#39;DeprecatedLabels&#39;</span><span class="p">,</span> <span class="s1">&#39;/Enabled&#39;</span><span class="p">,</span> <span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">)</span>
+<span class="go"># or</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">removeEntry</span><span class="p">(</span><span class="s1">&#39;DeprecatedLabels&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>УВАГА</strong>: <em>швидше за все</em> стара система підписів буде повністю видалена у наступному стабільному випуску QGIS. Будь ласка, оновіть свої проекти.</p>
+<p><img alt="image17" src="../../../_images/changelog-2.0_labels-deprecated.png" /></p>
+</div>
+</div>
+<div class="section" id="layer-legend">
+<h2><a class="toc-backref" href="#id25">Список шарів</a><a class="headerlink" href="#layer-legend" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-legend-visual-feedback-and-options">
+<h3><a class="toc-backref" href="#id26">Нові можливості списку шарів</a><a class="headerlink" href="#feature-legend-visual-feedback-and-options" title="Постійне посилання на цей заголовок">¶</a></h3>
+<ul class="simple">
+<li>Відображення кількості об’єктів шару, та кількості об’єктів кожного класу</li>
+<li>Векторні шари в режимі редагування позначаються червоним олівцем, якщо мають незбережені зміни</li>
+<li>Активний шар виділяється підкреслюванням</li>
+<li>Зняти вибір тепер можна клацнувши мишою по вільній частині легенди</li>
+<li>Клацання правою клавішею миші для виклику контекстного меню тепер автоматично призводить до клацанню лівою клавішею, що дозволяє використовувати одне натискання замість двох</li>
+<li>Імена груп та шарів можуть виділятися напівжирним</li>
+<li>Опціональне відключення генерації зменшених копій растрів, що в деяких випадках значно прискорює завантаження проектів</li>
+</ul>
+<p><img alt="image18" src="../../../_images/changelog-2.0_visual-options.png" /></p>
+</div>
+<div class="section" id="feature-duplicate-existing-map-layer">
+<h3><a class="toc-backref" href="#id27">Клонування шару</a><a class="headerlink" href="#feature-duplicate-existing-map-layer" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Можливість продублювати вибраний растровий або векторний шар у легенді. Рівнозначне повторному завантаженню шару та застосуванню до нього такого ж стилю.</p>
+<p><img alt="image19" src="../../../_images/changelog-2.0_dup-layer_1.png" /></p>
+</div>
+<div class="section" id="feature-multi-layer-toggle-editing-commands">
+<h3><a class="toc-backref" href="#id28">Редагування декількох шарів</a><a class="headerlink" href="#feature-multi-layer-toggle-editing-commands" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Якщо вибрано декілька шарів і хоча б один з них знаходиться в режимі редагування, можна швидко зберегти або відмінити поточні зміни. Також можна виконати ці дії для всіх шарів не залежно від наявності вибору.</p>
+<p><img alt="image20" src="../../../_images/changelog-2.0_current-edits.png" /></p>
+</div>
+</div>
+<div class="section" id="map-composer">
+<h2><a class="toc-backref" href="#id29">Редактор макетів</a><a class="headerlink" href="#map-composer" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-html-map-items">
+<h3><a class="toc-backref" href="#id30">Елемент HTML</a><a class="headerlink" href="#feature-html-map-items" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>З’явилась можливість розміщувати на карті елементи HTML.</p>
+<p><img alt="image21" src="../../../_images/Composer_1_006.png" /></p>
+</div>
+<div class="section" id="feature-multipage-support">
+<h3><a class="toc-backref" href="#id31">Підтримка багатосторінкових макетів</a><a class="headerlink" href="#feature-multipage-support" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Один макет тепер може складатися з декількох сторінок.</p>
+<p><img alt="image22" src="../../../_images/2013-09-08_22_31_33-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-expressions-in-composer-labels">
+<h3><a class="toc-backref" href="#id32">Вирази в підписах макету</a><a class="headerlink" href="#feature-expressions-in-composer-labels" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Підписи макетів QGIS 1.8 були обмежені в підтримці виразів і дозволяли використовувати лише функцію $CURRENT_DATE. У QGIS 2.0 реалізовано повну підтримку виразів.</p>
+<p>Підписи з виразами на зразок:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This was printed on: [% format_date( $now, &#39;dd.MM.yyyy&#39;)%]
+</pre></div>
+</div>
+<p>будуть обчислені в процесі друку (або візуалізації) і відображені як:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">was</span> <span class="n">printed</span> <span class="n">on</span><span class="p">:</span> <span class="mf">06.09</span><span class="o">.</span><span class="mi">2013</span>
+</pre></div>
+</div>
+<p>При ввімкненій генерації атласів стають доступними і атрибути поточного об’єкту, що дозволяє створювати такі тексти:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Asset</span> <span class="n">ID</span> <span class="p">[</span><span class="o">%</span> <span class="s2">&quot;ID&quot;</span> <span class="o">%</span><span class="p">]</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">Tree</span> <span class="n">Type</span> <span class="ow">is</span> <span class="p">[</span><span class="o">%</span> <span class="s2">&quot;TreeType&quot;</span> <span class="o">%</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="image23" src="../../../_images/2013-09-06_09_53_30-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-auto-snap-lines">
+<h3><a class="toc-backref" href="#id33">Автоматичні направляючі</a><a class="headerlink" href="#feature-auto-snap-lines" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Запроваджено автоматичні направляючі для вирівнювання близько розміщених елементів макету.</p>
+<p><img alt="image24" src="../../../_images/2013-09-05_10_05_01-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-manual-snap-lines">
+<h3><a class="toc-backref" href="#id34">Користувацькі направляючі</a><a class="headerlink" href="#feature-manual-snap-lines" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Іноді необхідно вирівняти елементи у певному місці макету. Нові користувацькі направляючі дозволяють додавати необхідну кількість ліній прив’язки для кращого вирівнювання елементів.</p>
+<p><img alt="image25" src="../../../_images/2013-09-05_10_09_41-Composer_1.png" /></p>
+</div>
+<div class="section" id="feature-map-series-generation">
+<h3><a class="toc-backref" href="#id35">Генерація послідовностей карт</a><a class="headerlink" href="#feature-map-series-generation" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Редактор макетів тепер дозволяє генерувати послідовності карт (атласи). В якості шару-покриття можуть використовуватися точки, лінії, полігони, а атрибути поточного об’єкту можна використовувати у підписах.</p>
+<p><img alt="image26" src="../../../_images/Picture1.png" /></p>
+</div>
+<div class="section" id="feature-automatic-overview-support-in-map-frame">
+<h3><a class="toc-backref" href="#id36">Підтримка оглядових карт</a><a class="headerlink" href="#feature-automatic-overview-support-in-map-frame" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Необхідно показати поточну область основної карти в вікну огляду? Тепер така можливість існує. Карта може відображати межі іншої карти та буде оновлюватися при їх зміні. Використання цієї можливості разом з функцією підготовки атласів дозволяє створювати зручні карти. Рамка оглядової карти може використовувати такі ж стилі як і звичайний полігональний об’єкт, то ж ваша творчість нічим не обмежується.</p>
+<p><img alt="image27" src="../../../_images/Picture1_1.png" /></p>
+</div>
+<div class="section" id="feature-layer-blending">
+<h3><a class="toc-backref" href="#id37">Змішування шарів</a><a class="headerlink" href="#feature-layer-blending" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Змішування шарів дозволяє комбінувати їх новими, захоплюючими способами. Якщо в попередніх версіях, все що можна було зробити це задати ступінь прозорості шару, то зараз можна обирати серед більш просунутих можливостей, таких як «множення», «затемнення» та інші.</p>
+<p>Змішування може використовуватися як на основній карті, так і в макеті. Коротка інструкція з використання змішування у редакторі макетів розміщена у дописі <a class="reference external" href="http://anitagraser.com/2013/07/29/vintage-map-design-using-qgis/">«Vintage map design using QGIS»</a>.</p>
+<p><img alt="image28" src="../../../_images/printcomposer_blending_1.png" /></p>
+</div>
+<div class="section" id="feature-html-label-support">
+<h3><a class="toc-backref" href="#id38">Підтримка HTML у підписах</a><a class="headerlink" href="#feature-html-label-support" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Підтримка HTML у підписах дає дозволяє контролювати зовнішній вигляд карт у ще більш широких межах. Підписи отримали повну підтримку CSS, HTML і навіть JavaScript.</p>
+<p><img alt="image29" src="../../../_images/html.png" /></p>
+</div>
+<div class="section" id="feature-multicolumn-composer-legend">
+<h3><a class="toc-backref" href="#id39">Багатоколоночна легенда</a><a class="headerlink" href="#feature-multicolumn-composer-legend" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Легенда тепер підтримує відображення у декілька стовпчиків. За необхідності можна розбивати один шару з багатьма класами на декілька стовпчиків. Шари з одним класом за замовчанням додаються як один рядок. Реалізовано три способи відображення назви шару або групи: Група, Вкладена група або Сховати. Стилі заголовків дозволяють налаштовувати групування елементів. Наприклад, шар з одним класом може відображатися одним рядком або з назвою шару (як у QGIS 1.8), символи декількох шарів можна об’єднати в групу тощо. За бажанням також можна відобразити число об’єктів.</p>
+<p><img alt="image30" src="../../../_images/multicolumn-legend.png" /></p>
+</div>
+<div class="section" id="feature-updates-to-map-composer-management">
+<h3><a class="toc-backref" href="#id40">Вдосконалення в управлінні макетами</a><a class="headerlink" href="#feature-updates-to-map-composer-management" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Внесено наступні зміни в управління макетами:</p>
+<ul class="simple">
+<li>Назву макета можна вказати на етапі створення, в тому числі вибравши в якості заготовки назву іншого макета</li>
+<li>Макети можна дублювати</li>
+<li>Пункти меню <code class="docutils literal"><span class="pre">New</span> <span class="pre">from</span> <span class="pre">Template</span></code> та <code class="docutils literal"><span class="pre">Specific</span></code> у редакторі макетів дозволяють створити макет на основі шаблону</li>
+<li>Можливість зберегти проект з вікна редактора макетів</li>
+<li>Всі операції з управління макетом тепер доступні у вінкі редактора макетів</li>
+</ul>
+<p><img alt="image31" src="../../../_images/changelog-2.0_composer-mngmnt.png" /></p>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2><a class="toc-backref" href="#id41">Плагіни</a><a class="headerlink" href="#plugins" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-revamped-plugin-manager">
+<h3><a class="toc-backref" href="#id42">Оновлений менеджер плаґінів</a><a class="headerlink" href="#feature-revamped-plugin-manager" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>У QGIS 1.x управління плаґінами було дещо заплутаним через наявність двох інтерфейсів — один для управління вде встановленими плаґінами та інший для їх завантаження з репозиторія. В QGIS 2.0 ми реалізували <strong>новий, уніфікований менеджер плаґінів</strong>, який є <em>єдиним місцем</em> для завантаження, активації/деактивації та управління плаґінами. Крім того, інтерфейс тепер виглядає набагато краще завдяки використанню бічної панелі та нових іконок!</p>
+<p><img alt="image32" src="../../../_images/Plugin_Manager_024.png" /></p>
+</div>
+</div>
+<div class="section" id="programmability">
+<h2><a class="toc-backref" href="#id43">Програмування та розробка</a><a class="headerlink" href="#programmability" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-new-python-console">
+<h3><a class="toc-backref" href="#id44">Нова консоль Python</a><a class="headerlink" href="#feature-new-python-console" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Нова консоль Python надає значно більше можливостей: підтримка автоматичного доповнення, підсвітка синтаксису, можливість налаштування шрифтів. Вбудований редактор коду з підтримкою завантаження та запуску файлів, дозволяє легко вводити великі блоки коду.</p>
+<p><img alt="image33" src="../../../_images/pyconsole.png" /></p>
+</div>
+<div class="section" id="feature-even-more-expression-functions">
+<h3><a class="toc-backref" href="#id45">Розширений набір виразів</a><a class="headerlink" href="#feature-even-more-expression-functions" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Вирази використовуються у багатьох підсистемах QGIS та дозволяють створювати підписи та символи з використанням виразів. У редакторі виразів було реалізовано багато нових функцій, і всі вони мають вбудовану довідку з прикладами використання.</p>
+<p><img alt="image34" src="../../../_images/2013-09-06_09_10_49-Expression_based_label.png" /></p>
+</div>
+<div class="section" id="feature-custom-expression-functions">
+<h3><a class="toc-backref" href="#id46">Користувацькі функції</a><a class="headerlink" href="#feature-custom-expression-functions" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Необхідна функція відсутня у редакторі виразів? Жодних проблем. Нову функцію можна додати за допомогою простого Python API.</p>
+<p><img alt="image35" src="../../../_images/2013-09-06_09_14_58-untitled__routing_-_Sublime_Text_UNREGISTERED.png" /></p>
+</div>
+<div class="section" id="feature-new-cleaner-python-api">
+<h3><a class="toc-backref" href="#id47">Нове Python API</a><a class="headerlink" href="#feature-new-cleaner-python-api" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Python API було перероблене, щоб зробити його використання більш зручним. API QGIS 2.0 використовує SIP v2, завдяки чому вдалось позбавитися ручної конвертації типів даних. Всі типи даних тепер автоматично конвертуються у відповідні типи даних Python.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;mycolumn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;mycolumn&#39;</span><span class="p">]</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<p>Вдосконалено процес зчитування об’єктів шару, що в майбутньому дозволить реалізувати багатопоточність.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">():</span>
+       <span class="nb">print</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;mycolumn&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="image36" src="../../../_images/2013-09-06_09_28_08-untitled__routing_-_Sublime_Text_UNREGISTERED.png" /></p>
+</div>
+<div class="section" id="feature-code-compatibility-with-version-1-x-releases">
+<h3><a class="toc-backref" href="#id48">Сумісність коду з серією 1.х</a><a class="headerlink" href="#feature-code-compatibility-with-version-1-x-releases" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>As this is a major release, it is not completely API compatible with
+previous 1.x releases. In most cases porting your code should be fairly
+straightforward - you can use <a class="reference external" href="https://github.com/qgis/QGIS/wiki/Python_plugin_API_changes_from_18_to_20">this
+guide</a>
+to get started. Please use the developer mailing list if you need
+further help.</p>
+<p><img alt="image37" src="../../../_images/Selection_021.png" /></p>
+</div>
+<div class="section" id="feature-python-project-macros">
+<h3><a class="toc-backref" href="#id49">Макроси проекту</a><a class="headerlink" href="#feature-python-project-macros" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Код Python, збережений у файлі проекту, може виконуватися при настанні однієї з наступних подій:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">openProject()</span></code></li>
+<li><code class="docutils literal"><span class="pre">saveProject()</span></code></li>
+<li><code class="docutils literal"><span class="pre">closeProject()</span></code></li>
+</ul>
+<p>Необхідність запуску макросів можна налаштувати.</p>
+<p><img alt="image38" src="../../../_images/changelog-2.0_project-macros_w-setttings.png" /></p>
+</div>
+</div>
+<div class="section" id="symbology">
+<h2><a class="toc-backref" href="#id50">Символіка</a><a class="headerlink" href="#symbology" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-data-defined-properties">
+<h3><a class="toc-backref" href="#id51">Перевизначення параметрів</a><a class="headerlink" href="#feature-data-defined-properties" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Завдяки можливості перевизначення параметрів можна контролювати тип символу, його розмір, колір, повертання та інші параметри, через атрибути об’єктів.</p>
+<p><img alt="image39" src="../../../_images/datadefinedproperties2.png" /></p>
+</div>
+<div class="section" id="feature-improved-symbol-layer-management">
+<h3><a class="toc-backref" href="#id52">Вдосконалення в управлінні символами</a><a class="headerlink" href="#feature-improved-symbol-layer-management" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Нова область перегляду символу відображає структуру символу та надає швидкий доступ до всіх символьних шарів.</p>
+<p><img alt="image40" src="../../../_images/symbollayertree.png" /></p>
+</div>
+<div class="section" id="feature-support-for-transparency-in-colour-definitions">
+<h3><a class="toc-backref" href="#id53">Підтримка прозорості у діалогах вибору кольору</a><a class="headerlink" href="#feature-support-for-transparency-in-colour-definitions" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>У більшості діалогів вибору кольору QGIS з’явилась можливість вказати значення альфа-каналу. Завдяки цьому можна створювати красиві карти та легко приховати непотрібні дані.</p>
+<p><img alt="image41" src="../../../_images/Layer_Properties_-_nat_026_1.png" /></p>
+</div>
+<div class="section" id="feature-color-control-for-raster-layers">
+<h3><a class="toc-backref" href="#id54">Управління кольорами для растрів</a><a class="headerlink" href="#feature-color-control-for-raster-layers" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>QGIS 2.0 дозволяє гнучко контролювати відображення растрових шарів. Ви можете налаштовувати яскравість, контраст та насиченість. Крім того є можливість відображення  растрів у відтінках сірого у відтінках іншого кольору.</p>
+<p><img alt="image42" src="../../../_images/Layer_Properties_-_blue_marble_032.png" /></p>
+</div>
+<div class="section" id="feature-copy-symbology-between-layers">
+<h3><a class="toc-backref" href="#id55">Копіювання символіки між шарами</a><a class="headerlink" href="#feature-copy-symbology-between-layers" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Відтепер дуже просто копіювати оформлення одного шару до іншого. Якщо ви працюєте з декількома схожими шарами, ви можете просто клацнути правою кнопкою миші по одному шару, вибрати <code class="docutils literal"><span class="pre">Копіювати</span> <span class="pre">стиль</span></code>, а потім клацнути правою клавішею миші на іншому шарі та вибрати <code class="docutils literal"><span class="pre">Вставити</span> <span class="pre">стиль</span></code>.</p>
+<p><img alt="image43" src="../../../_images/Selection_034.png" /></p>
+</div>
+<div class="section" id="feature-save-styles-in-your-database">
+<h3><a class="toc-backref" href="#id56">Збереження стилів у базі даних</a><a class="headerlink" href="#feature-save-styles-in-your-database" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Якщо ви використовуєте базу даних для збереження векторних шарів, то можете зберігати стилі у цій же базі даних. Завдяки цьому значно спрощується задача розповсюдження стилів у багатокористувацькому середовищі.</p>
+<p><img alt="image44" src="../../../_images/Selection_037.png" /></p>
+</div>
+<div class="section" id="feature-colour-ramp-support">
+<h3><a class="toc-backref" href="#id57">Підтримка кольорових шкал</a><a class="headerlink" href="#feature-colour-ramp-support" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Кольорові шкали використовуються у багатьох місцях символіки QGIS, а сама QGIS містить велику кількість кольорових шкал проекту <a class="reference external" href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/">cpt-city</a>. Крім того, ви можете створити свою власну кольорову шкалу. Всі кольорові шкали підтримують прозорість.</p>
+<p><img alt="image45" src="../../../_images/Selection_038.png" /></p>
+</div>
+<div class="section" id="feature-set-custom-default-styles-for-all-layer-types">
+<h3><a class="toc-backref" href="#id58">Стилі за замовчанням</a><a class="headerlink" href="#feature-set-custom-default-styles-for-all-layer-types" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Відтепер QGIS дозволяє контролювати як будуть відображатися нові шари, якщо вони не мають відповідного стилю. Також можна встановити ступінь прозорості шарів за замовчанням та необхідність використання випадкових кольорів.</p>
+<p><img alt="image46" src="../../../_images/Screen_Shot_2013-09-12_at_11.18.52_PM.png" /></p>
+</div>
+</div>
+<div class="section" id="user-interface">
+<h2><a class="toc-backref" href="#id59">Графічний інтерфейс</a><a class="headerlink" href="#user-interface" title="Постійне посилання на цей заголовок">¶</a></h2>
+<div class="section" id="feature-new-icon-theme">
+<h3><a class="toc-backref" href="#id60">Нова тема іконок</a><a class="headerlink" href="#feature-new-icon-theme" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Ми перейшли на використання теми «GIS» за замовчанням.</p>
+<p><img alt="image47" src="../../../_images/Selection_001_1.png" /></p>
+</div>
+<div class="section" id="feature-side-tabs-collapsable-groups">
+<h3><a class="toc-backref" href="#id61">Бічні панелі та групи, що згортаються</a><a class="headerlink" href="#feature-side-tabs-collapsable-groups" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Ми стандартизували зовнішній вигляд вкладок та почали використовувати групи елементів, що згортаються. Завдяки цьому навігація по настройкам стала більш простою, а використання площі екрана — оптимальним.</p>
+<p><img alt="image48" src="../../../_images/Selection_005.png" /></p>
+</div>
+<div class="section" id="feature-soft-notifications">
+<h3><a class="toc-backref" href="#id62">Спливаючі повідомлення</a><a class="headerlink" href="#feature-soft-notifications" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>У багатьох випадках ми хочемо повідомити щось, але не хочемо зупиняти вашу роботу. Нова система повідомлень QGIS дозволяє відображати важливу інформацію на панелі повідомлень, яка з’являється у верхній частині вікна і не потребує вашої реакції на неї, якщо ви зайняти чимось іншим. Розробники можуть створювати такі повідомлення за допомогою Python API.</p>
+<p><img alt="image49" src="../../../_images/Selection_030.png" /></p>
+</div>
+<div class="section" id="feature-application-custom-font-and-qt-stylesheet">
+<h3><a class="toc-backref" href="#id63">Користувацький шрифт і таблиці стилів Qt</a><a class="headerlink" href="#feature-application-custom-font-and-qt-stylesheet" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>З’явилась можливість задати шрифт, що буде використовуватися в інтерфейсі. Будь-який плаґін на C++ або Python, тепер копіює та використовує таблицю стилів QGIS, що дозволяє уникнути проблем з відображенням спеціальних віджетів QGIS, наприклад <code class="docutils literal"><span class="pre">QgsCollapsibleGroupBox</span></code>.</p>
+<p>Таблицю стилів QGIS можна отримати за допомогою наступної команди:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">qgis</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">mainWindow</span><span class="p">()</span><span class="o">.</span><span class="n">styleSheet</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image50" src="../../../_images/changelog-2.0_app-font.png" /></p>
+</div>
+<div class="section" id="feature-live-color-chooser-dialogs-and-buttons">
+<h3><a class="toc-backref" href="#id64">Нові діалоги вибору кольору</a><a class="headerlink" href="#feature-live-color-chooser-dialogs-and-buttons" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Всі кнопки вибору кольору було оновлено для відображення використання альфа-каналу. В якості діалогів вибору кольору тепер використовуються системні діалоги. Якщо активовано настройку <code class="docutils literal"><span class="pre">Use</span> <span class="pre">live-updating</span> <span class="pre">color</span> <span class="pre">chooser</span> <span class="pre">dialogs</span></code>, то будь-які зміни кольору будуть відображатися на відповідних елементах.</p>
+<p><img alt="image51" src="../../../_images/changelog-2.0_live-color-dlgs.png" /></p>
+</div>
+<div class="section" id="feature-svg-annotations">
+<h3><a class="toc-backref" href="#id65">SVG-анотації</a><a class="headerlink" href="#feature-svg-annotations" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>QGIS 2.0 дозволяє додавати на карту анотації в форматі SVG — прив’язані до вказаної точки або з відносним положенням.</p>
+<p><img alt="image52" src="../../../_images/Screen_Shot_2013-09-14_at_9.39.11_AM.png" /></p>
+</div>
+<div class="section" id="feature-drag-and-drop-form-builder">
+<h3><a class="toc-backref" href="#id66">Інтерактивний редактор форм</a><a class="headerlink" href="#feature-drag-and-drop-form-builder" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>QGIS 2.0 дозволяє створювати форми вводу даних. Завдяки редактору форм можна створити форму з вкладками та групами полів.</p>
+<p><img alt="image53" src="../../../_images/Screen_Shot_2013-09-14_at_2.17.27_PM.png" /></p>
+</div>
+<div class="section" id="feature-default-action-tool">
+<h3><a class="toc-backref" href="#id67">Інструмент дія за замовчанням</a><a class="headerlink" href="#feature-default-action-tool" title="Постійне посилання на цей заголовок">¶</a></h3>
+<p>Якщо ви використовуєте «дії» векторних шарів (маленькі задачі, що виконуються, коли ви клацаєте на об’єкті), вам сподобається новий інструмент. Він дозволяє вказати дію за замовчанням та виконувати її просто клацнувши на об’єкті.</p>
+<p><img alt="image54" src="../../../_images/Screen_Shot_2013-09-14_at_2.27.03_PM.png" /></p>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навігація</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Загальний індекс"
+             >індекс</a></li>
+        <li class="right" >
+          <a href="../trainingmaterial/index.html" title="Навчальні матеріали"
+             >наступний</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog220/index.html" title="Візуальний список змін для версії 2.2"
+             >попередній</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Користувачу</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" >Візуальні списки змін</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Якщо не вказано інше, вся інформація ліцензується за <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a> </p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Використані зображення з <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Сторінка без перекладу? Або ви побачили помилку:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">виправте</a>
+        <br/>
+        Помилка в тексті, відстуній текст або ви маєте кращий варіант:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">виправте</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
