@@ -1,0 +1,614 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Donaciones</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Certificación" href="certification.html" />
+    <link rel="prev" title="Reuniones de Usuarios de QGIS" href="meetings/user/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="certification.html" title="Certificación"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="meetings/user/index.html" title="Reuniones de Usuarios de QGIS"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Haz parte / Desarrollo</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Inglés">English</option>
+  <option value="ca" title="Catalán">Català</option>
+  <option value="da" title="Danés">Dansk</option>
+  <option value="de" title="Alemán">Deutsch</option>
+  <option value="es" title="Español">Español</option>
+  <option value="fa" title="Persa">فارسی</option>
+  <option value="fi" title="Finlandés">Suomi</option>
+  <option value="fr" title="Francés">Français</option>
+  <option value="gl" title="Gallego">Galego</option>
+  <option value="id" title="Indonesio">Bahasa Indonesia</option>
+  <option value="it" title="Italiano">Italiano</option>
+  <option value="hu" title="Húngaro">Magyar</option>
+  <option value="ja" title="Japonés">日本語</option>
+  <option value="km_KH" title="Camboyano">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coreano">한국어</option>
+  <option value="lt" title="Lituano">Lietuvių</option>
+  <option value="nl" title="Holandés">Nederlands</option>
+  <option value="pl" title="Polaco">Polski</option>
+  <option value="pt_BR" title="Portugués (Brasil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugués">Português</option>
+  <option value="ro" title="Rumano">Română</option>
+  <option value="tr" title="Turco">Türkçe</option>
+  <option value="ru" title="Ruso">Русский</option>
+  <option value="uk" title="Ucraniano">Українська</option>
+  <option value="zh-Hans" title="Chino (Simplificado)">簡体中文</option>
+  <option value="zh-Hant" title="Chino (Tradicional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/donations.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>¡Gracias!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>El Equipo de QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Donar Ahora</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Cerrar este mensaje</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Gracias por su donación!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS es Libre y gratuito, y esperamos que disfrute usando nuestro querido producto y le animamos a que comparta y extienda la copia que ha descargado a lo largo y a lo ancho, para que otros puedan disfrutar también. ¡Nuestros saludos más cordiales!</p>'+
+            '<p id="stripeerr" style="display:none;">Desafortunadamente, hubo un error en el procesamiento de su donación. Por favor inténtelo mas tarde, o contáctenos vía finance@qgis.org</p>'+
+            '<p>El Equipo de QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Cerrar este mensaje</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../about/index.html">Descubre QGIS</a></li>
+            <li><a href="../forusers/index.html">Para Usuarios</a></li>
+            <li><a href="index.html">Haz parte</a></li>
+            <li><a href="../../docs/index.html">Documentación</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Buscar" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="meetings/user/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="certification.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">Descubre QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forusers/index.html">Para Usuarios</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Haz parte / Desarrollo</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="document.html">Escribir Documentación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translate.html">Traducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/index.html">Desarrollo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Pruebas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daily_reports/index.html">Reportes diarios</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailinglists.html">Listas de correos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance/index.html">Organización del Proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meetings/index.html">Reuniones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance/sustaining_members/index.html">Sustaining Membership Program</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Donaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certification.html">Certificación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide.html">Guía de Estilo Gráfico</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/index.html">Documentación</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            
+<div class="getinvolved" id="color-identifier"></div>
+
+<section class="sub-landing-page" id="top">
+    <div class="container-fluid banner">
+        <div class="row-fluid">
+            <div class="span12">
+                <h2>QGIS Donaciones</h2>
+                <p>QGIS es desarrollado por un equipo de voluntarios dedicados, compañías y organizaciones.</p>
+                <p>We rely on sponsorships and donations for much of our funding. If you would like to support us, donations are very welcome.
+                        Donations can be made by electronic funds transfer, by credit card, or by PayPal.
+                </p>
+                <p>Donaciones a QGIS son deducible de impuestos en varios países. Por favor, diríjase a su oficina local de impuestos por detalles. 
+Si usted desea deducir impuestos como una empresa u organización alemana, por favor haga las donaciones a través del<a href="http://www.qgis.de/">Grupo Aleman de usuarios de QGIS</a>. Ellos pueden emitir una confirmación de pago como una asociación alemana exenta de impuestos. 
+                </p>
+                <p><strong>Tú puedes hacer parte!</strong></p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sub-landing-page menu">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <nav class="subnav">
+                    <header>
+                        <h3>DONAR AL PROYECTO</h3>
+                    </header>
+
+                    <!--<ul id="subnav">
+                        <li>
+                            <a href="#bank">Transferencia bancaria</a>
+                        </li>
+                        <li>
+                            <a href="#paypal">Tarjeta de crédito y Paypal</a>
+                        </li>
+                    </ul>-->
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sub-landing-page main" id="bank">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <img src='../../_static/images/get-involved-translate.png' class="text-center background-mask non-mobile-image wd" alt="translate bubbles icon" />
+            </div>
+            <div class="span1"></div>
+            <div class="span8">
+                <h3>Transferencia bancaria</h3>
+                <p>Use los detalles listados abajo para hacer una donación vía una transferencia internacional de dinero:</p>
+                <p>
+                <pre>
+Account name: QGIS.ORG
+Address:      Boeschacherstrasse 10a
+              CH-8624 Gruet
+BIC/SWIFT:    POFICHBEXXX 
+IBAN:         CH09 0900 0000 9146 3839 8
+Reference:    Donation QGIS
+Currency:     EUR
+Bank name:    PostFinance AG 
+Bank address: Mingerstrasse 20 
+              3030 Berne 
+              Switzerland
+VAT-number:   CHE-489.853.176
+                </pre>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid">
+                <h3>Stripe</h3>
+                <p>Usamos stripe.com para recibir donaciones mediante tarjeta de crédito. Note que las tarifas de servicio en Stripe son considerablemente mas bajas que las de Paypal - por lo que apreciaríamos, si puedes usar Stripe en lugar de Paypal. No requiere registro. </p>
+                <div id="stripe">Si usted no ve una Forma de Pago aquí, por favor infórmanos vía finance@qgis.org.<!-- content gets injected here via js in themes/qgis-theme/languageswitch.html --></div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="paypal">
+            <div class="span8">
+                <h3>Paypal</h3>
+                <p>Usted puede usar Paypal para donar usando su propia tarjeta de crédito (pero preferimos que use Stripe para ello). 
+El pago es procesado por Paypal pero usted no necesita tener una cuenta Paypal
+o registrarse en una, si esta pagando con tarjeta de crédito. </p>
+                <p>También puedes usar tu propia cuenta de Paypal para donar.</p>
+                <!--<h4 class="subsection-link"><a href="../forusers/support.html">Lista de Canales de Soporte de QGIS</a></h4>-->
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="GTYJSTG8LXKW6">
+                    <input type="hidden" name="image_url" value="https://qgis.org/en/_static/images/logo_for_paypal_checkout.png">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+                        border="0" name="submit" alt="Dona vía PayPal.com">
+                    <input type="hidden" name="lc" value="us">
+                    <img alt="" border="0" align="center" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    <!--<a href="http://www.qgis.org/en/sponsorship.html"><div style="margin-left:7px">more information</div></a>-->
+                    </form>
+                </div>
+            </div>
+            <div class="span1"></div>
+            <div class="span3">
+                <img src="../../_static/images/paypal-logo.jpg" class="text-center background-mask non-mobile-image wd" alt="participate icon" />
+            </div>
+        </div>
+        <hr>
+    </div>
+</section>
+<section class="sub-landing-page">
+    <div class="container-fluid banner">
+        <div class="row-fluid">
+            <div class="offset5 span2">
+                <h5 class="text-center">
+                    <a href="#top"> <i class="icon-arrow-up"></i>
+                        Volver al inicio
+                    </a>
+                </h5>
+            </div>
+            <div class="span5"></div>
+        </div>
+    </div>
+</section>
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="certification.html" title="Certificación"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="meetings/user/index.html" title="Reuniones de Usuarios de QGIS"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Haz parte / Desarrollo</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Salvo que se indique lo contrario, todos los contenidos están licenciados bajo la <a href="http://creativecommons.org/licenses/by-sa/3.0/">Licencia Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Gráficos obtenidos de <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        ¿Página sin traducir? o encuentras un error de traducción:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">corregir</a>
+        <br/>
+        Error textual, falta texto o usted conoce algo mejor:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">corregir</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
