@@ -1,0 +1,561 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GyIK</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Tárgymutató" href="../../../genindex.html" />
+    <link rel="search" title="Keresés" href="../../../search.html" />
+    <link rel="next" title="Vizuális stílus útmutató" href="../styleguide.html" />
+    <link rel="prev" title="Certification" href="../certification.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigáció</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Általános tárgymutató"
+             accesskey="I">nyitóoldal</a></li>
+        <li class="right" >
+          <a href="../styleguide.html" title="Vizuális stílus útmutató"
+             accesskey="N">következő</a> |</li>
+        <li class="right" >
+          <a href="../certification.html" title="Certification"
+             accesskey="P">előző</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Vegyen részt benne / Fejlesztés</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Angol">English</option>
+  <option value="ca" title="Katalán">Català</option>
+  <option value="da" title="Dán">Dansk</option>
+  <option value="de" title="Német">Deutsch</option>
+  <option value="es" title="Spanyol">Español</option>
+  <option value="fa" title="Perzsa">فارسی</option>
+  <option value="fi" title="Finn">Suomi</option>
+  <option value="fr" title="Francia">Français</option>
+  <option value="gl" title="Galíciai">Galego</option>
+  <option value="id" title="Indonéz">Bahasa Indonesia</option>
+  <option value="it" title="Olasz">Italiano</option>
+  <option value="hu" title="Magyar">Magyar</option>
+  <option value="ja" title="Japán">日本語</option>
+  <option value="km_KH" title="Kmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Koreai">한국어</option>
+  <option value="lt" title="Litván">Lietuvių</option>
+  <option value="nl" title="Holland">Nederlands</option>
+  <option value="pl" title="Lengyel">Polski</option>
+  <option value="pt_BR" title="Portugál (brazil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugál">Português</option>
+  <option value="ro" title="Román">Română</option>
+  <option value="tr" title="Török">Türkçe</option>
+  <option value="ru" title="Orosz">Русский</option>
+  <option value="uk" title="Ukrán">Українська</option>
+  <option value="zh-Hans" title="Kínai (Egyszerűsített)">簡体中文</option>
+  <option value="zh-Hant" title="Kínai (hagyományos)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/faq/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Köszönjük!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>A QGIS csapat</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Adományozzon most</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Üzenet bezárása</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Köszönjük az adományát!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">A QGIS ingyenes, és reméljük, hogy tetszik a munkánk és arra bátorítjuk Önt, hogy ossza meg és terjessze a letöltött másolatot bárhol bárkinek, hogy mások is élvezhessék a rendszer használatát. A legjobbakat kívánva Önnek!</p>'+
+            '<p id="stripeerr" style="display:none;">Sajnálatos módon hiba történt az Ön adományozásának feldolgozása során. Kérjük, próbálkozzon újra később, vagy lépjen velünk kapcsolatba a finance@qgis.org címen</p>'+
+            '<p>A QGIS csapat</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Üzenet bezárása</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">QGIS felfedezése</a></li>
+            <li><a href="../../forusers/index.html">Felhasználóknak</a></li>
+            <li><a href="../index.html">Vegyen részt benne</a></li>
+            <li><a href="../../../docs/index.html">Dokumentáció</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Keresés" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../certification.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../styleguide.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">A QGIS felfedezése</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Felhasználóknak</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Vegyen részt benne / Fejlesztés</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../document.html">Dokumentáció írása</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate.html">Fordítás</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development/index.html">Fejlesztés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tests.html">Tesztek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../daily_reports/index.html">Daily Reports</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mailinglists.html">Levelezőlisták</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../governance/index.html">Projekt szervezet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meetings/index.html">Találkozók</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../governance/sustaining_members/index.html">Sustaining Membership Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../donations.html">Adományok</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../certification.html">Certification</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GyIK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user">Felhasználó</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-ask-a-qgis-question">Hogyan tegyek fel egy QGIS kérdést?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-are-qgis-release-names-selected">How are QGIS release names selected?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-cite-qgis">How to cite QGIS?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#can-i-open-ecw-files-with-qgis">Megnyithatok ECW fájlt a QGIS-sel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#development">Fejlesztés</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#can-i-compile-qgis-myself">Le tudom fordítani magam a QGIS-t?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../styleguide.html">Vizuális stílus útmutató</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Dokumentáció</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="faq">
+<h1>GyIK<a class="headerlink" href="#faq" title="Hivatkozás erre a fejezetcímre">¶</a></h1>
+<p>Itt gyűjtjük össze a válaszokat a gyakran felmerülő kérdésekre.</p>
+<p>Ezzel az egy lappal kezdünk, lehetséges, hogy szakaszokra bontjuk, vagy  további lapokat hozunk létre, ha szükséges.</p>
+<div class="section" id="user">
+<h2>Felhasználó<a class="headerlink" href="#user" title="Hivatkozás erre a fejezetcímre">¶</a></h2>
+<div class="section" id="how-to-ask-a-qgis-question">
+<span id="id1"></span><h3>Hogyan tegyek fel egy QGIS kérdést?<a class="headerlink" href="#how-to-ask-a-qgis-question" title="Hivatkozás erre a fejezetcímre">¶</a></h3>
+<p>Ha a QGIS levelező listán szeretne kérdést feltenni, akkor kérjük adjon meg elegendő információt a problémájáról, hogy többiek könnyen megérthessék. Ha nem világos és pontos kérdés, akkor nagyon nehezem tudja megválaszolni azt bárki vagy túl sok időbe telik, mert  válasz egy kérdés lesz önhöz, stb, stb, A következő információkat adhatná meg:</p>
+<ul class="simple">
+<li>célszerű egy, az email címéhez tartozó leírás</li>
+<li>melyik QGIS verziót használta akkor (pontosan)</li>
+<li>mit gondol mit fog kapni</li>
+<li>ha alkalmazható, mit próbált meg és mi lett az eredmény</li>
+<li>ha a kérdés egy összeomláshoz kapcsolódik, meg kell adnia a következőket<ul>
+<li>pontosan mi a hiba (ha lehetséges képernyőkép, stacktrace, a hiba szövege)</li>
+<li>melyik operációs rendszer és verzió</li>
+<li>hogyan telepítette (OSGeo4W? önálló telepítő? saját szerkesztés?)</li>
+<li>mikor történt a hiba (újratelepítés, első telepítés, rendszerfrissítés, projekt változás)</li>
+</ul>
+</li>
+</ul>
+<p>Tartsa észben, hogy minél szabatosabb a kérdése, annál gyorsabb és pontosabb lehet a válasz.</p>
+<div class="admonition note">
+<p class="first admonition-title">Megjegyzés</p>
+<p class="last">In case of a broken function, you may give a look at <a class="reference external" href="https://issues.qgis.org/projects/qgis/issues">QGIS issue tracker</a> before
+mailing to the list. More information at <a class="reference internal" href="../development/bugreporting.html#qgis-bugreporting"><span class="std std-ref">Hibák, funkciók, témák</span></a>.</p>
+</div>
+</div>
+<div class="section" id="how-are-qgis-release-names-selected">
+<h3>How are QGIS release names selected?<a class="headerlink" href="#how-are-qgis-release-names-selected" title="Hivatkozás erre a fejezetcímre">¶</a></h3>
+<p>After a succesfull developer meeting in Zurich (Switzerland), we decided that
+the next release should be related to it. Since then, all releases have been named
+after locations of our developer meetings.</p>
+</div>
+<div class="section" id="how-to-cite-qgis">
+<h3>How to cite QGIS?<a class="headerlink" href="#how-to-cite-qgis" title="Hivatkozás erre a fejezetcímre">¶</a></h3>
+<p>To cite QGIS in your piece of work, or for an assignment, this general citation might be helpful: „QGIS Development Team (YEAR). QGIS Geographic Information System. Open Source Geospatial Foundation Project. <a class="reference external" href="http://qgis.osgeo.org">http://qgis.osgeo.org</a>”.</p>
+</div>
+<div class="section" id="can-i-open-ecw-files-with-qgis">
+<h3>Megnyithatok ECW fájlt a QGIS-sel<a class="headerlink" href="#can-i-open-ecw-files-with-qgis" title="Hivatkozás erre a fejezetcímre">¶</a></h3>
+<p>Igen… DE az operációs rendszere függvényében ez nagyobb vagy kisebb nehézséggel jár.</p>
+<p>Ha Windowst használ, használja az OSGeo4w telepítőt, ami tartalmazza.</p>
+<p>Ha OS X-et használ, akkor megtalálhatja az ECW modult és a telepítési útmutatókat a <a class="reference external" href="http://www.kyngchaos.com/software/frameworks">http://www.kyngchaos.com/software/frameworks</a> weboldalon</p>
+<p>További útmutatásért látogasson ide: <a class="reference external" href="http://www.faunalia.com/content/adding-ecw-support-quantum-gis">http://www.faunalia.com/content/adding-ecw-support-quantum-gis</a></p>
+</div>
+</div>
+<div class="section" id="development">
+<h2>Fejlesztés<a class="headerlink" href="#development" title="Hivatkozás erre a fejezetcímre">¶</a></h2>
+<div class="section" id="can-i-compile-qgis-myself">
+<h3>Le tudom fordítani magam a QGIS-t?<a class="headerlink" href="#can-i-compile-qgis-myself" title="Hivatkozás erre a fejezetcímre">¶</a></h3>
+<p>Igen, a QGIS forrásból fordítása lehetséges akármilyen op. rendszert (Windows, OS X, Linux) használ. Kérjük olvassa el a  <a class="reference external" href="http://htmlpreview.github.io/?https://github.com/qgis/QGIS/blob/master/doc/INSTALL.html">Building QGIS from source</a> oldalt</p>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigáció</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Általános tárgymutató"
+             >nyitóoldal</a></li>
+        <li class="right" >
+          <a href="../styleguide.html" title="Vizuális stílus útmutató"
+             >következő</a> |</li>
+        <li class="right" >
+          <a href="../certification.html" title="Certification"
+             >előző</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Vegyen részt benne / Fejlesztés</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Ha másképp nincs jelezve, akkor minden tartalom a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licensz (CC BY-SA)</a> alatt áll.</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Válasszon grafikát a <a href="http://thenounproject.com" target="_blank">Noun projekt kollekcióból</a>
+        
+        
+      </p>
+      <p class="credit">
+        Nincs az oldal lefordítva? Fordítási hibát talált:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">javítsa</a>
+        <br/>
+        Szövegezési hiba, hiányzó szöveg vagy tud jobb fordítást:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">javítsa</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
