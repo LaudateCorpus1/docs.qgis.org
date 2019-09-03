@@ -1,0 +1,1132 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGIS 2.12 pakeitimai</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Indeksas" href="../../../genindex.html" />
+    <link rel="search" title="Ieškoti" href="../../../search.html" />
+    <link rel="next" title="QGIS 2.10 pakeitimai" href="../visualchangelog210/index.html" />
+    <link rel="prev" title="QGIS 2.14 pakeitimai" href="../visualchangelog214/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigacija</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Bendras indeksas"
+             accesskey="I">indeksas</a></li>
+        <li class="right" >
+          <a href="../visualchangelog210/index.html" title="QGIS 2.10 pakeitimai"
+             accesskey="N">kitas</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog214/index.html" title="QGIS 2.14 pakeitimai"
+             accesskey="P">praeitas</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Naudotojams</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" accesskey="U">Vizualūs pakeitimų sąrašai</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Anglų">English</option>
+  <option value="ca" title="Katalonų">Català</option>
+  <option value="da" title="Daniškai">Dansk</option>
+  <option value="de" title="Vokiečių">Deutsch</option>
+  <option value="es" title="Ispanų">Español</option>
+  <option value="fa" title="Persiškai">فارسی</option>
+  <option value="fi" title="Suomiškai">Suomi</option>
+  <option value="fr" title="Prancūziškai">Français</option>
+  <option value="gl" title="Galų">Galego</option>
+  <option value="id" title="Indonezietiškai">Bahasa Indonesia</option>
+  <option value="it" title="Italų">Italiano</option>
+  <option value="hu" title="Vengrų">Magyar</option>
+  <option value="ja" title="Japonų">日本語</option>
+  <option value="km_KH" title="Khmerų kalba">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Korėjietiškai">한국어</option>
+  <option value="lt" title="Lietuviškai">Lietuvių</option>
+  <option value="nl" title="Olandiškai">Nederlands</option>
+  <option value="pl" title="Lenkiškai">Polski</option>
+  <option value="pt_BR" title="Portugališkai (Brazilija)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugališkai">Português</option>
+  <option value="ro" title="Rumuniškai">Română</option>
+  <option value="tr" title="Turkiškai">Türkçe</option>
+  <option value="ru" title="Rusiškai">Русский</option>
+  <option value="uk" title="Ukrainietiškai">Українська</option>
+  <option value="zh-Hans" title="Kinų (supaprastinta)">簡体中文</option>
+  <option value="zh-Hant" title="Kinų (tradicinė)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/visualchangelog212/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Ačiū!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>QGIS komanda</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Paremkite dabar</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Uždaryti šį pranešimą</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Ačiū už jūsų paramą!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS yra nemokamas ir mes tikimės, kad jums patiks naudoti mūsų darbą, bei skatiname dalintis ir skleisti atsisiųstą kopiją kiek galima plačiau, kad ir kiti galėtų ja džiaugtis. Kuo nuoširdžiausi mūsų linkėjimai!</p>'+
+            '<p id="stripeerr" style="display:none;">Deja apdorojant jūsų paramą įvyko klaida. Prašome pabandyti dar kartą vėliau arba susisiekti su mumis adresu finance@qgis.org</p>'+
+            '<p>QGIS komanda</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Uždaryti šį pranešimą</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">Atraskite QGIS</a></li>
+            <li><a href="../index.html">Naudotojams</a></li>
+            <li><a href="../../getinvolved/index.html">Įsitraukite</a></li>
+            <li><a href="../../../docs/index.html">Dokumentacija</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Ieškoti" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../visualchangelog214/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../visualchangelog210/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Atraskite QGIS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Naudotojams</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">Atsisiųsti QGIS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualchangelogs.html">Vizualūs pakeitimų sąrašai</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog38/index.html">QGIS 3.8 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog36/index.html">QGIS 3.6 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog34/index.html">QGIS 3.4 LTR pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog32/index.html">QGIS 3.2 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog30/index.html">QGIS 3.0 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog218/index.html">QGIS 2.18 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog216/index.html">QGIS 2.16 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog214/index.html">QGIS 2.14 pakeitimai</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QGIS 2.12 pakeitimai</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">Bendra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#analysis-tools">Analizės įrankiai</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#application-and-project-options">Programos ir projekto parinktys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#browser">Naršyklė</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-providers">Duomenų tiekėjai</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-management">Duomenų valdymas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitising">Skaitmeninimas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelling">Etiketės</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-composer">Žemėlapio maketas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plugins">Priedai</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmability">Programavimas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-server">QGIS Serveris</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">Simbologija</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog210/index.html">QGIS 2.10 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog28/index.html">QGIS 2.8 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog260/index.html">QGIS 2.6 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog240/index.html">QGIS 2.4 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog220/index.html">QGIS 2.2 pakeitimai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog200/index.html">QGIS 2.0 pakeitimai</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">Mokymo medžiaga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">Palaikymas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">Naudotojų grupės</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">Komercinis palaikymas</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../books/index.html">Knygos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Įsitraukite / Programavimas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Dokumentacija</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="changelog-for-qgis-2-12">
+<span id="changelog212"></span><h1>QGIS 2.12 pakeitimai<a class="headerlink" href="#changelog-for-qgis-2-12" title="Nuoroda į šią antraštę">¶</a></h1>
+<p><img alt="image1" src="../../../_images/3648539707d0789903fdfedac3705584f12fa6ac.png" /></p>
+<p>Tai kitos QGIS versijos - 2.12.0 „Lyon“ pakeitimai. Lyone 2012 metų balandžio mėnesį buvo rengiamas mūsų vystymo susitikimas.</p>
+<p><strong>Naujos QGIS 2.12 „Lyon“ savybės</strong></p>
+<p>Tai eilinė laida, išleidžiama kas 4 mėnesius. Ji duoda jums prieigą prie naujausių mūsų kuriamų funkcijų ir rodo QGIS vystymo pačius paskutinius pasiekimus.</p>
+<p>QGIS „Lyon“ pilna puikių naujų savybių. Ypatingai pastebimas naujai įdiegtos nuo taisyklių priklausančios etiketės, nuo taisyklių priklausantys atributų lentelių stiliai ir sudėtingesnis geometrijos tikrinimas, kreivinių geometrijų skaitmeninimas, geresnis autentikacijos valdymas ir daug daug kitų naujienų! QGIS 2.12 buvo ištaisyta daug riktų ir atminties naudojimo klaidų. QGIS 2.12 savybės bus įtrauktos į kitą LTR laidą (kurią planuojama išleisti 2016), taigi naudodami šią laidą jūs turite puikią galimybę išbandyti naujas savybes, kurios atsidurs kitoje LTR.</p>
+<p>Į programinę įrangą pridėjus naujų savybių, atsiranda ir naujų klaidų tikimybė - jei pastebėsite šios laidos problemų, prašome apie jas pranešti <a class="reference external" href="http://hub.qgis.org">QGIS klaidų registravimo sistemoje</a>. Jei dirbate gamybinėje aplinkoje, kur norite konservatyviau žiūrėti į naujo funkcionalumo diegimą naudotojams, mes taipogi teikiame ir ilgalaikę (LTR) QGIS laidą. Dabartinė LTR versija yra 2.8.3, ją rasite <a class="reference external" href="http://download.qgis.org">download.qgis.org</a>.</p>
+<p><strong>Padėkos</strong></p>
+<p>Norime padėkoti programuotojams, dokumentuotojams, testuotojams ir dar būriui kitų žmonių, kurie savo noru aukojo savo laiką ir pastangas (arba finansavo tuo užsiimančius žmones).</p>
+<p>From the QGIS community we hope you enjoy this release! If you wish to
+donate time, money or otherwise get involved in making QGIS more
+awesome, please wander along to <a class="reference external" href="https://qgis.org">qgis.org</a> and lend
+a hand!</p>
+<p>Na ir pagaliau norėtume padėkoti savo rėmėjams už neįkainojamą finansinę paramą šiam projektui:</p>
+<ul class="simple">
+<li><strong>AUKSINIS rėmėjas:</strong> <a class="reference external" href="http://www.asiaairsurvey.com/">Asia Air Survey, Japonija</a></li>
+<li>SIDABRINIS rėmėjas: <a class="reference external" href="http://www.agh.edu.pl/en">AGH Mokslo ir technologijos universitetas, Krokuva, Lenkija</a></li>
+<li>SIDABRINIS rėmėjas: <a class="reference external" href="http://www.vorarlberg.at/">State of Vorarlberg, Austrija</a></li>
+<li>SIDABRINIS rėmėjas: <a class="reference external" href="http://www.opw.ie/">Office of Public Works, Ireland, Airija</a></li>
+<li>SIDABRINIS rėmėjas: <a class="reference external" href="http://www.sourcepole.com/">Sourcepole AG, Šveicarija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting, Jungtinė Karalystė</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://wheregroup.com/">WhereGroup GmbH &amp; Co. KG, Vokietija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.npaconsult.co.uk/">Nicholas Pearson Associates, JK</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://qgis-polska.org/">QGIS Poland, Lenkija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.terrelogiche.com/">www.terrelogiche.com, Italija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.geosynergy.com.au/">GeoSynergy, Australija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.gaia3d.com/">Gaia3D, Pietų Korėja</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.rbwm.gov.uk/">Royal Borough of Windsor and Maidenhead, JK</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.chartwell-consultants.com/">Chartwell Consultants Ltd, Kanada</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.tragewegen.be/">Trage Wegen vzw, Belgija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.gfi-gis.de/">GFI - Gesellschaft fr Informations technologie mbH, Vokietija</a></li>
+<li>BRONZINIS Sponsorius: <a class="reference external" href="http://www.gkg-kassel.de/">GKG Kassel,(Dr.-Ing. Claas Leiner), Vokietija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.gis-support.com/">GIS-Support, Lenkija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.adlares.com/">ADLARES GmbH, Vokietija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.molitec.it/">www.molitec.it, Italija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.argusoft.de">www.argusoft.de, Vokietija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.customeranalytics.com/">Customer Analytics, JAV</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.avioportolano.it/">Avioportolano Italia, Italija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.wggios.agh.edu.pl/en">AGH, Mokslo ir technologijų universitetas, geologijos, geofizikos ir aplinkos apsaugos fakultetas, Lenkija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.urbsol.com.au/">Urbsol, Australija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.mappinggis.com/">MappingGIS, Ispanija</a></li>
+<li>BRONZINIS rėmėjas: <a class="reference external" href="http://www.gis3w.it/">GIS3W, Italija</a></li>
+</ul>
+<p>A current list of donors who have made financial contributions large
+and small to the project can be seen on our <a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#list-of-donors">donors
+list</a>.
+If you would like to become and official project sponsor, please visit
+<a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#sponsorship">our sponsorship
+page</a> for
+details. Sponsoring QGIS helps us to fund our six monthly developer
+meetings, maintain project infrastructure and fund bug fixing efforts.</p>
+<p>QGIS yra atvira programinė įranga ir jums jokiu būdu neprivalu mokėti norint ją naudoti. Priešingai, mes norime skatinti kiek galima daugiau žmonių naudoti ją nepriklausomai nuo jūsų finansinio ar visuomeninio statuso - mes tikime, kad duodant žmonėms įrankius, teikiančius galimybę daryti erdvinius sprendimus, galima sukurti geresnę visos žmonijos visuomenę.</p>
+<div class="contents local topic" id="turinys">
+<ul class="simple">
+<li><a class="reference internal" href="#general" id="id1">Bendra</a><ul>
+<li><a class="reference internal" href="#feature-new-welcome-screen" id="id2">Savybė: naujas pasveikinimo ekranas</a></li>
+<li><a class="reference internal" href="#feature-ongoing-improvements-to-code-quality" id="id3">Savybė: pastovus kodo kokybės gerinimas</a></li>
+<li><a class="reference internal" href="#feature-advanced-settings-editor" id="id4">Savybė: sudėtingesnis nustatymų redaktorius</a></li>
+<li><a class="reference internal" href="#feature-mutually-exclusive-layer-tree-groups" id="id5">Savybė: vienas kitą išjungiančių sluoksnių medžio grupė</a></li>
+<li><a class="reference internal" href="#feature-filtering-for-field-values-in-expression-widget" id="id6">Savybė: lauko reikšmių filtravimas išraiškos valdiklyje</a></li>
+<li><a class="reference internal" href="#feature-user-interface-theme-support" id="id7">Savybė: Naudotojo sąsajos temų palaikymas</a></li>
+<li><a class="reference internal" href="#feature-new-expression-functions-in-2-12" id="id8">Savybė: Naujos 2.12 išraiškų funkcijos</a></li>
+<li><a class="reference internal" href="#feature-variables-in-expressions" id="id9">Savybė: kintamieji išraiškose</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-tools" id="id10">Analizės įrankiai</a><ul>
+<li><a class="reference internal" href="#feature-added-number-of-vertices-to-derived-fields-in-identify-tool" id="id11">Savybė: Į išvestinių laukų sąrašą pridėtas viršūnių skaičius identifikavimo įrankyje</a></li>
+<li><a class="reference internal" href="#feature-raster-alignment-tool" id="id12">Savybė: Rastro lygiavimo įrankis</a></li>
+<li><a class="reference internal" href="#feature-geometry-checker-and-geometry-snapper-plugins" id="id13">Savybė: Geometrijos tikrinimo ir geometrijos pritraukimo priedai</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#application-and-project-options" id="id14">Programos ir projekto parinktys</a><ul>
+<li><a class="reference internal" href="#feature-encrypted-password-management" id="id15">Savybė: užkoduoto slaptažodžio valdymas</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#browser" id="id16">Naršyklė</a><ul>
+<li><a class="reference internal" href="#feature-improvements-to-postgis-connections-in-browser" id="id17">Savybė: PostGIS jungčių naršyklėje patobulinimai</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-providers" id="id18">Duomenų tiekėjai</a><ul>
+<li><a class="reference internal" href="#feature-postgis-provider-improvements" id="id19">Savybė: PostGIS tiekėjo patobulinimai</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-management" id="id20">Duomenų valdymas</a><ul>
+<li><a class="reference internal" href="#feature-dbmanager-improvements" id="id21">Savybė: DB tvarkyklės patobulinimai</a></li>
+<li><a class="reference internal" href="#feature-conditional-formatting-for-attribute-table-cells" id="id22">Savybė: sąlyginis atributų lentelės langelių formatavimas</a></li>
+<li><a class="reference internal" href="#feature-support-for-relative-paths-in-widgets" id="id23">Savybė: Santykinių kelių palaikymas valdikliuose</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#digitising" id="id24">Skaitmeninimas</a><ul>
+<li><a class="reference internal" href="#feature-digitising-improvements" id="id25">Savybė: skaitmeninimo patobulinimai</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labelling" id="id26">Etiketės</a><ul>
+<li><a class="reference internal" href="#feature-data-defined-quadrant-when-in-around-point-mode" id="id27">Savybė: nuo duomenų priklausantis kvadrantas „aplink tašką“ režime</a></li>
+<li><a class="reference internal" href="#feature-draw-only-labels-which-fit-inside-polygons" id="id28">Savybė: braižyti tik tas etiketes, kurios telpa poligonų viduje</a></li>
+<li><a class="reference internal" href="#feature-control-priority-of-labeling-obstacles" id="id29">Savybė: etikečių kliūčių prioriteto kontrolė</a></li>
+<li><a class="reference internal" href="#feature-new-options-to-control-how-polygon-layers-act-as-obstacles" id="id30">Savybė: naujos parinktys, kontroliuojančios kaip poligonų sluoksniai veikia kaip kliūtys</a></li>
+<li><a class="reference internal" href="#feature-data-defined-control-over-label-priority" id="id31">Savybė: nuo duomenų priklausanti etikečių prioriteto kontrolė</a></li>
+<li><a class="reference internal" href="#feature-option-for-obstacle-only-layers" id="id32">Savybė: tik-kliūčių sluoksnio parinktis</a></li>
+<li><a class="reference internal" href="#feature-rule-based-labeling" id="id33">Savybė: nuo taisyklių priklausančios etiketės</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-composer" id="id34">Žemėlapio maketas</a><ul>
+<li><a class="reference internal" href="#feature-atlas-navigation-improvements" id="id35">Savybė: atlaso navigacijos patobulinimai</a></li>
+<li><a class="reference internal" href="#feature-custom-format-for-grid-annotations" id="id36">Savybė: savas tinklelių anotacijų formatas</a></li>
+<li><a class="reference internal" href="#feature-multiline-text-handling-and-automatic-text-wrapping-in-composer-attribute-tables" id="id37">Savybė: kelių eilučių tekstas ir automatinis teksto perkėlimas maketo atributų lentelėse</a></li>
+<li><a class="reference internal" href="#feature-advanced-customisation-of-cell-background-color" id="id38">Savybė: sudėtingesnis langelio fono spalvos tinkinimas</a></li>
+<li><a class="reference internal" href="#feature-add-fit-page-to-contents-option-and-options-for-cropping-exports-to-contents" id="id39">Savybė: pridėtos parinktys talpinti puslapį į turinį ir apkarpyti eksportą pagal turinį</a></li>
+<li><a class="reference internal" href="#feature-force-vector-layers-to-render-as-a-raster-images" id="id40">Savybė: vektorinius sluoksnius priverstinai braižyti kaip rastrą</a></li>
+<li><a class="reference internal" href="#feature-data-defined-control-over-map-layers-and-style-presets" id="id41">Savybė: nuo duomenų priklausanti žemėlapio sluoksnių ir stilių kontrolė</a></li>
+<li><a class="reference internal" href="#feature-option-to-hide-pages-from-view-export" id="id42">Savybė: galimybė slėpti puslapius rodyme/eksportavime</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins" id="id43">Priedai</a><ul>
+<li><a class="reference internal" href="#feature-update-of-the-grass-plugin" id="id44">Savybė: GRASS priedo atnaujinimas</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmability" id="id45">Programavimas</a><ul>
+<li><a class="reference internal" href="#feature-map-tools-moved-from-app-gui" id="id46">Savybė: žemėlapio įrankiai perkelti iš app į gui</a></li>
+<li><a class="reference internal" href="#feature-editing-layers-via-with-edit-layer" id="id47">Savybė: Sluoksnių redagavimas naudojant `with edit(layer):`</a></li>
+<li><a class="reference internal" href="#feature-new-api-for-labeling-engine-qgslabelingenginev2" id="id48">Savybė: naujas API etikečių varikliui (QgsLabelingEngineV2)</a></li>
+<li><a class="reference internal" href="#feature-open-scripts-in-external-editor" id="id49">Savybė: atverti scenarijus išoriniame redaktoriuje</a></li>
+<li><a class="reference internal" href="#feature-new-classes-for-pyqgis-programs" id="id50">Savybė: naujos PyQGIS programų klasės</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qgis-server" id="id51">QGIS Serveris</a><ul>
+<li><a class="reference internal" href="#feature-qgis-server-python-api" id="id52">Savybė: QGIS serverio Python API</a></li>
+<li><a class="reference internal" href="#feature-getmap-in-dxf-format" id="id53">Savybė: getMap dxf formatu</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symbology" id="id54">Simbologija</a><ul>
+<li><a class="reference internal" href="#feature-export-thumbnails-from-style-manager" id="id55">Savybė: miniatiūrų eksportavimas iš stilių tvarkyklės</a></li>
+<li><a class="reference internal" href="#feature-new-option-for-limiting-size-in-mm-when-using-map-unit-sizes" id="id56">Savybė: nauja parinktis riboti dydį milimetrais, kai naudojami žemėlapio vienetų dydžiai</a></li>
+<li><a class="reference internal" href="#feature-improvements-to-displacement-renderer" id="id57">Savybė: pastumto braižymo patobulinimai</a></li>
+<li><a class="reference internal" href="#feature-all-color-ramps-can-now-be-edited" id="id58">Savybė: dabar galima redaguoti visas spalvų rampas</a></li>
+<li><a class="reference internal" href="#feature-improved-handling-of-svg-marker-outlines" id="id59">Savybė: SVG žymeklių rėmų tvarkymo patobulinimai</a></li>
+<li><a class="reference internal" href="#feature-add-pixels-as-option-for-all-symbology-size-unit-choices" id="id60">Savybė: pridėti taškus kaip vieną iš simbologijos dydžio nurodymo vienetų</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id1">Bendra</a><a class="headerlink" href="#general" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-new-welcome-screen">
+<h3><a class="toc-backref" href="#id2">Savybė: naujas pasveikinimo ekranas</a><a class="headerlink" href="#feature-new-welcome-screen" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Vietoje to, kad rodytų tuščią baltą drobę, QGIS dabar rodys paskutinių projektų sąrašą su nedidelėmis iliustracijomis, kad būtų galima greitai ir paprastai grįžti į jūsų paskutinę darbo sesiją.</p>
+<p><strong>Šią savybę sukūrė:</strong> Matthias Kuhn at <a class="reference external" href="http://www.opengis.ch">OPENGIS.ch</a></p>
+<p><img alt="image11" src="../../../_images/30f2ab32f4ae0d135a26b6a6ddb6705f0f6dd74a.png" /></p>
+</div>
+<div class="section" id="feature-ongoing-improvements-to-code-quality">
+<h3><a class="toc-backref" href="#id3">Savybė: pastovus kodo kokybės gerinimas</a><a class="headerlink" href="#feature-ongoing-improvements-to-code-quality" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Naudojant adresavimo tvarkymo biblioteką buvo rasti ir pataisyti šimtai atminties nutekėjimų. Periodiškai naudojant automatinius Coverity Scan kodo skenavimus buvo ieškoma potencialių problemų, šiuo metu mūsų Coverity defektų tankis yra įspūdingai žemas - tik 0,02 defektai 1000 kodo eilučių. Automatinių testų biblioteka buvo stipriai padidinta kuriant 2.12 versiją, taigi dabar regresijos identifikuojamos ir pataisomos nedelsiant. 2.12 mes taipogi pridėjome pastovų testavimą OSX, kad kiekvienas kodo pakeitimas būtų tikrinamas testais tiek Linux, tiek ir OSX platformose.</p>
+<p><img alt="image12" src="../../../_images/774d1839283f357009c64811bd000e2f8ad97c7a.png" /></p>
+</div>
+<div class="section" id="feature-advanced-settings-editor">
+<h3><a class="toc-backref" href="#id4">Savybė: sudėtingesnis nustatymų redaktorius</a><a class="headerlink" href="#feature-advanced-settings-editor" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Į nustatymų dialogą pridėtas skydelis, kuriame galite keisti bet kurią jūsų profilyje jau apibrėžtą parinktį. Tai skirta tik patyrusiems naudotojams, nes QGIS gali pradėti veikti neaiškiai, jei pakeisite vieną iš nustatymų nesuprasdami, ką darote.</p>
+<p><strong>Šią savybę sukūrė:</strong> Matthias Kuhn at <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+<p><img alt="image13" src="../../../_images/6d59988bf11726192579915cff18f2b81e3f9c8f.png" /></p>
+</div>
+<div class="section" id="feature-mutually-exclusive-layer-tree-groups">
+<h3><a class="toc-backref" href="#id5">Savybė: vienas kitą išjungiančių sluoksnių medžio grupė</a><a class="headerlink" href="#feature-mutually-exclusive-layer-tree-groups" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Su šia savybe jūs galite sukurti sluoksnių grupę, kurioje tik vienas sluoksnis iš grupės gali būti rodomas konkrečiu metu. Šią savybę per kontekstinį meniu galima įjungti konkrečiai grupei sluoksnių medyje.</p>
+<p><strong>Šią savybę sukūrė:</strong> Martin Dobias iš <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> pagal subrangos sutartį su <a class="reference external" href="http://www.gis3w.it/">Gis3W</a></p>
+<p><strong>Šią savybę finansavo:</strong> Tuscany Regionas (Italija) - SITA (CIG: 63526840AE)</p>
+<p><img alt="image14" src="../../../_images/5c68a4deab4d6058d05d3129fec89c6f9abb8530.png" /></p>
+</div>
+<div class="section" id="feature-filtering-for-field-values-in-expression-widget">
+<h3><a class="toc-backref" href="#id6">Savybė: lauko reikšmių filtravimas išraiškos valdiklyje</a><a class="headerlink" href="#feature-filtering-for-field-values-in-expression-widget" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Kuriant išraišką, kuri naudoja reikšmes iš lauko, jūs dabar galite filtruoti lauko reikšmes peržiūros skydelyje.</p>
+<p><strong>Šią savybę sukūrė:</strong> Salvatore Larosa</p>
+<p><img alt="image15" src="../../../_images/5d41174bdf2a059d41824590520857002a70a056.png" /></p>
+</div>
+<div class="section" id="feature-user-interface-theme-support">
+<h3><a class="toc-backref" href="#id7">Savybė: Naudotojo sąsajos temų palaikymas</a><a class="headerlink" href="#feature-user-interface-theme-support" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>QGIS 2.12 palaiko naudotojo sąsajos temas, kurias galite naudoti lango fono, mygtukų ir pan. išvaizdos tinkinimui. Pagal nutylėjimą mes teikiame dvi temas: <strong>Numatytoji</strong> ir <strong>Naktinis žymėjimas</strong>. Antroji yra tamsi tema, ji patinka žmonėms, kurių akis vargina šviesios temos.</p>
+<p>Daugiau apie temų palaikymą sužinosite perskaitę <a class="reference external" href="http://nathanw.net/2015/08/29/ui-theme-support-now-core-in-qgis/">Nathan Woodrow dienoraščio straipsnį</a>.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image16" src="../../../_images/2ec302b12a3b0db8e7a66465afccb227bc543a3e.png" /></p>
+</div>
+<div class="section" id="feature-new-expression-functions-in-2-12">
+<h3><a class="toc-backref" href="#id8">Savybė: Naujos 2.12 išraiškų funkcijos</a><a class="headerlink" href="#feature-new-expression-functions-in-2-12" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Buvo pridėtos kelios netikslaus atitikimo funkcijos. Tai funkcijos, skirtos rasti dviejų eilučių panašumus ir taip pat daryti fonetinio eilučių panašumo skaičiavimus, o tai leidžia vykdyti filtrus tokiems įrašams, kurie „daugmaž atitinka“ nurodytą eilutę.</p>
+<p>Buvo pridėta daugiau geometrijos funkcijų, tame tarpe:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">num_points(geom)</span></code> geometrijos taškų skaičiavimui</li>
+<li><code class="docutils literal"><span class="pre">area(geom)</span></code>, <code class="docutils literal"><span class="pre">length(geom)</span></code> ir <code class="docutils literal"><span class="pre">perimeter(geom)</span></code>, bet kokio objekto geometrijos ploto, ilgio ir perimetro skaičiavimui. Anksčiau buvo galima skaičiuoti plotą, ilgį ir perimetrą tik dabartinio objekto geometrijai.</li>
+<li><code class="docutils literal"><span class="pre">start_point(geom)</span></code>, <code class="docutils literal"><span class="pre">end_point(geom)</span></code>, <code class="docutils literal"><span class="pre">point_n(geom,</span> <span class="pre">n)</span></code>, geometrijos pirmam, paskutiniam ir konkrečiam taškui gauti</li>
+<li><code class="docutils literal"><span class="pre">make_point(x,y)</span></code>, rankiniam taško geometrijos sukūrimui</li>
+<li><code class="docutils literal"><span class="pre">x(geom)</span></code>, <code class="docutils literal"><span class="pre">y(geom)</span></code> taško geometrijos x ir y koordinačių gavimui ir centroido x/y ne taško geometrijoms</li>
+</ul>
+<p>Buvo pridėta nauja funkcija <code class="docutils literal"><span class="pre">project_color</span></code>, kuri leidžia gauti spalvą iš projekto spalvų schemos pagal jos pavadinimą. Tokiu būdu jūs galite kurti „susietas spalvas“, kur simboliai arba etiketės gali būti susietos su projekto spalvų schemos spalvomis. Pakeiskite spalvą schemoje ir visos susijusios spalvos automatiškai pasikeis!</p>
+<p>Papildomai kelios labai naudingos išraiškos buvo atkeltos iš expressions+ priedo, įskaitant:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">color_part</span></code>: leidžia ištraukti konkretų spalvos komponentą (pvz. raudonumą, atspalvį ar permatomumą) iš spalvos</li>
+<li><code class="docutils literal"><span class="pre">set_color_part</span></code>: leidžia keisti konkretų spalvos komponentą, pavyzdžiui keisti spalvos alfa (permatomumo) reikšmę</li>
+<li><code class="docutils literal"><span class="pre">day_of_week</span></code>: grąžina savaitės dieną kaip skaičių iš datos</li>
+</ul>
+<p>Taipogi kontekstinė išraiškos funkcijų pagalba buvo patobulinta geresniam skaitomumui.</p>
+<p><img alt="image17" src="../../../_images/b56f529af78b2d970f057c2c25ba89b87a85ce85.png" /></p>
+</div>
+<div class="section" id="feature-variables-in-expressions">
+<h3><a class="toc-backref" href="#id9">Savybė: kintamieji išraiškose</a><a class="headerlink" href="#feature-variables-in-expressions" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Dabar galite apsibrėžti kintamuosius, kuriuos norite naudoti išraiškose. Kintamieji gali būti apibrėžti globaliame aplikacijos, projekto, sluoksnio arba maketo lygyje. Kaip ir CSS pakopinės taisyklės, kintamųjų reikšmės gali būti permušamos - pavyzdžiui projekto lygio kintamasis permuš bet kokius nustatytus aplikacijos lygio kintamuosius. Galite naudoti šiuos kintamuosius tekstinių eilučių ar savo išraiškų kūrimui. Pavyzdžiui maketo etiketės su tokiu turiniu:</p>
+<p><code class="docutils literal"><span class="pre">Šis</span> <span class="pre">žemėlapis</span> <span class="pre">sukurtas</span> <span class="pre">naudojant</span> <span class="pre">QGIS</span> <span class="pre">[%</span> <span class="pre">&#64;qgis_version</span> <span class="pre">%].</span></code> <code class="docutils literal"><span class="pre">Žemėlapio</span> <span class="pre">projekto</span> <span class="pre">failas</span> <span class="pre">yra:</span>&#160; <span class="pre">[%</span> <span class="pre">&#64;project_path</span> <span class="pre">%]</span></code></p>
+<p>Sukurs tokį etiketės tekstą:</p>
+<p><code class="docutils literal"><span class="pre">Šis</span> <span class="pre">žemėlapis</span> <span class="pre">sukurtas</span> <span class="pre">naudojant</span> <span class="pre">QGIS</span> <span class="pre">2.12.</span></code> <code class="docutils literal"><span class="pre">Žemėlapio</span> <span class="pre">projekto</span> <span class="pre">failas</span> <span class="pre">yra:</span>&#160; <span class="pre">/gis/qgis-user-conference-2015.qgs</span></code></p>
+<p>Globalius kintamuosius galite valdyti per meniu punktą <code class="docutils literal"><span class="pre">Nustatymai</span> <span class="pre">-&gt;</span> <span class="pre">Parinktys</span></code>. Projekto lygio kintamuosius per <code class="docutils literal"><span class="pre">Projekto</span> <span class="pre">savybės</span></code> (įskaitant ir savų kintamųjų kūrimą).</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image18" src="../../../_images/19aca1d680543a4013c53ba80406bdd5ebff88c5.png" /></p>
+</div>
+</div>
+<div class="section" id="analysis-tools">
+<h2><a class="toc-backref" href="#id10">Analizės įrankiai</a><a class="headerlink" href="#analysis-tools" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-added-number-of-vertices-to-derived-fields-in-identify-tool">
+<h3><a class="toc-backref" href="#id11">Savybė: Į išvestinių laukų sąrašą pridėtas viršūnių skaičius identifikavimo įrankyje</a><a class="headerlink" href="#feature-added-number-of-vertices-to-derived-fields-in-identify-tool" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Panaudojus identifikavimo įrankį linijos geoobjektui, papildomuose išvestiniuose atributuose dabar bus rodomas ir viršūnių skaičius geoobjekte.</p>
+</div>
+<div class="section" id="feature-raster-alignment-tool">
+<h3><a class="toc-backref" href="#id12">Savybė: Rastro lygiavimo įrankis</a><a class="headerlink" href="#feature-raster-alignment-tool" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Šis naujas qgis_analysis bibliotekos įrankis gali priimti kelis rastrus kaip įvestį ir:</p>
+<ul class="simple">
+<li>perprojektuoti į tą patį CRS</li>
+<li>pertvarkyti į tokį patį celės dydį ir poslinkį tinklelyje</li>
+<li>apkarpyti pagal dominantį regioną</li>
+<li>prireikus pertvarkyti reikšmes</li>
+</ul>
+<p><strong>Šią savybę sukūrė:</strong> Martin Dobias iš <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> pagal subrangos sutartį su <a class="reference external" href="http://kartoza.com/">Kartoza</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://dfat.gov.au">DFAT</a> skirta projektui <a class="reference external" href="http://inasafe.org/">InaSAFE</a></p>
+<p><img alt="image2" src="../../../_images/c613bb210ba0e85eb3b479ab79cd895827c22602.png" /></p>
+</div>
+<div class="section" id="feature-geometry-checker-and-geometry-snapper-plugins">
+<h3><a class="toc-backref" href="#id13">Savybė: Geometrijos tikrinimo ir geometrijos pritraukimo priedai</a><a class="headerlink" href="#feature-geometry-checker-and-geometry-snapper-plugins" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Du nauji priedai (kuriuos jums reikės įjungti priedų tvarkyklėje) leidžia tikrinti ir taisyti geometrijas. <strong>Geometrijos Tikrinimo</strong> priedas (rodomas žemiau) jūsų vektoriniame duomenų rinkinyje ieškos skirtingų tipų sisteminių klaidų ir bandys jas už jus pataisyti. Pataisius klaidą, klaidų sąrašas automatiškai atnaujinamas, kad, pavyzdžiui, jei pataisius vieną klaidą išsprendžiamos kitos klaidos, visos klaidos būtų pašalinamos iš problemų sąrašo.</p>
+<p>Su <strong>Geometrijos pritraukimo</strong> įrankiu jūs galite lygiuoti vieno vektorinio sluoksnio kraštus ir viršūnes su antro sluoksnio kraštais ir viršūnėmis, naudodami nurodytą toleranciją.</p>
+<p><strong>Šią savybę sukūrė:</strong> Sandro Mani iš <a class="reference external" href="http://www.sourcepole.ch/">Sourcepole AG</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://www.sogis.so.ch/">Canton of Solothurn</a></p>
+<p><img alt="image3" src="../../../_images/319136e65a51c7a8d76adac7aef89806db170c2e.png" /></p>
+</div>
+</div>
+<div class="section" id="application-and-project-options">
+<h2><a class="toc-backref" href="#id14">Programos ir projekto parinktys</a><a class="headerlink" href="#application-and-project-options" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-encrypted-password-management">
+<h3><a class="toc-backref" href="#id15">Savybė: užkoduoto slaptažodžio valdymas</a><a class="headerlink" href="#feature-encrypted-password-management" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>QGIS 2.12 pridėta nauja atutentikavimo sistema (žr. <a class="reference external" href="https://github.com/dakcarto/QGIS-Enhancement-Proposals/blob/auth-system/qep-14-authentication-system.rst">PR 2330, QEP 14</a>). Štai kas pridėta:</p>
+<ul class="simple">
+<li>Pagrindiniu slaptažodžiu užkoduotos autentikacijos nustatymai laikomi SQLite duomenų bazėje</li>
+<li>Autentikacijos metodo priedų architektūra (kaip duomenų tiekėjų)</li>
+<li>Basic auth metodo priedas</li>
+<li>Bazinio autentikavimo priedas integruotas su PostGIS ir OWS tiekėjų jungtimis</li>
+<li>Kartu su dabartiniu naudotojo/slaptažodžio nustatymu (vis dar pilnai veikia)</li>
+<li>SSL serverio jungties konfigūracija (įrašyti išimtis ar savas konfigūracijas SSL jungties klaidoms)</li>
+</ul>
+<p>Susiję su PKI autentikacija:</p>
+<ul class="simple">
+<li>Importuoti papildomus Sertifikatų Autoritetus - CA, tarpiniai sertifikatų išdavėjai ir asmens identiteto paketai</li>
+<li>Sertifikatų komponentai valdomi kaip Firefox’e</li>
+<li>Autentikavimo metodų priedai PEM ir PKCS#12 paketams diske arba išsaugotiems asmeniniams identitetams</li>
+<li>Integruota su OWS tiekėjų jungtimis (PostGIS ir kitoms duomenų bazėms prireiks šiek tiek daugiau laiko, kad pradėtų veikti)</li>
+</ul>
+<p>Bendrų projektų atvejams, įskaitant tinklinių diskų atvejams, jūs galite keisti autentikavimo konfigūracijos (authcfg) ID į kažką, ką turi visi naudotojai.</p>
+<p>Kadangi authcfg ID įdėtas į projekto failą, kiekvienas naudotojas tik turi sukurti autentikacijos konfigūraciją, kurioje yra jų konkretūs to resurso prisijungimo duomenys. Tada pakeisti ID (konfigūracijos sukūrimo metu arba vėliau) į tą patį ID, kuris nurodytas projekto faile. Tada įkeliant resursą ta pati konfigūracija bus traukiama kiekvieno naudotojo QGIS, tik su jų asmeniniais duomenimis pasirinktam autentikavimo metodui.</p>
+<p>Blogų sluoksnių valdymo dialoge naudotojai gali Pridėti/Keisti/Išimti autentikacijos konfigūracijas tiesiai iš dialogo ir taip atitinkamai pakeisti duomenų šaltinio URI. Taigi bendro projekto atveju naudotojas gali projekto įkėlimo metu nedelsiant pridėti reikiamą naują autentikacijos konfigūraciją (ir pamatyti koks konkrečiai bus naudojamas bendro authcfg ID).</p>
+<p>Šiuo metu pagrindinio slaptažodžio automatinis nustatymas gali veikti per Python arba per savą C++ priedą nustatymų įkėlimo metu kviečiant <code class="docutils literal"><span class="pre">QgsAuthManager::instance()-&gt;setMasterPassword(</span> <span class="pre">&quot;mypassword&quot;,</span> <span class="pre">true</span> <span class="pre">)</span></code>, arba aplinkos kintamajame QGIS_AUTH_PASSWORD_FILE nustačius kelią iki failo su pagrindiniu slaptažodžiu.</p>
+<p><strong>Pastaba:</strong> serveriui, taip pat galite naudoti QGIS_AUTH_DB_DIR_PATH, kad nurodytumėte kelią iki qgis-auth.db aplanko ir QGIS_AUTH_PASSWORD_FILE, kad nurodytumėte kelią iki failo su pagrindiniu slaptažodžiu serveryje.</p>
+<p>PKI pavyzdžių dokumentai: <a class="reference external" href="https://github.com/dakcarto/QGIS-Enhancement-Proposals/blob/auth-system/extras/auth-system/pkiuser.rst">https://github.com/dakcarto/QGIS-Enhancement-Proposals/blob/auth-system/extras/auth-system/pkiuser.rst</a></p>
+<p><strong>Šią savybę sukūrė:</strong> Larry Shaffer</p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://boundlessgeo.com/">Boundless Spatial, Inc.</a></p>
+<p><img alt="image4" src="../../../_images/d6c9305a8dcaea3a5a6c039dec40d50e0caf23ff.png" /></p>
+</div>
+</div>
+<div class="section" id="browser">
+<h2><a class="toc-backref" href="#id16">Naršyklė</a><a class="headerlink" href="#browser" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-improvements-to-postgis-connections-in-browser">
+<h3><a class="toc-backref" href="#id17">Savybė: PostGIS jungčių naršyklėje patobulinimai</a><a class="headerlink" href="#feature-improvements-to-postgis-connections-in-browser" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>QGIS naršyklė dabar palaiko papildomą funkcionalumą PostGIS jungtims, įskaitant galimybę <strong>kurti, pervadinti ir trinti schemas</strong>, <strong>sluoksnių pervadinimo ir kapojimo galimybę</strong> ir <strong>lentelių kopijavimą iš vienos schemos į kitą</strong>.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Lentelių kopijavimą sukūrė:</strong> Jürgen Fischer iš <a class="reference external" href="http://www.norbit.de/">norBIT GmbH</a></p>
+<p><img alt="image5" src="../../../_images/00820dbcf67c97b61154e7e1f41af0397009b548.png" /></p>
+</div>
+</div>
+<div class="section" id="data-providers">
+<h2><a class="toc-backref" href="#id18">Duomenų tiekėjai</a><a class="headerlink" href="#data-providers" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-postgis-provider-improvements">
+<h3><a class="toc-backref" href="#id19">Savybė: PostGIS tiekėjo patobulinimai</a><a class="headerlink" href="#feature-postgis-provider-improvements" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Padaryti šie PostGIS tiekėjo patobulinimai:</p>
+<ul class="simple">
+<li>PostGIS sluoksnių taisyklėmis paremto braižymo greitaveikos patobulinimai</li>
+<li>pridėtas sudėtinių raktų rodiniuose palaikymas</li>
+</ul>
+<p><strong>Sudėtinių raktų funkcionalumą sukūrė:</strong> Jürgen Fischer iš <a class="reference external" href="http://www.norbit.de/">norBIT GmbH</a></p>
+<p><img alt="image6" src="../../../_images/bc56564581d97034137956cd27e945b3d3ceb3df.png" /></p>
+</div>
+</div>
+<div class="section" id="data-management">
+<h2><a class="toc-backref" href="#id20">Duomenų valdymas</a><a class="headerlink" href="#data-management" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-dbmanager-improvements">
+<h3><a class="toc-backref" href="#id21">Savybė: DB tvarkyklės patobulinimai</a><a class="headerlink" href="#feature-dbmanager-improvements" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>DB tvarkyklės įrankyje buvo padaryti patobulinimai:</p>
+<ul class="simple">
+<li>DB tvarkyklėje dabar galite eksportuoti jūsų duomenis į bet kokį OGR palaikomą duomenų formatą, o ne į ankstesnėse versijose prieinamą vienintelį Shapefile.</li>
+<li>DB tvarkyklė dabar palaiko ir Oracle Spatial</li>
+<li>Importuojant duomenis į lentelę jūs galite naudoti naują parinktį <strong>importuoti tik pažymėtus geoobjektus</strong>, kad apribotumėte, kas bus importuota.</li>
+<li>Nauji užklausų langai dabar kuriami kaip kortelės, kad būtų mažiau dialogų</li>
+</ul>
+<p><img alt="image7" src="../../../_images/daa22cc4517b58f2457d78781d4dbab12663ce9d.png" /></p>
+</div>
+<div class="section" id="feature-conditional-formatting-for-attribute-table-cells">
+<h3><a class="toc-backref" href="#id22">Savybė: sąlyginis atributų lentelės langelių formatavimas</a><a class="headerlink" href="#feature-conditional-formatting-for-attribute-table-cells" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Tai didelis QGIS atributų lentelės vaizdavimo patobulinimas. Dabar galite langelių stilių keisti pagal taisykles. Pavyzdžiui galite nuspalvinti visus langelius, kurių gyventojų skaičius mažesnis už 50 000, raudonai. Ši parinktis įjungiama naudojant naują piktogramą lentelės įrankinėje, atributų lentelės lango viršutiniame dešiniame kampe. Daugiau apie šią savybę galite paskaityti <a class="reference external" href="http://nathanw.net/2015/08/20/mixing-a-bit-of-excel-into-qgis-conditional-formatted-table-cells/">Nathan Woodrow’s dienoraščio straipsnyje</a>.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image8" src="../../../_images/ae9afefda043d31ef7718528d506d98e90e7a1f7.png" /></p>
+</div>
+<div class="section" id="feature-support-for-relative-paths-in-widgets">
+<h3><a class="toc-backref" href="#id23">Savybė: Santykinių kelių palaikymas valdikliuose</a><a class="headerlink" href="#feature-support-for-relative-paths-in-widgets" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Šiems redagavimo valdiklių tipams:</p>
+<ul class="simple">
+<li>Failo pavadinimas</li>
+<li>Foto</li>
+<li>Žiniatinklio rodinys</li>
+</ul>
+<p>Jei failų naršyklės pagalba parinktas kelias yra tame pačiame aplanke kaip ir .qgs projekto failas arba žemiau, keliai konvertuojami į santykinius kelius. Taip QGIS projektai su prisegta multimedija tampa pernešamesni.</p>
+<p><strong>Šią savybę sukūrė:</strong> Matthias Kuhn at <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://www.alta.is/">Alta ehf</a></p>
+<p><img alt="image9" src="../../../_images/fcf703990b5cb743ffa5cc7778cb151022ff2d20.png" /></p>
+</div>
+</div>
+<div class="section" id="digitising">
+<h2><a class="toc-backref" href="#id24">Skaitmeninimas</a><a class="headerlink" href="#digitising" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-digitising-improvements">
+<h3><a class="toc-backref" href="#id25">Savybė: skaitmeninimo patobulinimai</a><a class="headerlink" href="#feature-digitising-improvements" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>QGIS 2.10 mes paminėjome, kad yra nauja QGIS geometrijos architektūra, bet ne visi geoobjektai palaikomi skaitmeninimo įrankiuose. QGIS 2.12 redagavime jau palaiko <strong>kreivių kūrimą / „žiedines eilutes“</strong>. Vėlgi pastebėtina, kad turite naudoti duomenų tiekėją (pvz. PostGIS, GML arba WFS), palaikantį kreives. Į QGIS 2.12 buvo taipogi pridėti šie skaitmeninimo įrankių patobulinimai:</p>
+<ul class="simple">
+<li>įrankis apskritos linijos pridėjimui dviem taškais ir spinduliu</li>
+<li>įrankis apskritos linijos pridėjimui su pradžios tašku, kreivės taško ir pabaigos tašku</li>
+<li>leidžiamas naujų geoobjektų braižymo nutraukimas</li>
+<li>viršūnių lentelės rodymas redaguojant viršūnės įrankio pagalba, tai leidžia jums rankiniu būdu įvesti konkrečias x ir y koordinates viršūnėms, bei z ir m reikšmes (priklausomai nuo sluoksnio tipo)</li>
+</ul>
+<p>Papildomai, daugiau geometrijos redagavimo ir keitimo įrankių buvo atnaujinti, kad teisingai dirbtų su sluoksniais, turinčiais z arba m matmenis.</p>
+<p><strong>Šią savybę sukūrė:</strong> Marco Hugentobler iš <a class="reference external" href="http://www.sourcepole.ch/">Sourcepole AG</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://www.sogis.so.ch/">Canton of Solothurn</a></p>
+<p><img alt="image10" src="../../../_images/215ead2dd5e43e394d47169a7fd82aa5cc08b6b6.png" /></p>
+</div>
+</div>
+<div class="section" id="labelling">
+<h2><a class="toc-backref" href="#id26">Etiketės</a><a class="headerlink" href="#labelling" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-data-defined-quadrant-when-in-around-point-mode">
+<h3><a class="toc-backref" href="#id27">Savybė: nuo duomenų priklausantis kvadrantas „aplink tašką“ režime</a><a class="headerlink" href="#feature-data-defined-quadrant-when-in-around-point-mode" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Dabar galima nurodyti nuo duomenų priklausantį kvadrantą, kai taško etiketė pozicionuojama režime Aplink tašką. Tai leidžia rankiniu būdu keisti konkrečios etiketė pozicijos kvadrantą, tuo pačiu metu leidžiant likusias etiketes pildyti automatiškai.</p>
+<p>Daugiau informacijos rasite <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">šiame straipsnyje</a> .</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image19" src="../../../_images/27a58b65cf449505c92cc6c8470a93d1f09893a1.png" /></p>
+</div>
+<div class="section" id="feature-draw-only-labels-which-fit-inside-polygons">
+<h3><a class="toc-backref" href="#id28">Savybė: braižyti tik tas etiketes, kurios telpa poligonų viduje</a><a class="headerlink" href="#feature-draw-only-labels-which-fit-inside-polygons" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Poligonų sluoksniams pridėta parinktis, leidžianti etiketes braižyti tik tada, kai jos pilnai telpa poligono geoobjekte.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image20" src="../../../_images/5c8461abe3aa5483c3243c0f145940b0d5fd1310.png" /></p>
+</div>
+<div class="section" id="feature-control-priority-of-labeling-obstacles">
+<h3><a class="toc-backref" href="#id29">Savybė: etikečių kliūčių prioriteto kontrolė</a><a class="headerlink" href="#feature-control-priority-of-labeling-obstacles" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>2.12 versijoje jau galima nurodyti etikečių kliūčių prioritetus. Tai leidžia etiketėms stengtis labiau dengti etiketes iš vienų sluoksnių nei iš kitų. Prioritetas gali priklausyti nuo duomenų, kad konkrečių geoobjektų perdengimas kitais būtų labiau tikėtinas. Taip pat galite naudoti nuo duomenų priklausančias išraiškas ar laukus, kad valdytumėte, ar konkretus geoobjektas sluoksnyje turi veikti kaip etikečių kliūtis.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image21" src="../../../_images/f07a082bd4e62f059788c18a9de353107b8bdc44.png" /></p>
+</div>
+<div class="section" id="feature-new-options-to-control-how-polygon-layers-act-as-obstacles">
+<h3><a class="toc-backref" href="#id30">Savybė: naujos parinktys, kontroliuojančios kaip poligonų sluoksniai veikia kaip kliūtys</a><a class="headerlink" href="#feature-new-options-to-control-how-polygon-layers-act-as-obstacles" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Pridėtos naujos parinktys, kontroliuojančios, kaip etiketės turi būti dedamos, kad vengtų dengti poligonų sluoksnio geoobjektus. Galima arba vengti dėti etiketes virš poligonų vidaus, arba vengti etiketes braižyti ant poligonų ribų. Etikečių braižymo virš ribų vengimas naudingas braižant regionų ribų sluoksnius, kur geoobjektai dengia visą plotą. Tokiu atveju etiketės neišvengiamas bus ant geoobjekto, o daug geriau atrodo, kai etiketės nebraižomos ant tokių geoobjektų ribų. Tokioje situacijoje gauname kartografiškai geresnį etikečių išdėliojimą.</p>
+<p>Daugiau informacijos rasite <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">šiame straipsnyje</a> .</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image22" src="../../../_images/e37943c654080e33219acb5e519970cf748c87bf.png" /></p>
+</div>
+<div class="section" id="feature-data-defined-control-over-label-priority">
+<h3><a class="toc-backref" href="#id31">Savybė: nuo duomenų priklausanti etikečių prioriteto kontrolė</a><a class="headerlink" href="#feature-data-defined-control-over-label-priority" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Ši dažnai prašoma savybė leidžia naudotojams nurodyti konkrečių etikečių prioritetą. Ankstesnėse QGIS laidose etikečių prioritetas būdavo nurodomas visam sluoksniui, nebuvo galimybė kontroliuoti konkrečių geoobjektų prioriteto sluoksnyje. Dabar galite naudoti nuo duomenų priklausančią išraišką arba lauką, kad keistumėte konkrečių geoobjektų prioritetą sluoksnio viduje!</p>
+<p>Daugiau informacijos rasite <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">šiame straipsnyje</a></p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image23" src="../../../_images/bd185cde38420f50fb540d742d178768d28ac577.png" /></p>
+</div>
+<div class="section" id="feature-option-for-obstacle-only-layers">
+<h3><a class="toc-backref" href="#id32">Savybė: tik-kliūčių sluoksnio parinktis</a><a class="headerlink" href="#feature-option-for-obstacle-only-layers" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Tai leidžia naudotojams nurodyti, kad sluoksnis yra tik kliūtis kitų sluoksnių etiketėms net neturėdamas savo etikečių. Tai reiškia, kad sluoksnis be etikečių veiks kaip kliūtis kitų sluoksnių etiketėms, taigi bus stengiamasi kitų sluoksnių etikečių nebraižyti ant šio kliūčių sluoksnio geoobjektų. Tai leidžia teisingiau automatiškai dėlioti etiketes, vengiant situacijos, kai kitų sluoksnių etiketės dengia sluoksnio geoobjektus.</p>
+<p>Ekrano nuotraukoje galite matyti, kad gatvių parinktis „Stengtis, kad etiketės nedengtų geoobjektų“ įjungta. Todėl stengiamasi, kad raudonos etiketės iš poligono geometrijų nedengtų gatvių ašių. Poligonų sluoksnyje turite įjungti parinktį „Horizontaliai“ arba „Laisvai“, kad gautumėte gerą rezultatą.</p>
+<p>Pastebėtina, kad tuo pačiu metu galima ir braižyti sluoksnio etiketes, ir nurodyti, kad sluoksnis veiks kaip kliūčių sluoksnis, įjungus varnelę „Stengtis, kad etiketės nedengtų geoobjektų“ etikečių nustatymų kortelėje „Braižymas“.</p>
+<p>Daugiau informacijos rasite <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">šiame straipsnyje</a> .</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image24" src="../../../_images/de1eae1359ce92045d51c6fa9bc3f014a3f3ae67.png" /></p>
+</div>
+<div class="section" id="feature-rule-based-labeling">
+<h3><a class="toc-backref" href="#id33">Savybė: nuo taisyklių priklausančios etiketės</a><a class="headerlink" href="#feature-rule-based-labeling" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Geoobjektų etikečių stilių dabar galima keisti naudojant taisykles, kad galėtumėte dar labiau kontroliuoti, kur ir kaip braižomos etiketės. Kaip ir nuo taisyklių priklausantis kartografinis braižymas, etikečių taisyklės gali būti valdomos hierarchiškomis taisyklėmis, leidžiančiomis labai lanksčiai valdyti stiliaus parinktis. Pavyzdžiui jūs galite etiketes braižyti skirtingai, priklausomai nuo geoobjekto, kuriame jos bus braižomos, dydžio (tai pavaizduota ekrano nuotraukoje).</p>
+<p>Daugiau informacijos rasite <a class="reference external" href="http://www.lutraconsulting.co.uk/blog/2015/10/25/rule-based-labeling/">tinklaraščio įraše</a></p>
+<p><strong>Šią savybę sukūrė:</strong> Martin Dobias iš <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> pagal subrangos sutartį su <a class="reference external" href="http://www.gis3w.it/">Gis3W</a></p>
+<p><strong>Šią savybę finansavo:</strong> Tuscany Regionas (Italija) - SITA (CIG: 63526840AE)</p>
+<p><img alt="image25" src="../../../_images/8846f57f0395e7f6b2543a92a5c55b67e8b19923.png" /></p>
+</div>
+</div>
+<div class="section" id="map-composer">
+<h2><a class="toc-backref" href="#id34">Žemėlapio maketas</a><a class="headerlink" href="#map-composer" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-atlas-navigation-improvements">
+<h3><a class="toc-backref" href="#id35">Savybė: atlaso navigacijos patobulinimai</a><a class="headerlink" href="#feature-atlas-navigation-improvements" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Atlaso kompozicijose dabar galite nustatyti „puslapio pavadinimą“ kaip lauką arba išraišką. Į atlaso įrankinę pridėtas iškrentantis puslapio numerio sąrašas, kuris rodo ir galimus puslapių numerius, ir jų pavadinimus. Tai leidžia peršokti tiesiai į norimą jūsų atlaso puslapį.</p>
+<p>Puslapio pavadinimas taip pat gali būti naudojamas simbologijoje ar etikečių išraiškose, taip suteikiant galimybę įmantresniam atlaso geoobjektų stilių nustatymui pagal jų puslapio pavadinimą.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image26" src="../../../_images/bbf6147ef8be9d209fa188d6c524bce9d13d5ba8.png" /></p>
+</div>
+<div class="section" id="feature-custom-format-for-grid-annotations">
+<h3><a class="toc-backref" href="#id36">Savybė: savas tinklelių anotacijų formatas</a><a class="headerlink" href="#feature-custom-format-for-grid-annotations" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Maketo žemėlapio tinklelio anotacijas dabar galima formatuoti savu formatu, kuris įvertinamas naudojant išraiškų variklį. Galite panaudoti bet kokį ezoterinį tinklelio numeravimo formatą, kokio tik reikia jūsų žemėlapiui!</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image27" src="../../../_images/a6cd03594ca802015ef4a5bf7806cc1ce291214b.png" /></p>
+</div>
+<div class="section" id="feature-multiline-text-handling-and-automatic-text-wrapping-in-composer-attribute-tables">
+<h3><a class="toc-backref" href="#id37">Savybė: kelių eilučių tekstas ir automatinis teksto perkėlimas maketo atributų lentelėse</a><a class="headerlink" href="#feature-multiline-text-handling-and-automatic-text-wrapping-in-composer-attribute-tables" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Maketo atributų lentelės dabar pilnai palaiko kelių eilučių tekstą. Taipogi pridėtas vertikalaus lygiavimo celėje valdymas, kartu su parinktimis tekstą perkelti ties konkrečiais simboliais arba automatiškai paskaičiuoti, kad tekstas tilptų į stulpelių plotį. Norėdami įjungti automatinį teksto perkėlimą su automatiniu eilučių aukščiu, nurodykite stulpeliui fiksuotą dydį.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://gis.uster.ch/">City of Uster</a></p>
+<p><img alt="image28" src="../../../_images/db66b56f79949779ea32126bd22f2f1c9d4b55e6.png" /></p>
+</div>
+<div class="section" id="feature-advanced-customisation-of-cell-background-color">
+<h3><a class="toc-backref" href="#id38">Savybė: sudėtingesnis langelio fono spalvos tinkinimas</a><a class="headerlink" href="#feature-advanced-customisation-of-cell-background-color" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Šis pakeitimas leidžia naudotojams nustatyti skirtingas spalvas besikeičiančioms eilutėms ir stulpeliams. Pirma/paskutinė eilutė/stulpelis ir antraštės eilutė maketo atributų lentelėse.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://www.morges.ch/">Ville de Morges</a></p>
+<p><img alt="image29" src="../../../_images/68266f6b11599dfa226952455ca150448a5d082a.png" /></p>
+</div>
+<div class="section" id="feature-add-fit-page-to-contents-option-and-options-for-cropping-exports-to-contents">
+<h3><a class="toc-backref" href="#id39">Savybė: pridėtos parinktys talpinti puslapį į turinį ir apkarpyti eksportą pagal turinį</a><a class="headerlink" href="#feature-add-fit-page-to-contents-option-and-options-for-cropping-exports-to-contents" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Maketo skydelyje pridėta nauji parinktis, leidžianti keisti maketo dydį pagal jo turinį, su galimybe prireikus pridėti papildomas paraštes.</p>
+<p>Maketo eksportas taipogi gali būti apkarpomas pagal turinį. Parinktus šią parinktį, maketo sukurtuose piešiniuose bus tik tiek ploto, kiek užima turinys. Taipogi yra parinktis paraštėms apie elementus.</p>
+<p>Jei kūrinyje yra tik vienas puslapis, tai visos išvesties dydis bus parinktas toks, kad tilptų į kūrinį. Jei tai kelių puslapių kūrinys, tada kiekvienas puslapis bus apkarpytas taip, kad jame būtų tik to puslapio elementų plotas.</p>
+<p>Kad tai veiktų, buvo pridėtas naujas piešinio eksportavimo dialogas, kuriame taip pat yra patogios galimybės permušti spausdinimo rezoliuciją arba eksportuojamo piešinio matmenis.</p>
+<p><strong>Rėmėjas:</strong> <a class="reference external" href="https://www.niwa.co.nz/">NIWA</a></p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image30" src="../../../_images/38572cf4aa662cc4463c2a29f3d5ca38aa382632.png" /></p>
+</div>
+<div class="section" id="feature-force-vector-layers-to-render-as-a-raster-images">
+<h3><a class="toc-backref" href="#id40">Savybė: vektorinius sluoksnius priverstinai braižyti kaip rastrą</a><a class="headerlink" href="#feature-force-vector-layers-to-render-as-a-raster-images" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Sluoksnio savybių braižymo kortelėje pridėta nauja parinktis, leidžianti priversti vektorinių sluoksnių braižymą kaip rastrą. Ypatingai detalūs sluoksniai (pavyzdžiui poligonų sluoksniai su didžiuliais viršūnių skaičiais) gali sukelti didžiulius maketo eksportus į PDF/SVG formatą, nes į eksportuojamą failą įtraukiamos visos viršūnės. Dėl to gauto failo atvėrimas ir darbas su juo bus labai lėtas. Dabar galite pasirinktus sluoksnius priverstinai rasterizuoti, kad eksportuotuose failuose nebūtų tiek daug viršūnių. Taip gausite mažesnį failą ir PDF/SVG, kurie bus greičiau atidaromi.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image31" src="../../../_images/0127fe10ecae31dbcd133492c93f33b0d569dcba.png" /></p>
+</div>
+<div class="section" id="feature-data-defined-control-over-map-layers-and-style-presets">
+<h3><a class="toc-backref" href="#id41">Savybė: nuo duomenų priklausanti žemėlapio sluoksnių ir stilių kontrolė</a><a class="headerlink" href="#feature-data-defined-control-over-map-layers-and-style-presets" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Pridėtas naujas nuo duomenų priklausantis žemėlapio sluoksnių ir stilių rinkinių valdymas maketo žemėlapyje. Žemėlapio sluoksnių duomenų priklausomumo išraiška turėtų grąžinti | (vertikaliais brūkšneliais) atskirtą sluoksnių, kurie turi būti rodomi žemėlapyje, pavadinimų sąrašą, arba stilių rinkinių išraiška turi grąžinti esamo stilių rinkinio pavadinimą.</p>
+<p>Šio žemėlapių sluoksnio valdiklio naudojimas leidžia kurti „nuo sluoksnių priklausomus“ atlasus, kur žemėlapio sluoksniai turi keistis atlaso puslapiuose vietoje arba kartu su žemėlapio apimties pasikeitimais. Pavyzdžiui atlasas, kuriame yra skirtingi administraciniai vienetai tuo pačiu metu gali rodyti ir kelis skirtingus istorinius žemėlapius arba iš oro darytas nuotraukas.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://gis.uster.ch/">City of Uster</a></p>
+<p><img alt="image32" src="../../../_images/a8dc3b35df4020897e39c81bd22a469ab5ea6225.png" /></p>
+</div>
+<div class="section" id="feature-option-to-hide-pages-from-view-export">
+<h3><a class="toc-backref" href="#id42">Savybė: galimybė slėpti puslapius rodyme/eksportavime</a><a class="headerlink" href="#feature-option-to-hide-pages-from-view-export" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Dabar yra galimybė slėpti puslapių rodymą redaguojant arba eksportuojant kūrinius. Ši parinktis naudinga kūriniuose, kurie nėra skirti spausdinimui ir todėl nėra susieti su konkrečiais puslapių dydžiais. Jūs galite paslėpti puslapius, tada pridėti elementus ir keisti jų dydį bet kaip, kaip tik norite, nekreipiant dėmesio į puslapio kraštus!</p>
+<p><strong>Rėmėjas:</strong> <a class="reference external" href="https://www.niwa.co.nz/">NIWA</a></p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2><a class="toc-backref" href="#id43">Priedai</a><a class="headerlink" href="#plugins" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-update-of-the-grass-plugin">
+<h3><a class="toc-backref" href="#id44">Savybė: GRASS priedo atnaujinimas</a><a class="headerlink" href="#feature-update-of-the-grass-plugin" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>GRASS priedas buvo atnaujintas, pridedant GRASS 7 palaikymą. GRASS sluoksnius galima naršyti ir įkelti iš QGIS naršyklės arba naršymo skydelio. GRASS vektorinius duomenis galima redaguoti tiesiogiai QGIS. Projekte yra šie darbiniai paketai:</p>
+<ul class="simple">
+<li>Priedo bibliotekos atnaujinimas ir kelių versijų kūrimas</li>
+<li>QGIS naršyklės ir naršymo skydelio integracija</li>
+<li>Žemėlapių rinkinių, modulių ir duomenų analizės palaikymas</li>
+<li>vektorių redagavimas</li>
+</ul>
+<p>Tiek GRASS 6, tiek GRASS 7 naudotojai pastebės, kad integracija tarp GRASS ir QGIS daug sklandesnė. Galite kurti GRASS sluoksnius tiesiai QGIS naršymo skydelyje, keisti GRASS vektorinių sluoksnių stilius naudodami standartines QGIS stiliaus priemones bei naudoti žinomus QGIS skaitmeninimo įrankius kurdami naujas geometrijas GRASS žemėlapių rinkinyje.</p>
+<p>Taipogi žiūrėkite <a class="reference external" href="http://www.gissula.eu/qgis-grass-plugin-crowdfunding/">QGIS GRASS priedo atnaujinimo projekto puslapį</a> ir <a class="reference external" href="http://www.gissula.eu/qgis-grass-plugin-crowdfunding/progress.html">darbo eigos ataskaitą</a></p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://www.gissula.eu/">Radim Blazek</a></p>
+<p><strong>Šią savybę finansavo:</strong> Sutelktinis finansavimas, žiūrėkite <a class="reference external" href="http://www.gissula.eu/qgis-grass-plugin-crowdfunding/">projekto puslapį</a></p>
+<p><img alt="image33" src="../../../_images/fb9ac25e9ca6c5e4030167e289435e995f5af8f5.png" /></p>
+</div>
+</div>
+<div class="section" id="programmability">
+<h2><a class="toc-backref" href="#id45">Programavimas</a><a class="headerlink" href="#programmability" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-map-tools-moved-from-app-gui">
+<h3><a class="toc-backref" href="#id46">Savybė: žemėlapio įrankiai perkelti iš app į gui</a><a class="headerlink" href="#feature-map-tools-moved-from-app-gui" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Šis pakeitimas leidžia naudoti žemėlapio įrankius iš PyQGIS scenarijų ir Python priedų.</p>
+<p><strong>Šią savybę sukūrė:</strong> Matthias Kuhn at <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://www.sige.ch/">SIGE</a></p>
+</div>
+<div class="section" id="feature-editing-layers-via-with-edit-layer">
+<h3><a class="toc-backref" href="#id47">Savybė: Sluoksnių redagavimas naudojant `with edit(layer):`</a><a class="headerlink" href="#feature-editing-layers-via-with-edit-layer" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Pavyzdys:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="kn">from</span> <span class="nn">qgis.core</span> <span class="k">import</span> <span class="n">edit</span>
+
+<span class="k">with</span> <span class="n">edit</span><span class="p">(</span><span class="n">layer</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">()</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+    <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">5</span>
+    <span class="n">layer</span><span class="o">.</span><span class="n">updateFeature</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Tai pabaigoje automatiškai iškvies commitChanges(). Jei įvyks bet kokia klaida, visiems pakeitimams bus įvykdyta rollBack().</p>
+<p><strong>Šią savybę sukūrė:</strong> Matthias Kuhn at <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+</div>
+<div class="section" id="feature-new-api-for-labeling-engine-qgslabelingenginev2">
+<h3><a class="toc-backref" href="#id48">Savybė: naujas API etikečių varikliui (QgsLabelingEngineV2)</a><a class="headerlink" href="#feature-new-api-for-labeling-engine-qgslabelingenginev2" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Mintis yra padaryti variklį lankstesnį už QgsPalLabeling variantą:</p>
+<blockquote>
+<div><ul class="simple">
+<li>abstraktus tekstinių etikečių / diagramų apdorojimas tiesiai iš variklio</li>
+<li>leisti kelis skirtingus etikečių tipus viename sluoksnyje</li>
+<li>leisti savus etikečių tiekėjus (pvz. veikiančius per priedus)</li>
+<li>padaryti etikečių variklį nepriklausomą nuo žemėlapio braižymo variklio</li>
+<li>supaprastinti automatinį etikečių variklio ir jo komponentų testavimą</li>
+</ul>
+</div></blockquote>
+<p>Daugiau informacijos rasite <a class="reference external" href="http://www.lutraconsulting.co.uk/blog/2015/10/25/rule-based-labeling/">tinklaraščio įraše</a></p>
+<p><strong>Šią savybę sukūrė:</strong> Martin Dobias iš <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> pagal subrangos sutartį su <a class="reference external" href="http://www.gis3w.it/">Gis3W</a></p>
+<p><strong>Šią savybę finansavo:</strong> Tuscany Regionas (Italija) - SITA (CIG: 63526840AE)</p>
+</div>
+<div class="section" id="feature-open-scripts-in-external-editor">
+<h3><a class="toc-backref" href="#id49">Savybė: atverti scenarijus išoriniame redaktoriuje</a><a class="headerlink" href="#feature-open-scripts-in-external-editor" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Pythoniastai džiaukitės - jūs dabar galite atidaryti savo scenarijus išoriniame redaktoriuje, naudodami naują konsolės mygtuką.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image34" src="../../../_images/78acf0058f4306bf408a58df3762dff5986633a7.png" /></p>
+</div>
+<div class="section" id="feature-new-classes-for-pyqgis-programs">
+<h3><a class="toc-backref" href="#id50">Savybė: naujos PyQGIS programų klasės</a><a class="headerlink" href="#feature-new-classes-for-pyqgis-programs" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Buvo pridėta nauja klasė QgsStringUtils, kuri leidžia PyQGIS scenarijams naudoti naujus apytikslio palyginimo algoritmus, pridėtus 2.12. Tai funkcijos, ieškančios Levenshtein redagavimo atstumą tarp dviejų eilučių, soundex fonetinės išraiškos skaičiavimas ir pan. Šie algoritmai stipriai optimizuoti greitaveikai, taigi jų pagalba galite daryti apytikslį palyginimą milijonuose eilučių!</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+</div>
+</div>
+<div class="section" id="qgis-server">
+<h2><a class="toc-backref" href="#id51">QGIS Serveris</a><a class="headerlink" href="#qgis-server" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-qgis-server-python-api">
+<h3><a class="toc-backref" href="#id52">Savybė: QGIS serverio Python API</a><a class="headerlink" href="#feature-qgis-server-python-api" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>QGIS serveris dabar supakuotas kaip biblioteka su pradiniu (bet augančiu) API ir sąsaja su Python’u. Su nauju API turime aibę Python’o testų serverio pagrindiniams komponentams ir serverio priedams. Paleisti serverį per Python dabar labai paprasta:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.server</span> <span class="k">import</span> <span class="n">QgsServer</span>
+<span class="n">headers</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span>  <span class="n">QgsServer</span><span class="p">()</span><span class="o">.</span><span class="n">handleRequest</span><span class="p">(</span><span class="n">my_query_string</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Daugiau informacijos rasite <a class="reference external" href="http://www.itopen.it/qgis-server-binding-news/">šiame straipsnyje</a></p>
+<p><strong>Šiuos darbus atliko ir finansavo</strong>: Alessandro Pasotti iš <a class="reference external" href="http://www.itopen.it/">ItOpen</a></p>
+</div>
+<div class="section" id="feature-getmap-in-dxf-format">
+<h3><a class="toc-backref" href="#id53">Savybė: getMap dxf formatu</a><a class="headerlink" href="#feature-getmap-in-dxf-format" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Dabar galima gauti GetMap WMS užklausos rezultatą DXF formatu. Palaikomos tos pačios savybės ir parinktys, kaip ir QGIS darbastalyje. Su tais pačiais apribojimais.</p>
+<div class="line-block">
+<div class="line">Pavyzdinė užklausa:</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">http://yourserver.org/cgi-bin/qgismapserver.fcgi?</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">map=/kelias/iki/jūsų/projektofailo.qgs&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">SERVICE=WMS&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">VERSION=1.3.0&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">REQUEST=GetMAP&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FORMAT=application/dxf&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FORMAT_OPTIONS=SCALE:500;MODE:SYMBOLLAYERSYMBOLOGY&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FILE_NAME=jūsųišvestiesfailas.dxf&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">CRS=EPSG:EPSG:21781&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">BBOX=695558.73070825,244430.77224034,697158.88528251,245722.25976142&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">WIDTH=1042&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">HEIGHT=841&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">LAYERS=jūsųdxfeksportosluoksniai</span></code></div>
+</div>
+</div>
+<p>See also <a class="reference external" href="http://docs.qgis.org/2.18/en/docs/user_manual/working_with_ogc/ogc_server_support.html#dxf-export">QGIS as OGC data server</a>
+for all the available options.</p>
+<p>Ekrano nuotraukoje matote QGIS Žiniatinklio klientą kairėje su DXF eksporto funkcionalumu (naudojant QGIS serverį) ir tą pačią apimti, rodomą Autodesk TrueView, dešinėje.</p>
+<p><strong>Šią savybę sukūrė:</strong> Marco Hugentobler <a class="reference external" href="http://www.sourcepole.ch/">Sourcepole AG</a></p>
+<p><strong>Šią savybę finansavo:</strong> <a class="reference external" href="http://gis.uster.ch/">City of Uster</a></p>
+<p><img alt="image35" src="../../../_images/beb2e9c00102c67ae703eac097ffba8866379609.png" /></p>
+</div>
+</div>
+<div class="section" id="symbology">
+<h2><a class="toc-backref" href="#id54">Simbologija</a><a class="headerlink" href="#symbology" title="Nuoroda į šią antraštę">¶</a></h2>
+<div class="section" id="feature-export-thumbnails-from-style-manager">
+<h3><a class="toc-backref" href="#id55">Savybė: miniatiūrų eksportavimas iš stilių tvarkyklės</a><a class="headerlink" href="#feature-export-thumbnails-from-style-manager" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Stilių tvarkyklė dabar leidžia eksportuoti pažymėtas stilių miniatiūras arba kaip SVG, arba kaip PNG piešinius.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image36" src="../../../_images/8861a040751804f6c2691ee4d93d410efd6d99ac.png" /></p>
+</div>
+<div class="section" id="feature-new-option-for-limiting-size-in-mm-when-using-map-unit-sizes">
+<h3><a class="toc-backref" href="#id56">Savybė: nauja parinktis riboti dydį milimetrais, kai naudojami žemėlapio vienetų dydžiai</a><a class="headerlink" href="#feature-new-option-for-limiting-size-in-mm-when-using-map-unit-sizes" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Anksčiau riboti mastelio intervalą buvo galima tik žemėlapio vienetais. Dabar taip pat galite pasirinkti riboti galutinio rezultato dydžiu milimetrais.</p>
+<p><img alt="image37" src="../../../_images/b822235ddb09b4184b926bf2e0acc5c892147d0b.png" /></p>
+</div>
+<div class="section" id="feature-improvements-to-displacement-renderer">
+<h3><a class="toc-backref" href="#id57">Savybė: pastumto braižymo patobulinimai</a><a class="headerlink" href="#feature-improvements-to-displacement-renderer" title="Nuoroda į šią antraštę">¶</a></h3>
+<ul class="simple">
+<li>Leisti postūmio braižymui toleranciją milimetrais/taškais</li>
+<li>Leisti spalvoms nustatyti permatomumą</li>
+<li>Koncentrinių žiedų pozicionavimo režimas (leidžia kompaktiškesnį rodymą nei vien žiedams)</li>
+</ul>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image38" src="../../../_images/33b5f15429279a7ec75dd1f6a2e01b1a7df789ca.png" /></p>
+</div>
+<div class="section" id="feature-all-color-ramps-can-now-be-edited">
+<h3><a class="toc-backref" href="#id58">Savybė: dabar galima redaguoti visas spalvų rampas</a><a class="headerlink" href="#feature-all-color-ramps-can-now-be-edited" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>QGIS 2.12 buvo pridėti „Keisti“ mygtukai prie visų spalvų rampų pasirinkimų. Tai leidžia paprastai keisti esančią rampą nekuriant naujos, perrašant esamą.</p>
+<p><img alt="image39" src="../../../_images/6ca1426e6e9bfd5500b08fb2185ae50a77258892.png" /></p>
+</div>
+<div class="section" id="feature-improved-handling-of-svg-marker-outlines">
+<h3><a class="toc-backref" href="#id59">Savybė: SVG žymeklių rėmų tvarkymo patobulinimai</a><a class="headerlink" href="#feature-improved-handling-of-svg-marker-outlines" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>QGIS 2.12 pataisyta eilė prblemų su SVG žymeklių ir SVG pildymo simbolių rėmelių valdymu.</p>
+<p>Ankstesnėse QGIS versijose rėmeliai buvo braižomi stipriai mažesni, nei nurodyta, o SVG su rėmelio dydžiu žemėlapio vienetais braižymais buvo sugadintas.</p>
+<p>Šios problemos pataisytos QGIS 2.12, bet to pasekoje jūs turite atnaujinti projekto simbologiją, jei anksčiau stipriai padidinote rėmelių dydžius, kad apeitumėte šiuos riktus. Nuotraukoje matote QGIS 2.12 ir QGIS 2.10 SVG žymeklius simbolių sluoksnių dialoguose.</p>
+<p><img alt="image40" src="../../../_images/a678d22393345b4fcc07b5bd023babe383151b46.png" /></p>
+</div>
+<div class="section" id="feature-add-pixels-as-option-for-all-symbology-size-unit-choices">
+<h3><a class="toc-backref" href="#id60">Savybė: pridėti taškus kaip vieną iš simbologijos dydžio nurodymo vienetų</a><a class="headerlink" href="#feature-add-pixels-as-option-for-all-symbology-size-unit-choices" title="Nuoroda į šią antraštę">¶</a></h3>
+<p>Visuose dydžių įvesties valdikliuose dabar yra trečia parinktis „taškai“ greta „mm“ ir „žemėlapio vienetų“. Tai įtakoja dydžius, braižymo pločius, štrichavimo dydžius, poslinkius ir pan. Tai gali padėti, jei jūsų dizainas kuriamas ekranams, o ne spausdinimui.</p>
+<p><strong>Šią savybę sukūrė:</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image41" src="../../../_images/cbc683061bcc06764361ab79874f1020ccfe8eb7.png" /></p>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigacija</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Bendras indeksas"
+             >indeksas</a></li>
+        <li class="right" >
+          <a href="../visualchangelog210/index.html" title="QGIS 2.10 pakeitimai"
+             >kitas</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog214/index.html" title="QGIS 2.14 pakeitimai"
+             >praeitas</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Naudotojams</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" >Vizualūs pakeitimų sąrašai</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Jei neparašyta kitaip, viso turinio licencija yra <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Parinkite grafiką iš <a href="http://thenounproject.com" target="_blank">The Noun Project rinkinio</a>
+        
+        
+      </p>
+      <p class="credit">
+        Neišverstas puslapis? Arba radote vertimo klaidą:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">pataisykite mane</a>
+        <br/>
+        Tekstinė klaida, trūkstamas tekstas arba jūs žinote geriau:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">pataisykite mane</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
