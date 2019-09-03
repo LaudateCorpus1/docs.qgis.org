@@ -1,0 +1,552 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Utilisation de la console Python pour préparer une carte stockée en local depuis un service WMS (outil de téléchargement de tuile).</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Rechercher" href="../../../search.html" />
+    <link rel="next" title="L’Institut de Recherche pour la Protection Géo-hydrologique de Turin – Gestion des archives photo" href="italy_turin.html" />
+    <link rel="prev" title="Utilisation d’outils open source pour la caractérisation d’un paysage. L’extension LecosS" href="portugal_coimbra.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="italy_turin.html" title="L’Institut de Recherche pour la Protection Géo-hydrologique de Turin – Gestion des archives photo"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="portugal_coimbra.html" title="Utilisation d’outils open source pour la caractérisation d’un paysage. L’extension LecosS"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Découvrez QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Exemples d’utilisation</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Anglais">English</option>
+  <option value="ca" title="Catalan">Català</option>
+  <option value="da" title="Danois">Dansk</option>
+  <option value="de" title="Allemand">Deutsch</option>
+  <option value="es" title="Espagnol">Español</option>
+  <option value="fa" title="Perse">فارسی</option>
+  <option value="fi" title="Finnois">Suomi</option>
+  <option value="fr" title="Français">Français</option>
+  <option value="gl" title="Galicien">Galego</option>
+  <option value="id" title="Indonésien">Bahasa Indonesia</option>
+  <option value="it" title="Italien">Italiano</option>
+  <option value="hu" title="Hongrois">Magyar</option>
+  <option value="ja" title="Japonais">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coréen">한국어</option>
+  <option value="lt" title="Lituanien">Lietuvių</option>
+  <option value="nl" title="Hollandais">Nederlands</option>
+  <option value="pl" title="Polonais">Polski</option>
+  <option value="pt_BR" title="Portugais (Brésil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugais">Português</option>
+  <option value="ro" title="Roumain">Română</option>
+  <option value="tr" title="Turque">Türkçe</option>
+  <option value="ru" title="Russe">Русский</option>
+  <option value="uk" title="Ukrainien">Українська</option>
+  <option value="zh-Hans" title="Chinois (simplifié)">簡体中文</option>
+  <option value="zh-Hant" title="Chinois (Traditionnel)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/about/case_studies/india_pune.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Merci !</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>L’Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Faites un don à QGIS</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fermer ce message</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Merci pour votre don !</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS est gratuit et nous espérons que vous aimez utiliser le fruit de nos labeurs, nous vous encourageons à partager et à propager le plus possible la copie que vous avez téléchargée pour que les autres en profitent aussi. Avec toute notre considération.</p>'+
+            '<p id="stripeerr" style="display:none;">Il y a malheureusement eu une erreur lors du traitement de votre don. Veuillez réessayer plus tard, ou veuillez nous contacter à finance@qgis.org</p>'+
+            '<p>L’Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fermer ce message</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">Découvrir</a></li>
+            <li><a href="../../forusers/index.html">Pour les utilisateurs</a></li>
+            <li><a href="../../getinvolved/index.html">Contribuer</a></li>
+            <li><a href="../../../docs/index.html">Documentation</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Rechercher" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="portugal_coimbra.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="italy_turin.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Découvrez QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html">Exemple de carte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html#screenshots">Captures d’écran</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Exemples d’utilisation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">2017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">2015</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id5">2014</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="afghanistan.html">[2014/10] Danish Demining Group (DDG) using QGIS in Kabul, Afghanistan by Edward Crowther</a></li>
+<li class="toctree-l4"><a class="reference internal" href="india_guwahati.html">[2014/08] Trainings &amp; Research activities using QGIS at NIRD&amp;PR-NERC in Guwahati, India by Alajangi Simhachalam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portugal_coimbra.html">[2014/07] Using open source tools for characterization of a landscape. The LecosS plugin by André Duarte</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">[2014/05] Use of python console to prepare offline map from WMS (tile downloader) by Prashant Kadgi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="italy_turin.html">[2014/01] The Research Institute for Geo-hydrological Protection of Turin - Aerial photo archive management by Danilo and Franco Godone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">2013</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">2012</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id8">2011</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id9">2010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id10">2009</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members.html">Sustaining members, sponsors and Donors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shop_goodies.html">Boutique</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://planet.qgis.org">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Utiliser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Contribuez / Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="use-of-python-console-to-prepare-offline-map-from-wms-tile-downloader">
+<h1>Utilisation de la console Python pour préparer une carte stockée en local depuis un service WMS (outil de téléchargement de tuile).<a class="headerlink" href="#use-of-python-console-to-prepare-offline-map-from-wms-tile-downloader" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Cette étude explique comment préparer des cartes locales à partir de cartes WMS/WFS ou toute carte chargée dans le canevas de cartes de QGIS en téléchargeant des tuiles à l’aide d’un script qui fonctionne avec la console Python. Le script génère également une mosaïque de toutes les tuiles pour une utilisation ultérieure.</p>
+<p>Accéder à des cartes raster ou vecteur à travers un service Web Mapping Service (WMS) est très courant et très efficace. Cela a plusieurs avantages dont la sécurité, la centralisation ainsi que des styles de carte flexibles. Par exemple, Google Maps, Yahoo, Bing, MODIS, Landsat, les cartes publiées par la NASA, NRSC (Inde). L’inconvénient/limite de WMS est que le service est fourni par Internet ou via un Intranet. Il est possible de ne pas toujours disposer d’une connexion Internet, particulièrement lors des enquêtes sur le terrain. De plus, WMS est généralement lent par rapport au travail avec des images stockées en local comme le GeoTiff, le jpeg, etc.</p>
+<div class="section" id="use-of-qgis">
+<h2>Utilisation de QGIS<a class="headerlink" href="#use-of-qgis" title="Lien permanent vers ce titre">¶</a></h2>
+<p>QGIS fournit un outil pour se connecter/accéder à n’importe quel service WMS. La connexion WMS est basée sur une simple URL et une fois la connexion établie, une carte peut être affichée dans le canevas de carte. Si on sauvegarde la carte dans l’emprise visible depuis QGIS au format Jpeg( Fichier -&gt; Sauvegarder en tant qu’image), cela créé un fichier world contenant les coordonnées géographiques de cette région en particulier; par exemple, échantillon.jpg est l’image et échantillon.jpgw contient les coordonnées. Cela signifie que l’image téléchargée est géoréférencée. Nous pouvons télécharger les tuiles dans un format de grille manuellement pour les utiliser localement. Le téléchargement manuel est possible si la surface couverte est faible ou si une faible résolution d’image est acceptable.</p>
+<div class="figure align-left" id="id1">
+<a class="reference internal image-reference" href="../../../_images/india_pune1.png"><img alt="QGIS with WMS tiles" src="../../../_images/india_pune1.png" style="width: 512.1px; height: 405.0px;" /></a>
+<p class="caption"><span class="caption-text">QGIS et les tuiles WMS</span></p>
+</div>
+</div>
+<div class="section" id="python-console">
+<h2>Console Python<a class="headerlink" href="#python-console" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un script court a été écrit dans la «&nbsp;Console Python&nbsp;» avec l’aide disponible sur le site web officiel de QGIS dans le Guide de Recettes du Développeur PyQGIS. Le script contient simplement 4 composants:</p>
+<ol class="arabic simple">
+<li>La coordonnée X,Y de la première tuile (coin supérieur gauche et inférieur droit).</li>
+<li>La taille de la tuile à télécharger (ex: 0.001 x 0.001 degrés).</li>
+<li>Le nombre de tuiles à télécharger (calculé à partir de l’emprise complete de la carte et la taille des tuiles).</li>
+<li>Répertoire de sortie pour les tuiles/fichiers générés</li>
+</ol>
+<p>Le script fonctionne avec deux boucles simples dont la première définit l’emprise de la carte dans le canevas QGIS et le nombre de lignes/colonnes. Une fois l’emprise de la carte paramétrée, la carte est chargée dans QGIS. Un délai de 3 secondes (dépendant de la connexion Internet) a été introduit avant d’enregistrer la carte en Jpeg dans le répertoire utilisateur. Une fois que le script est exécuté, toutes les tuiles créées dans le répertoire peuvent être chargées dans QGIS. Il est possible de préparer une dalle unique à partir de Raster &gt; Divers &gt; Fusionner ou Construire un raster virtuel (catalogue). Les deux outils génèrent une dalle unique mais l’outil Fusionner créé une image indépendante des tuiles alors que le raster virtuel génère un lien vers les tuiles individuelles.</p>
+<div class="figure align-left" id="id2">
+<a class="reference internal image-reference" href="../../../_images/india_pune2.png"><img alt="Python script and directory where tiles are stored" src="../../../_images/india_pune2.png" style="width: 630.0px; height: 265.2px;" /></a>
+<p class="caption"><span class="caption-text">Script Python et répertoire où les tuiles sont stockées.</span></p>
+</div>
+<p>La méthode a des limites notamment le fait que des changements sur le serveur ne sont pas reflétés localement. Dans ce cas, l’utilisateur doit relancer le script et générer une nouvelle carte locale. Le deuxième limitation est que la carte locale est une image et elle ne peut pas être utilisée pour des cartes thématiques ou pour une classification d’image. Avec un peu d’effort supplémentaire, quelques cartes d’occupation du sol peuvent être converties en vecteur avec des pertes de données.</p>
+</div>
+<div class="section" id="scope">
+<h2>Portée<a class="headerlink" href="#scope" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La mosaïque générée est une image même si elle a été téléchargée depuis une carte thématique (7-8 couleurs). En utilisant un outil avancé de reclassification, et l’empilement des bandes, ce raster peut être converti en vecteur polygone. WMS dispose de plusieurs modes de requêtes comme getcapabilities, getmap, getfeatureinfo, etc. En utilisant getfeatureinfo, l’information de l’attribut peut être récupérée pour chaque polygone. Le script peut être converti en extension de manière à ce que toute personne sans compétence de développement sera capable d’utiliser le script.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les expériences présentées montrent que QGIS peut être utilisé à n’importe quel niveau avancé. Avec des connaissances basiques en développement, on peut écrire un petit script ou une extension pour améliorer la qualité du travail et gagner du temps. Au sein de QGIS, l’accès au dépôt des extensions développées à travers le monde est une grande force. Le Guide de Recette des Développeurs PyQGIS est une source d’information d’intérêt pour écrire un script et la gestion des données raster est assez simple grâce à l’aide des outils GDAL.</p>
+</div>
+<div class="section" id="authors">
+<h2>Auteurs<a class="headerlink" href="#authors" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cet article a été rédigé en mai 2014 avec la contribution de Prashant Kadgi, basé à Pune en Inde. Il travaille actuellement en tant que consultant SIG pour APP Consultancy Services. Depuis 2009 il utilise les SIG et la télédétection pour la gestion des ressources naturelles, la forêt, le e-gouvernement, les projets de développement logiciel dans différentes régions de l’Inde et du monde.</p>
+<ul class="simple">
+<li>Contact : <a class="reference external" href="mailto:kadgiprashant&#37;&#52;&#48;gmail&#46;com">kadgiprashant<span>&#64;</span>gmail<span>&#46;</span>com</a></li>
+<li>Site web : www.gisappco.com (en construction)</li>
+</ul>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="italy_turin.html" title="L’Institut de Recherche pour la Protection Géo-hydrologique de Turin – Gestion des archives photo"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="portugal_coimbra.html" title="Utilisation d’outils open source pour la caractérisation d’un paysage. L’extension LecosS"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Découvrez QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Exemples d’utilisation</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Sauf indication contraire, tout le contenu est sous licence <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Sélectionner des graphiques depuis la collection <a href="http://thenounproject.com" target="_blank">"The Noun Project"</a>.
+        
+        
+      </p>
+      <p class="credit">
+        Vous avez lu une page non traduite ? Ou vous avez observé une erreur de traduction:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">corrigez-moi</a>
+        <br/>
+        Erreur de texte, texte manquant on non explicite:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">corrigez-moi</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

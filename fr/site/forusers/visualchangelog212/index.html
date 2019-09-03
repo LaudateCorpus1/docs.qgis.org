@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Modifications apportées par QGIS 2.12</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Rechercher" href="../../../search.html" />
+    <link rel="next" title="Modifications apportées par QGIS 2.10" href="../visualchangelog210/index.html" />
+    <link rel="prev" title="Modifications apportées par QGIS 2.14" href="../visualchangelog214/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../visualchangelog210/index.html" title="Modifications apportées par QGIS 2.10"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog214/index.html" title="Modifications apportées par QGIS 2.14"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Utiliser</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" accesskey="U">Modifications en images</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Anglais">English</option>
+  <option value="ca" title="Catalan">Català</option>
+  <option value="da" title="Danois">Dansk</option>
+  <option value="de" title="Allemand">Deutsch</option>
+  <option value="es" title="Espagnol">Español</option>
+  <option value="fa" title="Perse">فارسی</option>
+  <option value="fi" title="Finnois">Suomi</option>
+  <option value="fr" title="Français">Français</option>
+  <option value="gl" title="Galicien">Galego</option>
+  <option value="id" title="Indonésien">Bahasa Indonesia</option>
+  <option value="it" title="Italien">Italiano</option>
+  <option value="hu" title="Hongrois">Magyar</option>
+  <option value="ja" title="Japonais">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coréen">한국어</option>
+  <option value="lt" title="Lituanien">Lietuvių</option>
+  <option value="nl" title="Hollandais">Nederlands</option>
+  <option value="pl" title="Polonais">Polski</option>
+  <option value="pt_BR" title="Portugais (Brésil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugais">Português</option>
+  <option value="ro" title="Roumain">Română</option>
+  <option value="tr" title="Turque">Türkçe</option>
+  <option value="ru" title="Russe">Русский</option>
+  <option value="uk" title="Ukrainien">Українська</option>
+  <option value="zh-Hans" title="Chinois (simplifié)">簡体中文</option>
+  <option value="zh-Hant" title="Chinois (Traditionnel)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/visualchangelog212/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Merci !</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>L’Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Faites un don à QGIS</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fermer ce message</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Merci pour votre don !</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS est gratuit et nous espérons que vous aimez utiliser le fruit de nos labeurs, nous vous encourageons à partager et à propager le plus possible la copie que vous avez téléchargée pour que les autres en profitent aussi. Avec toute notre considération.</p>'+
+            '<p id="stripeerr" style="display:none;">Il y a malheureusement eu une erreur lors du traitement de votre don. Veuillez réessayer plus tard, ou veuillez nous contacter à finance@qgis.org</p>'+
+            '<p>L’Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fermer ce message</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">Découvrir</a></li>
+            <li><a href="../index.html">Pour les utilisateurs</a></li>
+            <li><a href="../../getinvolved/index.html">Contribuer</a></li>
+            <li><a href="../../../docs/index.html">Documentation</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Rechercher" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../visualchangelog214/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../visualchangelog210/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Découvrez QGIS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Utiliser</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">Télécharger QGIS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualchangelogs.html">Modifications en images</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog38/index.html">Changelog for QGIS 3.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog36/index.html">Modifications apportées par QGIS 3.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog34/index.html">Modifications apportées par QGIS 3.4 LTR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog32/index.html">Modifications apportées par QGIS 3.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog30/index.html">Modifications apportées par QGIS 3.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog218/index.html">Modifications apportées par QGIS 2.18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog216/index.html">Modifications apportées par QGIS 2.16</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog214/index.html">Modifications apportées par QGIS 2.14</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Modifications apportées par QGIS 2.12</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">Général</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#analysis-tools">Outils d’analyse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#application-and-project-options">Options de l’application et du projet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#browser">Navigateur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-providers">Fournisseurs de données</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-management">Gestion de données</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitising">Numérisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelling">Étiquetage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-composer">Composeur de cartes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plugins">Extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmability">Programmation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-server">QGIS Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">Style</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog210/index.html">Modifications apportées par QGIS 2.10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog28/index.html">Modifications apportées par QGIS 2.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog260/index.html">Modifications apportées par QGIS 2.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog240/index.html">Modifications apportées par QGIS 2.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog220/index.html">Modifications apportées par QGIS 2.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog200/index.html">Modifications apportées par QGIS 2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">Matériel de formation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">Groupes d’utilisateurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">Support commercial</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../books/index.html">Livres</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Contribuez / Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="changelog-for-qgis-2-12">
+<span id="changelog212"></span><h1>Modifications apportées par QGIS 2.12<a class="headerlink" href="#changelog-for-qgis-2-12" title="Lien permanent vers ce titre">¶</a></h1>
+<p><img alt="image1" src="../../../_images/3648539707d0789903fdfedac3705584f12fa6ac.png" /></p>
+<p>Voici le journal des modifications de la dernière version de QGIS - version 2.12.0 “Lyon” - ville hôte de notre rencontre des développeurs en Avril 2012.</p>
+<p><strong>Nouvelles Fonctionnalités dans QGIS 2.12 “Lyon”</strong></p>
+<p>Cette version est la prochaine de notre cycle de version intervenant tous les 4 mois.
+Elle vous permet d’avoir accès aux dernière fonctionnalités sur lesquels nous travaillons et constitue la dernière version à la pointe des développements de Qgis.</p>
+<p>Qgis “Lyon” embarque de nouvelles fonctionnalités. Les principales sont le support de règles d’affichage pour les étiquettes, des règles d’affichage pour les tables d’attributs, le gestionnaire avancé de géométrie, la création et l’édition de courbes géométriques, une meilleure gestion des authentifications et plus encore ! Par ailleurs, de nombreux bogues ont été corrigés dont les fuites de mémoire dans QGIS 2.12. Les fonctionnalités présentes dans cette version seront inclues dans la prochaine version long terme (qui sortira en 2016), l’utiliser est une bonne occasion de tester ces nouvelles fonctionnalités</p>
+<p>Quand une nouvelle fonctionnalité est ajoutée au logiciel, cela peut entraîner la possibilité de nouveaux bogues. Si vous rencontrez un problème avec cette version, vous pouvez remplir un ticket <a class="reference external" href="http://hub.qgis.org">sur le QGIS Bug Tracker</a>. Si vous travailler dans un environnement de production où la stabilité prime sur la nouveauté, nous fournissions aussi une version à long terme (LTR: Long Term Release) de QGIS. La version actuelle est la 2.8.3 est est disponible sur <a class="reference external" href="http://download.qgis.org">download.qgis.org</a>.</p>
+<p><strong>Merci</strong></p>
+<p>Nous souhaitons remercier tous les développeurs, rédacteurs, testeurs et les nombreuses personnes qui ont donné volontairement de leur temps (ou financé des personnes pour le faire).</p>
+<p>From the QGIS community we hope you enjoy this release! If you wish to
+donate time, money or otherwise get involved in making QGIS more
+awesome, please wander along to <a class="reference external" href="https://qgis.org">qgis.org</a> and lend
+a hand!</p>
+<p>Enfin, nous souhaitons remercier nos sponsors officiels pour leurs soutiens financiers inestimables à ce projet :</p>
+<ul class="simple">
+<li><strong>Sponsor GOLD :</strong> <a class="reference external" href="http://www.asiaairsurvey.com/">Asia Air Survey, Japon</a></li>
+<li>Sponsor ARGENT: <a class="reference external" href="http://www.agh.edu.pl/en">AGH University of Science and Technology, Krakow, Pologne</a></li>
+<li>Sponsor SILVER : <a class="reference external" href="http://www.vorarlberg.at/">State of Vorarlberg, Austria</a></li>
+<li>Sponsor SILVER: <a class="reference external" href="http://www.opw.ie/">Office of Public Works, Irlande, Irlande</a></li>
+<li>Sponsor SILVER : <a class="reference external" href="http://www.sourcepole.com/">Sourcepole AG, Suisse</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting, UK</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://wheregroup.com/">WhereGroup GmbH &amp; Co. KG, Allemagne</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.npaconsult.co.uk/">Nicholas Pearson Associates, Royaume-Uni</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://qgis-polska.org/">QGIS Poland, Pologne</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.terrelogiche.com/">www.terrelogiche.com, Italie</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.geosynergy.com.au/">GeoSynergy, Australia</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.gaia3d.com/">Gaia3D, South Korea</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.rbwm.gov.uk/">Royal Borough of Windsor and Maidenhead, UK</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.chartwell-consultants.com/">Chartwell Consultants Ltd, Canada</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.tragewegen.be/">Trage Wegen vzw, Belgium</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.gfi-gis.de/">GFI - Gesellschaft fr Informations technologie mbH, Germany</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.gkg-kassel.de/">GKG Kassel, (Dr.-Ing. Claas Leiner), Allemagne</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.gis-support.com/">GIS-Support, Pologne</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.adlares.com/">ADLARES GmbH, Allemagne</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.molitec.it/">www.molitec.it, Italy</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.argusoft.de">www.argusoft.de, Germany</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.customeranalytics.com/">Customer Analytics, USA</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.avioportolano.it/">Avioportolano Italia, Italie</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.wggios.agh.edu.pl/en">Faculty of Geology, Geophysics and Environmental Protection, AGH, University of Science and Technology, Poland</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.urbsol.com.au/">Urbsol, Australie</a></li>
+<li>Sponsor BRONZE: <a class="reference external" href="http://www.mappinggis.com/">MappingGIS, Espagne</a></li>
+<li>Sponsor BRONZE : <a class="reference external" href="http://www.gis3w.it/">GIS3W, Italy</a></li>
+</ul>
+<p>A current list of donors who have made financial contributions large
+and small to the project can be seen on our <a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#list-of-donors">donors
+list</a>.
+If you would like to become and official project sponsor, please visit
+<a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#sponsorship">our sponsorship
+page</a> for
+details. Sponsoring QGIS helps us to fund our six monthly developer
+meetings, maintain project infrastructure and fund bug fixing efforts.</p>
+<p>QGIS est un logiciel libre et vous n’avez aucune obligation de payer quoi que ce soit pour l’utiliser. En fait, nous souhaitons encourager les gens à l’utiliser le plus possible, sans s’intéresser à leur état financier ou à leur statut social. Nous croyons que fournir aux gens des outils décisionnels spatiaux permettra d’améliorer la société.</p>
+<div class="contents local topic" id="sommaire">
+<ul class="simple">
+<li><a class="reference internal" href="#general" id="id1">Général</a><ul>
+<li><a class="reference internal" href="#feature-new-welcome-screen" id="id2">Fonctionnalité : Nouvel écran de bienvenue</a></li>
+<li><a class="reference internal" href="#feature-ongoing-improvements-to-code-quality" id="id3">Fonctionnalité : amélioration continue de la qualité de code</a></li>
+<li><a class="reference internal" href="#feature-advanced-settings-editor" id="id4">Fonctionnalité : Éditeur avancé de paramètres</a></li>
+<li><a class="reference internal" href="#feature-mutually-exclusive-layer-tree-groups" id="id5">Fonctionnalité : groupes de couches mutuellement exclusive</a></li>
+<li><a class="reference internal" href="#feature-filtering-for-field-values-in-expression-widget" id="id6">Fonctionnalité : Filtre des valeurs de champs dans les boites d’expression</a></li>
+<li><a class="reference internal" href="#feature-user-interface-theme-support" id="id7">Fonctionnalité : gestion des thèmes pour l’interface utilisateur</a></li>
+<li><a class="reference internal" href="#feature-new-expression-functions-in-2-12" id="id8">Fonctionnalité : Nouvelles fonctions dans le générateur d’expressions</a></li>
+<li><a class="reference internal" href="#feature-variables-in-expressions" id="id9">Fonctionnalité : variables dans les expressions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-tools" id="id10">Outils d’analyse</a><ul>
+<li><a class="reference internal" href="#feature-added-number-of-vertices-to-derived-fields-in-identify-tool" id="id11">Fonctionnalité : ajout du nombre de sommets dans un champs de l’outil «&nbsp;identifiez les entités&nbsp;»</a></li>
+<li><a class="reference internal" href="#feature-raster-alignment-tool" id="id12">Fonctionnalité : outil d’alignement des raster</a></li>
+<li><a class="reference internal" href="#feature-geometry-checker-and-geometry-snapper-plugins" id="id13">Fonctionnalité : Extension d’aimantation et vérificateur de géométrie</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#application-and-project-options" id="id14">Options de l’application et du projet</a><ul>
+<li><a class="reference internal" href="#feature-encrypted-password-management" id="id15">Fonctionnalité : gestion des mots de passe cryptés</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#browser" id="id16">Navigateur</a><ul>
+<li><a class="reference internal" href="#feature-improvements-to-postgis-connections-in-browser" id="id17">Fonctionnalité : Améliorations des connexions PostGIS dans le navigateur</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-providers" id="id18">Fournisseurs de données</a><ul>
+<li><a class="reference internal" href="#feature-postgis-provider-improvements" id="id19">Fonctionnalité : Amélioration du connecteur PostGIS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-management" id="id20">Gestion de données</a><ul>
+<li><a class="reference internal" href="#feature-dbmanager-improvements" id="id21">Fonctionnalité : Améliorations du gestionnaire de bases de données</a></li>
+<li><a class="reference internal" href="#feature-conditional-formatting-for-attribute-table-cells" id="id22">Fonctionnalité : Formatage conditionnel des cellules de la table attributaire</a></li>
+<li><a class="reference internal" href="#feature-support-for-relative-paths-in-widgets" id="id23">Fonctionnalité : Support des chemins relatifs dans les widgets</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#digitising" id="id24">Numérisation</a><ul>
+<li><a class="reference internal" href="#feature-digitising-improvements" id="id25">Fonctionnalité : Améliorations de la numérisation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labelling" id="id26">Étiquetage</a><ul>
+<li><a class="reference internal" href="#feature-data-defined-quadrant-when-in-around-point-mode" id="id27">Fonctionnalité : Définition par les données du quadrant pour le mode «&nbsp;Autour du point&nbsp;»</a></li>
+<li><a class="reference internal" href="#feature-draw-only-labels-which-fit-inside-polygons" id="id28">Fonctionnalité : Afficher uniquement les étiquettes qui rentrent à l’intérieur des polygones</a></li>
+<li><a class="reference internal" href="#feature-control-priority-of-labeling-obstacles" id="id29">Fonctionnalité : Contrôle de la priorité des obstacles aux étiquettes</a></li>
+<li><a class="reference internal" href="#feature-new-options-to-control-how-polygon-layers-act-as-obstacles" id="id30">Fonctionnalité : Nouvelles options de contrôle des couches polygones en obstacles aux étiquettes</a></li>
+<li><a class="reference internal" href="#feature-data-defined-control-over-label-priority" id="id31">Fonctionnalité : Définition de la priorité de contrôle sur les étiquettes par les données</a></li>
+<li><a class="reference internal" href="#feature-option-for-obstacle-only-layers" id="id32">Fonctionnalité : Option pour les couches d’obstacle</a></li>
+<li><a class="reference internal" href="#feature-rule-based-labeling" id="id33">Fonctionnalité : Étiquettes basées sur des règles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-composer" id="id34">Composeur de cartes</a><ul>
+<li><a class="reference internal" href="#feature-atlas-navigation-improvements" id="id35">Fonctionnalité : Amélioration de la navigation dans l’atlas de cartes</a></li>
+<li><a class="reference internal" href="#feature-custom-format-for-grid-annotations" id="id36">Fonctionnalité : Format personnalisé pour les annotations de grille</a></li>
+<li><a class="reference internal" href="#feature-multiline-text-handling-and-automatic-text-wrapping-in-composer-attribute-tables" id="id37">Fonctionnalité : Gestion du texte multi-lignes et du redimensionnement automatique de texte dans les tables d’attributs du composeur</a></li>
+<li><a class="reference internal" href="#feature-advanced-customisation-of-cell-background-color" id="id38">Option : Personnalisation avancée de la couleur d’arrière plan d’une cellule.</a></li>
+<li><a class="reference internal" href="#feature-add-fit-page-to-contents-option-and-options-for-cropping-exports-to-contents" id="id39">Fonctionnalité : Ajout de l’option d’adaptation de la page à son contenu et des options de rognage de l’export au contenu</a></li>
+<li><a class="reference internal" href="#feature-force-vector-layers-to-render-as-a-raster-images" id="id40">Fonctionnalité : Forcer le rendu en images raster des couches vecteur</a></li>
+<li><a class="reference internal" href="#feature-data-defined-control-over-map-layers-and-style-presets" id="id41">Fonctionnalité : Contrôle défini par les données sur les couches et les réglages de style</a></li>
+<li><a class="reference internal" href="#feature-option-to-hide-pages-from-view-export" id="id42">Fonctionnalité : Option pour masquer des pages de la vue/export</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins" id="id43">Extensions</a><ul>
+<li><a class="reference internal" href="#feature-update-of-the-grass-plugin" id="id44">Fonctionnalité : Mise à jour de l’extension GRASS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmability" id="id45">Programmation</a><ul>
+<li><a class="reference internal" href="#feature-map-tools-moved-from-app-gui" id="id46">Fonctionnalité : Outils de carte déplacés de app-&gt;gui</a></li>
+<li><a class="reference internal" href="#feature-editing-layers-via-with-edit-layer" id="id47">Fonctionnalité : Édition de couches via `with edit(layer):`</a></li>
+<li><a class="reference internal" href="#feature-new-api-for-labeling-engine-qgslabelingenginev2" id="id48">Fonctionnalité : Nouvelle API du moteur d’étiquettes (QgsLabelingEngineV2)</a></li>
+<li><a class="reference internal" href="#feature-open-scripts-in-external-editor" id="id49">Fonctionnalité : Ouvrir les scripts dans un éditeur externe</a></li>
+<li><a class="reference internal" href="#feature-new-classes-for-pyqgis-programs" id="id50">Fonctionnalité : Nouvelles classes pour les programmes PyQGIS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qgis-server" id="id51">QGIS Server</a><ul>
+<li><a class="reference internal" href="#feature-qgis-server-python-api" id="id52">Fonctionnalité : API python de QGIS Server</a></li>
+<li><a class="reference internal" href="#feature-getmap-in-dxf-format" id="id53">Fonctionnalité : getMap en format dxf</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symbology" id="id54">Style</a><ul>
+<li><a class="reference internal" href="#feature-export-thumbnails-from-style-manager" id="id55">Fonctionnalité : Exporter des vignettes depuis le gestionnaire de style</a></li>
+<li><a class="reference internal" href="#feature-new-option-for-limiting-size-in-mm-when-using-map-unit-sizes" id="id56">Fonctionnalité : Nouvelle option de limitation de la taille en mm lorsque les tailles sont définies en unités de carte</a></li>
+<li><a class="reference internal" href="#feature-improvements-to-displacement-renderer" id="id57">Fonctionnalité : Améliorations du moteur de rendu de déplacement de points</a></li>
+<li><a class="reference internal" href="#feature-all-color-ramps-can-now-be-edited" id="id58">Fonctionnalité : Toutes les palettes de couleurs peuvent être modifiées</a></li>
+<li><a class="reference internal" href="#feature-improved-handling-of-svg-marker-outlines" id="id59">Fonctionnalité : Amélioration de la gestion des marqueurs de bordure SVG</a></li>
+<li><a class="reference internal" href="#feature-add-pixels-as-option-for-all-symbology-size-unit-choices" id="id60">Fonctionnalité : Ajout du pixel comme unité pour la taille des symboles</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id1">Général</a><a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-new-welcome-screen">
+<h3><a class="toc-backref" href="#id2">Fonctionnalité : Nouvel écran de bienvenue</a><a class="headerlink" href="#feature-new-welcome-screen" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Au lieu de vous présenter une carte vide, vierge, QGIS vous présentera maintenant une liste des projets les plus récents, avec des vignettes afin de faciliter et d’améliorer le choix des travaux que vous avez effectués lors de votre dernière session.</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Matthias Kuhn de <a class="reference external" href="http://www.opengis.ch">OPENGIS.ch</a></p>
+<p><img alt="image11" src="../../../_images/30f2ab32f4ae0d135a26b6a6ddb6705f0f6dd74a.png" /></p>
+</div>
+<div class="section" id="feature-ongoing-improvements-to-code-quality">
+<h3><a class="toc-backref" href="#id3">Fonctionnalité : amélioration continue de la qualité de code</a><a class="headerlink" href="#feature-ongoing-improvements-to-code-quality" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Grâce à l’utilisation d’une bibliothèque de nettoyage d’adresse, des centaines de fuites de mémoires ont été identifiées et corrigées. Le scan automatisé du code avec Coverity Scan à été régulièrement effectué afin d’identifier des problèmes potentiels et notre densité de défaut par Coverity est incroyablement faible avec 0,02 défauts pour 1000 lignes de code. La bibliothèque de tests unitaires automatisés à également grossi significativement pendant le développement de la 2.12, résultant à une augmentation des corrections en amont corrigeant des régressions identifiés. Pour la version 2.12, nous avons également ajouté des tests en continu pour OSX, afin que chaque commit soit testé avec la suite des tests unitaires à la fois sur les plateformes Linux mais aussi OSX.</p>
+<p><img alt="image12" src="../../../_images/774d1839283f357009c64811bd000e2f8ad97c7a.png" /></p>
+</div>
+<div class="section" id="feature-advanced-settings-editor">
+<h3><a class="toc-backref" href="#id4">Fonctionnalité : Éditeur avancé de paramètres</a><a class="headerlink" href="#feature-advanced-settings-editor" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un nouveau menu a été ajouté aux options qui vous laisse éditer n’importe quelles options définies dans votre profile. Cela a été prévu dans le cas d’une utilisation avancée de QGIS car cela peut entraîner un comportement inattendu si vous changez ces options sans bien les comprendre.</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Matthias Kuhn de <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+<p><img alt="image13" src="../../../_images/6d59988bf11726192579915cff18f2b81e3f9c8f.png" /></p>
+</div>
+<div class="section" id="feature-mutually-exclusive-layer-tree-groups">
+<h3><a class="toc-backref" href="#id5">Fonctionnalité : groupes de couches mutuellement exclusive</a><a class="headerlink" href="#feature-mutually-exclusive-layer-tree-groups" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Avec cette fonctionnalité, vous pouvez créer un groupe de couche où seulement une seule couche peut être visible.
+cette fonctionnalité peut être activée pour les groupes dans la vue en arborescence des couches du menu contextuel.</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Martin Dobias de <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> en sous-traitance de <a class="reference external" href="http://www.gis3w.it/">Gis3W</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> Tuscany Region (Italie) - SITA (CIG: 63526840AE)</p>
+<p><img alt="image14" src="../../../_images/5c68a4deab4d6058d05d3129fec89c6f9abb8530.png" /></p>
+</div>
+<div class="section" id="feature-filtering-for-field-values-in-expression-widget">
+<h3><a class="toc-backref" href="#id6">Fonctionnalité : Filtre des valeurs de champs dans les boites d’expression</a><a class="headerlink" href="#feature-filtering-for-field-values-in-expression-widget" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Lorsque vous créez une expression qui prend en compte les valeurs d’un champ, vous pouvez désormais filtrer cette valeur dans l’espace de prévisualisation</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> Salvatore Larosa</p>
+<p><img alt="image15" src="../../../_images/5d41174bdf2a059d41824590520857002a70a056.png" /></p>
+</div>
+<div class="section" id="feature-user-interface-theme-support">
+<h3><a class="toc-backref" href="#id7">Fonctionnalité : gestion des thèmes pour l’interface utilisateur</a><a class="headerlink" href="#feature-user-interface-theme-support" title="Lien permanent vers ce titre">¶</a></h3>
+<p>QGIS 2.12 supporte désormais les thèmes d’interface que vous pouvez utiliser pour personnaliser les apparences des fenêtre, des boutons, etc.
+Par défaut, le logiciel dispose de deux thèmes <strong>Default</strong> et <strong>Night mapping</strong>. Ce dernier est un thème sombre que certaines personnes peuvent préférer si elles trouvent que le thème claire fatigue la vue.
+Si vous connaissez un peu de CSS, vous pouvez créer votre propre thème personnalisé assez facilement.</p>
+<p>Vous trouverez plus d’informations sur la gestion des thèmes en lisant  <a class="reference external" href="http://nathanw.net/2015/08/29/ui-theme-support-now-core-in-qgis/">l’article du blog de Nathan Woodrow</a>.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image16" src="../../../_images/2ec302b12a3b0db8e7a66465afccb227bc543a3e.png" /></p>
+</div>
+<div class="section" id="feature-new-expression-functions-in-2-12">
+<h3><a class="toc-backref" href="#id8">Fonctionnalité : Nouvelles fonctions dans le générateur d’expressions</a><a class="headerlink" href="#feature-new-expression-functions-in-2-12" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Des fonctions de «&nbsp;recherche floues&nbsp;» ont été ajoutées.
+Elles incluent des fonctions de recherche de similitudes entre deux chaînes de caractère, la correspondance phonétique et permette de réaliser des filtres sur enregistrements  «&nbsp;proches&nbsp;» d’une chaîne de caractère déterminée.</p>
+<p>Plusieurs fonctions basées sur les géométries ont été ajoutées, dont :</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">num_points(geom)</span></code> pour calculer le nombre de nœuds dans une géométrie</li>
+<li><code class="docutils literal"><span class="pre">area(geom)</span></code>, <code class="docutils literal"><span class="pre">length(geom)</span></code> et <code class="docutils literal"><span class="pre">perimeter(geom)</span></code>, pour le calcul de l’aire, de la longueur et du périmètre de tout objet géométrique. Auparavant, ces calculs n’étaient possibles que sur la géométrie de l’entité courante.</li>
+<li><code class="docutils literal"><span class="pre">start_point(geom)</span></code>, <code class="docutils literal"><span class="pre">end_point(geom)</span></code>, <code class="docutils literal"><span class="pre">point_n(geom,</span> <span class="pre">n)</span></code> pour récupérer le premier, dernier et n-ième point d’une géométrie</li>
+<li><code class="docutils literal"><span class="pre">make_point(x,y)</span></code> pour la création manuelle d’une géométrie de type point</li>
+<li><code class="docutils literal"><span class="pre">x(geom)</span></code>, <code class="docutils literal"><span class="pre">y(geom)</span></code> qui renvoient les coordonnées x et y des géométries de type point ou du centroïde des objets non ponctuels</li>
+</ul>
+<p>Une nouvelle fonction nommée <code class="docutils literal"><span class="pre">project_color</span></code> a été ajoutée. Elle permet de récupérer par son nom, une couleur du jeu de couleurs du projet. Cela vous permet de créer des couleurs liées où la couleur du symbole ou des composants d’une étiquette est liée à une couleur du jeu de couleur du projet. Lors de la mise à jour de la couleur dans le jeu de couleurs, toutes les couleurs liées seront automatiquement mises à jour !</p>
+<p>De plus, certaines fonctions utiles de l’extension expressions+ ont été intégrée dans le logiciel dont:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">color_part</span></code>: permet de récupérer un composant d’une couleur donnée (par exemple, le rouge, la teinte, l’alpha) à partir d’une couleur</li>
+<li><code class="docutils literal"><span class="pre">set_color_part</span></code>: permet d’écraser une des composantes d’une couleur donnée, par exemple modifier la valeur alpha (l’opacité) d’une couleur</li>
+<li><code class="docutils literal"><span class="pre">day_of_week</span></code>: renvoi le jour de la semaine sous forme de nombre à partir d’une date</li>
+</ul>
+<p>de plus, l’aide contextuelle pour les fonctions a été amélioré pour une meilleure lisibilité.</p>
+<p><img alt="image17" src="../../../_images/b56f529af78b2d970f057c2c25ba89b87a85ce85.png" /></p>
+</div>
+<div class="section" id="feature-variables-in-expressions">
+<h3><a class="toc-backref" href="#id9">Fonctionnalité : variables dans les expressions</a><a class="headerlink" href="#feature-variables-in-expressions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez désormais définir des variables personnalisées pour des fonctions.
+Ces variables peuvent être définies au niveau de l’application, du projet de la couche ou du composeur d’impression. Cela peut s’assimiler aux règles de CSS en cascade car les variables peuvent être remplacée.  Par exemple, une variable créée pour un projet va remplacer toute autres variables du niveau de l’application. Vous pouvez utiliser ces variables pour construire des chaînes de caractère ou une expression particulière. Par exemple, créer une étiquette dans le composeur avec ce contenu:</p>
+<p><code class="docutils literal"><span class="pre">Cette</span> <span class="pre">carte</span> <span class="pre">a</span> <span class="pre">été</span> <span class="pre">faite</span> <span class="pre">avec</span> <span class="pre">QGIS</span> <span class="pre">[%</span> <span class="pre">&#64;qgis_version</span> <span class="pre">%].</span></code> <code class="docutils literal"><span class="pre">Le</span> <span class="pre">fichier</span> <span class="pre">projet</span> <span class="pre">de</span> <span class="pre">cette</span> <span class="pre">carte</span> <span class="pre">est:</span> <span class="pre">[%</span> <span class="pre">&#64;project_path</span> <span class="pre">%]</span></code></p>
+<p>qui renverra l’étiquette suivante:</p>
+<p><code class="docutils literal"><span class="pre">Cette</span> <span class="pre">carte</span> <span class="pre">a</span> <span class="pre">été</span> <span class="pre">faite</span> <span class="pre">avec</span> <span class="pre">QGIS</span> <span class="pre">2.12.</span></code> <code class="docutils literal"><span class="pre">Le</span> <span class="pre">fichier</span> <span class="pre">projet</span> <span class="pre">de</span> <span class="pre">cette</span> <span class="pre">carte</span> <span class="pre">est:</span> <span class="pre">/gis/qgis-user-conference-2015.qgs</span></code></p>
+<p>Vous pouvez gérer des variables globales depuis le menu <code class="docutils literal"><span class="pre">Préférences</span> <span class="pre">-&gt;</span> <span class="pre">Options</span></code>. Pour les variables de projet, cela se fait depuis  <code class="docutils literal"><span class="pre">Propriétés</span> <span class="pre">du</span> <span class="pre">projet</span></code> (cela permet aussi d’ajouter vos propres variables).</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image18" src="../../../_images/19aca1d680543a4013c53ba80406bdd5ebff88c5.png" /></p>
+</div>
+</div>
+<div class="section" id="analysis-tools">
+<h2><a class="toc-backref" href="#id10">Outils d’analyse</a><a class="headerlink" href="#analysis-tools" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-added-number-of-vertices-to-derived-fields-in-identify-tool">
+<h3><a class="toc-backref" href="#id11">Fonctionnalité : ajout du nombre de sommets dans un champs de l’outil «&nbsp;identifiez les entités&nbsp;»</a><a class="headerlink" href="#feature-added-number-of-vertices-to-derived-fields-in-identify-tool" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En utilisant «&nbsp;identifiez les entités&nbsp;» sur une ligne, vous aurez désormais accès au nombre de sommets de l’entité comme attribut supplémentaire.</p>
+</div>
+<div class="section" id="feature-raster-alignment-tool">
+<h3><a class="toc-backref" href="#id12">Fonctionnalité : outil d’alignement des raster</a><a class="headerlink" href="#feature-raster-alignment-tool" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ce nouvel outil dans la bibliothèque qgis_analysis est maintenant capable de prendre plusieurs raster en entrée et :</p>
+<ul class="simple">
+<li>Reprojète vers le même SRC</li>
+<li>Rééchantilloner à la même taille de cellule et décalage dans la grille</li>
+<li>Découpe une région d’intérêt</li>
+<li>Rééchantillonne les valeurs lorsque cela est nécessaire</li>
+</ul>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Martin Dobias de <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> en sous-traitance de <a class="reference external" href="http://kartoza.com/">Kartoza</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://dfat.gov.au">DFAT</a> pour <a class="reference external" href="http://inasafe.org/">InaSAFE project</a></p>
+<p><img alt="image2" src="../../../_images/c613bb210ba0e85eb3b479ab79cd895827c22602.png" /></p>
+</div>
+<div class="section" id="feature-geometry-checker-and-geometry-snapper-plugins">
+<h3><a class="toc-backref" href="#id13">Fonctionnalité : Extension d’aimantation et vérificateur de géométrie</a><a class="headerlink" href="#feature-geometry-checker-and-geometry-snapper-plugins" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Deux nouvelles extensions (que vous devez ajouter manuellement dans le gestionnaire d’extensions) sont disponibles pour valider et corriger les géométries.</p>
+<p>Avec l’outil <strong>Géometry Snaper</strong>, vous pouvez aligner les lignes et sommets d’un vecteur vers celles d’un autre vecteur selon une tolérance pouvant être personalisée.</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Sandro Mani <a class="reference external" href="http://www.sourcepole.ch/">Sourcepole AG</a></p>
+<p><strong>Cette fonctionnalité a été financée par :</strong> <a class="reference external" href="http://www.sogis.so.ch/">Canton of Solothurn</a></p>
+<p><img alt="image3" src="../../../_images/319136e65a51c7a8d76adac7aef89806db170c2e.png" /></p>
+</div>
+</div>
+<div class="section" id="application-and-project-options">
+<h2><a class="toc-backref" href="#id14">Options de l’application et du projet</a><a class="headerlink" href="#application-and-project-options" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-encrypted-password-management">
+<h3><a class="toc-backref" href="#id15">Fonctionnalité : gestion des mots de passe cryptés</a><a class="headerlink" href="#feature-encrypted-password-management" title="Lien permanent vers ce titre">¶</a></h3>
+<p>QGIS 2.12 introduit un nouveau système d’authentification (voir <a class="reference external" href="https://github.com/dakcarto/QGIS-Enhancement-Proposals/blob/auth-system/qep-14-authentication-system.rst">PR 2330, QEP 14</a>. Voici ce qu’il apporte:</p>
+<ul class="simple">
+<li>Configurations d’authentification chiffrées par un mot de passe principale et stockées dans une base de données SQLite</li>
+<li>Architecture basée sur un mécanisme d’extension d’authentification (comme les fournisseurs de données)</li>
+<li>Extension d’authentification basique</li>
+<li>Extension d’authentification basique intégrée pour les connexions PostGIS et les fournisseurs OWS</li>
+<li>Configuration classique avec utilisateur/mot de passe (toujours fonctionnelle)</li>
+<li>Configurations pour les connexions serveurs SSL (enregistrement d’exceptions ou de configurations customisées pour les erreurs de connexion SSL)</li>
+</ul>
+<p>Authentification avec une IGC:</p>
+<ul class="simple">
+<li>Import de certificats d’Autorités de Certification supplémentaires, de certificats intermédiaires et de lots de certificats d’identification personnelle</li>
+<li>Composants de gestion des certificats comme dans Firefox</li>
+<li>Extensions d’authentification pour les lots de certificats au format PEM et PKCS#12 sur disque ou dans les identités personnelles</li>
+<li>Intégration avec les connexions du fournisseur de données OWS (les connexions avec PostGIS et d’autres bases de données demandent encore un peu de travail)</li>
+</ul>
+<p>Pour le cas de projets partagés incluant un répertoire réseau, il est possible d’éditer l’identifiant de la configuration d’authentification (authcfg) avec une référence commune à l’ensemble des utilisateurs.</p>
+<p>Etant donné que l’identifiant de la configuration d’authentification est stocké dans le fichier de projet, chaque utilisateur doit juste faire en sorte d’avoir une configuration d’authentification avec leurs éléments d’authentification (compte/mot de passe) et que cette configuration prenne le même identifiant que celui qui est présent dans le fichier projet. Ensuite, lors du chargement des ressources, la même configuration d’authentification est appellée sur l’ensemble des postes QGIS en utilisant les éléments d’authentification respectifs de chaque utilisateur.</p>
+<p>Dans la boîte de dialogue de gestion des couches non trouvées, les utilisateurs peuvent directement ajouter/modifier/supprimer les configuration d’authentification et mettre à jour l’URI de la source de données correspondante. Ainsi, dans le scénario d’un projet partagé, l’utilisateur peut immédiatement ajouter une nouvelle configuration d’authentification adaptée (et voir exactement quel est l’identifiant de configuration d’authentification qui doit être utilisé) lors du chargement du projet.</p>
+<p>Pour le moment, le paramétrage automatique du mot de passe principal peut être configuré via Python ou via une extension C++ lors du lancement en utilisant un appel de <code class="docutils literal"><span class="pre">QgsAuthManager::instance()-&gt;setMasterPassword(</span> <span class="pre">&quot;monmotdepasse&quot;,</span> <span class="pre">true</span> <span class="pre">)</span></code> ou via la variable d’environnement QGIS_AUTH_PASSWORD_FILE qui est utilisée pour pointer vers un fichier contenant le mot de passe principal.</p>
+<p><strong>Note:</strong> for QGIS Server, vous pouvez également utiliser QGIS_AUTH_DB_DIR_PATH pour paramétrer le chemin vers le répertoire contenant qgis-auth.db et QGIS_AUTH_PASSWORD_FILE pour paramétrer le chemin vers un fichier contenant le mot de passe principal sur le serveur.</p>
+<p>Documents d’exemple sur l’IGC: <a class="reference external" href="https://github.com/dakcarto/QGIS-Enhancement-Proposals/blob/auth-system/extras/auth-system/pkiuser.rst">https://github.com/dakcarto/QGIS-Enhancement-Proposals/blob/auth-system/extras/auth-system/pkiuser.rst</a></p>
+<p><strong>Cette fonctionnalité a été développé par:</strong> Larry Shaffer</p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://boundlessgeo.com/">Boundless Spatial, Inc.</a></p>
+<p><img alt="image4" src="../../../_images/d6c9305a8dcaea3a5a6c039dec40d50e0caf23ff.png" /></p>
+</div>
+</div>
+<div class="section" id="browser">
+<h2><a class="toc-backref" href="#id16">Navigateur</a><a class="headerlink" href="#browser" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-improvements-to-postgis-connections-in-browser">
+<h3><a class="toc-backref" href="#id17">Fonctionnalité : Améliorations des connexions PostGIS dans le navigateur</a><a class="headerlink" href="#feature-improvements-to-postgis-connections-in-browser" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le navigateur QGIS gère maintenant la fonctionnalité supplémentaire pour les connexions PostGIS, incluant la possibilité de <strong>créer, renommer et supprimer les schémas</strong>, <strong>le renommage et le vidage des couches</strong> ainsi que la <strong>copie de tables d’un schéma à l’autre</strong>.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Copie des tables par:</strong> Jürgen Fischer de <a class="reference external" href="http://www.norbit.de/">norBIT GmbH</a></p>
+<p><img alt="image5" src="../../../_images/00820dbcf67c97b61154e7e1f41af0397009b548.png" /></p>
+</div>
+</div>
+<div class="section" id="data-providers">
+<h2><a class="toc-backref" href="#id18">Fournisseurs de données</a><a class="headerlink" href="#data-providers" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-postgis-provider-improvements">
+<h3><a class="toc-backref" href="#id19">Fonctionnalité : Amélioration du connecteur PostGIS</a><a class="headerlink" href="#feature-postgis-provider-improvements" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les améliorations suivantes ont été apportées au prestataire PostGIS :</p>
+<ul class="simple">
+<li>amélioration des performances pour les rendus basés sur des ensembles de règles pour les couches PostGIS</li>
+<li>prise en charge des clés composées pour les vues</li>
+</ul>
+<p><strong>Clefs composées développée par:</strong> Jürgen Fischer de <a class="reference external" href="http://www.norbit.de/">norBIT GmbH</a></p>
+<p><img alt="image6" src="../../../_images/bc56564581d97034137956cd27e945b3d3ceb3df.png" /></p>
+</div>
+</div>
+<div class="section" id="data-management">
+<h2><a class="toc-backref" href="#id20">Gestion de données</a><a class="headerlink" href="#data-management" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-dbmanager-improvements">
+<h3><a class="toc-backref" href="#id21">Fonctionnalité : Améliorations du gestionnaire de bases de données</a><a class="headerlink" href="#feature-dbmanager-improvements" title="Lien permanent vers ce titre">¶</a></h3>
+<p>De nombreuses améliorations ont été ajoutées au Gestionnaire de bases de données :</p>
+<ul class="simple">
+<li>Dans DB Manager, vous pouvez maintenant exporter vos données dans n’importe quel format géré par OGR. Auparavant seul le format Shapefile était géré.</li>
+<li>Oracle Spatial est maintenant géré dans le Gestionnaire de Base de données</li>
+<li>Lors de l’import de données dans une table, vous pouvez utiliser la nouvelle option <strong>Importer uniquement les entités sélectionnées</strong> pour limiter les données à récupérer.</li>
+<li>Afin de mieux gérer l’espace occupé par les fenêtres, les nouvelles fenêtres de requête sont affichées sous forme d’onglet.</li>
+</ul>
+<p><img alt="image7" src="../../../_images/daa22cc4517b58f2457d78781d4dbab12663ce9d.png" /></p>
+</div>
+<div class="section" id="feature-conditional-formatting-for-attribute-table-cells">
+<h3><a class="toc-backref" href="#id22">Fonctionnalité : Formatage conditionnel des cellules de la table attributaire</a><a class="headerlink" href="#feature-conditional-formatting-for-attribute-table-cells" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il s’agit d’une amélioration importante dans le rendu de la table attributaire dans QGIS. Vous pouvez désormais définir l’affichage des cellules de la table à l’aide de règles. Ainsi, par exemple, vous pouvez colorier en rouge toutes les cellules de la table affichant une population de moins de 50 000 habitants. Cette option est activée à l’aide de la nouvelle icône sur la barre d’outils de la table, en haut à droite de la fenêtre. Plus d’informations sur cette fonctionnalité dans ` l’article du blog de Nathan Woodrow &lt;<a class="reference external" href="http://nathanw.net/2015/08/20/mixing-a-bit-of-excel-into-qgis-conditional-formatted-table-cells/">http://nathanw.net/2015/08/20/mixing-a-bit-of-excel-into-qgis-conditional-formatted-table-cells/</a>&gt;`__.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image8" src="../../../_images/ae9afefda043d31ef7718528d506d98e90e7a1f7.png" /></p>
+</div>
+<div class="section" id="feature-support-for-relative-paths-in-widgets">
+<h3><a class="toc-backref" href="#id23">Fonctionnalité : Support des chemins relatifs dans les widgets</a><a class="headerlink" href="#feature-support-for-relative-paths-in-widgets" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour les types de widgets d’édition suivants:</p>
+<ul class="simple">
+<li>Nom de fichier</li>
+<li>Photo</li>
+<li>Vue Web</li>
+</ul>
+<p>Si le chemin sélectionné par le sélectionneur de fichiers est situé dans le même répertoire que le fichier de projet .qgs ou dans un répertoir situé dessous, les chemins sont convertis en chemins relatifs. Cela améliore la portabilité d’un projet QGIS avec des informations multimédias embarquées.</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Matthias Kuhn de <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://www.alta.is/">Alta ehf</a></p>
+<p><img alt="image9" src="../../../_images/fcf703990b5cb743ffa5cc7778cb151022ff2d20.png" /></p>
+</div>
+</div>
+<div class="section" id="digitising">
+<h2><a class="toc-backref" href="#id24">Numérisation</a><a class="headerlink" href="#digitising" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-digitising-improvements">
+<h3><a class="toc-backref" href="#id25">Fonctionnalité : Améliorations de la numérisation</a><a class="headerlink" href="#feature-digitising-improvements" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans QGIS 2.10, nous avons mentionné qu’il y avait eu la mise en place d’une nouvelle architecture de géométrie pour QGIS mais que toutes les fonctionnalités n’étaient pas implémentées pour les outils de numérisation. Avec QGIS 2.12, il est maintenant possible de <strong>créer des courbes / “polylignes circulaires`</strong>. Prenez néanmoins note que vous devez utiliser un fournisseur de données qui gère les courbes (ex: PostGIS, GML ou WFS). Les améliorations suivantes des outils de numérisation ont également été introduites dans QGIS 2.12:</p>
+<ul class="simple">
+<li>outil de création de polylignes circulaires avec deux points et un rayon</li>
+<li>outil de création de polylignes circulaires avec un point de départ, un point de courbe et un point terminal</li>
+<li>Permet d’annuler le dessin d’une nouvelle entité.</li>
+<li>affichage d’une table des nœuds lors de l’édition avec l’outil de nœuds. Cette table vous permet de renseigner manuellement les coordonnées x et y des nœuds ainsi que les valeurs z et m (en fonction du type de couche).</li>
+</ul>
+<p>De plus, la plupart des outils de modification et d’édition de géométrie ont été mis à jour pour gérer correctement les couches contenant des dimensions z ou m.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> Marco Hugentobler de <a class="reference external" href="http://www.sourcepole.ch/">Sourcepole AG</a></p>
+<p><strong>Cette fonctionnalité a été financée par :</strong> <a class="reference external" href="http://www.sogis.so.ch/">Canton of Solothurn</a></p>
+<p><img alt="image10" src="../../../_images/215ead2dd5e43e394d47169a7fd82aa5cc08b6b6.png" /></p>
+</div>
+</div>
+<div class="section" id="labelling">
+<h2><a class="toc-backref" href="#id26">Étiquetage</a><a class="headerlink" href="#labelling" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-data-defined-quadrant-when-in-around-point-mode">
+<h3><a class="toc-backref" href="#id27">Fonctionnalité : Définition par les données du quadrant pour le mode «&nbsp;Autour du point&nbsp;»</a><a class="headerlink" href="#feature-data-defined-quadrant-when-in-around-point-mode" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il est maintenant possible d’indiquer un quadrant via les données de la couche lorsqu’une étiquette d’un point est paramétrée avec le mode de placement «&nbsp;Autour du point&nbsp;». Cela vous permet de passer outre la position du quadrant pour une étiquette spécifique alors que les autres suivront la règle du placement automatique.</p>
+<p>Voir <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">cet article</a> pour plus de détails.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image19" src="../../../_images/27a58b65cf449505c92cc6c8470a93d1f09893a1.png" /></p>
+</div>
+<div class="section" id="feature-draw-only-labels-which-fit-inside-polygons">
+<h3><a class="toc-backref" href="#id28">Fonctionnalité : Afficher uniquement les étiquettes qui rentrent à l’intérieur des polygones</a><a class="headerlink" href="#feature-draw-only-labels-which-fit-inside-polygons" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une nouvelle option ajoutée aux couches de polygones permet de limiter l’affichage des étiquettes à celles qui sont complètement contenues dans le polygone.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image20" src="../../../_images/5c8461abe3aa5483c3243c0f145940b0d5fd1310.png" /></p>
+</div>
+<div class="section" id="feature-control-priority-of-labeling-obstacles">
+<h3><a class="toc-backref" href="#id29">Fonctionnalité : Contrôle de la priorité des obstacles aux étiquettes</a><a class="headerlink" href="#feature-control-priority-of-labeling-obstacles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans QGIS 2.12, il est maintenant possible d’indiquer la priorité des obstacles aux étiquettes. Cela vous permet de créer des étiquettes qui recouvreront les entités de certaines couches plutôt que d’autres. La priorité peut également être définie par les données pour permettre à certaines entités d’être plus facilement couvertes que d’autres. Vous pouvez également utiliser des expressions ou des valeurs de champs pour contrôler si une entité spécifique d’une couche agira en tant qu’obstacle pour les étiquettes.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image21" src="../../../_images/f07a082bd4e62f059788c18a9de353107b8bdc44.png" /></p>
+</div>
+<div class="section" id="feature-new-options-to-control-how-polygon-layers-act-as-obstacles">
+<h3><a class="toc-backref" href="#id30">Fonctionnalité : Nouvelles options de contrôle des couches polygones en obstacles aux étiquettes</a><a class="headerlink" href="#feature-new-options-to-control-how-polygon-layers-act-as-obstacles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>De nouvelles options ont été ajoutées pour contrôler comment les étiquettes doivent se placer pour éviter de recouvrir les entités des couches de polygones. Les options permettent soit d’éviter le placement sur l’intérieur des polygones, soit d’éviter le placement sur les bordures des polygones. L’évitement du placement sur les bordures est utile pour  les couches de limites régionales où les entités recouvrent entièrement une zone. Dans ce cas, il est impossible d’éviter de placer des étiquettes au sein de ces entités et le rendu est bien meilleur quand on évite les bordures. Il en résulte un meilleur placement cartographique des étiquettes.</p>
+<p>Voir <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">cet article</a> pour plus de détails.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image22" src="../../../_images/e37943c654080e33219acb5e519970cf748c87bf.png" /></p>
+</div>
+<div class="section" id="feature-data-defined-control-over-label-priority">
+<h3><a class="toc-backref" href="#id31">Fonctionnalité : Définition de la priorité de contrôle sur les étiquettes par les données</a><a class="headerlink" href="#feature-data-defined-control-over-label-priority" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette fonctionnalité souvent réclamée permet aux utilisateurs de paramétrer la priorité de chaque étiquette. Dans les versions antérieures, QGIS ne permettait de paramétrer la priorité des étiquettes qu’au niveau de la couche entière mais il n’y avait aucune option pour contrôler chaque entité au sein d’une même couche. Maintenant, vous pouvez utiliser une expression définie par les données ou un champ pour prioriser l’affichage des étiquettes sur certaines entités par rapport à d’autres au sein de la même couche !</p>
+<p>Voir <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">cet article</a> pour plus de détails</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image23" src="../../../_images/bd185cde38420f50fb540d742d178768d28ac577.png" /></p>
+</div>
+<div class="section" id="feature-option-for-obstacle-only-layers">
+<h3><a class="toc-backref" href="#id32">Fonctionnalité : Option pour les couches d’obstacle</a><a class="headerlink" href="#feature-option-for-obstacle-only-layers" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Elle permet aux utilisateurs d’indiquer qu’une couche est simplement un obstacle pour les étiquettes des autres couches sans qu’elle ait besoin d’avoir elle-même un rendu d’étiquette. Cela signifie qu’une couche non étiquetée peut se comporter comme un obstacle pour les étiquettes des autres couches, de manière que l’affichage d’étiquettes au dessus des entités de cette couche d’obstacle soit découragé. Cela permet également l’amélioration du placement automatique des étiquettes en évitant le chevauchement des étiquettes et des entités des autres couches.</p>
+<p>Dans la capture d’écran, vous pouvez observer que les Rues ont l’option «&nbsp;Éviter que les autres étiquettes ne recouvrent des objets dans cette couche&nbsp;» activée. Les étiquettes rouges dérivées des géométries de polygone sont placées de manière à éviter l’intersection avec l’axe des rues. Vous devez activer le placement «&nbsp;Horizontal&nbsp;» ou «&nbsp;Libre&nbsp;» sur la couche de polygone pour obtenir un résultat correct.</p>
+<p>A noter qu’il est également possible à la fois d’étiquetter une couche mais également de la faire se comporter en tant que couche d’obstacle en activant la case à cocher «&nbsp;Éviter que l’étiquette ne recouvre des objets&nbsp;» dans l’onglet «&nbsp;Rendu&nbsp;» des paramètres d’étiquettes.</p>
+<p>Voir <a class="reference external" href="http://nyalldawson.net/2015/07/recent-labelling-improvements-in-qgis-master/">cet article</a> pour plus de détails.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image24" src="../../../_images/de1eae1359ce92045d51c6fa9bc3f014a3f3ae67.png" /></p>
+</div>
+<div class="section" id="feature-rule-based-labeling">
+<h3><a class="toc-backref" href="#id33">Fonctionnalité : Étiquettes basées sur des règles</a><a class="headerlink" href="#feature-rule-based-labeling" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les étiquettes des entités peuvent maintenant être stylées en utilisant des règles qui permettent plus de contrôles sur le placement et le style. De la même manière que les rendus cartographiques basés sur des ensembles de règles, les étiquettes basées sur des règles peuvent être hiérarchisées pour permettre plus de souplesse dans les options. Par exemple, vous pouvez faire un rendu différent des étiquettes selon la taille de l’entité sur lesquelles elles seront dessinées (comme illustré par la capture d’écran).</p>
+<p>Voir <a class="reference external" href="http://www.lutraconsulting.co.uk/blog/2015/10/25/rule-based-labeling/">le blog</a> pour plus de détails</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Martin Dobias de <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> en sous-traitance de <a class="reference external" href="http://www.gis3w.it/">Gis3W</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> Tuscany Region (Italie) - SITA (CIG: 63526840AE)</p>
+<p><img alt="image25" src="../../../_images/8846f57f0395e7f6b2543a92a5c55b67e8b19923.png" /></p>
+</div>
+</div>
+<div class="section" id="map-composer">
+<h2><a class="toc-backref" href="#id34">Composeur de cartes</a><a class="headerlink" href="#map-composer" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-atlas-navigation-improvements">
+<h3><a class="toc-backref" href="#id35">Fonctionnalité : Amélioration de la navigation dans l’atlas de cartes</a><a class="headerlink" href="#feature-atlas-navigation-improvements" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez maintenant paramétrer un champ ou une expression comme «&nbsp;nom de page&nbsp;» pour les compositions d’atlas. Une liste déroulante de numéro de page a été ajoutée dans la barre d’outils de l’atlas. Elle présente une liste des numéros de page disponibles ainsi que les noms. Cela vous permet de sauter directement à une page au sein de l’atlas.</p>
+<p>Le nom de page peut également être utilisé au sein des expressions de symbologie et d’étiquettes pour permettre la création de styles avancés des entités de l’atlas, en se basant sur le nom de la page.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image26" src="../../../_images/bbf6147ef8be9d209fa188d6c524bce9d13d5ba8.png" /></p>
+</div>
+<div class="section" id="feature-custom-format-for-grid-annotations">
+<h3><a class="toc-backref" href="#id36">Fonctionnalité : Format personnalisé pour les annotations de grille</a><a class="headerlink" href="#feature-custom-format-for-grid-annotations" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les annotations de grille du composeur peuvent maintenant être formattées en utilisant un format personnalisé qui est construit en utilisant le moteur d’expression de QGIS. Vous pouvez maintenant utiliser n’importe quel format de grille ésotérique dont vos cartes ont besoins !</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image27" src="../../../_images/a6cd03594ca802015ef4a5bf7806cc1ce291214b.png" /></p>
+</div>
+<div class="section" id="feature-multiline-text-handling-and-automatic-text-wrapping-in-composer-attribute-tables">
+<h3><a class="toc-backref" href="#id37">Fonctionnalité : Gestion du texte multi-lignes et du redimensionnement automatique de texte dans les tables d’attributs du composeur</a><a class="headerlink" href="#feature-multiline-text-handling-and-automatic-text-wrapping-in-composer-attribute-tables" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les tables d’attributs du composeur incorpore maintenant une gestion complète des chaînes de caractères sur plusieurs lignes. Le contrôle de l’alignement vertical du texte au sein d’une cellule a été ajouté ainsi que des options pour redimensionner le texte sur certains caractères ou automatiquement pour s’adapter à la taille des colonnes. Pour imposer le redimensionnement automatique du texte avec des hauteurs automatiques de ligne, paramétrez la largeur de la colonne avec une taille fixe.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://gis.uster.ch/">City of Uster, Suisse</a></p>
+<p><img alt="image28" src="../../../_images/db66b56f79949779ea32126bd22f2f1c9d4b55e6.png" /></p>
+</div>
+<div class="section" id="feature-advanced-customisation-of-cell-background-color">
+<h3><a class="toc-backref" href="#id38">Option : Personnalisation avancée de la couleur d’arrière plan d’une cellule.</a><a class="headerlink" href="#feature-advanced-customisation-of-cell-background-color" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ce changement permet aux utilisateurs de paramétrer différentes couleurs pour les alternances de lignes et de colonnes, pour les premières/dernières lignes/colonnes et pour les lignes d’en-tête au sein des tables d’attributs du composeur.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://www.morges.ch/">Ville de Morges</a></p>
+<p><img alt="image29" src="../../../_images/68266f6b11599dfa226952455ca150448a5d082a.png" /></p>
+</div>
+<div class="section" id="feature-add-fit-page-to-contents-option-and-options-for-cropping-exports-to-contents">
+<h3><a class="toc-backref" href="#id39">Fonctionnalité : Ajout de l’option d’adaptation de la page à son contenu et des options de rognage de l’export au contenu</a><a class="headerlink" href="#feature-add-fit-page-to-contents-option-and-options-for-cropping-exports-to-contents" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une nouvelle option a été ajouté au panneau de composition pour modifier la taille de la composition à son contenu avec, en option, des marges supplémentaires si nécéssaires.</p>
+<p>Les exports du composeur peuvent également être rognés à leur contenu. Lorsque cette option est sélectionnée, les sorties images du composeur n’inclueront que les zones de la composition qui comportent un contenu. Il existe également une option pour les marges, pour en ajouter autour des emprises d’objet, si nécéssaire.</p>
+<p>Si la composition inclue une seule page, la sortie sera dimensionnée pour inclure l’ensemble de la composition. Si la composition est à pages multiples, chaque page sera rognée pour inclure uniquement la zone de la page contenu des objets.</p>
+<p>Une nouvelle boîte de dialogue des options d’export au format image a été ajoutée pour faciliter cela. Elle inclue des raccourcis pour passer outre la résolution d’impression ou les dimensions de l’image exportée.</p>
+<p><strong>Sponsorisé par:</strong> <a class="reference external" href="https://www.niwa.co.nz/">NIWA</a></p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image30" src="../../../_images/38572cf4aa662cc4463c2a29f3d5ca38aa382632.png" /></p>
+</div>
+<div class="section" id="feature-force-vector-layers-to-render-as-a-raster-images">
+<h3><a class="toc-backref" href="#id40">Fonctionnalité : Forcer le rendu en images raster des couches vecteur</a><a class="headerlink" href="#feature-force-vector-layers-to-render-as-a-raster-images" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une nouvelle option a été ajoutée sous l’onglet «&nbsp;Rendu&nbsp;» des propriétés de la couche pour forcer la couche vecteur a être rendue comme un raster. Les couches extrêmement détaillées (ex: les couches de polygones avec un grand nombre de nœuds) peuvent entraîner des exports de composeur au format PDF/SVG de très grande taille car tous les nœuds sont inclus dans le fichier exporté. Cela entraîne souvent un fichier d’export long à ouvrir dans les programmes externes. Maintenant, vous pouvez forcer ces couches à être rasterisées sur une base individuelle de manière à ce que les fichiers d’export n’aient pas à inclure l’ensemble des nœuds contenus dans ces couches. Il en résulte des fichiers PDF/SVG plus petits qui sont plus rapides à ouvrir.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image31" src="../../../_images/0127fe10ecae31dbcd133492c93f33b0d569dcba.png" /></p>
+</div>
+<div class="section" id="feature-data-defined-control-over-map-layers-and-style-presets">
+<h3><a class="toc-backref" href="#id41">Fonctionnalité : Contrôle défini par les données sur les couches et les réglages de style</a><a class="headerlink" href="#feature-data-defined-control-over-map-layers-and-style-presets" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un nouveau contrôle défini par les données a été ajouté pour les couches et les réglages de styles pour l’affichage dans un objet carte de composeur. L’expression définie par les données des couches de la carte doit produire une liste de couches délimitée par des caractères | (pipe) qui seront affichés dans la carte; ou encore, l’expression qui gère les réglages de style doit produire le nom d’un réglage de style existant.</p>
+<p>En utilisant ce contrôle sur les couches de la carte, on peut créer une sorte d’atlas basé sur des couches où les couches affichées changent selon les pages de l’atlas plutôt qu’en utilisant une combinaison changeante d’emprises de carte. Un exemple peut être illustré en créant un atlas qui boucle sur différentes unités administrative et en même temps, qui boucle sur plusieurs cartes historiques ou plusieurs images aériennes.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://gis.uster.ch/">City of Uster, Suisse</a></p>
+<p><img alt="image32" src="../../../_images/a8dc3b35df4020897e39c81bd22a469ab5ea6225.png" /></p>
+</div>
+<div class="section" id="feature-option-to-hide-pages-from-view-export">
+<h3><a class="toc-backref" href="#id42">Fonctionnalité : Option pour masquer des pages de la vue/export</a><a class="headerlink" href="#feature-option-to-hide-pages-from-view-export" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il existe maintenant une option pour masquer l’affichage des pages lors de l’édition et de l’export des compositions. Cette option est utile pour les compositions qui ne sont pas destinées à l’impression et qui ne sont pas liées à des tailles de page prédéfinies. Vous pouvez masquer les pages et ajouter ou redimenssionner les objets comme vous le désirez sans la distraction visuelle des bordures de la page !</p>
+<p><strong>Sponsorisé par:</strong> <a class="reference external" href="https://www.niwa.co.nz/">NIWA</a></p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2><a class="toc-backref" href="#id43">Extensions</a><a class="headerlink" href="#plugins" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-update-of-the-grass-plugin">
+<h3><a class="toc-backref" href="#id44">Fonctionnalité : Mise à jour de l’extension GRASS</a><a class="headerlink" href="#feature-update-of-the-grass-plugin" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le plugin GRASS a été mis à jour pour gérer GRASS 7. Les couches GRASS peuvent être accessibles et chargées depuis le panneau de navigation ou par QGIS Browser. Les données vecteur GRASS peuvent être éditées directement dans QGIS. Le projet contient les modules fonctionnels suivants:</p>
+<ul class="simple">
+<li>Mise à jour de la bibliothèque d’extensions et compilation multi-version</li>
+<li>Intégration dans QGIS Browser et dans le panneau de navigation</li>
+<li>Gestion des ensembles de couches, des modules et du shell pour l’analyse de données</li>
+<li>édition de vecteur</li>
+</ul>
+<p>Pour les utilisateurs de GRASS 6 et 7, vous trouverez que l’intégration de GRASS dans QGIS est maintenant plus fluide. Vous pouvez créer des couches GRASS directement dans le panneau de QGIS Browser, vous pouvez styler les couches vecteur GRASS en utilisant les outils de style de QGIS ainsi qu’utiliser les outils de numérisation de QGIS pour créer de nouvelles géométries vectorielles dans un jeu de données GRASS.</p>
+<p>Voir aussi <a class="reference external" href="http://www.gissula.eu/qgis-grass-plugin-crowdfunding/">projet de mise à niveau de l’extension GRASS dans QGIS</a> et <a class="reference external" href="http://www.gissula.eu/qgis-grass-plugin-crowdfunding/progress.html">rapport de progression</a></p>
+<p><strong>Cette fonctionnalité a été développé par :</strong> <a class="reference external" href="http://www.gissula.eu/">Radim Blazek</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> par financement participatif, voir la <a class="reference external" href="http://www.gissula.eu/qgis-grass-plugin-crowdfunding/">page du projet</a></p>
+<p><img alt="image33" src="../../../_images/fb9ac25e9ca6c5e4030167e289435e995f5af8f5.png" /></p>
+</div>
+</div>
+<div class="section" id="programmability">
+<h2><a class="toc-backref" href="#id45">Programmation</a><a class="headerlink" href="#programmability" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-map-tools-moved-from-app-gui">
+<h3><a class="toc-backref" href="#id46">Fonctionnalité : Outils de carte déplacés de app-&gt;gui</a><a class="headerlink" href="#feature-map-tools-moved-from-app-gui" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette modification permet de réutiliser les outils de carte depuis des scripts Python ou des extensions Python</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Matthias Kuhn de <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://www.sige.ch/">SIGE</a></p>
+</div>
+<div class="section" id="feature-editing-layers-via-with-edit-layer">
+<h3><a class="toc-backref" href="#id47">Fonctionnalité : Édition de couches via `with edit(layer):`</a><a class="headerlink" href="#feature-editing-layers-via-with-edit-layer" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Exemple:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="kn">from</span> <span class="nn">qgis.core</span> <span class="k">import</span> <span class="n">edit</span>
+
+<span class="k">with</span> <span class="n">edit</span><span class="p">(</span><span class="n">layer</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">()</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+    <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">5</span>
+    <span class="n">layer</span><span class="o">.</span><span class="n">updateFeature</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ceci appellera automatiquement commitChanges() à la fin. En cas d’exception levée, toutes les modifications seront automatiquement annulées grâce à rollBack().</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Matthias Kuhn de <a class="reference external" href="http://www.opengis.ch/">OpenGIS</a></p>
+</div>
+<div class="section" id="feature-new-api-for-labeling-engine-qgslabelingenginev2">
+<h3><a class="toc-backref" href="#id48">Fonctionnalité : Nouvelle API du moteur d’étiquettes (QgsLabelingEngineV2)</a><a class="headerlink" href="#feature-new-api-for-labeling-engine-qgslabelingenginev2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’idée est de rendre le moteur plus flexible comparé à QgsPalLabeling :</p>
+<blockquote>
+<div><ul class="simple">
+<li>abstraction des étiquettes et des diagrammes du moteur en lui-même</li>
+<li>permet de disposer de plusieurs types d’étiquettes par couche</li>
+<li>gère les fournisseurs d’étiquettes personnalisés (ex: implémentés dans des extensions)</li>
+<li>rend le moteur d’étiquette indépendant du moteur de rendu de la carte</li>
+<li>améliore les tests automatiques du moteur d’étiquettes et de ses composants</li>
+</ul>
+</div></blockquote>
+<p>Voir <a class="reference external" href="http://www.lutraconsulting.co.uk/blog/2015/10/25/rule-based-labeling/">le blog</a> pour plus de détails</p>
+<p><strong>Cette fonctionnalité a été développée par:</strong> Martin Dobias de <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a> en sous-traitance de <a class="reference external" href="http://www.gis3w.it/">Gis3W</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> Tuscany Region (Italie) - SITA (CIG: 63526840AE)</p>
+</div>
+<div class="section" id="feature-open-scripts-in-external-editor">
+<h3><a class="toc-backref" href="#id49">Fonctionnalité : Ouvrir les scripts dans un éditeur externe</a><a class="headerlink" href="#feature-open-scripts-in-external-editor" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pythonistas, réjouissez-vous - vous pouvez désormais ouvrir vos scripts dans un éditeur externe à l’aide du nouveau bouton ajouté à la console.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image34" src="../../../_images/78acf0058f4306bf408a58df3762dff5986633a7.png" /></p>
+</div>
+<div class="section" id="feature-new-classes-for-pyqgis-programs">
+<h3><a class="toc-backref" href="#id50">Fonctionnalité : Nouvelles classes pour les programmes PyQGIS</a><a class="headerlink" href="#feature-new-classes-for-pyqgis-programs" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une nouvelle classe QgsStringUtils a été ajoutée et elle permet aux scripts de PyQGIS d’utiliser les nouveaux algorithmes de correspondance floue ajoutés dans la version 2.12. Ces fonctions permettent de trouver la distance de Levenshtein entre deux chaînes de caractères ainsi que de calculer la représentation phonetique Soundex d’une chaîne de caractères. Ces algorithmes ont été optimisés pour la performance et vous pouvez les appliquer à des millions de chaînes de caractères !</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+</div>
+</div>
+<div class="section" id="qgis-server">
+<h2><a class="toc-backref" href="#id51">QGIS Server</a><a class="headerlink" href="#qgis-server" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-qgis-server-python-api">
+<h3><a class="toc-backref" href="#id52">Fonctionnalité : API python de QGIS Server</a><a class="headerlink" href="#feature-qgis-server-python-api" title="Lien permanent vers ce titre">¶</a></h3>
+<p>QGIS Server est empaqueté sous forme de bibliothèque avec une API initiale (mais en accroissement) ainsi que des liens Python. Avec la nouvelle API, nous disposons d’un jeu de tests unitaires Python pour le composant principal du serveur ainsi que pour ses extensions. Invoquer le serveur depuis Python est maintenant aussi facile que:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.server</span> <span class="k">import</span> <span class="n">QgsServer</span>
+<span class="n">headers</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span>  <span class="n">QgsServer</span><span class="p">()</span><span class="o">.</span><span class="n">handleRequest</span><span class="p">(</span><span class="n">my_query_string</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pour plus d’informations, voir <a class="reference external" href="http://www.itopen.it/qgis-server-binding-news/">cet article</a></p>
+<p><strong>Cette fonctionnalité a été développée et financée par:</strong> Alessandro Pasotti de <a class="reference external" href="http://www.itopen.it/">ItOpen</a></p>
+</div>
+<div class="section" id="feature-getmap-in-dxf-format">
+<h3><a class="toc-backref" href="#id53">Fonctionnalité : getMap en format dxf</a><a class="headerlink" href="#feature-getmap-in-dxf-format" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il est maintenant possible de récupérer le résultat d’une requête GetMap sur WMS en format DXF. Il prend en charge les mêmes fonctionnalités et options disponibles sous QGIS Desktop. Avec les mêmes limitations.</p>
+<div class="line-block">
+<div class="line">Exemple d’URL:</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal"><span class="pre">http://yourserver.org/cgi-bin/qgismapserver.fcgi?</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">map=/path/to/your/projectfile.qgs&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">SERVICE=WMS&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">VERSION=1.3.0&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">REQUEST=GetMAP&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FORMAT=application/dxf&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FORMAT_OPTIONS=SCALE:500;MODE:SYMBOLLAYERSYMBOLOGY&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">FILE_NAME=youroutputfilename.dxf&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">CRS=EPSG:EPSG:21781&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">BBOX=695558.73070825,244430.77224034,697158.88528251,245722.25976142&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">WIDTH=1042&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">HEIGHT=841&amp;</span></code></div>
+<div class="line"><code class="docutils literal"><span class="pre">LAYERS=voscouchesdxf</span></code></div>
+</div>
+</div>
+<p>Voir également <a class="reference external" href="http://docs.qgis.org/2.18/en/docs/user_manual/working_with_ogc/ogc_server_support.html#dxf-export">QGIS en tant que serveur de données OGC</a> pour toutes les options disponibles.</p>
+<p>Dans la capture d’écran, vous pouvez observer le client QGIS Web sur la gauche avec l’export DXF fonctionnel (utilisant QGIS Server) et la même emprise dans Autodesk TrueView sur la droite.</p>
+<p><strong>Cette fonctionnalité a été développée par :*</strong> Marco Hugentobler <a class="reference external" href="http://www.sourcepole.ch/">Sourcepole AG</a></p>
+<p><strong>Cette fonctionnalité a été financée par:</strong> <a class="reference external" href="http://gis.uster.ch/">City of Uster, Suisse</a></p>
+<p><img alt="image35" src="../../../_images/beb2e9c00102c67ae703eac097ffba8866379609.png" /></p>
+</div>
+</div>
+<div class="section" id="symbology">
+<h2><a class="toc-backref" href="#id54">Style</a><a class="headerlink" href="#symbology" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="feature-export-thumbnails-from-style-manager">
+<h3><a class="toc-backref" href="#id55">Fonctionnalité : Exporter des vignettes depuis le gestionnaire de style</a><a class="headerlink" href="#feature-export-thumbnails-from-style-manager" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le gestionnaire de styles vous permet désormais d’exporter des vignettes des styles sélectionnés en format SVG ou PNG.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nathanw.net/">Nathan Woodrow</a></p>
+<p><img alt="image36" src="../../../_images/8861a040751804f6c2691ee4d93d410efd6d99ac.png" /></p>
+</div>
+<div class="section" id="feature-new-option-for-limiting-size-in-mm-when-using-map-unit-sizes">
+<h3><a class="toc-backref" href="#id56">Fonctionnalité : Nouvelle option de limitation de la taille en mm lorsque les tailles sont définies en unités de carte</a><a class="headerlink" href="#feature-new-option-for-limiting-size-in-mm-when-using-map-unit-sizes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Auparavant, la seule option disponible de limite de la plage d’échelle était exprimée en unité de la carte. Vous pouvez maintenant également choisir de limiter la taille de rendu en mm.</p>
+<p><img alt="image37" src="../../../_images/b822235ddb09b4184b926bf2e0acc5c892147d0b.png" /></p>
+</div>
+<div class="section" id="feature-improvements-to-displacement-renderer">
+<h3><a class="toc-backref" href="#id57">Fonctionnalité : Améliorations du moteur de rendu de déplacement de points</a><a class="headerlink" href="#feature-improvements-to-displacement-renderer" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li>Permettre une tolérance en mm/pixels pour le moteur de rendu de déplacement</li>
+<li>Permettre le paramétrage de la transparence des couleurs</li>
+<li>Mode de placement en cercle concentrique (permet un affichage plus compact qu’avec les cercles)</li>
+</ul>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image38" src="../../../_images/33b5f15429279a7ec75dd1f6a2e01b1a7df789ca.png" /></p>
+</div>
+<div class="section" id="feature-all-color-ramps-can-now-be-edited">
+<h3><a class="toc-backref" href="#id58">Fonctionnalité : Toutes les palettes de couleurs peuvent être modifiées</a><a class="headerlink" href="#feature-all-color-ramps-can-now-be-edited" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans QGIS 2.12 les boutons d’édition ont été ajoutés à côté de chaque contrôle de choix des rampes de couleur. Cela vous permet d’éditer facilement une rampe de couleur existante sans avoir besoin de créer une nouvelle rampe et d’écraser l’existante.</p>
+<p><img alt="image39" src="../../../_images/6ca1426e6e9bfd5500b08fb2185ae50a77258892.png" /></p>
+</div>
+<div class="section" id="feature-improved-handling-of-svg-marker-outlines">
+<h3><a class="toc-backref" href="#id59">Fonctionnalité : Amélioration de la gestion des marqueurs de bordure SVG</a><a class="headerlink" href="#feature-improved-handling-of-svg-marker-outlines" title="Lien permanent vers ce titre">¶</a></h3>
+<p>QGIS 2.12 a corrigé un certain nombre de problèmes liés à la gestion des bordures de marqueurs SVG et des symboles de remplissage SVG</p>
+<p>Les versions précédentes de QGIS effectuaient un rendu des bordures avec une taille significativement plus petite que celle qui était paramétrée et le dessin des bordures SVG avec des tailles exprimées en unités de carte était non fonctionnel.</p>
+<p>Ces problèmes ont été corrigés dans QGIS 2.12 mais vous devrez sans doute mettre à jour la symbologie de votre projet si vous avez déjà paramétré des bordures agrandies pour contrer ces bogues. Dans l’image vous pouvez observer la différence entre les marqueurs SVG de QGIS 2.12 vs QGIS 2.10 dans les boîtes de dialogue sur les symboles de couche.</p>
+<p><img alt="image40" src="../../../_images/a678d22393345b4fcc07b5bd023babe383151b46.png" /></p>
+</div>
+<div class="section" id="feature-add-pixels-as-option-for-all-symbology-size-unit-choices">
+<h3><a class="toc-backref" href="#id60">Fonctionnalité : Ajout du pixel comme unité pour la taille des symboles</a><a class="headerlink" href="#feature-add-pixels-as-option-for-all-symbology-size-unit-choices" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans tous les widgets de saisie de taille, une troisième option, «&nbsp;pixel&nbsp;», a été ajoutée aux côtés de «&nbsp;mm&nbsp;» et «&nbsp;unités de carte&nbsp;». Cela concerne la taille des symboles, la largeur des traits, la tailles des tirets, les décalages, etc… Ce paramètre peut notamment être utile lorsque les projets sont destinés à un affichage sur écran plutôt qu’une impression papier.</p>
+<p><strong>Cette fonctionnalité a été développée par :</strong> <a class="reference external" href="http://nyalldawson.net/">Nyall Dawson</a></p>
+<p><img alt="image41" src="../../../_images/cbc683061bcc06764361ab79874f1020ccfe8eb7.png" /></p>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="../visualchangelog210/index.html" title="Modifications apportées par QGIS 2.10"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog214/index.html" title="Modifications apportées par QGIS 2.14"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Utiliser</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" >Modifications en images</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Sauf indication contraire, tout le contenu est sous licence <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Sélectionner des graphiques depuis la collection <a href="http://thenounproject.com" target="_blank">"The Noun Project"</a>.
+        
+        
+      </p>
+      <p class="credit">
+        Vous avez lu une page non traduite ? Ou vous avez observé une erreur de traduction:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">corrigez-moi</a>
+        <br/>
+        Erreur de texte, texte manquant on non explicite:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">corrigez-moi</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

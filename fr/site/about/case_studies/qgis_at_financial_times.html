@@ -1,0 +1,595 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Utilisation de QGIS au sein du Financial Times</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Rechercher" href="../../../search.html" />
+    <link rel="next" title="Analyse de l’habitat du Lynx dans le sud des Carpates" href="europe_lynx.html" />
+    <link rel="prev" title="QGIS pour décrire le mur de Cesena" href="italy_cesena.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="europe_lynx.html" title="Analyse de l’habitat du Lynx dans le sud des Carpates"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="italy_cesena.html" title="QGIS pour décrire le mur de Cesena"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Découvrez QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Exemples d’utilisation</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Anglais">English</option>
+  <option value="ca" title="Catalan">Català</option>
+  <option value="da" title="Danois">Dansk</option>
+  <option value="de" title="Allemand">Deutsch</option>
+  <option value="es" title="Espagnol">Español</option>
+  <option value="fa" title="Perse">فارسی</option>
+  <option value="fi" title="Finnois">Suomi</option>
+  <option value="fr" title="Français">Français</option>
+  <option value="gl" title="Galicien">Galego</option>
+  <option value="id" title="Indonésien">Bahasa Indonesia</option>
+  <option value="it" title="Italien">Italiano</option>
+  <option value="hu" title="Hongrois">Magyar</option>
+  <option value="ja" title="Japonais">日本語</option>
+  <option value="km_KH" title="Khmer">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coréen">한국어</option>
+  <option value="lt" title="Lituanien">Lietuvių</option>
+  <option value="nl" title="Hollandais">Nederlands</option>
+  <option value="pl" title="Polonais">Polski</option>
+  <option value="pt_BR" title="Portugais (Brésil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugais">Português</option>
+  <option value="ro" title="Roumain">Română</option>
+  <option value="tr" title="Turque">Türkçe</option>
+  <option value="ru" title="Russe">Русский</option>
+  <option value="uk" title="Ukrainien">Українська</option>
+  <option value="zh-Hans" title="Chinois (simplifié)">簡体中文</option>
+  <option value="zh-Hant" title="Chinois (Traditionnel)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/about/case_studies/qgis_at_financial_times.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Merci !</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>L’Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Faites un don à QGIS</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fermer ce message</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Merci pour votre don !</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS est gratuit et nous espérons que vous aimez utiliser le fruit de nos labeurs, nous vous encourageons à partager et à propager le plus possible la copie que vous avez téléchargée pour que les autres en profitent aussi. Avec toute notre considération.</p>'+
+            '<p id="stripeerr" style="display:none;">Il y a malheureusement eu une erreur lors du traitement de votre don. Veuillez réessayer plus tard, ou veuillez nous contacter à finance@qgis.org</p>'+
+            '<p>L’Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fermer ce message</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">Découvrir</a></li>
+            <li><a href="../../forusers/index.html">Pour les utilisateurs</a></li>
+            <li><a href="../../getinvolved/index.html">Contribuer</a></li>
+            <li><a href="../../../docs/index.html">Documentation</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Rechercher" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="italy_cesena.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="europe_lynx.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Découvrez QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html">Exemple de carte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html#screenshots">Captures d’écran</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Exemples d’utilisation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">2017</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id3">2016</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="italy_cesena.html">[2016/11] QGIS to describe the Cesena's Wall Camilla Fabbri</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">[2016/04] QGIS at the Financial Times Graphics Team by Steve Bernard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">2015</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id5">2014</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">2013</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">2012</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id8">2011</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id9">2010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id10">2009</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members.html">Sustaining members, sponsors and Donors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shop_goodies.html">Boutique</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://planet.qgis.org">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Utiliser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Contribuez / Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="use-of-qgis-at-the-financial-times-graphics-team">
+<h1>Utilisation de QGIS au sein du Financial Times<a class="headerlink" href="#use-of-qgis-at-the-financial-times-graphics-team" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="interview-with-steven-bernard-interactive-design-editor">
+<h2>Entretien avec Steven Bernard (Éditeur Conception Interactive)<a class="headerlink" href="#interview-with-steven-bernard-interactive-design-editor" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Steven est Éditeur Conception Interactive au Financial Times. Vous pouvez le joindre sur <a class="reference external" href="https://twitter.com/sdbernard">Twitter</a>. Il est aussi l’auteur de <a class="reference external" href="https://t.co/6aTE6G8h0T">vidéos utiles COMMENTFAIRE sur Youtube</a> traitant de tâches cartographiques en QGIS.</p>
+<p><strong>QGIS</strong> : Steven, Quel est le nom de l’équipe avec laquelle vous travaillez au FT ? Pouvez-vous nous donner des détails sur le contexte de ce que fait votre équipe au FT ?</p>
+<p><strong>Steve</strong> : Notre équipe est dans une période de transition en ce moment, nous avons un nouveau éditeur visualisation des données, Alan Smith OBE (anciennement ONS) qui est en train de tout changer en créant une équipe graphique unique. Traditionnellement nous avions une équipe graphique web et une équipe graphique impression. L’équipe impression était responsable de tous les graphiques du journal ainsi que de la création de leur version pour le web. Mon équipe ne s’occupait que du contenu spécifiquement web, ainsi que de travailler en étroite collaboration avec les producteurs/développeurs interactifs pour le développement de graphiques interactifs.</p>
+<p>L’équipe nouvellement formée permettra une dissémination plus importante des expériences entre les différents médias.</p>
+<p>Alan a introduit un flux de travail unique pour notre équipe, comprenant l’utilisation de d3 pour aider à créer un vocabulaire graphique plus étendu et pour réduire le temps nécessaire à la création d’illustrations.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_europe_migration_balkan-route.png"><img alt="Migrant flows. Western Balkans route." src="../../../_images/ft_europe_migration_balkan-route.png" style="width: 100%;" /></a>
+</div>
+<p><em>Exemple : Flux de migration. Route des Balkans de l’Ouest.</em></p>
+<p><strong>QGIS</strong> : Combien y a-t-il de collaborateurs dans votre équipe ?</p>
+<p><strong>Steven</strong> : En incluant les designers, développeurs, producteurs et statisticiens, nous avons une équipe de 24</p>
+<p><strong>QGIS</strong>: Quel est votre rôle spécifique dans l’équipe?</p>
+<p><em>Steven*</em> : Je n’ai pas un rôle spécifique car nous sommes un département multi-disciplinaire. Mon rôle comprend la production de designs réactifs pour les graphiques inter-actifs ainsi que le développement frontal des interactives moins compliquées (par ex. : <a class="reference external" href="http://ig.ft.com/sites/2015/isis-oil/">À l’intérieur d’Isis Inc: Le voyage d’un baril de pétrole</a>). Je produit aussi les diagrammes et cartes quotidiens standards basés sur les nouvelles du jour. Depuis ces deux dernières années, je me suis focalisé sur le développement de notre offre cartographique à FT. QGIS a contribué de manière déterminante dans la façon dont nous créons nos cartes,  et avec d’autres outils tels que Blender m’a aidé à être plus créatif dans la façon dont nous approchons les cartes.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_nigeria-migration_animation.gif"><img alt="Dora's journey from Nigeria to Sicily - one of thousands by trafficked women each year" src="../../../_images/ft_nigeria-migration_animation.gif" style="width: 100%;" /></a>
+</div>
+<p><em>Exemple : Animation du voyage de Dora, du Nigeria à la Sicile - une des milliers de femmes victimes de traite chaque année.</em></p>
+<p><strong>QGIS</strong> : Pouvez-vous nous en dire un peu plus sur vous-même ? Quelle est votre formation ? Que faisiez-vous avant de rejoindre l’équipe de visualisation des données à FT ?</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_gotthard-tunnel.png"><img alt="Gotthard rail and road tunnel" src="../../../_images/ft_gotthard-tunnel.png" style="width: 60%;" /></a>
+</div>
+<p><em>Exemple : Le tunnel routier et ferroviaire du Gotthard dans les Alpes suisses.</em></p>
+<p><em>Steven*</em> : J’ai une formation traditionnelle d’illustrateur scientifique. Qu’est ce que c’est ? Je vous entend demander ! C’est la production d’illustrations pour des journaux médicaux, des publications d’histoire naturelle, pour tout média dans lequel vous voulez convoyer des informations visuelles qu’une photo ne peut pas faire. Pensez aux diagrammes montrant le système de circulation humain, ou montrant une procédure pour ressouder un os cassé. Malheureusement il n’y avait pas beaucoup d’offres d’emploi dans cette branche quand j’ai fini l’université et j’ai eu le job à FT pratiquement par un coup de chance. J’ai toujours été bon en math, ce qui je pense est important pour travailler dans les visualisations de données, et aussi m’a certainement aidé avec la programmation.</p>
+<p><strong>QGIS</strong>: Comment avez-vous découvert QGIS?</p>
+<p><strong>Steven</strong> : Je suis tombé sur QGIS en 2013 alors que nous travaillions sur un <a class="reference external" href="http://ig.ft.com/features/2013-07-19_middleeast_religion_map/dist/index.html">projet de cartographie des ethnicités au Moyen Orient</a></p>
+<p>Nous l’avons utilisé pour géo-référencer les cartes produites par un professeur de l’Université de Colombia. Au début j’ai trouvé l’outil d’ajout graphique des entités très compliqué, car il ne ressemblait à rien de ce que je connaissais dans Illustrator que j’utilisais depuis 17 ans ! J’étais aussi frustré de devoir sauver deux fois : une fois lorsque l’édition du shapefile est finie et une autre fois pour sauver le projet. Cependant cela n’était dû qu’à mon inexpérience du logiciel et à la fin il a fait exactement ce que nous voulions, c.-à-d. produire des shapefiles que nous pouvions ajouter sur une carte de base Mapbox.</p>
+<p><strong>QGIS</strong> : Quel est le rôle de QGIS dans vos flux de travail habituels ?</p>
+<p><strong>Steven</strong> : QGIS est un élément incontournable de notre flux de travail cartographique. Je n’utilise aucun autre SIG pour créer nos cartes. Mais certains des membres de notre équipe utilisent Map Publisher car ils se sentent plus à l’aise de rester avec Adobe Illustrator. Je dirais que 80% de nos cartes sont produites avec QGIS.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_blm-federal-land-map.png"><img alt="Public Lands in the US" src="../../../_images/ft_blm-federal-land-map.png" style="width: 100%;" /></a>
+</div>
+<p><em>Exemple : Domaines publics aux USA.</em></p>
+<p><strong>QGIS</strong> : Quels autres outils utilisez-vous en dehors de QGIS et comment les combinez-vous ?</p>
+<p><strong>Steven</strong> : Si c’est pour une simple carte de localisation 95% du travail se fait dans QGIS, et le polissage final dans Adobe Illustrator.</p>
+<p>Si je fait une carte topographique, alors le procédé est bien plus complexe. Je récupère les fichiers MNE avec Nasa Earth Explorer et les importent dans QGIS pour les recadrer à la taille voulue. J’importe ensuite le MNE recadré dans Blender pour faire un rendu 3D. Si j’utilise une image satellite sur le relief ombré je récupère une image BlueMarble à partir de la Nasa et l’importe aussi dans Blender. Le rendu exporté de Blender est alors importé dans QGIS pour être utilisé comme couche de base. Je le manipule avec Photoshop avant l’import si nécessaire.</p>
+<p>Pour des cartes adaptables comme celles dans <a class="reference external" href="http://ig.ft.com/sites/2015/isis-oil/">Isis l’histoire d’un baril de pétrole</a>, j’ai utilisé tous les outils précédents mais l’étape finale est l’utilisation d’un script Open Source pour Adobe Illustrator créé par Archie Tse du New York Times. Il me permet de créer des versions adaptables de mes cartes qui fonctionnent sur tous les appareils.</p>
+<p>Un autre outil utile est Google My Maps qui permet aux reporteurs dans le monde de marquer des positions sur une carte que nous pouvons ensuite récupérer en tant que fichier kmz et les importer directement dans QGIS.</p>
+<p>Le dernier outil que j’utilise est Adobe After Effects car je me suis mis récemment à animer mes cartes pour amener l’utilisateur en voyage. Comme dans la série récente Land Rush :</p>
+<ul class="simple">
+<li><a class="reference external" href="https://ig.ft.com/sites/land-rush-investment/ethiopia/">Land Rush Ethiopia</a></li>
+<li><a class="reference external" href="https://ig.ft.com/sites/land-rush-investment/myanmar/">Land Rush Myanmar</a></li>
+<li><a class="reference external" href="https://ig.ft.com/sites/land-rush-investment/indonesia/">Land Rush Indonesia</a></li>
+</ul>
+<p><strong>QGIS</strong> : Utilisez-vous d’autres outils spatiaux ou SIG en dehors de QGIS, et si oui, lesquels ?</p>
+<p><strong>Steven</strong> : Tout en QGIS pour moi, mais comme mentionné auparavant certains de mes collègues utilisent aussi Map Publisher.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_isis-air-strikes_febupdate.png"><img alt="Strikes on Syria in February 2016" src="../../../_images/ft_isis-air-strikes_febupdate.png" style="width: 100%;" /></a>
+</div>
+<p><em>Exemples : Frappes en Syrie en février 2016.</em></p>
+<p><strong>QGIS</strong> : Pouvez-vous décrire les points forts et les points faibles de QGIS en ce qui concerne les travaux que vous avez à faire ?</p>
+<p><strong>Steven</strong> : Lorsque j’ai utilisé QGIS pour la première fois je l’ai considéré comme outil pour spécialiste, bon seulement pour certaines fonctions spécifiques. Je ne l’avais vraiment pas considéré comme outil de production. Fin 2014 deux de mes collègues ont eu une formation sur QGIS faite par Alasdair Rae à l’Université de Sheffield. Ils n’ont pas arrêté de faire les louanges de QGIS, et j’ai donc pris sur moi-même d’en faire l’évaluation en tant qu’outil qui pourrait être utilisé pour produire toutes nos cartes.</p>
+<p>Dans les quinze jours j’étais convaincu que c’était faisable. Le point fort étant la possibilité de mettre en place des guides de styles pour tout, y compris pour les niveaux de zoom pour les cartes de villes.</p>
+<p>J’ai un système en place où nous avons des sets de feuilles Google avec colonnes pour nom du marqueur, lat., long., icône, épaisseur-casse, taille-casse et si vous voulez que le marqueur soit visible ou non.</p>
+<p>L’icône du marqueur est une boîte déroulante connectée à une table vLookUp qui remplie tous les détails pour ce marqueur.</p>
+<p>Ainsi, tout ce que j’ai à faire est de télécharger le fichier csv, l’importer dans QGIS, lui appliquer un style et bingo, j’ai une carte prête à 95%.</p>
+<p>Pour être tout à fait honnête je ne vois aucun point faible, il y a certaines choses que je voudrais voir ou être capable de faire, mais je ne vois pas ça comme point faible, juste comme une composante manquante.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_chinaMigration.png"><img alt="Urban Attraction and Migration within China" src="../../../_images/ft_chinaMigration.png" style="width: 100%;" /></a>
+</div>
+<p><em>Exemple : Attraction urbaine et migration interne en Chine.</em></p>
+<p><strong>QGIS</strong> : Quels sont les concepts ou composantes que vous appréciez le plus dans QGIS ?</p>
+<p><strong>Steven</strong> : Il y a beaucoup de composantes que je classifierais comme essentielles ! Mais principalement Quick OSM et l’outil de géo-référencement m’ont fait gagner énormément de temps, ce qui est absolument essentiel lorsque les échéances sont serrées. Ce qui, travaillant pour un organisme de presse, arrive 90% du temps.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_china_henanGuangdong.png"><img alt="Urban Attraction and Migration within China, Details" src="../../../_images/ft_china_henanGuangdong.png" style="width: 100%;" /></a>
+</div>
+<p><em>Exemple : Attraction urbaine et migration interne en Chine. Vues de détail.</em></p>
+<p><strong>QGIS</strong> : Quelles sont les composantes ou fonctionnalités de QGIS qui vous manquent le plus ? Avez-vous une liste des composantes manquantes qui vous serez très utiles si elles étaient implémentées ?</p>
+<p><strong>Steven</strong> : Certaines des choses que je voudrais voir dans des futures versions sont…</p>
+<p>Support pour les courbes de Bézier, ce qui serait particulièrement utile avec l’outil de géo-référencement. Je sais qu’il y a une extension spline mais elle ne fournit pas le contrôle qu’une courbe de Bézier fournirait.</p>
+<p>Pouvoir sauver en tant qu’image ayant une taille plus grande. À l’heure actuelle c’est la seule façon que j’ai pour créer un fichier MNE géo-référencé recadré pour l’import dans Blender. Mais il est limité à la taille de votre écran. Si j’ai un fichier MNE de 8 000 pixels dans QGIS j’aimerais pouvoir être capable d’exporter un recadrage ayant une taille plus grande que celle de mon écran, par exemple, pour être utilisé dans une vidéo HD.</p>
+<p><strong>QGIS</strong> : S’il vous manque des composantes dans QGIS qui vous aideraient - considéreriez-vous d’améliorer QGIS vous-même (en changeant le code de QGIS ou avec des extensions Python), ou considéreriez-vous employer un développeur QGIS pour implémenter les composantes manquantes pour vous ? Ou bien rechercheriez-vous d’autres outils pour combler ce manque ?</p>
+<p><strong>Steven</strong> : Je n’ai certainement pas la capacité de faire cette programmation la moi-même, Je suis bien à l’aise avec Javascript mais j’aurais des difficultés avec Python. J’aimerais beaucoup embaucher un développeur pour implémenter des composantes mais je n’ai aucun contrôle sur les budgets, j’utilise donc d’autres outils pour pallier à ce manque.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_us_broadband_internet_subscription.png"><img alt="Percentage of households with a broadband internet subscription in the US." src="../../../_images/ft_us_broadband_internet_subscription.png" style="width: 100%;" /></a>
+</div>
+<p><em>Exemple : Pourcentage des ménages ayant une connexion internet haut débit aux USA.</em></p>
+<p><strong>QGIS</strong> : Parlons de l’expérience utilisateur - l’équipe de QGIS est au courant que certaines parties de l’IU (dialogues, panels, etc.) pourraient être grandement améliorées. Pouvez-vous nous dire rapidement quelles sont les parties de l’IU qui auraient le plus besoin d’amélioration ?</p>
+<p><strong>Steven</strong> : Je pense que les outils principaux sont très bien comme ils sont, une fois que vous en avez l’habitude ils sont plutôt évidents. Cependant, ce que je trouve frustrant c’est d’essayer de traquer les extensions une fois qu’elle ont été installées. Elles soit créent leur propre menu (MMQGIS), soit s’installent dans un des menus (Géo-référencement) ou créent leur propre icône (threejs). Il serait utile d’avoir une fenêtre d’extensions qui regroupent toutes les extensions qui sont installées. De nouveau, ce n’est pas un blocage mais ce serait plus facile que de chercher dans plusieurs endroits différents.</p>
+<p><strong>QGIS</strong> : Merci de nous avoir reçu et du travail que vous faite pour promouvoir et documenter les flux de travail en QGIS !</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/ft_potrait_steve_bernard.jpg"><img alt="Portrait Steve Bernard" src="../../../_images/ft_potrait_steve_bernard.jpg" style="width: 50%;" /></a>
+</div>
+<p><em>Portrait de  Steve Bernard. Éditeur Design Interactif chez Financial Times.</em></p>
+<p><strong>Steven</strong> : De rien, je suis presque évangélique au sujet de QGIS ! D’où les <a class="reference external" href="https://t.co/6aTE6G8h0T">31 tutoriels vidéos</a> et toujours heureux de faire passer le message.</p>
+<p>Interview réalisé par A. Neumann et T. Sutton, Avril 2016.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="europe_lynx.html" title="Analyse de l’habitat du Lynx dans le sud des Carpates"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="italy_cesena.html" title="QGIS pour décrire le mur de Cesena"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Découvrez QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Exemples d’utilisation</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Sauf indication contraire, tout le contenu est sous licence <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Sélectionner des graphiques depuis la collection <a href="http://thenounproject.com" target="_blank">"The Noun Project"</a>.
+        
+        
+      </p>
+      <p class="credit">
+        Vous avez lu une page non traduite ? Ou vous avez observé une erreur de traduction:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">corrigez-moi</a>
+        <br/>
+        Erreur de texte, texte manquant on non explicite:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">corrigez-moi</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
