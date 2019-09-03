@@ -1,0 +1,556 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Utilizarea instrumentelor cu sursă deschisă pentru caracterizarea unui peisaj. Plugin-ul LecosS</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Căutare" href="../../../search.html" />
+    <link rel="next" title="Utilizarea consolei Python în pregătirea unei hărți offline WMS (descărcător de plăcuțe)" href="india_pune.html" />
+    <link rel="prev" title="Activități de training și cercetare, folosind QGIS la NIRD&amp;PR-NERC, Guwahati, India" href="india_guwahati.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="india_pune.html" title="Utilizarea consolei Python în pregătirea unei hărți offline WMS (descărcător de plăcuțe)"
+             accesskey="N">următor</a> |</li>
+        <li class="right" >
+          <a href="india_guwahati.html" title="Activități de training și cercetare, folosind QGIS la NIRD&amp;PR-NERC, Guwahati, India"
+             accesskey="P">precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Descoperiți QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Studii de caz</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engleză">English</option>
+  <option value="ca" title="Catalană">Català</option>
+  <option value="da" title="Daneză">Dansk</option>
+  <option value="de" title="Germană">Deutsch</option>
+  <option value="es" title="Spaniolă">Español</option>
+  <option value="fa" title="Persană">فارسی</option>
+  <option value="fi" title="Finlandeză">Suomi</option>
+  <option value="fr" title="Franceză">Français</option>
+  <option value="gl" title="Galiciană">Galego</option>
+  <option value="id" title="Indoneziană">Bahasa Indonesia</option>
+  <option value="it" title="Italiană">Italiano</option>
+  <option value="hu" title="Maghiară">Magyar</option>
+  <option value="ja" title="Japoneză">日本語</option>
+  <option value="km_KH" title="Khmeră">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coreeană">한국어</option>
+  <option value="lt" title="Lituaniană">Lietuvių</option>
+  <option value="nl" title="Olandeză">Nederlands</option>
+  <option value="pl" title="Poloneză">Polski</option>
+  <option value="pt_BR" title="Portugheză (Brazilia)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugheză">Português</option>
+  <option value="ro" title="Română">Română</option>
+  <option value="tr" title="Turcă">Türkçe</option>
+  <option value="ru" title="Rusă">Русский</option>
+  <option value="uk" title="Ucrainiană">Українська</option>
+  <option value="zh-Hans" title="Cineză (Simplificată)">簡体中文</option>
+  <option value="zh-Hant" title="Chineză (Tradițională)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/about/case_studies/portugal_coimbra.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Donați Acum</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim pentru donație!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS fiind gratuit, sperăm că vă place să-l folosiți; totodată, vă încurajăm să partajați și altora copia descărcată, astfel încât și ei să o poată utiliza. Vă mulțumim!</p>'+
+            '<p id="stripeerr" style="display:none;">Din păcate, a apărut o eroare în procesarea donației. Reîncercați mai târziu sau contactați-ne la adresa finance@qgis.org</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">Descoperiți QGIS</a></li>
+            <li><a href="../../forusers/index.html">Pentru utilizatori</a></li>
+            <li><a href="../../getinvolved/index.html">Implicați-vă</a></li>
+            <li><a href="../../../docs/index.html">Documentație</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Căutare" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="india_guwahati.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="india_pune.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Descoperiți QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Aplicații</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html">Exemple de Hărți</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html#screenshots">Capturi de ecran</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Studii de caz</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">2017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">2015</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id5">2014</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="afghanistan.html">[2014/10] Danish Demining Group (DDG) using QGIS in Kabul, Afghanistan by Edward Crowther</a></li>
+<li class="toctree-l4"><a class="reference internal" href="india_guwahati.html">[2014/08] Trainings &amp; Research activities using QGIS at NIRD&amp;PR-NERC in Guwahati, India by Alajangi Simhachalam</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">[2014/07] Using open source tools for characterization of a landscape. The LecosS plugin by André Duarte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="india_pune.html">[2014/05] Use of python console to prepare offline map from WMS (tile downloader) by Prashant Kadgi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="italy_turin.html">[2014/01] The Research Institute for Geo-hydrological Protection of Turin - Aerial photo archive management by Danilo and Franco Godone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">2013</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">2012</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id8">2011</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id9">2010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id10">2009</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members.html">Sustaining members, sponsors and Donors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shop_goodies.html">Magazin</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://planet.qgis.org">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Pentru utilizatori</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Implicați-vă / Dezvoltare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentație</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="using-open-source-tools-for-characterization-of-a-landscape-the-lecoss-plugin">
+<h1>Utilizarea instrumentelor cu sursă deschisă pentru caracterizarea unui peisaj. Plugin-ul LecosS<a class="headerlink" href="#using-open-source-tools-for-characterization-of-a-landscape-the-lecoss-plugin" title="Link permanent la acest titlu">¶</a></h1>
+<p>Acest studiu de caz provine din proiectul final de absolvire a Sistemelor de Informații Geografice predate de către GeoPoint. Ne-am propus să studiem un peisaj folosind Plugin-ul de Ecologie Peisagistică (LecoS) în QGIS 2.01 Dufour. Studiul a fost condus într-o regiune din centrul Portugaliei, Municipalitatea din Coimbra, cu o suprafață totală de 31940 ha și având coordonatele geografice 40°12’11.84 „Nord, 8 °24’37.15” Vest. Datorită noii reorganizări administrative, această municipalitate este împărțită în 18 parohii, care sunt, în mare parte, suprafețe urbane (Figura 1).</p>
+<div class="figure align-left" id="id1">
+<a class="reference internal image-reference" href="../../../_images/portugal_coimbra1.png"><img alt="Geographic location of the municipality of Coimbra." src="../../../_images/portugal_coimbra1.png" style="width: 584.5px; height: 413.0px;" /></a>
+<p class="caption"><span class="caption-text">Localizarea geografică a municipalității din Coimbra.</span></p>
+</div>
+<p>Caracterizarea unui peisaj se realizează cu ajutorul indicilor cantitativi proiectați de metricile de peisaj. Acești indici sunt apoi folosiți pentru a descrie caracteristicile structurale ale peisajului, pentru a documenta modificarea și relația lor cu apariția mai multor specii sau grupuri de specii (Turner et al, 2001;. Olsen et al, 2007;. Fidalgo et al., 2009). Numărul de metrici este extrem de mare și poate fi calculat la nivel de peisaj și clasă (Turner et al, 2001;. Fidalgo et al, 2009). Metricile pot fi calculate din hărțile de utilizare a terenului Corine Land Cover (COS 90 și COS2006) sau din hărțile de acoperire produse de noi. Potrivit lui Martin Jung (2012), Landscape Ecology Stistics (Lecos) este un modul de QGIS, utilizat pentru a calcula metricile de peisaj în straturile raster. Rezultatul poate fi disponibil în format CSV.</p>
+<div class="section" id="methods">
+<h2>Metodele<a class="headerlink" href="#methods" title="Link permanent la acest titlu">¶</a></h2>
+<p>Metricile de peisaj au fost calculate folosind Corine Land Cover (CLC) din anii 1990 și 2006. În acest scop, a fost necesară transformarea acoperirilor în format raster cu dimensiunea celulei de 50x50 metri. Folosim instrumentul r.to.raster din modulul Grass Gis, care este prezent în setul de instrumente de prelucrare, iar nivelul de clasificare CLC este folosit primul. După transformarea acoperirilor vom calcula metricile din plugin-ul de ecologie peisagistică (LecoS) folosind modelatorul grafic (Figura 2).</p>
+<div class="figure align-left" id="id2">
+<a class="reference internal image-reference" href="../../../_images/portugal_coimbra3.png"><img alt="Landscape metrics calculated for diferent years (1990 and 2006)." src="../../../_images/portugal_coimbra3.png" style="width: 678.0px; height: 436.2px;" /></a>
+<p class="caption"><span class="caption-text">Metricile de peisaj calculate pentru ani diferiți (1990 și 2006).</span></p>
+</div>
+<p>Se calculează suprafața terenului de acoperit, proporția peisajului, densitatea marginilor, numărul de zone, suprafața celei mai mici zone, distanța medie între zone și dimensiunea ochiului de plasă efectivă (Tabelul 1). Prin măsurarea diversității peisajului s-a calculat indicele Shannon, uniformitatea și indicele Simpson.</p>
+</div>
+<div class="section" id="results">
+<h2>Rezultatele<a class="headerlink" href="#results" title="Link permanent la acest titlu">¶</a></h2>
+<p>Din analiza metricilor calculate ale peisajului s-a constatat că a existat o creștere a gradului de anxietate umană și, prin urmare, o fragmentare mai mare a utilizării între 1990 și 2006. Numărul de „păduri și zone semi-naturale”, precum și a „zonelor agricole” a scăzut între 1990 și 2006 (Tabelul 1). Aceste metrici ne pot da anumite indicii asupra proceselor ecologice, sau asupra creșterii sau scăderii relațiilor între populații și habitate (Viana și Aranha, 2008). De asemenea, de notat este distanța medie dintre puncte, o măsură care ne permite să înțelegem gradul de fragmentare a peisajului, declinul „pădurilor și a zonele semi-naturale” între 1990-2006 în favoarea „zonelor artificiale” (Tabelul 1).</p>
+<div class="figure align-left" id="id3">
+<a class="reference internal image-reference" href="../../../_images/portugal_coimbra2.png"><img alt="Model to calculate landscape metrics in 1990." src="../../../_images/portugal_coimbra2.png" style="width: 716.4px; height: 324.90000000000003px;" /></a>
+<p class="caption"><span class="caption-text">Modelul de calcul al metricilor de peisaj din 1990.</span></p>
+</div>
+<p>Între 1990-2006 diversitatea a crescut, cu toate acestea, este cunoscut faptul că acest rezultat este direct legat de transferul între acoperirea terenurilor, în special pierderile înregistrate în „Suprafețele agricole” și în „Păduri și zonele semi-naturale”. Același lucru s-a întâmplat cu uniformitatea.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Concluzii<a class="headerlink" href="#conclusion" title="Link permanent la acest titlu">¶</a></h2>
+<p>A fost posibilă determinarea metricilor de peisaj folosind plugin-ul LecoS, remarcându-se faptul că zona de studiu prezintă probleme de fragmentare din cauza gradului ridicat de anxietate umană. QGIS s-a dovedit a fi destul de intuitiv și foarte practic în calculul metricilor de peisaj, în absența oricărei constrângeri. Este într-adevăr robust și viabil, comparativ cu soluțiile proprietare. În viitor ne-am propus să aplicăm această metodă în zonele care au probleme cu speciile invazive, pentru a le studia comportamentul în peisaj.</p>
+</div>
+<div class="section" id="references">
+<h2>Referințe<a class="headerlink" href="#references" title="Link permanent la acest titlu">¶</a></h2>
+<ul class="simple">
+<li>Fidalgo, B., R. Salas, et al. (2009). „Estimarea diversității plantelor într-un peisaj mozaicat împădurit: rolul peisajului, caracteristici de habitat și de zonă.” Revista Latino-americană de Resurse Naturale 5 (2): 65-73.</li>
+<li>Viana, Hélder; Aranha, José (2008) - Studiul modificărilor în acoperirea solurilor din parcul Național Peneda Geres (1995 și 2007). Analiza temporală a modelelor de amenajare a teritoriului și de evaluare cantitativă a structurii peisagistice. X Reuniunea Utilizatorilor Sistemelor Informatice Geografice, 14-16 mai 2008 - Oeiras.</li>
+<li>Martin Jung (2012) LecoS - Un plug-in QGIS pentru efectuarea statisticilor ecologiei peisagistice, <a class="reference external" href="http://plugins.qgis.org/plugins/LecoS">http://plugins.qgis.org/plugins/LecoS</a>.</li>
+<li>Olsen, L., V. Dale, et al. (2007). „Modelele peisagistice, ca indicatori ai schimbării ecologice la Fort Benning, Georgia, USA.” Planificare peisagistică și urbană 79: 137-149.</li>
+<li>Turner, M. G., R. Gardner, et al. (2001). Ecologia peisagistică în teorie și îń practică: model și proces. New York.</li>
+</ul>
+</div>
+<div class="section" id="authors">
+<h2>Autor<a class="headerlink" href="#authors" title="Link permanent la acest titlu">¶</a></h2>
+<div class="figure align-left" id="id4">
+<a class="reference internal image-reference" href="../../../_images/portugal_coimbra4.png"><img alt="André Duarte" src="../../../_images/portugal_coimbra4.png" style="width: 71.2px; height: 121.4px;" /></a>
+<p class="caption"><span class="caption-text">André Duarte</span></p>
+</div>
+<p>Acest articol a fost transmis în iulie 2014 de către André Duarte. El are o diplomă în Ingineria Resurselor Forestiere și un masterat în Resursele Forestiere la Școala Superioară de Agricultură din Coimbra. Absolvent în Sisteme Informatice Geografice la Geopoint. În prezent, colaborează cu Grupo Portucel Soporcel.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             >index</a></li>
+        <li class="right" >
+          <a href="india_pune.html" title="Utilizarea consolei Python în pregătirea unei hărți offline WMS (descărcător de plăcuțe)"
+             >următor</a> |</li>
+        <li class="right" >
+          <a href="india_guwahati.html" title="Activități de training și cercetare, folosind QGIS la NIRD&amp;PR-NERC, Guwahati, India"
+             >precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Descoperiți QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Studii de caz</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">În cazul în care nu se prevede altfel, tot conținutul este licențiat sub <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Elemente grafice preluate de la <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Pagină netradusă? Sau ați observat o eroare de traducere:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">remediere</a>
+        <br/>
+        Eroare contextuală, text lipsă sau știți dvs. mai bine:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">remediere</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

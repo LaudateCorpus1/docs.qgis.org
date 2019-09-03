@@ -1,0 +1,795 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cărți</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Căutare" href="../../../search.html" />
+    <link rel="next" title="Implicați-vă / Dezvoltare" href="../../getinvolved/index.html" />
+    <link rel="prev" title="Suport Comercial" href="../commercial_support.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../getinvolved/index.html" title="Implicați-vă / Dezvoltare"
+             accesskey="N">următor</a> |</li>
+        <li class="right" >
+          <a href="../commercial_support.html" title="Suport Comercial"
+             accesskey="P">precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Pentru utilizatori</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engleză">English</option>
+  <option value="ca" title="Catalană">Català</option>
+  <option value="da" title="Daneză">Dansk</option>
+  <option value="de" title="Germană">Deutsch</option>
+  <option value="es" title="Spaniolă">Español</option>
+  <option value="fa" title="Persană">فارسی</option>
+  <option value="fi" title="Finlandeză">Suomi</option>
+  <option value="fr" title="Franceză">Français</option>
+  <option value="gl" title="Galiciană">Galego</option>
+  <option value="id" title="Indoneziană">Bahasa Indonesia</option>
+  <option value="it" title="Italiană">Italiano</option>
+  <option value="hu" title="Maghiară">Magyar</option>
+  <option value="ja" title="Japoneză">日本語</option>
+  <option value="km_KH" title="Khmeră">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coreeană">한국어</option>
+  <option value="lt" title="Lituaniană">Lietuvių</option>
+  <option value="nl" title="Olandeză">Nederlands</option>
+  <option value="pl" title="Poloneză">Polski</option>
+  <option value="pt_BR" title="Portugheză (Brazilia)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugheză">Português</option>
+  <option value="ro" title="Română">Română</option>
+  <option value="tr" title="Turcă">Türkçe</option>
+  <option value="ru" title="Rusă">Русский</option>
+  <option value="uk" title="Ucrainiană">Українська</option>
+  <option value="zh-Hans" title="Cineză (Simplificată)">簡体中文</option>
+  <option value="zh-Hant" title="Chineză (Tradițională)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/books/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Donați Acum</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim pentru donație!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS fiind gratuit, sperăm că vă place să-l folosiți; totodată, vă încurajăm să partajați și altora copia descărcată, astfel încât și ei să o poată utiliza. Vă mulțumim!</p>'+
+            '<p id="stripeerr" style="display:none;">Din păcate, a apărut o eroare în procesarea donației. Reîncercați mai târziu sau contactați-ne la adresa finance@qgis.org</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">Descoperiți QGIS</a></li>
+            <li><a href="../index.html">Pentru utilizatori</a></li>
+            <li><a href="../../getinvolved/index.html">Implicați-vă</a></li>
+            <li><a href="../../../docs/index.html">Documentație</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Căutare" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../commercial_support.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../../getinvolved/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Descoperiți QGIS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Pentru utilizatori</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">Descărcați QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visualchangelogs.html">Jurnalul Schimbărilor Vizuale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">Materiale pentru instruire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">Asistență</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">Grupuri de Utilizatori</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">Suport Comercial</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cărți</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#english">Engleză</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#discover-qgis-3-x">Discover QGIS 3.x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hands-on-geospatial-analysis-with-r-and-qgis">Hands-On Geospatial Analysis with R and QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#learn-qgis-fourth-edition">Learn QGIS - Fourth Edition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#on-the-way-with-gis">On the Way with GIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-the-door-to-gis-student-and-teacher-s-edition">Open the Door to GIS - Student and Teacher’s Edition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-python-programming-cookbook-second-edition">QGIS Python Programming Cookbook - Second Edition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-becoming-a-gis-power-user">QGIS:Becoming a GIS Power User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mastering-qgis-second-edition">Mastering QGIS - A Doua Ediție</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#discover-qgis">Descoperiți QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-2-cookbook">Cartea de rețete a QGIS 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#learning-qgis-third-edition">Learning QGIS - Third Edition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-map-design">QGIS Map Design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mastering-qgis">Mastering QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-blueprints">QGIS Blueprints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-by-example">QGIS By Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-pyqgis-programmer-s-guide-extending-qgis-with-python">The PyQGIS Programmer’s Guide - Extending QGIS with Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-qgis-training-manual-a-comprehensive-introduction-to-quantum-gis">The QGIS Training Manual - A Comprehensive Introduction to Quantum GIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dutch">Olandeză</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-at-secondary-level-geography-studies-cartography-at-secondary-level-giswijzer-go-game">QGIS la nivel secundar - Studii de Geografie - Cartografiere la nivel secundar - jocul GISwijzer GO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#french">Franceză</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#systemes-d-information-geographique-cours-et-exercices-corriges-avec-grass-et-qgis">Systèmes d’information géographique. Cours et exercices corrigés avec Grass et Qgis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#learning-qgis-by-example-in-french">Învățați QGIS prin exemple, în limba franceză</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#greek">Greacă</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction-to-raster-analysis-learning-qgis-book-2">Introducere în Analiza Raster (Manualul 2 de Instruire în QGIS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-workbook-is-an-introductory-text-for-learning-qgis-2-8">Manualul de Bază cuprinde un text introductiv pentru învățarea QGIS (2.8)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#japanese">Japanese</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#qgis">【改訂新版】［オープンデータ＋QGIS］統計・防災・環境情報がひと目でわかる地図の作り方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">業務で使う林業QGIS　徹底使いこなしガイド</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#polish">Poloneză</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#learn-about-gis-and-qgis-in-polish">Inițiere în GIS și QGIS, în limba poloneză</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#turkish">Turcă</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#geological-applications-with-open-source-coded-geographic-information-systems">Aplicații Geologice folosind Sisteme de Informații Geografice cu Sursă Deschisă</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Implicați-vă / Dezvoltare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentație</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="books">
+<span id="qgis-books"></span><h1>Cărți<a class="headerlink" href="#books" title="Link permanent la acest titlu">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Pe acestă pagină afișăm cărți disponibile de la diverse edituri. QGIS nu are relații cu nici una dintre ele, ele fiind enumerate doar pentru a le ajuta.</p>
+<p>Please write to <a class="reference external" href="mailto:psc&#37;&#52;&#48;qgis&#46;org">psc<span>&#64;</span>qgis<span>&#46;</span>org</a> if you want to have your book added here.
+Or you edit this page in github and do a pull request.</p>
+<p>Notă: Ordinea cărți începe cu cea mai nouă. Nota 2: După cărțile în limba engleză există articole în franceză, greacă și poloneză</p>
+<div class="section" id="english">
+<h2>Engleză<a class="headerlink" href="#english" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="discover-qgis-3-x">
+<h3>Discover QGIS 3.x<a class="headerlink" href="#discover-qgis-3-x" title="Link permanent la acest titlu">¶</a></h3>
+<p>A workbook for Classroom or Independent Study</p>
+<ul class="simple">
+<li><a class="reference external" href="https://locatepress.com/dq3">https://locatepress.com/dq3</a></li>
+<li>Author: Kurt Menke</li>
+<li>Date: May 2019</li>
+</ul>
+</div>
+<div class="section" id="hands-on-geospatial-analysis-with-r-and-qgis">
+<h3>Hands-On Geospatial Analysis with R and QGIS<a class="headerlink" href="#hands-on-geospatial-analysis-with-r-and-qgis" title="Link permanent la acest titlu">¶</a></h3>
+<p>Exemple practice din proiecte ale lumii reale de GIS, Teledetecție, Analiza și Managementul și Datelor Geospațiale folosind limbajul de programare R</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/application-development/hands-geospatial-analysis-r-and-qgis">https://www.packtpub.com/application-development/hands-geospatial-analysis-r-and-qgis</a></li>
+<li>Autor: Shammunul Islam</li>
+<li>Data: Noiembrie 2018</li>
+</ul>
+</div>
+<div class="section" id="learn-qgis-fourth-edition">
+<h3>Learn QGIS - Fourth Edition<a class="headerlink" href="#learn-qgis-fourth-edition" title="Link permanent la acest titlu">¶</a></h3>
+<p>Aflați cum se vizualizează, editează și se analizează datele geospațiale cu ajutorul QGIS și Python 3</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/application-development/learn-qgis-fourth-edition">https://www.packtpub.com/application-development/learn-qgis-fourth-edition</a></li>
+<li>Autori: Andrew Cutts, Anita Graser</li>
+<li>Data: Noiembrie 2018</li>
+</ul>
+</div>
+<div class="section" id="on-the-way-with-gis">
+<h3>On the Way with GIS<a class="headerlink" href="#on-the-way-with-gis" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://locatepress.com/otw">https://locatepress.com/otw</a></li>
+<li>Autor(i): Toni Fisher</li>
+<li>Data: Februarie 2018</li>
+</ul>
+</div>
+<div class="section" id="open-the-door-to-gis-student-and-teacher-s-edition">
+<h3>Open the Door to GIS - Student and Teacher’s Edition<a class="headerlink" href="#open-the-door-to-gis-student-and-teacher-s-edition" title="Link permanent la acest titlu">¶</a></h3>
+<p>Open the Door to GIS oferă profesorilor posibilitatea de a folosi un soft de GIS puternic în clasele lor, fără a-i obliga să devină experți, prin descărcarea gratuită a aplicației QGIS. Open the Door to GIS este recomandată elevilor cu vârste cuprinse între 10 și 15 ani, fiind disponibile atât o ediție pentru profesori cât și una pentru studenți.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://locatepress.com/odg">https://locatepress.com/odg</a></li>
+<li>Autor(i): Toni Fisher</li>
+<li>Data: Mai 2017</li>
+</ul>
+</div>
+<div class="section" id="qgis-python-programming-cookbook-second-edition">
+<h3>QGIS Python Programming Cookbook - Second Edition<a class="headerlink" href="#qgis-python-programming-cookbook-second-edition" title="Link permanent la acest titlu">¶</a></h3>
+<p>Bazată pe versiunea QGIS 2.18, această carte vă va învăța cum să scrieți cod Python care să funcționeze cu date spațiale, în scopul automatizării sarcinilor de geoprocesare din QGIS.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/application-development/qgis-python-programming-cookbook-second-edition">https://www.packtpub.com/application-development/qgis-python-programming-cookbook-second-edition</a></li>
+<li>Autor(i): Joel Lawhead</li>
+<li>Data: Martie 2017</li>
+</ul>
+</div>
+<div class="section" id="qgis-becoming-a-gis-power-user">
+<h3>QGIS:Becoming a GIS Power User<a class="headerlink" href="#qgis-becoming-a-gis-power-user" title="Link permanent la acest titlu">¶</a></h3>
+<p>Deveniți un utilizator de QGIS avansat, care stăpânește gestiunea datelor cu ajutorul QGIS, tehnici de analiză spațială și de vizualizare</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/big-data-and-business-intelligence/qgisbecoming-gis-power-user">https://www.packtpub.com/big-data-and-business-intelligence/qgisbecoming-gis-power-user</a></li>
+<li>Anita Graser, Ben Mearns, Alex Mandel, Victor Olaya Ferrero, Alexander Bruy</li>
+<li>Data: Februarie 2017</li>
+</ul>
+</div>
+<div class="section" id="mastering-qgis-second-edition">
+<h3>Mastering QGIS - A Doua Ediție<a class="headerlink" href="#mastering-qgis-second-edition" title="Link permanent la acest titlu">¶</a></h3>
+<p>Mergeți dincolo de elementele de bază și folosiți puterea deplină a QGIS în exemple practice, pas-cu-pas</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-qgis-second-edition">https://www.packtpub.com/big-data-and-business-intelligence/mastering-qgis-second-edition</a></li>
+<li>Kurt Menke, GISP și alții</li>
+<li>Data: Septembrie 2016</li>
+</ul>
+</div>
+<div class="section" id="discover-qgis">
+<h3>Descoperiți QGIS<a class="headerlink" href="#discover-qgis" title="Link permanent la acest titlu">¶</a></h3>
+<p>Cartea de studiu pentru curriculumul GeoAcademy</p>
+<ul class="simple">
+<li><a class="reference external" href="https://locatepress.com/dqw">https://locatepress.com/dqw</a></li>
+<li>Autor(i): Kurt Menke</li>
+<li>Data: Iulie 2016</li>
+</ul>
+</div>
+<div class="section" id="qgis-2-cookbook">
+<h3>Cartea de rețete a QGIS 2<a class="headerlink" href="#qgis-2-cookbook" title="Link permanent la acest titlu">¶</a></h3>
+<p>Deveniți un utilizator de QGIS avansat, care stăpânește gestiunea datelor cu ajutorul QGIS, tehnici de analiză spațială și de vizualizare</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/application-development/qgis-2-cookbook">https://www.packtpub.com/application-development/qgis-2-cookbook</a></li>
+<li>Autor(i): Alex Mandel, Anita Graser, Victor Olaya Ferrero, Alexander Bruy</li>
+<li>Data: Aprilie 2016</li>
+</ul>
+</div>
+<div class="section" id="learning-qgis-third-edition">
+<h3>Learning QGIS - Third Edition<a class="headerlink" href="#learning-qgis-third-edition" title="Link permanent la acest titlu">¶</a></h3>
+<p>Utilizați QGIS pentru a crea hărți mărețe și pentru a îndeplini toate sarcinile de geoprocesare de care aveți nevoie.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/big-data-and-business-intelligence/learning-qgis-third-edition">https://www.packtpub.com/big-data-and-business-intelligence/learning-qgis-third-edition</a></li>
+<li>Autor(i): Anita Graser</li>
+<li>Data: Martie 2016</li>
+</ul>
+</div>
+<div class="section" id="qgis-map-design">
+<h3>QGIS Map Design<a class="headerlink" href="#qgis-map-design" title="Link permanent la acest titlu">¶</a></h3>
+<p>Aflați cum să utilizați QGIS pentru a duce produsele cartografice spre cel mai înalt nivel.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://locatepress.com/qmd">http://locatepress.com/qmd</a></li>
+<li>Autor(i): Anita Graser și Gretchen N. Peterson</li>
+<li>Data: Martie 2016</li>
+</ul>
+</div>
+<div class="section" id="mastering-qgis">
+<h3>Mastering QGIS<a class="headerlink" href="#mastering-qgis" title="Link permanent la acest titlu">¶</a></h3>
+<p>Intrați în profunzimile QGIS și gestionați datele geospațiale folosind acest ghid avansat, creat pentru a vă ajuta să dezvoltați hărți și aplicații care permit explorarea lumii în noi moduri.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/application-development/mastering-qgis">https://www.packtpub.com/application-development/mastering-qgis</a></li>
+<li>Autor(i): Kurt Menke, GISP - Dr. Richard Smith Jr., GISP - Dr. Luigi Pirelli - Dr John Van Hoesen, GISP</li>
+<li>Data: Marrtie 2015</li>
+</ul>
+</div>
+<div class="section" id="qgis-blueprints">
+<h3>QGIS Blueprints<a class="headerlink" href="#qgis-blueprints" title="Link permanent la acest titlu">¶</a></h3>
+<p>Dezvoltați în QGIS aplicații web analitice, bazate pe locație.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/hardware-and-creative/qgis-blueprints">https://www.packtpub.com/hardware-and-creative/qgis-blueprints</a></li>
+<li>Autor(i): Ben Mearn</li>
+<li>Data: Septembrie 2015</li>
+</ul>
+</div>
+<div class="section" id="qgis-by-example">
+<h3>QGIS By Example<a class="headerlink" href="#qgis-by-example" title="Link permanent la acest titlu">¶</a></h3>
+<p>Folosiți facilitățile QGIS în aplicații din lumea reală, pentru a deveni un utilizator puternic în cartografie și în analiza GIS</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.packtpub.com/application-development/qgis-example">https://www.packtpub.com/application-development/qgis-example</a></li>
+<li>Autor(i): Alexander Bruy, Daria Svidzinsk</li>
+<li>Data: Iunie 2015</li>
+</ul>
+</div>
+<div class="section" id="the-pyqgis-programmer-s-guide-extending-qgis-with-python">
+<h3>The PyQGIS Programmer’s Guide - Extending QGIS with Python<a class="headerlink" href="#the-pyqgis-programmer-s-guide-extending-qgis-with-python" title="Link permanent la acest titlu">¶</a></h3>
+<p>Bine ați venit în lumea PyQGIS, o combinație de Quantum GIS și Python, menită să extindă și să sporească setul de instrumente GIS cu sursă deschisă. Cu ajutorul PyQGIS puteți scrie script-uri și plugin-uri, în scopul implementării de noi caracteristici și a îndeplinirii sarcinilor automate.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://locatepress.com/ppg">http://locatepress.com/ppg</a></li>
+<li>Autor(i): Gary Sherman</li>
+<li>Data: Aprilie 2014</li>
+</ul>
+</div>
+<div class="section" id="the-qgis-training-manual-a-comprehensive-introduction-to-quantum-gis">
+<h3>The QGIS Training Manual - A Comprehensive Introduction to Quantum GIS<a class="headerlink" href="#the-qgis-training-manual-a-comprehensive-introduction-to-quantum-gis" title="Link permanent la acest titlu">¶</a></h3>
+<p>Proiectat pentru lucrul în QGIS 1.8</p>
+<p>Ani de experiență cumulați într-o singură carte─Manualul Oficial de Instruire în  Quantum GIS, scris de formatori experimentați. Reprezintă startul de care aveți nevoie pentru a învăța acest soft popular de cartografiere, împreună cu setul său de instrumente GIS.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://locatepress.com/qtm">http://locatepress.com/qtm</a></li>
+<li>Autor(i): Rüdiger Thiede, Tim Sutton, Horst Düster, și Marcelle Sutton</li>
+<li>Data: Mai 2013</li>
+</ul>
+</div>
+</div>
+<div class="section" id="dutch">
+<h2>Olandeză<a class="headerlink" href="#dutch" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="qgis-at-secondary-level-geography-studies-cartography-at-secondary-level-giswijzer-go-game">
+<h3>QGIS la nivel secundar - Studii de Geografie - Cartografiere la nivel secundar - jocul GISwijzer GO<a class="headerlink" href="#qgis-at-secondary-level-geography-studies-cartography-at-secondary-level-giswijzer-go-game" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.giswijzer.nl/?product=qgis-op-vo-niveau-geografie-studies-cartografie-op-vo-niveau-giswijzer-go-spel">https://www.giswijzer.nl/?product=qgis-op-vo-niveau-geografie-studies-cartografie-op-vo-niveau-giswijzer-go-spel</a></li>
+<li>Margit Stapel</li>
+<li>Data: Decembrie 2016</li>
+</ul>
+</div>
+</div>
+<div class="section" id="french">
+<h2>Franceză<a class="headerlink" href="#french" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="systemes-d-information-geographique-cours-et-exercices-corriges-avec-grass-et-qgis">
+<h3>Systèmes d’information géographique. Cours et exercices corrigés avec Grass et Qgis<a class="headerlink" href="#systemes-d-information-geographique-cours-et-exercices-corriges-avec-grass-et-qgis" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.dunod.com/sciences-techniques/systemes-d-information-geographique-cours-et-exercices-corriges-avec-grass-et">https://www.dunod.com/sciences-techniques/systemes-d-information-geographique-cours-et-exercices-corriges-avec-grass-et</a></li>
+<li>Autor : Yves Auda</li>
+<li>Data: Martie 2018</li>
+</ul>
+</div>
+<div class="section" id="learning-qgis-by-example-in-french">
+<h3>Învățați QGIS prin exemple, în limba franceză<a class="headerlink" href="#learning-qgis-by-example-in-french" title="Link permanent la acest titlu">¶</a></h3>
+<p>Această carte se referă la fluxurile de lucru esențiale din domeniul GIS, de la crearea de date la reprezentarea cartografică a acestora și câteva noțiuni fundamentale de analiză spațială.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.amazon.fr/Apprendre-QGIS-par-lexemple-dInformation/dp/1517565766">https://www.amazon.fr/Apprendre-QGIS-par-lexemple-dInformation/dp/1517565766</a></li>
+<li>Autor: Gerard Allali</li>
+<li>Data: Septembrie 2015</li>
+</ul>
+</div>
+</div>
+<div class="section" id="greek">
+<h2>Greacă<a class="headerlink" href="#greek" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="introduction-to-raster-analysis-learning-qgis-book-2">
+<h3>Introducere în Analiza Raster (Manualul 2 de Instruire în QGIS)<a class="headerlink" href="#introduction-to-raster-analysis-learning-qgis-book-2" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.kobo.com/cy/en/ebook/V7poK2Or2za3IqGN-__5ZA">https://www.kobo.com/cy/en/ebook/V7poK2Or2za3IqGN-__5ZA</a></li>
+<li>Autor(i): Anthony Antoniou</li>
+<li>Data: Decembrie 2016</li>
+</ul>
+</div>
+<div class="section" id="basic-workbook-is-an-introductory-text-for-learning-qgis-2-8">
+<h3>Manualul de Bază cuprinde un text introductiv pentru învățarea QGIS (2.8)<a class="headerlink" href="#basic-workbook-is-an-introductory-text-for-learning-qgis-2-8" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.kobo.com/cy/en/ebook/ZmcAySXVLjKxvYmZk3eKVQ">https://www.kobo.com/cy/en/ebook/ZmcAySXVLjKxvYmZk3eKVQ</a></li>
+<li>Autor(i): Anthony Antoniou</li>
+<li>Data: Marrtie 2015</li>
+</ul>
+</div>
+</div>
+<div class="section" id="japanese">
+<h2>Japanese<a class="headerlink" href="#japanese" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="qgis">
+<h3>【改訂新版】［オープンデータ＋QGIS］統計・防災・環境情報がひと目でわかる地図の作り方<a class="headerlink" href="#qgis" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://gihyo.jp/book/2019/978-4-297-10317-0">https://gihyo.jp/book/2019/978-4-297-10317-0</a></li>
+<li>Authors: Kosuke ASAHI, Shoichi OTOMO, Takayuki MIZUTANI, Norihiro YAMATE</li>
+<li>Date: December 2018</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>業務で使う林業QGIS　徹底使いこなしガイド<a class="headerlink" href="#id1" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.ringyou.or.jp/publish/detail_1409.html">http://www.ringyou.or.jp/publish/detail_1409.html</a></li>
+<li>Authors: Koichi KITA</li>
+<li>Date: June 2017</li>
+</ul>
+</div>
+</div>
+<div class="section" id="polish">
+<h2>Poloneză<a class="headerlink" href="#polish" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="learn-about-gis-and-qgis-in-polish">
+<h3>Inițiere în GIS și QGIS, în limba poloneză<a class="headerlink" href="#learn-about-gis-and-qgis-in-polish" title="Link permanent la acest titlu">¶</a></h3>
+<p>Cartea este pregătită similar seriei „pentru Tonți”.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://helion.pl/ksiazki/qgis-tworzenie-i-analiza-map-bartlomiej-iwanczak,qgista.htm">http://helion.pl/ksiazki/qgis-tworzenie-i-analiza-map-bartlomiej-iwanczak,qgista.htm</a></li>
+<li>Autor(i): Bartłomiej Iwańczak</li>
+<li>Data: Octombrie 2016</li>
+</ul>
+</div>
+</div>
+<div class="section" id="turkish">
+<h2>Turcă<a class="headerlink" href="#turkish" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="geological-applications-with-open-source-coded-geographic-information-systems">
+<h3>Aplicații Geologice folosind Sisteme de Informații Geografice cu Sursă Deschisă<a class="headerlink" href="#geological-applications-with-open-source-coded-geographic-information-systems" title="Link permanent la acest titlu">¶</a></h3>
+<p>(Açık Kaynak Kodlu Coğrafi Bilgi Sistemleri ile Jeoloji Uygulamaları</p>
+<p>Cartea cuprinde 2 părți principale; În prima parte, este explicată noțiunea de Sistem de Informații Geografice. În a doua parte, este prezentată folosirea QGIS alături de aplicații geologice.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.jmo.org.tr/yayinlar/kitap_goster.php?kodu=260">http://www.jmo.org.tr/yayinlar/kitap_goster.php?kodu=260</a></li>
+<li>Autori: Can Ayday, Levent Sabah, Nefise Yaman, Kübra Keser</li>
+<li>Data: Ianuarie 2016</li>
+</ul>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../getinvolved/index.html" title="Implicați-vă / Dezvoltare"
+             >următor</a> |</li>
+        <li class="right" >
+          <a href="../commercial_support.html" title="Suport Comercial"
+             >precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Pentru utilizatori</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">În cazul în care nu se prevede altfel, tot conținutul este licențiat sub <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Elemente grafice preluate de la <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Pagină netradusă? Sau ați observat o eroare de traducere:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">remediere</a>
+        <br/>
+        Eroare contextuală, text lipsă sau știți dvs. mai bine:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">remediere</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

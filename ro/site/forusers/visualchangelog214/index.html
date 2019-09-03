@@ -1,0 +1,1686 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Jurnalul schimbărilor pentru QGIS 2.14</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Căutare" href="../../../search.html" />
+    <link rel="next" title="Jurnalul schimbărilor pentru QGIS 2.12" href="../visualchangelog212/index.html" />
+    <link rel="prev" title="Jurnalul schimbărilor pentru QGIS 2.16" href="../visualchangelog216/index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../visualchangelog212/index.html" title="Jurnalul schimbărilor pentru QGIS 2.12"
+             accesskey="N">următor</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog216/index.html" title="Jurnalul schimbărilor pentru QGIS 2.16"
+             accesskey="P">precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Pentru utilizatori</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" accesskey="U">Jurnalul Schimbărilor Vizuale</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engleză">English</option>
+  <option value="ca" title="Catalană">Català</option>
+  <option value="da" title="Daneză">Dansk</option>
+  <option value="de" title="Germană">Deutsch</option>
+  <option value="es" title="Spaniolă">Español</option>
+  <option value="fa" title="Persană">فارسی</option>
+  <option value="fi" title="Finlandeză">Suomi</option>
+  <option value="fr" title="Franceză">Français</option>
+  <option value="gl" title="Galiciană">Galego</option>
+  <option value="id" title="Indoneziană">Bahasa Indonesia</option>
+  <option value="it" title="Italiană">Italiano</option>
+  <option value="hu" title="Maghiară">Magyar</option>
+  <option value="ja" title="Japoneză">日本語</option>
+  <option value="km_KH" title="Khmeră">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coreeană">한국어</option>
+  <option value="lt" title="Lituaniană">Lietuvių</option>
+  <option value="nl" title="Olandeză">Nederlands</option>
+  <option value="pl" title="Poloneză">Polski</option>
+  <option value="pt_BR" title="Portugheză (Brazilia)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugheză">Português</option>
+  <option value="ro" title="Română">Română</option>
+  <option value="tr" title="Turcă">Türkçe</option>
+  <option value="ru" title="Rusă">Русский</option>
+  <option value="uk" title="Ucrainiană">Українська</option>
+  <option value="zh-Hans" title="Cineză (Simplificată)">簡体中文</option>
+  <option value="zh-Hant" title="Chineză (Tradițională)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/forusers/visualchangelog214/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Donați Acum</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim pentru donație!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS fiind gratuit, sperăm că vă place să-l folosiți; totodată, vă încurajăm să partajați și altora copia descărcată, astfel încât și ei să o poată utiliza. Vă mulțumim!</p>'+
+            '<p id="stripeerr" style="display:none;">Din păcate, a apărut o eroare în procesarea donației. Reîncercați mai târziu sau contactați-ne la adresa finance@qgis.org</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">Descoperiți QGIS</a></li>
+            <li><a href="../index.html">Pentru utilizatori</a></li>
+            <li><a href="../../getinvolved/index.html">Implicați-vă</a></li>
+            <li><a href="../../../docs/index.html">Documentație</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Căutare" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../visualchangelog216/index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../visualchangelog212/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Descoperiți QGIS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Pentru utilizatori</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">Descărcați QGIS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../visualchangelogs.html">Jurnalul Schimbărilor Vizuale</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog38/index.html">Changelog for QGIS 3.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog36/index.html">Jurnalul schimbărilor pentru QGIS 3.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog34/index.html">Jurnalul schimbărilor pentru QGIS 3.4 LTR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog32/index.html">Changelog for QGIS 3.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog30/index.html">Jurnalul schimbărilor pentru QGIS 3.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog218/index.html">Jurnalul schimbărilor pentru QGIS 2.18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog216/index.html">Jurnalul schimbărilor pentru QGIS 2.16</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Jurnalul schimbărilor pentru QGIS 2.14</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#current-qgis-sponsors">Sponsori Actuali ai QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general">Generalități</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#analysis-tools">Instrumentele de analiză</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#browser">Navigatorul</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-providers">Furnizorii de Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-management">Gestiunea datelor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitising">Digitizarea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labelling">Etichetarea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layer-legend">Legenda Stratului</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-composer">Compozitorul de Hărți</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plugins">Plugin-uri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing">Procesare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programmability">Programabilitatea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-server">Serverul QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">Simbologie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-interface">Interfața cu Utilizatorul</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog212/index.html">Jurnalul schimbărilor pentru QGIS 2.12</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog210/index.html">Jurnalul schimbărilor pentru QGIS 2.10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog28/index.html">Jurnalul schimbărilor pentru QGIS 2.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog260/index.html">Jurnalul schimbărilor pentru QGIS 2.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog240/index.html">Jurnalul schimbărilor pentru QGIS 2.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog220/index.html">Jurnalul schimbărilor pentru QGIS 2.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualchangelog200/index.html">Jurnalul schimbărilor pentru QGIS 2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../trainingmaterial/index.html">Materiale pentru instruire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support.html">Asistență</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usergroups.html">Grupuri de Utilizatori</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commercial_support.html">Suport Comercial</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org/plugins/">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../books/index.html">Cărți</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Implicați-vă / Dezvoltare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentație</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="changelog-for-qgis-2-14">
+<span id="changelog214"></span><h1>Jurnalul schimbărilor pentru QGIS 2.14<a class="headerlink" href="#changelog-for-qgis-2-14" title="Link permanent la acest titlu">¶</a></h1>
+<p><img alt="image1" src="../../../_images/596e7e353771d2802f065352548e512b8d902d83.png" /></p>
+<p>Acesta este jurnalul schimbărilor pentru următoarea versiune de QGIS - versiunea 2.14 «Essen». Essen a fost orașul gazdă al întâlnirilor dezvoltatorilor din Octombrie 2012 și 2014.</p>
+<p><strong>Versiunea cu Suport pe Termen Lung</strong></p>
+<p>Aceasta este o versiune specială, deoarece este desemnată ca fiind «LTR» (Versiune cu Suport pe Termen Lung). Versiunilor LTR li se vor depana erorile timp de <strong>un an</strong>, și vor avea în permanență funcționalitățile înghețate (adică, nu se vor adăuga noi caracteristici, doar se vor repara erorile și se vor efectua actualizări triviale). Rețineți că se află în discuție lansarea versiunilor LTR o dată la doi ani, dar, din motive tehnice, nu vom face acest lucru până la apariția QGIS 3.2.</p>
+<p>Scopul versiunilor LTR este de a oferi o platformă stabilă și mai puțin supusă schimbărilor, pentru întreprinderi și organizații care nu doresc să se ocupe cu reactualizarea competențelor utilizatorilor, a materialelor de instruire etc., mai mult de o dată pe an. Succesul versiunilor LTR ține de voi, utilizatorii noștri dragi - avem nevoie de sprijinul vostru pentru a ajuta la finanțarea reparării erorilor, asigurându-vă, totodată, prin contractele de asistență cu furnizorii de suport tehnic, că toate erorile reparate în numele dumneavoastră vor fi aplicate atât versiunii LTR cât și celei obișnuite.</p>
+<p>De asemenea, în cazul în care o versiune LTR este importantă pentru dvs., vă rugăm să luați în considerare susținerea în mod direct a proiectului QGIS, sau să propuneți furnizorului dumneavoastră comercial utilizarea LTR ca bază pentru soluțiile de întreprindere, astfel încât oricine să poată beneficia de o platformă stabilă,  îmbunătățită și finisată în permanență. Rețineți că pentru utilizatorii și organizațiile cărora le plac lucrurile împinse la limită, elaborarea unei noi versiuni, o dată la patru luni, va continua neabătut.</p>
+<p><strong>Noi Funcționalități în QGIS 2.14 «Essen»</strong></p>
+<p>Dacă efectuați o actualizare a QGIS 2.8 (versiunea LTR anterioară) veți descoperi un număr mare de caracteristici noi. Vă încurajăm să citiți jurnalele schimbărilor pentru versiunile de bază non LTR <a class="reference external" href="../visualchangelog210/">2.10</a> și <a class="reference external" href="../visualchangelog212/">2.12</a>, versiunea QGIS 2.14 incluzând, de asemenea, toate funcționalitățile respective. Rețineți că 2.14 va apărea mai întâi în depozitele de pachete regulate, și nu va înlocui imediat 2.8 în depozitele pachetelor LTR. Acest lucru se va întâmpla în urma lansării versiunii 2.16.</p>
+<p>Ori de câte ori se adaugă noi caracteristici în aplicație, apare posibilitatea introducerii unor noi erori - dacă întâmpinați probleme cu această versiune, vă rugăm să semnalați acest lucru în <a class="reference external" href="http://hub.qgis.org">Sistemul de urmărire a erorilor QGIS</a>.</p>
+<p><strong>Mulțumiri</strong></p>
+<p>We would like to thank the developers, documenters, testers and all the
+many folks out there who volunteer their time and effort (or fund people
+to do so). From the QGIS community we hope you enjoy this release! If
+you wish to donate time, money or otherwise get involved in making QGIS
+more awesome, please wander along to <a class="reference external" href="https://qgis.org">qgis.org</a> and
+lend a hand!</p>
+<p>QGIS is supported by donors and sponsors. A current list of donors who
+have made financial contributions large and small to the project can be
+seen on our <a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#list-of-donors">donors
+list</a>.
+If you would like to become an official project sponsor, please visit
+<a class="reference external" href="https://qgis.org/en/site/about/sponsorship.html#sponsorship">our sponsorship
+page</a> for
+details. Sponsoring QGIS helps us to fund our six-monthly developer
+meetings, maintain project infrastructure and fund bug fixing efforts. A
+complete list of current sponsors is provided below - our very great
+thank you to all of our sponsors!</p>
+<p>QGIS este un soft gratuit iar dvs. nu aveți obligația de a plăti pentru folosirea lui - de fapt, vrem să încurajăm oamenii de oriunde să-l folosească, indiferent de starea financiară sau socială - având convingerea că, prin punerea la dispoziția utilizatorilor a posibilităților de decizie spațială, vom ajunge la o societate mai potrivită întregii omeniri. Dacă aveți posibilitatea de a sprijini QGIS, puteți <a class="reference external" href="https://qgis.org/en/site/getinvolved/donations.html"><img alt="donate here" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" /></a></p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#current-qgis-sponsors" id="id1">Sponsori Actuali ai QGIS</a></li>
+<li><a class="reference internal" href="#general" id="id2">Generalități</a><ul>
+<li><a class="reference internal" href="#feature-changed-behaviour-of-strpos-function" id="id3">Caracteristică: Comportament schimbat al funcției strpos</a></li>
+<li><a class="reference internal" href="#feature-zoom-to-feature-with-right-click-in-attribute-table" id="id4">Caracteristică: Transfocare la nivelul entității, cu ajutorul unui clic dreapta în tabelul de atribute</a></li>
+<li><a class="reference internal" href="#feature-speed-and-memory-improvements" id="id5">Caracteristică: Îmbunătățiri aduse vitezei și memoriei</a></li>
+<li><a class="reference internal" href="#feature-more-expression-variables" id="id6">Caracteristică: Mai multe variabile în cadrul expresiilor</a></li>
+<li><a class="reference internal" href="#feature-better-control-over-placement-of-map-elements" id="id7">Caracteristică: Mai mult control asupra plasamentului elementelor de hartă</a></li>
+<li><a class="reference internal" href="#feature-paid-bugfixing-programme" id="id8">Caracteristică: Program de plată pentru eliminarea erorilor</a></li>
+<li><a class="reference internal" href="#feature-field-calculator-can-be-used-to-update-feature-s-geometry" id="id9">Caracteristică: Calculatorul de câmpuri poate fi folosit pentru a actualiza geometria entității</a></li>
+<li><a class="reference internal" href="#feature-new-expression-functions-in-2-14" id="id10">Caracteristică: Noi funcții pentru expresii în 2.14</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-tools" id="id11">Instrumentele de analiză</a><ul>
+<li><a class="reference internal" href="#feature-more-statistics-available-in-merge-attributes-tool" id="id12">Caracteristică: Mai multe statistici disponibile în instrumentul de îmbinare a atributelor</a></li>
+<li><a class="reference internal" href="#feature-z-m-values-are-shown-when-using-the-identify-tool" id="id13">Caracteristică: Valorile z/m sunt afișate atunci când se utilizează instrumentul de identificare</a></li>
+<li><a class="reference internal" href="#feature-unified-handling-of-distance-and-area-units-and-coordinate-formats" id="id14">Caracteristică: Manipulare centralizată a unităților de distanță și de suprafață, și a formatelor pentru coordonate</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#browser" id="id15">Navigatorul</a><ul>
+<li><a class="reference internal" href="#feature-browser-improvements" id="id16">Caracteristică: Îmbunătățiri aduse Navigatorului</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-providers" id="id17">Furnizorii de Date</a><ul>
+<li><a class="reference internal" href="#feature-cache-wms-capabililies" id="id18">Caracteristică: Capabilităţi de păstrare în memoria tampon a cererilor WMS</a></li>
+<li><a class="reference internal" href="#feature-curved-geometry-support-expanded" id="id19">Caracteristică: S-a extins suportul pentru geometria curbată</a></li>
+<li><a class="reference internal" href="#feature-better-handling-of-time-and-datetime-fields" id="id20">Caracteristică: Gestiune îmbunătățită pentru câmpurile de tipurile time și datetime</a></li>
+<li><a class="reference internal" href="#feature-z-m-support-in-delimited-text-provider" id="id21">Caracteristică: Suport Z/M în furnizorul de text delimitat</a></li>
+<li><a class="reference internal" href="#feature-transaction-groups-for-postgres-editing" id="id22">Caracteristică: Grupuri de tranzacții pentru editarea Postgres:</a></li>
+<li><a class="reference internal" href="#feature-postgres-provider-pki-authentication" id="id23">Caracteristică: Autentificare PKI pentru furnizorul Postgres</a></li>
+<li><a class="reference internal" href="#feature-virtual-layers" id="id24">Caracteristică: Straturi virtuale</a></li>
+<li><a class="reference internal" href="#feature-more-file-extensions-for-gdal-and-ogr-providers-file-selectors" id="id25">Caracteristică: Mai multe extensii de fișiere pentru furnizorii selectorilor de fișiere  GDAL și OGR</a></li>
+<li><a class="reference internal" href="#feature-use-st-removerepeatedpoints-for-server-side-simplification-with-postgis-2-2-or-newer-layers" id="id26">Caracteristică: Utilizarea ST_RemoveRepeatedPoints pentru simplificarea, pe parte de server, a straturilor PostGIS 2.2 (sau mai noi)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-management" id="id27">Gestiunea datelor</a><ul>
+<li><a class="reference internal" href="#feature-removal-of-spit-plugin" id="id28">Caracteristică: Eliminarea plugin-ului SPIT</a></li>
+<li><a class="reference internal" href="#feature-dxf-export-option-to-use-title-instead-of-name-as-dxf-layer-name-in-application-and-server" id="id29">Caracteristică: Exportul DXF: opțiunea de a utiliza titlul în loc de nume, ca denumire a stratului DXF în aplicație și server</a></li>
+<li><a class="reference internal" href="#feature-geometry-type-can-be-overridden-in-the-vector-save-as-dialog" id="id30">Caracteristică: Tipul de geometrie poate fi suprascris în dialogul de salvare a vectorului</a></li>
+<li><a class="reference internal" href="#feature-vector-joins-are-now-saved-within-qlr-layer-definition-files" id="id31">Caracteristică: Joncțiunile vectoriale sunt de acum salvate în interiorul fișierului QLR, cu definițiile stratului</a></li>
+<li><a class="reference internal" href="#feature-external-resource-widget" id="id32">Caracteristică: Controlul grafic al Resurselor Externe</a></li>
+<li><a class="reference internal" href="#feature-n-m-relation-editing" id="id33">Caracteristică: Editarea relației N:M</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#digitising" id="id34">Digitizarea</a><ul>
+<li><a class="reference internal" href="#feature-configurable-rubber-band-color" id="id35">Caracteristică: Culoare configurabilă pentru banda elastică</a></li>
+<li><a class="reference internal" href="#feature-trace-digitising-tool" id="id36">Caracteristică: Instrument de digitizare prin urmărire</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#labelling" id="id37">Etichetarea</a><ul>
+<li><a class="reference internal" href="#feature-cartographic-placement-mode-for-point-labels" id="id38">Caracteristică: Mod de poziționare „cartografică” pentru etichetele punctelor</a></li>
+<li><a class="reference internal" href="#feature-applying-label-distance-from-symbol-bounds" id="id39">Caracteristică: Aplicarea distanței etichetei față de limitele simbolurilor</a></li>
+<li><a class="reference internal" href="#feature-control-over-label-rendering-order" id="id40">Caracteristică: Controlul ordinii de randare a etichetelor</a></li>
+<li><a class="reference internal" href="#feature-actual-rendered-symbol-is-now-considered-as-an-obstacle-for-point-feature-labels" id="id41">Caracteristică: Simbolulul de randare actual este de acum considerat drept un obstacol pentru etichetele entităților de tip punct</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-legend" id="id42">Legenda Stratului</a><ul>
+<li><a class="reference internal" href="#feature-paste-a-style-to-multiple-selected-layers-or-to-all-layers-in-a-legend-group" id="id43">Caracteristică: Se poate aplica un stil mai multor straturi selectate, sau tuturor straturilor din legenda grupului</a></li>
+<li><a class="reference internal" href="#feature-filter-legend-by-expression" id="id44">Caracteristică: Filtrarea legendei după o expresie</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-composer" id="id45">Compozitorul de Hărți</a><ul>
+<li><a class="reference internal" href="#feature-new-options-for-filtering-legend-elements" id="id46">Caracteristică: Noi opțiuni pentru filtrarea elementelor de legendă</a></li>
+<li><a class="reference internal" href="#feature-additional-paths-for-composer-templates" id="id47">Caracteristică: Căi suplimentare pentru șabloanele compozitorului</a></li>
+<li><a class="reference internal" href="#feature-multiple-selection-of-compositions-in-manager" id="id48">Caracteristică: Selecție multiplă a compozițiilor din manager</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins" id="id49">Plugin-uri</a><ul>
+<li><a class="reference internal" href="#feature-authentication-system-support-for-plugin-manager" id="id50">Caracteristică: Sistem de autentificare pentru managerul de plugin-uri</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#processing" id="id51">Procesare</a><ul>
+<li><a class="reference internal" href="#feature-new-algorithms-in-2-14" id="id52">Caracteristică: Noi algoritmi în 2.14</a><ul>
+<li><a class="reference internal" href="#qgis-geoalgorithms" id="id53">Geoalgoritmi QGIS:</a></li>
+<li><a class="reference internal" href="#gdal-ogr-geoalgorithms" id="id54">Geoalgoritmi GDAL/OGR:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feature-unit-tests-q-a" id="id55">Caracteristică: Asigurarea Calității pentru Testele de Unitate</a></li>
+<li><a class="reference internal" href="#feature-improved-toolbox" id="id56">Caracteristică:  Îmbunătățiri aduse barei de instrumente</a></li>
+<li><a class="reference internal" href="#feature-batch-processes-can-be-saved-and-later-recovered-from-the-batch-processing-interface" id="id57">Caracteristică: Procesarea loturilor se poate salva, deschizându-se, ulterior, cu ajutorul interfeței de prelucrare a loturilor</a></li>
+<li><a class="reference internal" href="#feature-more-informative-algorithm-dialog" id="id58">Caracteristică: Dialogul algoritmilor conține mai multe informații</a></li>
+<li><a class="reference internal" href="#feature-grass7-v-net-modules" id="id59">Caracteristică: Module v.net GRASS7</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#programmability" id="id60">Programabilitatea</a><ul>
+<li><a class="reference internal" href="#feature-redesign-expression-function-editor" id="id61">Caracteristică: S-a reproiectat editorul de expresii</a></li>
+<li><a class="reference internal" href="#feature-store-python-init-code-into-the-project" id="id62">Caracteristică: Stocarea în proiect a codului init Python</a></li>
+<li><a class="reference internal" href="#feature-new-filtering-and-sorting-options-for-qgsfeaturerequest" id="id63">Caracteristică: Noi opțiuni de sortare și filtrare pentru QgsFeatureRequest</a></li>
+<li><a class="reference internal" href="#feature-custom-feature-form-python-code-options" id="id64">Caracteristică: Opțiuni pentru codul Python din formularele personalizabile</a></li>
+<li><a class="reference internal" href="#feature-new-pyqgis-classes-in-2-14" id="id65">Caracteristică: Noi clase PyQGIS în 2.14</a></li>
+<li><a class="reference internal" href="#new-core-classes" id="id66">Noi clase de baze</a></li>
+<li><a class="reference internal" href="#new-gui-classes" id="id67">Noi clase GUI</a><ul>
+<li><a class="reference internal" href="#reusable-widgets" id="id68">Controale grafice reutilizabile:</a></li>
+<li><a class="reference internal" href="#reusable-dialogs" id="id69">Dialoguri reutilizabile:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#qgis-server" id="id70">Serverul QGIS</a><ul>
+<li><a class="reference internal" href="#feature-startindex-param-in-wfs-getfeature-request" id="id71">Caracteristică: Parametrul STARTINDEX în cererea WMS GetFeature</a></li>
+<li><a class="reference internal" href="#feature-showfeaturecount-in-getlegendgraphic" id="id72">Caracteristică: showFeatureCount în GetLegendGraphic</a></li>
+<li><a class="reference internal" href="#feature-option-to-avoid-rendering-artefacts-at-edges-of-tiles" id="id73">Caracteristică: Opțiune de evitare a randării artefactelor, la marginile plăcuțelor</a></li>
+<li><a class="reference internal" href="#feature-configuration-checker-in-project-properties" id="id74">Caracteristică: Verificator de configurare, în Proprietățile Proiectului</a></li>
+<li><a class="reference internal" href="#feature-wms-inspire-capabilities" id="id75">Caracteristică: Capabilităţi WMS INSPIRE</a></li>
+<li><a class="reference internal" href="#feature-add-short-name-to-layers-groups-and-project" id="id76">Caracteristică: Adăugarea unor nume scurte pentru straturi, grupuri și proiecte</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#symbology" id="id77">Simbologie</a><ul>
+<li><a class="reference internal" href="#feature-size-assistant-for-varying-line-width" id="id78">Caracteristică: Asistent pentru ajustarea lățimii liniei</a></li>
+<li><a class="reference internal" href="#feature-support-for-transparency-in-svg-color-parameters" id="id79">Caracteristică: Suport pentru transparență în parametrii de culoare SVG</a></li>
+<li><a class="reference internal" href="#feature-easy-duplication-of-symbol-layers" id="id80">Caracteristică: Duplicarea facilă a straturilor pentru simboluri</a></li>
+<li><a class="reference internal" href="#feature-2-5d-renderer" id="id81">Caracteristică: Render 2.5D</a></li>
+<li><a class="reference internal" href="#feature-allow-definition-of-rendering-order-for-features" id="id82">Caracteristică: Este permisă definirea ordinii de randare a entităților</a></li>
+<li><a class="reference internal" href="#feature-geometry-generator-symbols" id="id83">Caracteristică: Simboluri pentru generatorul de geometrie</a></li>
+<li><a class="reference internal" href="#examples" id="id84">Exemple</a><ul>
+<li><a class="reference internal" href="#translate-a-geometry" id="id85">Translația unei geometrii</a></li>
+<li><a class="reference internal" href="#fill-style-for-polygon-border" id="id86">Stilul umplerii pentru conturul poligoanelor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-interface" id="id87">Interfața cu Utilizatorul</a><ul>
+<li><a class="reference internal" href="#feature-attribute-table-can-be-refreshed" id="id88">Caracteristică: Tabela de atribute poate fi actualizată</a></li>
+<li><a class="reference internal" href="#feature-directly-set-renderer-and-class-symbol-colors-from-context-menu-in-legend" id="id89">Caracteristică: Setarea directă a renderului și a clasei de culori pentru simbol, din meniul contextual al legendei,</a></li>
+<li><a class="reference internal" href="#feature-edit-legend-symbols-directly-from-layer-tree" id="id90">Caracteristică: Editarea simbolurilor legendei direct din arborele straturilor</a></li>
+<li><a class="reference internal" href="#feature-show-hide-all-legend-items-via-the-context-menu" id="id91">Caracteristică: Afișarea/ascunderea tuturor elementelor din legendă, prin intermediul meniului contextual</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="current-qgis-sponsors">
+<h2><a class="toc-backref" href="#id1">Sponsori Actuali ai QGIS</a><a class="headerlink" href="#current-qgis-sponsors" title="Link permanent la acest titlu">¶</a></h2>
+<table border="1" class="docutils" id="sponsori-de-argint">
+<caption><span class="caption-text">Sponsori de Argint</span><a class="headerlink" href="#sponsori-de-argint" title="Link permanent la acest tabel">¶</a></caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/opw.jpg"><img alt="opw" src="../../../_images/opw.jpg" style="width: 150px;" /></a> <a class="reference external" href="http://www.opw.ie/">Oficiul Lucrărilor Publice, Irlanda</a>, Irlanda (12.2014-12.2016)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/gaia.png"><img alt="gaia" src="../../../_images/gaia.png" style="width: 150px;" /></a> <a class="reference external" href="http://www.gaia-mbh.de">G.A.I.A. mbH</a>, Germania (11.2015-11.2016)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/sourcepole.png"><img alt="sourcepole" src="../../../_images/sourcepole.png" style="width: 150px;" /></a> <a class="reference external" href="http://www.sourcepole.com/">Sourcepole AG</a>, Elveția (10.2014-10.2016)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/agh.png"><img alt="agh" src="../../../_images/agh.png" style="width: 90px;" /></a> <a class="reference external" href="http://www.agh.edu.pl/en">Universitatea de Știință și Tehnologie AGH</a>, Polonia (06.2015-06.2016)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../../_images/silver.png"><img alt="silver" src="../../../_images/silver.png" style="width: 75px;" /></a> <a class="reference internal" href="../../../_images/land_f.jpg"><img alt="vorarlberg" src="../../../_images/land_f.jpg" style="width: 150px;" /></a> <a class="reference external" href="http://www.vorarlberg.at/">Statul Vorarlberg</a>, Austria (03.2013-05.2016)</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="sponsori-de-bronz">
+<caption><span class="caption-text">Sponsori de Bronz</span><a class="headerlink" href="#sponsori-de-bronz" title="Link permanent la acest tabel">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/geoinnova.jpg"><img alt="geoinnova" src="../../../_images/geoinnova.jpg" style="width: 90px;" /></a></p>
+<p class="last"><a class="reference external" href="http://geoinnova.org/">Asociația Geoinnova</a>, Spania (03.2016-03-2017)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/gis3w.png"><img alt="gis3w" src="../../../_images/gis3w.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.gis3w.it/">GIS3W</a>, Italia (01.2014-01.2017)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/claasleiner.png"><img alt="claasleinert" src="../../../_images/claasleiner.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.gkg-kassel.de/">GKG Kassel,(Dr.-Ing. Claas Leiner)</a>, Germania (03.2014-03.2017)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/cawdor_forestry_logo.png"><img alt="cawdor_forestry" src="../../../_images/cawdor_forestry_logo.png" style="width: 90px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.cawdorforestry.com/">Managementul Resurselor din CawdorForestry</a>, Scoția (02.2016-02.2017)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/chameleon-john-logo.png"><img alt="chameleon_john" src="../../../_images/chameleon-john-logo.png" style="width: 90px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.chameleonjohn.com/">ChameleonJohn</a>, SUS (02.2016-02.2017)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/2d3dgis.png"><img alt="2d3dgis" src="../../../_images/2d3dgis.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.2d3d-gis.com/">2D3D.GIS</a>, Franța (12.2015-12.2016)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/kela.png"><img alt="kela" src="../../../_images/kela.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.dr-kerth-lampe.de/">Dr. Kerth + Lampe Geo-Infometric GmbH</a>, Germania (12.2015-12.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/mappinggis.png"><img alt="mappinggis" src="../../../_images/mappinggis.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.mappinggis.com/">MappingGIS</a>, Spania (11.2015-11.2016)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/hfacts.png"><img alt="hfacts" src="../../../_images/hfacts.png" style="width: 90px;" /></a></p>
+<p class="last"><a class="reference external" href="https://hostingfacts.com/">HostingFacts.com</a>, Estonia (12.2015-12.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/urbsol.png"><img alt="urbsol" src="../../../_images/urbsol.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.urbsol.com.au/">Urbsol</a>, Australia (11.2014-11.2016)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/lutra_consulting.png"><img alt="lutra" src="../../../_images/lutra_consulting.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a>, UK (10.2015-10.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/whg.jpg"><img alt="whg" src="../../../_images/whg.jpg" style="width: 90px;" /></a></p>
+<p class="last"><a class="reference external" href="http://wheregroup.com/">WhereGroup GmbH &amp; Co. KG</a>, Germania (08.2015-08.2016)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/npa.jpg"><img alt="npa" src="../../../_images/npa.jpg" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.npaconsult.co.uk/">Nicholas Pearson Associates</a>, UK (07.2015-07.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/qpolska.png"><img alt="qpolska" src="../../../_images/qpolska.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://qgis-polska.org/">QGIS Polska</a>, Polonia (07.2015-07.2016)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/terrelogiche.jpg"><img alt="terrelogiche" src="../../../_images/terrelogiche.jpg" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.terrelogiche.com/">www.terrelogiche.com</a>, Italia (06.2015-06.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/geosynergy.jpg"><img alt="geosynergy" src="../../../_images/geosynergy.jpg" style="width: 90px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.geosynergy.com.au/">www.geosynergy.com.au</a>, Australia (05.2012-05.2013+06.2015-06-2016)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/gaia3d.png"><img alt="gaia3d" src="../../../_images/gaia3d.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.gaia3d.com/">Gaia3D, Inc.</a>, Coreea de Sud (05.2015-05.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/windsor.png"><img alt="windsor" src="../../../_images/windsor.png" style="width: 90px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.rbwm.gov.uk/">Royal Borough of Windsor and Maidenhead</a>, UK (04.2015-04.2016)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/chartwell.png"><img alt="chartwell" src="../../../_images/chartwell.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.chartwell-consultants.com/">Chartwell Consultants Ltd.</a>, Canada (03.2015-03.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/tragewegen.png"><img alt="tragewegen" src="../../../_images/tragewegen.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.tragewegen.be/">Trage Wegen vzw</a>, Belgia (03.2015-03.2016)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/gfi.png"><img alt="gfi" src="../../../_images/gfi.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.gfi-gis.de/">GFI - Gesellschaft für Informationstechnologie mbH</a>, Germania (03.2015-03.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/gis_supp.png"><img alt="gis_supp" src="../../../_images/gis_supp.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.gis-support.com/">GIS-Support</a>, Polonia (02.2015-02.2016)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/adlares.png"><img alt="adlares" src="../../../_images/adlares.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.adlares.com/">ADLARES GmbH</a>, Germania (01.2015-01.2016)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/molitec.png"><img alt="molitec" src="../../../_images/molitec.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.molitec.it/">www.molitec.it</a>, Italia (01.2014-01.2016)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/argus.jpg"><img alt="argus" src="../../../_images/argus.jpg" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.argusoft.de/">www.argusoft.de</a>, Germania (06.2012-06.2013 + 12.2013-12.2015)</p>
+</td>
+<td><p class="first"><a class="reference internal" href="../../../_images/bronze.png"><img alt="bronze" src="../../../_images/bronze.png" style="width: 60px;" /></a> <a class="reference internal" href="../../../_images/canal.png"><img alt="canal" src="../../../_images/canal.png" style="width: 64px;" /></a></p>
+<p class="last"><a class="reference external" href="http://www.customeranalytics.com/">Customer Analytics</a>, SUA (12.2014-12.2015)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id2">Generalități</a><a class="headerlink" href="#general" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-changed-behaviour-of-strpos-function">
+<h3><a class="toc-backref" href="#id3">Caracteristică: Comportament schimbat al funcției strpos</a><a class="headerlink" href="#feature-changed-behaviour-of-strpos-function" title="Link permanent la acest titlu">¶</a></h3>
+<p>Comportamentul funcției strpos a fost modificat, astfel încât nici o potrivire nu va rezulta într-o valoare de „0”, o valoare diferită de zero indicând o potrivire la poziția caracterului specificat. În versiunile QGIS mai vechi, valoarea «-1» specifică o ne-potrivire, iar alte valori returnate reprezintă poziția caracterului - 1.</p>
+<p>Fișierele de proiect din versiunile anterioare QGIS vor trebui să fie actualizate, pentru a reflecta această modificare.</p>
+<p><img alt="image47" src="../../../_images/74ddb567a30e840405ca83656e76dd6476d00226.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de Jürgen Fischer</p>
+</div>
+<div class="section" id="feature-zoom-to-feature-with-right-click-in-attribute-table">
+<h3><a class="toc-backref" href="#id4">Caracteristică: Transfocare la nivelul entității, cu ajutorul unui clic dreapta în tabelul de atribute</a><a class="headerlink" href="#feature-zoom-to-feature-with-right-click-in-attribute-table" title="Link permanent la acest titlu">¶</a></h3>
+<p>De acum, puteți transfoca la nivelulu oricărei entități din cadrul tabelului de atribute (fără a fi nevoie să o selectați mai întâi) făcând clic dreapta și alegând transfocare la nivelul entității.</p>
+<p><img alt="image48" src="../../../_images/7a400f577a7d554f309297f8a1af05a61e448a27.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-speed-and-memory-improvements">
+<h3><a class="toc-backref" href="#id5">Caracteristică: Îmbunătățiri aduse vitezei și memoriei</a><a class="headerlink" href="#feature-speed-and-memory-improvements" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><strong>Salvarea unui set de entități selectate</strong> dintr-un strat foarte mare, este, de acum, mult mai rapidă</li>
+<li>Actualizarea doar a entităților selectate, folosind <strong>calculatorul de câmpuri</strong> este mai rapidă</li>
+<li><strong>Transfocare mai rapidă</strong> asupra selecțiilor din straturile mari</li>
+<li>Funcția <code class="docutils literal"><span class="pre">get_feature</span></code> este mult mai rapidă (mai ales atunci când se folosește o coloană indexată din stratul de referință)</li>
+<li>Algoritmii de procesare <code class="docutils literal"><span class="pre">SelectByAttribute</span></code> și <code class="docutils literal"><span class="pre">ExtractByAttribute</span></code> sunt cu câteva ordine de mărime mai rapizi, și pot beneficia de indecșii din bazele de date creați pentru un atribut</li>
+<li>Algoritmul de procesare <code class="docutils literal"><span class="pre">PointsInPolygon</span></code> este cu multe ordine de mărime mai rapid</li>
+<li><strong>Filtrarea categoriilor dintr-un render de categorisire</strong> (de exemplu, prezentând doar unele categorii și debifându-le pe altele) este mult mai rapidă, deoarece acum doar entitățile potrivite sunt preluate din furnizorul de date</li>
+<li><strong>Reducere semnificativă a memoriei</strong> necesară pentru deschiderea straturilor vectoriale de mari dimensiuni</li>
+</ul>
+</div>
+<div class="section" id="feature-more-expression-variables">
+<h3><a class="toc-backref" href="#id6">Caracteristică: Mai multe variabile în cadrul expresiilor</a><a class="headerlink" href="#feature-more-expression-variables" title="Link permanent la acest titlu">¶</a></h3>
+<p>Pe durata randării, noi variabile vor fi disponibile:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;geometry_part_count</span></code>: Numărul de părți al geometriei randate în mod curent (util pentru entitățile multi-parte)</li>
+<li><code class="docutils literal"><span class="pre">&#64;geometry_part_num</span></code>: indexul cu originea 1, al părții de  geometrie randată în mod curent</li>
+</ul>
+<p>Acestea sunt utile pentru a aplica diferite stiluri diverselor părți ale entităților multiparte:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;map_extent_width</span></code>: Lățimea hărții randate în mod curent, în unități de hartă</li>
+<li><code class="docutils literal"><span class="pre">&#64;map_extent_height</span></code>: Înălțimea hărții randate în mod curent, în unități de hartă</li>
+<li><code class="docutils literal"><span class="pre">&#64;map_extent_center</span></code>: Punctul central al hărții randate în mod curent, în unități de hartă</li>
+</ul>
+<p>Au fost, de asemenea, adăugate variabilele referitoare la mediul de operare:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;qgis_os_name</span></code>: de ex. «Linux»,»Windows» sau «OSX»</li>
+<li><code class="docutils literal"><span class="pre">&#64;qgis_platform</span></code>: de ex. «Desktop» sau «Server»</li>
+<li><code class="docutils literal"><span class="pre">&#64;user_account_name</span></code>: numele de cont pentru utilizator curent din sistemul de operare</li>
+<li><code class="docutils literal"><span class="pre">&#64;user_full_name</span></code>: numele utilizatorului curent din sistemul de operare (dacă este disponibil).</li>
+</ul>
+<p><img alt="image49" src="../../../_images/b2e29d9df21795416961b8b548f98078386eeecf.png.400x300_q85_crop.jpg" /></p>
+<p>Această facilitate a fost finanțată de Andreas Neumann (variabilele referitoare la sistemul de operare și la utilizator)</p>
+<p>Această funcționalitate a fost dezvoltată de Nyall Dawson, Matthias Kuhn</p>
+</div>
+<div class="section" id="feature-better-control-over-placement-of-map-elements">
+<h3><a class="toc-backref" href="#id7">Caracteristică: Mai mult control asupra plasamentului elementelor de hartă</a><a class="headerlink" href="#feature-better-control-over-placement-of-map-elements" title="Link permanent la acest titlu">¶</a></h3>
+<p>QGIS 2.14 a dobândit un control mai bun asupra plasării pe canevas a săgeții nordului, a bării de scară și a notițelor privind drepturile de autor. De acum puteți seta cu precizie poziționarea acestor elemente, folosind diferite unități (inclusiv milimetri, pixeli și procente).</p>
+<p><img alt="image50" src="../../../_images/e2390ce8f4bc93ebf00228e1545b192315d2cb57.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-paid-bugfixing-programme">
+<h3><a class="toc-backref" href="#id8">Caracteristică: Program de plată pentru eliminarea erorilor</a><a class="headerlink" href="#feature-paid-bugfixing-programme" title="Link permanent la acest titlu">¶</a></h3>
+<p>Înainte de fiecare lansare, vom susține un program plătit de eliminare a erorilor, în care vom finanța dezvoltatorii să curețe cât mai multe erori posibil. Am decis să inițiem inclusiv un nou raport cu privire la acest program de eliminare cu plată a defecțiunilor, ca parte a jurnalului schimbărilor. Rețineți că această listă <strong>nu este exhaustivă</strong>.</p>
+<ul class="simple">
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/13141">Conexiunea PostGIS se blochează dacă se apasă „Setare filtru” pe durata încărcării datelor</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/10600">db_manager este în imposibilitate de a încărca rastere din conexiuni pentru care nu s-a specificat un dbname</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/11900">Rotirea nu funcționează corect în straturile plugin-urilor</a></li>
+<li>Sandro Santilli: Închidere accidentală a aplicației în QgsGeomColumnTypeThread, la oprirea scanării conexiunii <a class="reference external" href="http://hub.qgis.org/issues/14140">#14140</a> <a class="reference external" href="http://hub.qgis.org/issues/13806">#13806</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/11422">Închidere accidentală a aplicației după schimbarea valorii atributului în fișierul shape</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/13865">KMZ cauzează închiderea accidentală a aplicației QGIS (Mac)</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/12416">QGIS 2.8.1 se închide accidental la deschiderea fișierelor GDB (openGDB-Driver)</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/14188">Închidere accidentală a aplicației după eliminarea unui vertex al unei geometrii multiparte</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/14176">test -V -R qgis_analyzertest
+segfaults</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/14212">output/bin/qgis_diagramtest
+segfaults</a></li>
+<li>Sandro Santilli: Eroare de depășire, în cazul cheilor primare cu valori negative; QGIS se blochează la editare <a class="reference external" href="http://hub.qgis.org/issues/13958">#13958</a> <a class="reference external" href="http://hub.qgis.org/issues/14262">#14262</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/14269">Testul PyQgsPostgresProvider se blochează în absența unei baze de date de testare</a></li>
+<li>Sandro Santilli: <a class="reference external" href="http://hub.qgis.org/issues/14308">TestVectorLayerJoinBuffer produce o blocare în cazul în care baza de date cu care nu este disponibilă</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14116">BLOCAJ: Închiderea ccidentală la deschiderea dialogului cu proprietățile stratului, pentru straturile fără geometrie</a></li>
+<li>Nyall Dawson: Filtrarea pe partea de server este nefuncțională pentru straturi OGR, Oracle și Spatialite</li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14117">BLOCAJ: Digitizarea defectuoasă a poligoanelor în versiunea master</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14127">BLOCAJ: Hărțile calorice care conțin expresii declanșează o eroare de segmentare</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14118">BLOCAJ: debifarea unui sub-strat de simbologie ordonată pe categorii, conduce la ne-desenarea entităților</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/13155">Prioritate ÎNALTĂ: O imagine multibandă (cum ar fi landsat5,7,8) nu poate fi afișată în Windows8</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14028">BLOCAJ: CurvePolygons nu se desenează</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14146">BLOCAJ: Instrumentul „Îmbinare Attribute” nu schimbă valorile atunci când sunt introduse</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14131">Prioritate ÎNALTĂ: Filtrarea legendei după conținut nu se efectuează atunci când renderul conține simboluri duplicate</a></li>
+<li>Nyall Dawson: S-au remediat probleme care blocau un render, la conversia acestuia în render bazat pe reguli</li>
+<li>Nyall Dawson: S-a remediat un defect care împiedica renderul bazat pe categorii să stocheze modificările aduse simbolului sursei</li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/13336">Prioritate ÎNALTĂ: S-a remediat închiderea accidentală a aplicației în urma încărcării unor rastere mari, sau a folosirii calculatorului raster</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14148">Prioritate ÎNALTĂ: variabila &#64;value, de umplere cu o culoare simplă a unui simbol, se modifică în mod eronat într-o expresie definită de date</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/11459">Prioritate ÎNALTĂ: Editarea legendei Compozitorului nu funcționează pe durata filtrării</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14168">Prioritate NORMALĂ: Ștergerea nodurilor - comportament inconsecvent</a></li>
+<li>Nyall Dawson: S-a remediat manipularea valorii timpului în atribute</li>
+<li>Nyall Dawson: S-a remediat ordinea filelor dialogului</li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14223">BLOCAJ: închidere accidentală a aplicației după adăugarea mai multor fișiere din panoul navigatorului</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14235">Prioritate ÎNALTĂ: Instrumentul de îmbinare a datelor selectate corupe datele atunci când coloanele sunt definite ca fiind „ascunse”</a></li>
+<li>Nyall Dawson: Acum câmpurile LongLong se interpretează corect în dialogul de îmbinare a atributelor</li>
+<li>Nyall Dawson: S-a remediat afișarea eronată a detaliilor de calcul din dialogul instrumentului de măsurare (era înșelătoare și inexactă pentru multe combinații CRS/unitate)</li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/14282">Prioritate NORMALĂ: Valoarea maximă pentru opțiunea „crește dimensiunea diagramelor mici» nu este suficientă</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/13209">BLOCAJ: Suprafața nu era calculată corect având activată opțiunea OTF</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/9730">Prioritate NORMALĂ: Coordonatele lat/lon erau incoerente, într-un proiect aflat într-un sistem de coordonate proiectat</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/12939">Prioritate NORMALĂ: Posibilitatea ca în calculatorul de câmpuri să se calculeze suprafețele și lungimile și în alte unități, diferite de cele de hartă `12939</a> <a class="reference external" href="http://hub.qgis.org/issues/2402">#2402</a> <a class="reference external" href="http://hub.qgis.org/issues/4857">#4857</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/4252">Prioritate NORMALĂ: diferite unelte interne calculau eronat ariile poligoanelor</a></li>
+<li>Nyall Dawson: <a class="reference external" href="http://hub.qgis.org/issues/12622">Prioritate NORMALĂ: În câmpurile virtuale funcția $area calculează valorile folosind întotdeauna elisoidul «None/planimetric»</a></li>
+<li>Martin Dobias: desenare defectuoasă a straturilor raster</li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/11441">Prioritate ÎNALTĂ: Probleme de randare multifilară și probleme de reproiectare OTF `#11441</a> <a class="reference external" href="http://hub.qgis.org/issues/11746">#11746</a></li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/14158">BLOCAJ: Regresie în dialogul de „salvare ca” pentru fișierele shape</a></li>
+<li>Martin Dobias: În modul de depanare încărcarea tabelului de atribute are loc lent</li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/14164">BLOCAJ: Închidere accidentală a aplicației la schimbarea tipului de render</a></li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/14025">Prioritate ÎNALTĂ: Probleme particulare ale renderului Python #1</a></li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/13973">Prioritate ÎNALTĂ: Probleme particulare ale renderului Python #2</a></li>
+<li>Martin Dobias: S-au adus corecții la renderul 2.5d</li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/12578">Prioritate ÎNALTĂ: Blocare pe termen lung la inițializarea acroșării</a></li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/14177">Prioritate NORMALĂ: Încărcarea definițiilor de date din xml</a></li>
+<li>Martin Dobias: Corecții aduse la DB Manager, pentru a putea lucra cu SpatiaLite &lt; 4.2</li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/14369">Prioritate NORMALĂ: Închidere accidentală a aplicației în modul de depanare</a></li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/14232">BLOCAJ: Remediere selecție / identificare în vederile spatialite `14232</a> <a class="reference external" href="http://hub.qgis.org/issues/14233">#14233</a></li>
+<li>Martin Dobias: <a class="reference external" href="http://hub.qgis.org/issues/14237">BLOCAJ: Remediere drag&amp;drop în tabelele spatialite</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/3155">Transfocarea la nivelul stratului lucreaza incorect pe durata editării stratului</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/8305">Ajutor proces de vizualizare care rulează în fundal, fără nici un ajutor de vizualizare (sau chiar QGIS) deschis</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/13197">Calea către fișierul de includere a indexului spațial lipsește din unele componente</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/13680">Compilarea are loc în mod eronat, la încercarea de generare a fișierului qgsversion.h</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/13960">Configurarea controlului grafic de editare este stocată de două ori</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/13938">Extra spațiul din operatorul „IS NOT” face ca expresia să returneze o selecție eronată</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/13963">QGIS face economie de memorie, și se blochează la editarea cu ajutorul instrumentului nod a fișierelor shape de dimensiuni moderate</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14101">Reproiectarea franceză folosește ntf_r93.gsb (IGNF:LAMBE etc ..)</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14154">Digitizare: „Refolosirea ultimelor valori de atribute introduse” nu ar trebui să suprascrie coloana cheii primare</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14189">Probleme în descrierea instrucțiunii Case</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14190">scrierea fișierului shape vectorial: salvarea ca și dată a unui câmp datetime are ca rezultat pierdererea valorilor pentru oră</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14259">S-a adăugat ajutorul pentru anumite funcții variabile</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14313">Straturile virtuale nu funcționează în Processing</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14340">Fișierul cu definiții pentru strat se încarcă în mod eronat</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14204">QgsGeometry::fromWkb eșuează dacă WKB are o reprezentare endiană diferită</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14248">Compilare eronată pentru Debian.</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14269">Testul PyQgsPostgresProvider eșuează în absența unei baze de date de testare</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14315">Acces WKB în afara limitelor</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="http://hub.qgis.org/issues/14316">QGIS sub Windows NetCDF importă invers axa Y, în timp ce Linux nu face acest lucru</a> <a class="reference external" href="https://trac.osgeo.org/osgeo4w/ticket/483">OSGeo4W #483</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="https://trac.osgeo.org/osgeo4w/ticket/105">OSGEO4W: Programul independent de instalare se blochează în timpul rulării</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="https://trac.osgeo.org/osgeo4w/ticket/117">OSGEO4W: Dependențele nu sunt înregistrate pentru Windows Server 2003 x64</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="https://trac.osgeo.org/osgeo4w/ticket/151">OSGEO4W: instalarea din pachetul local nu verifică dependențele</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="https://trac.osgeo.org/osgeo4w/ticket/262">OSGEO4W: Instalarea începe descărcarea și instalarea pachetelor mai înainte de afișarea unei liste de selecție</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="https://trac.osgeo.org/osgeo4w/ticket/351">OSGEO4W: Parametrul -a pentru modul Avansat selectează două opțiuni (linia de comandă a instalării)</a></li>
+<li>Jürgen Fischer:<a class="reference external" href="https://trac.osgeo.org/osgeo4w/ticket/486">OSGEO4W: Pe durata instalării szip se descărca la infinit licența de utilizare</a></li>
+<li>Jürgen Fischer: Trimitere eronată către furnizorul Oracle</li>
+<li>Jürgen Fischer: s-a remediat setarea căii SAGA</li>
+</ul>
+</div>
+<div class="section" id="feature-field-calculator-can-be-used-to-update-feature-s-geometry">
+<h3><a class="toc-backref" href="#id9">Caracteristică: Calculatorul de câmpuri poate fi folosit pentru a actualiza geometria entității</a><a class="headerlink" href="#feature-field-calculator-can-be-used-to-update-feature-s-geometry" title="Link permanent la acest titlu">¶</a></h3>
+<p>Calculatorul de câmpuri poate fi utilizat de acum pentru a actualiza o geometrie a unei entități utilizând rezultatul unei expresii geometrice. Aceasta este o comandă rapidă, la îndemână, pentru a face operații de genul aplicării unui tampon unui grup de entități selectate, care, alături de toate funcțiile specifice geometriilor, nou adăugate în 2.14, facilitează manipularea geometriilor dvs.!</p>
+<p><img alt="image51" src="../../../_images/ba37e2e778a2349c7099e09fcf648238090d8af4.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-new-expression-functions-in-2-14">
+<h3><a class="toc-backref" href="#id10">Caracteristică: Noi funcții pentru expresii în 2.14</a><a class="headerlink" href="#feature-new-expression-functions-in-2-14" title="Link permanent la acest titlu">¶</a></h3>
+<p>În versiunea 2.14 au fost adăugate multe funcții noi, specifice expresiilor:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">relate</span></code>: realizează relații cu geometrii DE-9IM, fie prin returnarea reprezentării DE-9IM a relației dintre două geometrii, fie prin testarea potrivirii unei relații DE-9IM cu un model specificat.</li>
+<li>funcția <code class="docutils literal"><span class="pre">make_point</span></code> acceptă de acum valorile opționale z și m, iar o nouă funcție <code class="docutils literal"><span class="pre">make_point_m</span></code> a fost adăugată pentru crearea geometriilor PointM.</li>
+<li>funcțiile <code class="docutils literal"><span class="pre">m</span></code> și <code class="docutils literal"><span class="pre">z</span></code> pentru recuperarea valorilor m și z dintr-o geometrie de tip punct</li>
+<li>funcțiile <code class="docutils literal"><span class="pre">make_line</span></code> și <code class="docutils literal"><span class="pre">make_polygon</span></code>, pentru crearea geometriilor de tip linie sau poligon pornind de la un set de puncte</li>
+<li><code class="docutils literal"><span class="pre">reverse</span></code>, pentru scrierea inversă a șirurilor de linii</li>
+<li><code class="docutils literal"><span class="pre">eval</span></code>, care poate evalua expresia pe care o reprezintă șirul de caractere</li>
+<li><code class="docutils literal"><span class="pre">translate</span></code>, pentru deplasarea geometriilor în sensul axelor x/y, pe o anumită distanță</li>
+<li><code class="docutils literal"><span class="pre">darker</span></code> și <code class="docutils literal"><span class="pre">lighter</span></code>, care preiau ca argument o culoare și o fac mai inchisă sau mai deschisă, în funcție de valoarea specificată</li>
+<li><code class="docutils literal"><span class="pre">radiani</span></code> și <code class="docutils literal"><span class="pre">grade</span></code>: pentru conversia unghiurilor în radiani sau grade</li>
+<li><code class="docutils literal"><span class="pre">point_on_surface</span></code>: returnează un punct care se situează pe suprafața unei geometrii</li>
+<li><code class="docutils literal"><span class="pre">exterior_ring</span></code>: returnează inelul exterior pentru o geometrie de tip poligon</li>
+<li><code class="docutils literal"><span class="pre">is_closed</span></code>: returnează true dacă un șir de linii este închis</li>
+<li>noi funcții accesor pentru geometrie: <code class="docutils literal"><span class="pre">geometry_n</span></code> (returnează o geometrie specifică din cadrul unei colecții), <code class="docutils literal"><span class="pre">interior_ring_n</span></code> (returnează un inel interior dintr-un poligon)</li>
+<li><code class="docutils literal"><span class="pre">num_geometries</span></code>: returnează numărul de geometrii din interiorul unei colecții</li>
+<li><code class="docutils literal"><span class="pre">num_rings</span></code>: returnează numărul de inele dintr-un obiect de geometrie poligonală</li>
+<li><code class="docutils literal"><span class="pre">num_interior_rings</span></code>: returnează numărul de inele interioare dintr-un poligon</li>
+<li><code class="docutils literal"><span class="pre">nodes_to_points</span></code>, pentru conversia fiecărui nod dintr-o geometrie într-o geometrie de tip multipunct</li>
+<li><code class="docutils literal"><span class="pre">segments_to_lines</span></code>, pentru conversia fiecărui segment dintr-o geometrie într-o geometrie de tip multilinie</li>
+<li><code class="docutils literal"><span class="pre">closest_point</span></code>: returnează cel mai apropiat punct al unei geometrii față de o alta</li>
+<li><code class="docutils literal"><span class="pre">shortest_line</span></code>: returnează cea mai scurtă linie posibilă care unește două geometrii</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">nodes_to_points</span></code> și <code class="docutils literal"><span class="pre">segments_to_lines</span></code> sunt destinate folosirii cu generatorul  de simbolistică pentru geometrii, permițând, de exemplu, utilizarea valorilor m și z pentru noduri/linii cu simbologie definită cu ajutorul datelor.</p>
+<p>Alte îmbunătățiri:</p>
+<ul class="simple">
+<li>geometriile și entitățile pot fi folosite de acum în funcții condiționale. De exemplu, acest lucru permite expresii de genul <code class="docutils literal"><span class="pre">case</span> <span class="pre">when</span> <span class="pre">$geometry</span> <span class="pre">then</span> <span class="pre">...</span> <span class="pre">else</span> <span class="pre">...</span></code> și <code class="docutils literal"><span class="pre">case</span> <span class="pre">when</span> <span class="pre">get_feature(...)</span> <span class="pre">then</span> <span class="pre">...</span> <span class="pre">else</span> <span class="pre">...</span></code></li>
+</ul>
+<p><img alt="image52" src="../../../_images/98616590f44281e09aa24f6c30d7f668c8665c31.png.400x300_q85_crop.jpg" /></p>
+</div>
+</div>
+<div class="section" id="analysis-tools">
+<h2><a class="toc-backref" href="#id11">Instrumentele de analiză</a><a class="headerlink" href="#analysis-tools" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-more-statistics-available-in-merge-attributes-tool">
+<h3><a class="toc-backref" href="#id12">Caracteristică: Mai multe statistici disponibile în instrumentul de îmbinare a atributelor</a><a class="headerlink" href="#feature-more-statistics-available-in-merge-attributes-tool" title="Link permanent la acest titlu">¶</a></h3>
+<p>Atunci când se utilizează îmbinarea valorilor atributului sau instrumentul de îmbinare a entităților, sunt disponibile sumare cu statistici, care se pot utiliza la stabilirea valorilor pentru atributele rezultate. Printre altele, sunt incluse cuartilele Q1 și Q3, intervalele intercuartile, valorile majorității și minoritții precum și numărul de valori unice.</p>
+<p><img alt="image27" src="../../../_images/3820507f3bffdaab2bafe7285a8c51791f0b1fdb.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-z-m-values-are-shown-when-using-the-identify-tool">
+<h3><a class="toc-backref" href="#id13">Caracteristică: Valorile z/m sunt afișate atunci când se utilizează instrumentul de identificare</a><a class="headerlink" href="#feature-z-m-values-are-shown-when-using-the-identify-tool" title="Link permanent la acest titlu">¶</a></h3>
+<p>Instrumentul de identificare este de acum capabil să arate orice valoare z sau m prezentă în entitățile identificate. În cazul în care entitatea este de tip linie sau poligon, instrumentul va afișa numărul vertecșilor și coordonatele x/y/z/m pentru cel mai apropiat vertex față de punctul identificat. De acum, instrumentul de identificare arată, de asemenea, numărul de părți și numărul de identificare al fiecărei părți, în cazul colecțiilor.</p>
+<p><img alt="image28" src="../../../_images/c9813d351340f46e28e6a0cb576a4b2ca72466a9.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-unified-handling-of-distance-and-area-units-and-coordinate-formats">
+<h3><a class="toc-backref" href="#id14">Caracteristică: Manipulare centralizată a unităților de distanță și de suprafață, și a formatelor pentru coordonate</a><a class="headerlink" href="#feature-unified-handling-of-distance-and-area-units-and-coordinate-formats" title="Link permanent la acest titlu">¶</a></h3>
+<p>În QGIS 2.14 manipularea diferitelor opțiuni referitoare la unitățile de distanță, de suprafață și de afișare a coordonatelor au fost unificate, simplificate, fiind grupate în Proprietățile Proiectului. Această modificare aduce numeroase avantaje, printre care:</p>
+<ul class="simple">
+<li>Formatul pentru coordonate, specificat în Proprietățile Proiectului, este utilizat de fiecare dată când o coordonată este afișată utilizatorului, inclusiv la prezentarea rezultatelor instrumentului de identificare și la afișarea în bara de stare.</li>
+<li>Unitățile de distanță și de suprafață stabilite în Proprietățile Proiectului sunt respectate pentru toate calculele de distanță și suprafață, inclusiv de instrumentul de măsură, de cel de identificare a rezultatelor, și de funcțiile <code class="docutils literal"><span class="pre">$area</span></code>, <code class="docutils literal"><span class="pre">$length</span></code> and <code class="docutils literal"><span class="pre">$perimeter</span></code>.</li>
+<li>Au fost adăugate unități suplimentare pentru arii, incluzând yarzi pătrați, acri, hectare și multe altele.</li>
+<li>instrumentul de măsurare a unghiului i s-au adăugat unități unghiulare suplimentare, inclusiv rotații, minute de arc și secunde de arc.</li>
+<li>De acum este posibilă afișarea coordonatelor în latitudine și longitudine în bara de stare, chiar și atunci când se utilizează un CRS proiectat.</li>
+</ul>
+<p><img alt="image29" src="../../../_images/b086f236720ecb5cac0aa8bb7383275799affff4.png.400x300_q85_crop.jpg" /></p>
+<p>Această facilitate a fost finanțată prin programul de eliminare a erorilor, sponsorizat de QGIS</p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+</div>
+<div class="section" id="browser">
+<h2><a class="toc-backref" href="#id15">Navigatorul</a><a class="headerlink" href="#browser" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-browser-improvements">
+<h3><a class="toc-backref" href="#id16">Caracteristică: Îmbunătățiri aduse Navigatorului</a><a class="headerlink" href="#feature-browser-improvements" title="Link permanent la acest titlu">¶</a></h3>
+<p>Navigatorul QGIS constă într-un sistem de fișiere, în Servicii Web OGC și conexiuni de date, care vă permit să trageți cu ușurință orice strat din sursele menționate mai sus, iar apoi să-l fixați în canevasul hărții (sau în fereastra DB Manager). În această versiune s-au adus două noi îmbunătățiri utile:</p>
+<ul class="simple">
+<li><strong>Căile pot fi ascunse în mod selectiv, utilizând panoul navigatorului</strong> - acest lucru este util pentru curățarea listei cu surse, și să vă concentrați doar pe directoarele relevante.</li>
+<li><strong>Încărcarea proiectelor direct din navigator</strong> - acum aveți posibilitatea să glisați și să eliberați un întreg proiect în canevasul hărții QGIS, iar acesta va fi încărcat.</li>
+</ul>
+<p><img alt="image30" src="../../../_images/8479ec7c4077c9602d6eacdb11d518bd55922074.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de Nathan Woodrow</p>
+</div>
+</div>
+<div class="section" id="data-providers">
+<h2><a class="toc-backref" href="#id17">Furnizorii de Date</a><a class="headerlink" href="#data-providers" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-cache-wms-capabililies">
+<h3><a class="toc-backref" href="#id18">Caracteristică: Capabilităţi de păstrare în memoria tampon a cererilor WMS</a><a class="headerlink" href="#feature-cache-wms-capabililies" title="Link permanent la acest titlu">¶</a></h3>
+<p>De acum, QGIS va păstra în memoria tampon cererile <code class="docutils literal"><span class="pre">GetCapabilities</span></code> WMS, astfel încât, ulterior, cererilor similare li se va răspunde mai rapid. În mod implicit, perioada de stocare în memoria tampon este de 24 de ore, dar puteți ajusta această valoare prin internmediul dialogul Setărilor QGIS.</p>
+<p><img alt="image31" src="../../../_images/743840449ddf09f45251e9710e9666cf4da86081.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de Jürgen Fischer</p>
+</div>
+<div class="section" id="feature-curved-geometry-support-expanded">
+<h3><a class="toc-backref" href="#id19">Caracteristică: S-a extins suportul pentru geometria curbată</a><a class="headerlink" href="#feature-curved-geometry-support-expanded" title="Link permanent la acest titlu">¶</a></h3>
+<p>Furnizorul de text delimitat acceptă de acum șirurile de caractere WKT curbe, iar furnizorul de memorie (cum ar fi, straturile „temporare, stocate în memorie”) au primit suport complet pentru geometriile curbe. În plus, în cazul în care QGIS a fost compilat cu ajutorul versiunilor GDAL 2.0 sau mai mari, atunci QGIS va accepta pe deplin geometriile curbe din tipurile de fișiere suportate (cum ar fi, de exemplu, fișierele GML).</p>
+<p><img alt="image32" src="../../../_images/79f4b8256ab3507b192277c4f14d3bb04423dc52.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-better-handling-of-time-and-datetime-fields">
+<h3><a class="toc-backref" href="#id20">Caracteristică: Gestiune îmbunătățită pentru câmpurile de tipurile time și datetime</a><a class="headerlink" href="#feature-better-handling-of-time-and-datetime-fields" title="Link permanent la acest titlu">¶</a></h3>
+<p>QGIS 2.14 dispune de o manipulare îmbunătățită a câmpurilor de tipurile time și datetime, iar în plus:</p>
+<ul class="simple">
+<li>Câmpurile de tip amprentă temporală din PostgreSQL sunt manipulate corect</li>
+<li>Motorul de expresii are de acum suport complet pentru câmpurile de tipul time</li>
+<li>Generatorul de expresii oferă de acum previzualizarea rezultatelor calculului pentru dată, oră și intervale de ore sau date</li>
+<li>Câmpurile time sunt pe deplin acceptate de straturile fișierelor vectoriale (în funcție de formatul de fișier), PostgreSQL, MS SQL Server și de straturile temporare stocate în memorie</li>
+<li>La salvarea straturilor în fișiere vectoriale se va păstra tipurile time din câmpuri, dacă acest lucru este acceptat de formatul stratului vectorial (de exemplu,  fișiere MapInfo, cu extensia .tab)</li>
+</ul>
+<p><img alt="image33" src="../../../_images/2511118cd31ca53892ef5764cf8e80d9491d131a.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de Jürgen Fischer, Nyall Dawson</p>
+</div>
+<div class="section" id="feature-z-m-support-in-delimited-text-provider">
+<h3><a class="toc-backref" href="#id21">Caracteristică: Suport Z/M în furnizorul de text delimitat</a><a class="headerlink" href="#feature-z-m-support-in-delimited-text-provider" title="Link permanent la acest titlu">¶</a></h3>
+<p>Furnizorul de text delimitat dispune de suport pentru șiruri WKT care conțin coordonatele Z și M. De exemplu, puteți reprezenta un punct cu elementele z și m în felul următor : <code class="docutils literal"><span class="pre">POINT</span> <span class="pre">ZM</span> <span class="pre">(1</span> <span class="pre">1</span> <span class="pre">5</span> <span class="pre">60)</span></code>.</p>
+<p><img alt="image34" src="../../../_images/41d5c223ac43b4f8f392894109414e9d053c9136.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-transaction-groups-for-postgres-editing">
+<h3><a class="toc-backref" href="#id22">Caracteristică: Grupuri de tranzacții pentru editarea Postgres:</a><a class="headerlink" href="#feature-transaction-groups-for-postgres-editing" title="Link permanent la acest titlu">¶</a></h3>
+<p>O nouă opțiune a fost introdusă pentru a permite editarea tranzacțională.</p>
+<p>Atunci când această opțiune este activată</p>
+<ul class="simple">
+<li>Toate straturile din aceeași bază de date sunt incluse într-un grup de tranzacții</li>
+<li>În cazul în care primul strat al unui grup este pus în modul de editare, toate celelalte straturi sunt, de asemenea, puse automat în modul de editare</li>
+<li>Atunci când un strat este editat, modificările sunt transmise imediat în baza de date, permițând aplicarea imediată a declanșatorilor și a constrângerilor</li>
+<li>În urma modificărilor efectuate asupra unui strat dintr-un grup de tranzacții, se vor salva toate straturile (tranzacție la nivelul bazei de date)</li>
+<li>În urma refacerii modificărilor aduse unui strat dintr-un grup de tranzacții, se vor reface modificările din toate straturile (tranzacție la nivelul bazei de date)</li>
+</ul>
+<p>Această funcționalitate este în prezent <strong>Experimentală</strong>. În caz că identificați unele probleme, vă rugăm să <a class="reference external" href="https://www.qgis.org/en/site/getinvolved/development/bugreporting.html">le raportați</a>.</p>
+<p>Acest lucru este aplicabil doar bazelor de date Postgres, la acest moment.</p>
+<p><img alt="image35" src="../../../_images/bb8a03f09c9675985409cf4360308509830d38d4.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost finanțată de: <a class="reference external" href="http://www.sige.ch/">SIGE</a></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="https://opengis.ch">Matthias Kuhn, OPENGIS.ch, pe baza muncii depuse anterior de Sourcepole</a></p>
+</div>
+<div class="section" id="feature-postgres-provider-pki-authentication">
+<h3><a class="toc-backref" href="#id23">Caracteristică: Autentificare PKI pentru furnizorul Postgres</a><a class="headerlink" href="#feature-postgres-provider-pki-authentication" title="Link permanent la acest titlu">¶</a></h3>
+<p>Abilitatea de a utiliza Managerul de Autentificare QGIS, introdusă în 2.12, a fost extinsă la furnizorul PostGIS. Acest lucru permite conectarea la Postgres folosind autentificarea de bază sau PKI, cu acreditările stocate în configurația QGIS. Noul furnizor de autentificarea Postgres poate fi utilizat și în DB Manager.</p>
+<p><img alt="image36" src="../../../_images/6e8f65042bd5981e585812ce2d957d0c6055ba3f.jpg.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="boundlessgeo.com">Boundless Spatial</a></p>
+<p>Această funcționalitate a fost dezvoltată de Luigi Pirelli</p>
+</div>
+<div class="section" id="feature-virtual-layers">
+<h3><a class="toc-backref" href="#id24">Caracteristică: Straturi virtuale</a><a class="headerlink" href="#feature-virtual-layers" title="Link permanent la acest titlu">¶</a></h3>
+<p>Interogările dinamice SQL pot fi acum folosite pentru orice fel de straturi vectoriale pe care le poate încărca QGIS, chiar dacă, în sine, formatul stratului nu are suport pentru interogări SQL!</p>
+<p>Un nou tip de strat vectorial denumit „strat virtual” este de acum disponibil în acest scop. Aveți posibilitatea de a crea un strat virtual, prin definirea unei interogări (incluzând suport pentru agregare și joncțiune) din alte straturi, în proiectul dumneavoastră. Stratul rezultat constituie o vizualizare în direct, dinamică, a rezultatului interogării, astfel încât orice modificări aduse straturilor sursă vor fi reflectate instantaneu în stratul virtual!</p>
+<p>Dialectul SQL permis este SQLite, cu funcții Spatialite. Expresiile cu funcții QGIS pot fi utilizate, de asemenea, în interogări. Orice fel de straturi vectoriale pot fi accesate în interogare, inclusiv mai multe straturi de la diferiți furnizori de date, în scopul creării de joncțiuni.</p>
+<p>Suportul pentru straturile virtuale a fost adăugat și în DB Manager, precum și setului de instrumente din bara de instrumente Processing, în care este disponibil noul instrument «Execuție SQL».</p>
+<p><img alt="image37" src="../../../_images/58bc1a2fea31fe8d6ab70ff33c763c9ddac40ade.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="http://www.developpement-durable.gouv.fr">MEDDE (Ministerul Francez al Dezvoltării Sustenabile)</a></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://oslandia.com">Hugo Mercier / Oslandia</a></p>
+</div>
+<div class="section" id="feature-more-file-extensions-for-gdal-and-ogr-providers-file-selectors">
+<h3><a class="toc-backref" href="#id25">Caracteristică: Mai multe extensii de fișiere pentru furnizorii selectorilor de fișiere  GDAL și OGR</a><a class="headerlink" href="#feature-more-file-extensions-for-gdal-and-ogr-providers-file-selectors" title="Link permanent la acest titlu">¶</a></h3>
+<p>Pentru fișierele vectoriale și raster, QGIS se bazează pe biblioteca GDAL/OGR. Aceasta înseamnă că aproape orice format de fișier care poate fi deschis de către GDAL sau OGR, poate fi deschis direct din QGIS. Până în prezent, unele extensii de fișiere nu au fost adăugate în selectorul de fișiere GDAL sau OGR și, drept urmare, există utilizatori care cred că QGIS nu poate deschide sau manipula aceste formate. Pentru a minimiza această problemă, unele extensii noi au fost adăugate în filtrele de selectare a fișierelor GDAL și OGR:</p>
+<p><strong>Pentru fișierele vectoriale:</strong></p>
+<ul class="simple">
+<li>.thf pentru formatul franțuzesc de cadastru EDIGEO</li>
+<li>.ods pentru formatul Foilor de calcul de tip Open Document LibreOffice</li>
+<li>.xls pentru formatul MS Excel</li>
+<li>.xlsx pentru formatul Microsoft Excel OpenXML</li>
+<li>.xml pentru formatul NAS - ALKIS</li>
+<li>.map pentru formatul WAsP</li>
+<li>.pix pentru formatul PCIDSK</li>
+<li>.gtm și .gtz pentru formatul GPSTrackMaker</li>
+<li>.vfk pentru formatul VFK</li>
+<li>.osm și .pbf pentru formatul OpenStreetMap</li>
+<li>.sua pentru formatul SUA</li>
+<li>.txt pentru formatul OpenAir</li>
+<li>.xml pentru formatul Planetary Data Systems TABLE</li>
+<li>.htf pentru formatul Hydrographic Transfer</li>
+<li>.svg pentru formatul SVG</li>
+<li>.gen pentru formatul ARCGEN</li>
+<li>.sxf pentru formatul Storage and eXchange</li>
+<li>.pdf pentru formatul vectorial Geospatial PDF</li>
+<li>.sgy și .segy pentru formatul SEG-Y</li>
+<li>.seg, .seg1, .sp1, .uko, .ukooa pentru formatul SEGUKOOA</li>
+<li>.ovf pentru formatul fișierului vectorial VRT</li>
+<li>.kmz pentru formatul KML compresat (KMZ)</li>
+<li>.db3, .s3db, .sqlite3, .db3, .s3db, .sqlite3 pentru formatele SQLite/Spatialite</li>
+<li>.sl3 pentru formatul SQLite Spatial (FDO)</li>
+<li>CouchDB Spatial (via URL)</li>
+</ul>
+<p><strong>Pentru fIșierele raster:</strong></p>
+<ul class="simple">
+<li>.ovr pentru formatul de fișier raster vrt</li>
+</ul>
+<p><img alt="image38" src="../../../_images/7a628a66f2f63454bd65fbedda309ff5a7d25f1e.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="https://medspx.fr">Médéric Ribreux</a></p>
+</div>
+<div class="section" id="feature-use-st-removerepeatedpoints-for-server-side-simplification-with-postgis-2-2-or-newer-layers">
+<h3><a class="toc-backref" href="#id26">Caracteristică: Utilizarea ST_RemoveRepeatedPoints pentru simplificarea, pe parte de server, a straturilor PostGIS 2.2 (sau mai noi)</a><a class="headerlink" href="#feature-use-st-removerepeatedpoints-for-server-side-simplification-with-postgis-2-2-or-newer-layers" title="Link permanent la acest titlu">¶</a></h3>
+<p>De acum, la utilizarea unei instanțe PostGIS 2.2, QGIS folosește funcția ST_RemoveRepeatedPoints în locul funcției ST_SnapToGrid pentru procesul de simplificare pe parte de server, așa cum este descris de <a class="reference external" href="http://blog.cartodb.com/smaller-faster/">Paul Ramsey</a>.</p>
+<p>Această metodă va reduce numărul de noduri al geometriilor pe care QGIS trebuie să le descarce de pe server, ceea ce va crește viteza de randare și va economisi lățimea de bandă dintre QGIS și serverul PostgreSQL.</p>
+<p><img alt="image39" src="../../../_images/bea701efeedd257314f507dfb2689fbf95403095.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://3liz.com">Michaël Douchin &#64;kimaidou</a></p>
+</div>
+</div>
+<div class="section" id="data-management">
+<h2><a class="toc-backref" href="#id27">Gestiunea datelor</a><a class="headerlink" href="#data-management" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-removal-of-spit-plugin">
+<h3><a class="toc-backref" href="#id28">Caracteristică: Eliminarea plugin-ului SPIT</a><a class="headerlink" href="#feature-removal-of-spit-plugin" title="Link permanent la acest titlu">¶</a></h3>
+<p>Plugin-ul „SPIT” nu mai este livrat împreună cu QGIS, deoarece plugin-ul nu mai este întreținut și a fost depășit de DB Manager si de algoritmii de import în bazele de date.</p>
+<p><img alt="image40" src="../../../_images/b496fc25b098575ece2a38ea5a601caf75bb51dc.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de Nathan Woodrow</p>
+</div>
+<div class="section" id="feature-dxf-export-option-to-use-title-instead-of-name-as-dxf-layer-name-in-application-and-server">
+<h3><a class="toc-backref" href="#id29">Caracteristică: Exportul DXF: opțiunea de a utiliza titlul în loc de nume, ca denumire a stratului DXF în aplicație și server</a><a class="headerlink" href="#feature-dxf-export-option-to-use-title-instead-of-name-as-dxf-layer-name-in-application-and-server" title="Link permanent la acest titlu">¶</a></h3>
+<p><img alt="image41" src="../../../_images/e09652676e15a883821ca9b269c03ab0239aacb3.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="http://gis.uster.ch/">City of Uster</a></p>
+<p>Această funcționalitate a fost dezvoltată de Jürgen Fischer</p>
+</div>
+<div class="section" id="feature-geometry-type-can-be-overridden-in-the-vector-save-as-dialog">
+<h3><a class="toc-backref" href="#id30">Caracteristică: Tipul de geometrie poate fi suprascris în dialogul de salvare a vectorului</a><a class="headerlink" href="#feature-geometry-type-can-be-overridden-in-the-vector-save-as-dialog" title="Link permanent la acest titlu">¶</a></h3>
+<p>Acest lucru face posibilă efectuarea unor lucruri cum ar fi salvarea unui tabel fără geometrie CU un anumit tip de geometrie, astfel încât geometriile să poată fi apoi adăugate manual în rânduri. Anterior, acest lucru a fost posibil în QGIS doar prin recurgerea la relații false, sau la alte trucuri.</p>
+<p>În plus, au fost adăugate opțiuni pentru a forța ca fișierul de ieșire să fie de genul multi-tip, sau să includă o dimensiune z.</p>
+<p><img alt="image42" src="../../../_images/886630cb835b72865c5442a73a79b46cc5a7b60f.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-vector-joins-are-now-saved-within-qlr-layer-definition-files">
+<h3><a class="toc-backref" href="#id31">Caracteristică: Joncțiunile vectoriale sunt de acum salvate în interiorul fișierului QLR, cu definițiile stratului</a><a class="headerlink" href="#feature-vector-joins-are-now-saved-within-qlr-layer-definition-files" title="Link permanent la acest titlu">¶</a></h3>
+</div>
+<div class="section" id="feature-external-resource-widget">
+<h3><a class="toc-backref" href="#id32">Caracteristică: Controlul grafic al Resurselor Externe</a><a class="headerlink" href="#feature-external-resource-widget" title="Link permanent la acest titlu">¶</a></h3>
+<p>Un nou control grafic de tipul formular este, de acum, disponibil. Acesta este denumit „Resursă Externă” și permite o manevrare mai completă a atributelor asignate la stocarea căilor către fișiere. Mai jos, este prezentat un rezumat complet al funcțiunilor acestui control:</p>
+<ul class="simple">
+<li>Puteți seta un <strong>filtru de extensie</strong> pentru a forța stocarea unor formate fixe de fișiere. În cazul în care este setat un filtru, selectorul de fișiere va afișa doar acele nume de fișier care sunt relevante pentru filtru (este posibilă și selectarea oricărui fișier prin utilizarea caracterelor «*» în câmpul de căutare). Sintaxa filtrului este similară cu cea pentru <a class="reference external" href="https://doc.qt.io/qt-4.8/qfiledialog.html#getOpenFileName">Controlul grafic Qt QFileDialog::getOpenFileName</a>.</li>
+<li>Puteți seta o <strong>cale implicită</strong>. De fiecare dată când un utilizator declanșează acest control grafic, un selector de fișiere se va deschide având calea implicită (dacă este setată). În cazul în care nici o cale implicită nu a fost stabilită, selectorul de fișiere va utiliza ultima cale selectată dintr-un control „Resursă externă”. În cazul în care niciodată nu a fost folosit controlul respectiv, dosarul implicit la deschiderea selectorului reprezintă calea proiectului.</li>
+<li>Puteți defini și seta <strong>calea relativă de stocare</strong>. Aveți posibilitatea de a salva doar acea parte a căii care se află după calea implicită (în cazul în care calea implicită este setată), sau calea proiectului curent. Acest lucru este deosebit de util atunci când doriți să salvați căi lungi în cadrul atributelor cu dimensiuni limitate (cum ar fi atributele de text pentru fișierele shape, care sunt limitate la 254 de caractere), sau pentru crearea de proiecte și fișiere cu arhive de date de sine stătătoare, în scopul distribuirii.</li>
+<li>O altă caracteristică nouă care face controlul mai ușor de utilizat o constituie faptul că <strong>de acum, căile de fișier pot fi afișate sub formă de hiperlegături</strong>. Dacă faceți clic pe hiperlegătură, fișierul respectiv se va deschide direct din QGIS. Aveți posibilitatea să configurați această opțiune, pentru a afișa calea completă a fișierului, sau doar numele fișierului. Fișierul va fi deschis cu ajutorul aplicației implicite, pentru acel format de fișier, configurată în sistemul de operare.</li>
+<li>De asemenea, <strong>puteți utiliza o adresă URL în loc de o cale de fișier</strong>. Controlul o va interpreta ca pe o adresă URL, și va fi capabil de a deschide pagina web respectivă direct în navigatorul web implicit.</li>
+<li>Puteți alege să <strong>selectaţi căile către directoare în locul căilor spre fişiere</strong>.</li>
+<li>Există un <strong>vizualizator de documente integrat</strong> în acest control grafic. Puteți să-l utilizați pentru a afișa imagini sau pagini web direct în QGIS. Selectorul de fișiere al vizualizatorului integrat va beneficia de toate opțiunile menționate mai sus.</li>
+</ul>
+<p>Pentru mai multe informații despre opțiunile de configurare, puteți utiliza baloanele cu indicații din caseta de dialog pentru configurare.</p>
+<p>Scopul principal al acestui nou control este de a completa și de a le îmbunătăți pe cele două existente: «File name» și «Photo», și de a le înlocui cu un singur control unificat. Pentru moment, le puteți utiliza în continuare pe cele vechi, dar ele se vor demoda și vor fi înlăturate din QGIS 3.0. Vă recomandăm să modificați proiectele dvs., pentru a utiliza controlul «Resursă Externă» de pe acum.</p>
+<p><strong>Această funcționalitate a fost dezvoltată de</strong>:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/3nids">Denis Rouzaud</a></li>
+<li>Matthias Kuhn de la <a class="reference external" href="https://opengis.ch">OPENGIS.ch</a></li>
+<li><a class="reference external" href="https://medspx.fr">Médéric Ribreux</a></li>
+</ul>
+<p><img alt="image43" src="../../../_images/d20edab2103d774f548a55552ca2dbe20ac39e67.png.400x300_q85_crop.png" /></p>
+</div>
+<div class="section" id="feature-n-m-relation-editing">
+<h3><a class="toc-backref" href="#id33">Caracteristică: Editarea relației N:M</a><a class="headerlink" href="#feature-n-m-relation-editing" title="Link permanent la acest titlu">¶</a></h3>
+<p>S-a adăugat posibilitatea de a gestiona datele dintr-o bază de date relațională, normalizată în N:M (mai multe la mai multe) relații. În editorul de relații dintr-un formular, instrumentele necesare pentru a adăuga, șterge, lega și dezlega funcționează, de asemenea, și pe tabela legată, dacă relația cu aceasta este vizualizată ca fiind de tipul N:M.</p>
+<p>Configurarea se face în fila câmpurilor, unde pentru o relație poate fi aleasă o a doua relație (în cazul în care există una adecvată).</p>
+<p><strong>Limitări:</strong></p>
+<p>QGIS nu este un sistem de management al bazelor de date.</p>
+<p>Acesta face unele presupuneri privitor la sistemul de baze de date. În special:</p>
+<ul class="simple">
+<li>se așteaptă să existe <code class="docutils literal"><span class="pre">ȘTERGEREA</span> <span class="pre">ÎN</span> <span class="pre">CASCADĂ</span></code>, sau o acțiune similară, pentru cea de-a doua relație</li>
+<li>Setarea cheii primare nu este importată la momentul adăugării de entități. Fie veți instrui utilizatorii cum să o seteze manual, fie - în cazul în care aceasta reprezintă o valoare derivată din baza de date - straturile trebuie să se afle în modul de tranzacție</li>
+</ul>
+<p><img alt="image44" src="../../../_images/9f033883617b01432aae23c35be54070c1a9f5b3.png.400x300_q85_crop.png" /></p>
+<p>Această caracteristică a fost finanțată de către Republica și Cantonul Neuchâtel, Ville de Pully, Ville de Vevey</p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://opengis.ch">Matthias Kuhn</a></p>
+</div>
+</div>
+<div class="section" id="digitising">
+<h2><a class="toc-backref" href="#id34">Digitizarea</a><a class="headerlink" href="#digitising" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-configurable-rubber-band-color">
+<h3><a class="toc-backref" href="#id35">Caracteristică: Culoare configurabilă pentru banda elastică</a><a class="headerlink" href="#feature-configurable-rubber-band-color" title="Link permanent la acest titlu">¶</a></h3>
+<p>De acum, se pot seta lățimea și culoarea pentru banda elastică folosită la digitizare.</p>
+<p><img alt="image45" src="../../../_images/40ef6c2f93c7697133ebede324fe9dafe40f42f0.png.400x300_q85_crop.png" /></p>
+</div>
+<div class="section" id="feature-trace-digitising-tool">
+<h3><a class="toc-backref" href="#id36">Caracteristică: Instrument de digitizare prin urmărire</a><a class="headerlink" href="#feature-trace-digitising-tool" title="Link permanent la acest titlu">¶</a></h3>
+<p>Noul instrument de digitizare prin urmărire reprezintă un instrument avansat, care permite digitizarea entităților dintr-un strat prin urmărirea conturului entităților dintr-un alt strat.</p>
+<p>Instrumentul de urmărire:</p>
+<ul class="simple">
+<li>utilizează algoritmul de calcul a celei mai scurte căi, al lui Dijkstra, pentru a identifica rute trasabile</li>
+<li>poate urmări trasee pentru multiple entități distincte</li>
+<li>poate fi utilizat cu instrumente Avansate de Digitizare (cum ar fi reprofilarea)</li>
+<li>poate fi activat și dezactivat prin apăsarea tastei <strong>T</strong> pe durata digitizării</li>
+<li>este rapid și ușor de utilizat</li>
+</ul>
+<p>Puteți citi mai multe despre această facilitate <a class="reference external" href="http://www.lutraconsulting.co.uk/blog/2016/02/16/qgis-trace-digitising/">aici</a> și în <a class="reference external" href="http://www.lutraconsulting.co.uk/products/autotrace/TraceDigitising">acest tutorial</a>.</p>
+<p>Această caracteristică a fost finanțată de: The Royal Borough of Windsor and Maidenhead, Neath Port Talbot County Borough Council, Ujaval Gandhi, Surrey Heath Borough Council, Matias Arnold, Northumberland National Park Authority, Buccleuch Estates Limited, Countryscape</p>
+<p><img alt="image46" src="../../../_images/357ff84cf7685a2686a019ebe42f0012b495f79a.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://www.lutraconsulting.co.uk">Lutra Consulting</a></p>
+</div>
+</div>
+<div class="section" id="labelling">
+<h2><a class="toc-backref" href="#id37">Etichetarea</a><a class="headerlink" href="#labelling" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-cartographic-placement-mode-for-point-labels">
+<h3><a class="toc-backref" href="#id38">Caracteristică: Mod de poziționare „cartografică” pentru etichetele punctelor</a><a class="headerlink" href="#feature-cartographic-placement-mode-for-point-labels" title="Link permanent la acest titlu">¶</a></h3>
+<p>În acest mod de poziționare, etichetele punctelor sunt generate după reguli ideale de plasare, cartografice, aranjarea etichetelor fiind prioritizată astfel:</p>
+<ul class="simple">
+<li>dreapta sus</li>
+<li>stânga sus</li>
+<li>dreapta jos</li>
+<li>stânga jos</li>
+<li>mijloc dreapta</li>
+<li>mijloc stânga</li>
+<li>sus, puțin spre dreapta</li>
+<li>jos, puțin spre stânga</li>
+</ul>
+<p>(în concordanță cu indicațiile din Krygier și Wood (2011), precum și din alte lucrări cartografice de bază)</p>
+<p>Prioritatea destinațiilor de plasare poate fi, de asemenea, setată pentru o entitate individuală utilizând o listă de poziții definite cu ajutorul datelor. Acest lucru permite, de asemenea, utilizarea numai a unora dintre destinațiile de plasare, astfel că, în cazul unor entități care reprezintă, de exemplu, coasta marină, ați putea împiedica plasarea etichetelor deasupra solului.</p>
+<p><img alt="image53" src="../../../_images/23cdbb38f45b05ea930fbeec8ad461e2616ef2a9.png.400x300_q85_crop.jpg" /></p>
+<p>Această facilitate a fost finanțată de Andreas Neumann</p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-applying-label-distance-from-symbol-bounds">
+<h3><a class="toc-backref" href="#id39">Caracteristică: Aplicarea distanței etichetei față de limitele simbolurilor</a><a class="headerlink" href="#feature-applying-label-distance-from-symbol-bounds" title="Link permanent la acest titlu">¶</a></h3>
+<p>Când această setare este activă, distanța etichetei se calculează de la limitele simbolului randat pentru un punct. Este deosebit de util atunci când dimensiunea simbolului nu este fixă, cum ar fi în cazul în care dimensiunea este definită cu ajutorul datelor, sau atunci când se utilizează diferite simboluri dintr-un render organizat pe categorii.</p>
+<p>Rețineți că această setare este disponibilă numai pentru noul mod, Cartografic, de plasare al etichetei.</p>
+<p><img alt="image54" src="../../../_images/9469a985c317ec310e8506e27da5148cedbb93c0.png.400x300_q85_crop.jpg" /></p>
+<p>Această facilitate a fost finanțată de Andreas Neumann</p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-control-over-label-rendering-order">
+<h3><a class="toc-backref" href="#id40">Caracteristică: Controlul ordinii de randare a etichetelor</a><a class="headerlink" href="#feature-control-over-label-rendering-order" title="Link permanent la acest titlu">¶</a></h3>
+<p>Un nou control pentru setarea ordinii „z-index” a etichetelor a fost adăugat în dialogul proprietăților de etichetare. Acest control (care acceptă, de asemenea, setări definite cu ajutorul datelor pentru entitățile individuale) determină ordinea în care sunt randate etichetele. Etichetele dintr-un strat cu un z-index mai mare sunt randate deasupra etichetelor dintr-un strat cu un z-index inferior.</p>
+<p>In plus, logica a fost optimizată, astfel încât, dacă 2 etichete au același z-index, atunci:</p>
+<ul class="simple">
+<li>în cazul în care acestea fac parte din același strat, o etichetă mai mică va fi desenată întotdeauna deasupra unei etichete mai mare</li>
+<li>în cazul în care acestea fac parte din diferite straturi, etichetele vor fi desenate în aceeași ordine ca și straturile în sine (de exemplu, respectând ordinea stabilită în legendă)</li>
+</ul>
+<p>Diagramelor li se poate stabili, de asemenea, propriul z-index (care nu poate fi definit, totuși, cu ajutorul datelor), astfel încât ordinea etichetelor și a diagramelor poate fi controlată.</p>
+<p>Rețineți că acest control <em>NU</em> stabilește ca etichetele să fie desenate sub entitățile din alte straturi, ci ordinea în care sunt desenate etichetele deasupra hărții.</p>
+<p><img alt="image55" src="../../../_images/52f3e941b047714fbaf81adc7a226e4808a82d09.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-actual-rendered-symbol-is-now-considered-as-an-obstacle-for-point-feature-labels">
+<h3><a class="toc-backref" href="#id41">Caracteristică: Simbolulul de randare actual este de acum considerat drept un obstacol pentru etichetele entităților de tip punct</a><a class="headerlink" href="#feature-actual-rendered-symbol-is-now-considered-as-an-obstacle-for-point-feature-labels" title="Link permanent la acest titlu">¶</a></h3>
+<p>Anterior, numai entitățile de tip punct erau considerate ca obstacol pentru etichete. În cazul în care pentru punct erau utilizate un simbol sau un decalaj mare, atunci etichetele erau lăsate să se suprapună peste acest simbol, fără a se lua în considerare obstacolul.</p>
+<p>De acum, sunt luate în considerare atât dimensiunea reală, cât și decalajul simbolului randat, la momentul în care s-a detectat că o etichetă s-a ciocnit cu un element de tip punct. Drept urmare,  QGIS va evita, în mai multe circumstanțe, desenarea etichetelor peste simbolurile de tip punct.</p>
+<p><img alt="image56" src="../../../_images/7d4d3117427f938ec3a5a4a1ed013e8e4445db60.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost finanțată de City of Uster</p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+</div>
+<div class="section" id="layer-legend">
+<h2><a class="toc-backref" href="#id42">Legenda Stratului</a><a class="headerlink" href="#layer-legend" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-paste-a-style-to-multiple-selected-layers-or-to-all-layers-in-a-legend-group">
+<h3><a class="toc-backref" href="#id43">Caracteristică: Se poate aplica un stil mai multor straturi selectate, sau tuturor straturilor din legenda grupului</a><a class="headerlink" href="#feature-paste-a-style-to-multiple-selected-layers-or-to-all-layers-in-a-legend-group" title="Link permanent la acest titlu">¶</a></h3>
+<p>Această facilitate adaugă posibilitatea de a aplica stilul unuia dintre straturi, unui grup de straturi sau unor straturi selectate.</p>
+<p><img alt="image57" src="../../../_images/63fd1bfff18a108796c400edf127367f30f93c4b.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de Salvatore Larosa</p>
+</div>
+<div class="section" id="feature-filter-legend-by-expression">
+<h3><a class="toc-backref" href="#id44">Caracteristică: Filtrarea legendei după o expresie</a><a class="headerlink" href="#feature-filter-legend-by-expression" title="Link permanent la acest titlu">¶</a></h3>
+<p>De acum, este posibilă filtrarea elementelor de legendă după o expresie. Acest lucru a fost gândit pentru filtrarea simbologiilor bazate pe reguli sau pe categorii.</p>
+<p>Filtrarea legendei este disponibilă în legenda aplicației principale, precum și pentru componentele de legendă ale compozitorului QGIS.</p>
+<p><img alt="image59" src="../../../_images/8c957ae820bc98f0a23a7d660abd40264af6e31d.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="http://www.eau-adour-garonne.fr">Agence de l’Eau Adour-Garonne (Adour-Garonne Water Agency)</a></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://oslandia.com">Hugo Mercier / Oslandia</a></p>
+</div>
+</div>
+<div class="section" id="map-composer">
+<h2><a class="toc-backref" href="#id45">Compozitorul de Hărți</a><a class="headerlink" href="#map-composer" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-new-options-for-filtering-legend-elements">
+<h3><a class="toc-backref" href="#id46">Caracteristică: Noi opțiuni pentru filtrarea elementelor de legendă</a><a class="headerlink" href="#feature-new-options-for-filtering-legend-elements" title="Link permanent la acest titlu">¶</a></h3>
+<p>S-au introdus două noi opțiuni pentru filtrarea elementelor de legendă.</p>
+<p>Prima, filtrarea după o expresie, permite utilizatorilor stabilirea unei expresii, pentru filtrarea entităților care trebuie să fie afișate în legendă. Numai simbolurile cu entitatea potrivită vor fi afișate în legendă.</p>
+<p>A doua opțiune de filtrare permite legendei compozitorului să fie filtrată, pentru a include numai elementele care sunt conținute în poligonul atlasului curent.</p>
+<p><img alt="image58" src="../../../_images/cf32cc889370df205de51af684c4e683c3ec2dc4.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://oslandia.com/">Hugo Mercier (Oslandia)</a></p>
+</div>
+<div class="section" id="feature-additional-paths-for-composer-templates">
+<h3><a class="toc-backref" href="#id47">Caracteristică: Căi suplimentare pentru șabloanele compozitorului</a><a class="headerlink" href="#feature-additional-paths-for-composer-templates" title="Link permanent la acest titlu">¶</a></h3>
+<p>Aveți posibilitatea de a defini căile personalizate care ar trebui să fie folosite de QGIS pentru a găsi șabloanele compozitorului. Acest lucru înseamnă că puteți, de exemplu, să partajați în rețea o serie de șabloane, și să oferiți utilizatorilor acces la acest dosar, în plus față de cele locale, existente pe sistemele lor. Pentru a administra căile de căutare a șabloanelor compozitorului, mergeți la <code class="docutils literal"><span class="pre">Setări</span> <span class="pre">-&gt;</span> <span class="pre">Opțiuni</span> <span class="pre">-&gt;</span> <span class="pre">Compozitor</span></code></p>
+<p><img alt="image60" src="../../../_images/bd36891d76ee01ee79e516b0167f403a89fa49de.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de Nathan Woodrow</p>
+</div>
+<div class="section" id="feature-multiple-selection-of-compositions-in-manager">
+<h3><a class="toc-backref" href="#id48">Caracteristică: Selecție multiplă a compozițiilor din manager</a><a class="headerlink" href="#feature-multiple-selection-of-compositions-in-manager" title="Link permanent la acest titlu">¶</a></h3>
+<p>Managerul de compoziții acceptă gestionarea mai multor compoziții în același timp. De acum, puteți deschide sau șterge mai multe compoziții simultan, folosind tasta Ctrl și selectând mai multe compoziții din listă.</p>
+<p><img alt="image61" src="../../../_images/2603b37c6a6ccec10f56f37951d9494cb44c8d0a.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="https://medspx.fr">Médéric Ribreux</a></p>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2><a class="toc-backref" href="#id49">Plugin-uri</a><a class="headerlink" href="#plugins" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-authentication-system-support-for-plugin-manager">
+<h3><a class="toc-backref" href="#id50">Caracteristică: Sistem de autentificare pentru managerul de plugin-uri</a><a class="headerlink" href="#feature-authentication-system-support-for-plugin-manager" title="Link permanent la acest titlu">¶</a></h3>
+<p>A fost adăugat managerului de plugin-uri suport pentru noul sistem de autentificare. Acest lucru permite utilizatorilor să aplice configurații de autentificare pentru conexiunile către depozitele de plugin-uri, iar administratorilor de sistem să creeze acces autentificat la arhivele și/sau la pachetelor descărcabile de plugin-uri.</p>
+<p><img alt="image62" src="../../../_images/7b66e68eb37b27b0ecabcab7d0656985e222e8c0.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="http://boundlessgeo.com">Boundless Spatial</a></p>
+<p>Această funcționalitate a fost dezvoltată de Larry Shaffer</p>
+</div>
+</div>
+<div class="section" id="processing">
+<h2><a class="toc-backref" href="#id51">Procesare</a><a class="headerlink" href="#processing" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-new-algorithms-in-2-14">
+<h3><a class="toc-backref" href="#id52">Caracteristică: Noi algoritmi în 2.14</a><a class="headerlink" href="#feature-new-algorithms-in-2-14" title="Link permanent la acest titlu">¶</a></h3>
+<div class="section" id="qgis-geoalgorithms">
+<h4><a class="toc-backref" href="#id53">Geoalgoritmi QGIS:</a><a class="headerlink" href="#qgis-geoalgorithms" title="Link permanent la acest titlu">¶</a></h4>
+<ul class="simple">
+<li>Netezire: pentru netezirea stratorilor de tip poligon sau linie.</li>
+<li>Inversare direcţie linie.</li>
+</ul>
+</div>
+<div class="section" id="gdal-ogr-geoalgorithms">
+<h4><a class="toc-backref" href="#id54">Geoalgoritmi GDAL/OGR:</a><a class="headerlink" href="#gdal-ogr-geoalgorithms" title="Link permanent la acest titlu">¶</a></h4>
+<ul class="simple">
+<li>gdal2tiles: construiește un director cu plăcuțe TMS, KML-uri și simple navigatoare web.</li>
+<li>gdal_retile: reface un set de plăcuțe și/sau construiește niveluri piramidale cu plăci.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="feature-unit-tests-q-a">
+<h3><a class="toc-backref" href="#id55">Caracteristică: Asigurarea Calității pentru Testele de Unitate</a><a class="headerlink" href="#feature-unit-tests-q-a" title="Link permanent la acest titlu">¶</a></h3>
+<p>Pentru a garanta stabilitatea pe termen lung a modulului de procesare, a fost introdus un nou cadru de testare.</p>
+<p>Geo-algoritmii de procesare sunt rulați după fiecare schimbare adusă codului sursă QGIS, iar rezultatele sunt comparate cu un set de date de control, pentru validarea execuției corecte. În acest fel se obține un feedback imediat cu privire la posibilele regresii.</p>
+<p>Este posibil - și de dorit - ca mai multe teste să fie adăugate. Puteți citi mai multe despre <a class="reference external" href="www.opengis.ch/2016/02/04/increasing-the-stability-of-processing-algorithms/">modul în care puteți participa</a>.</p>
+<p><img alt="image63" src="../../../_images/4121e58bd51cfe5c8b2c0cd14d1420eaeb1f4473.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="https://www.qgis.org">Proiectul QGIS</a></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="https://opengis.ch">Matthias Kuhn, OPENGIS.ch</a></p>
+</div>
+<div class="section" id="feature-improved-toolbox">
+<h3><a class="toc-backref" href="#id56">Caracteristică:  Îmbunătățiri aduse barei de instrumente</a><a class="headerlink" href="#feature-improved-toolbox" title="Link permanent la acest titlu">¶</a></h3>
+<p>Interfața simplificată a fost eliminată, fiind adăugat un sistem nou, mai ușor de utilizat, pentru gestionarea furnizorilor. Algoritmul de căutare caută, de acum, și  furnizorii care nu sunt activi, sugerând activarea acestora.</p>
+<p><img alt="image64" src="../../../_images/2a135d5384f592e77938c59c0563cc2d0f6c3ebf.jpg.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="http://boundlessgeo.com/">Boundless Spatial</a></p>
+<p>Această funcționalitate a fost dezvoltată de Víctor Olaya</p>
+</div>
+<div class="section" id="feature-batch-processes-can-be-saved-and-later-recovered-from-the-batch-processing-interface">
+<h3><a class="toc-backref" href="#id57">Caracteristică: Procesarea loturilor se poate salva, deschizându-se, ulterior, cu ajutorul interfeței de prelucrare a loturilor</a><a class="headerlink" href="#feature-batch-processes-can-be-saved-and-later-recovered-from-the-batch-processing-interface" title="Link permanent la acest titlu">¶</a></h3>
+<p><img alt="image65" src="../../../_images/f8dec7fbc9e74dc3f4078f9710984d44b26c4fa3.jpg.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-more-informative-algorithm-dialog">
+<h3><a class="toc-backref" href="#id58">Caracteristică: Dialogul algoritmilor conține mai multe informații</a><a class="headerlink" href="#feature-more-informative-algorithm-dialog" title="Link permanent la acest titlu">¶</a></h3>
+<p>O scurtă descriere este afișată, de acum, împreună cu parametrii algoritmului, făcând ușor de înțeles scopul acestuia.</p>
+<p>De asemenea, procesarea loturilor poate fi, de acum, pornită din dialogul algoritmului, cu ajutorul butonului «Executare ca proces în serie …»</p>
+<p><img alt="image66" src="../../../_images/c4039a87ddc906921e5e3ce47f8c7aadc7ab2263.jpg.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-grass7-v-net-modules">
+<h3><a class="toc-backref" href="#id59">Caracteristică: Module v.net GRASS7</a><a class="headerlink" href="#feature-grass7-v-net-modules" title="Link permanent la acest titlu">¶</a></h3>
+<p>De acum, QGIS 2.14 Processing încorporează modulele GRASS v.net (numai pentru GRASS7). Acele module reprezintă un set de algoritmi care se pot rula asupra grafurilor din straturile vectoriale de tip linie (rețele). <a class="reference external" href="https://en.wikipedia.org/wiki/Graph_theory#Graph">Un graf</a> constă într-un set de vertecși (noduri sau puncte), legați între ei cu ajutorul unor muchii (arce sau linii). Adesea, setul de muchii este denumit rețea.</p>
+<p>Mulțumită modulelor v.net, puteți calcula cu ușurință cea mai scurtă cale dintre nodurile rețelei sau chiar <a class="reference external" href="https://en.wikipedia.org/wiki/Isochrone_map">harta izocronă</a> dintr-un set de puncte centrale. De asemenea, puteți rezolva cu ușurință <a class="reference external" href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">problema complexă a comis-voiajorului</a> dintr-o rețea și un set de noduri.</p>
+<p>Algoritmii v.net folosesc adesea un strat vectorial de tip linie (pentru rețea), și un strat de tip punct, care reprezintă nodurile pe care doriți să le utilizați în calcul. Asigurați-vă că utilizați un strat vectorial de tip linie care reprezintă un graf  (muchiile trebuie să fie conectate la vârfuri, fără intersecție între muchii) pentru a evita problemele. De asemenea, puteți utiliza orice atribut al stratului, pentru calcul costurilor (conținutul atributului este utilizat pentru a calcula costul de deplasare de-a lungul liniei).</p>
+<p>Mai jos este prezentat un sumar al diferiților algoritmi care au fost incluși în Processing:</p>
+<ul class="simple">
+<li>v.net.alloc: Alocă subrețelele din cele mai apropiate centre.</li>
+<li>v.net.allpairs: Calculează cea mai scurtă cale între toate perechile de noduri din rețea</li>
+<li>v.net.arcs: Creează arce dintr-un fișier cu puncte.</li>
+<li>v.net.articulation: Calculează <a class="reference external" href="https://en.wikipedia.org/wiki/Biconnected_component">punctele de articulare</a> din rețea</li>
+<li>v.net.bridge: Calculează <a class="reference external" href="https://en.wikipedia.org/wiki/Bridge_%28graph_theory%29">punțile</a> din rețea.</li>
+<li>v.net.centrality: Calculează gradul, centralitatea, încadrarea, apropierea și centralitatea vectorului caracteristic din fiecare nod al rețelei.</li>
+<li>v.net.components: Calculează componentele puternic și slab conectate din rețea.</li>
+<li>v.netconnect: Conectează punctele (nodurile) la cele mai apropiate arce din rețea (adaugând muchii, dacă este necesar).</li>
+<li>v.net.connectivity: Calculează conectivitatea vertecșilor dintre două seturi cu noduri, din rețea.</li>
+<li>v.net.distance: Calculează cea mai scurtă cale din rețea, dintre două seturi cu noduri.</li>
+<li>v.net.flow: Calculează debitul maxim dintre două seturi cu noduri, ale unei rețele.</li>
+<li>v.net.iso: Calculează harta izocronă a rețelei, dintr-un set cu noduri.</li>
+<li>v.net.nodes - Extrage nodurile din rețeaua/graful unui strat.</li>
+<li>v.net.nreports: Oferă informații despre noduri.</li>
+<li>v.net.path: Găsește calea cea mai scurtă dintre două noduri ale unei rețele.</li>
+<li>v.net.report: Oferă informații despre liniile dintr-o rețea.</li>
+<li>v.net.salesman: Calculează <a class="reference external" href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">Calea comis-voiajorului</a> dintr-un set cu noduri, din rețea.</li>
+<li>v.net.spanningtree: Calculează <a class="reference external" href="https://en.wikipedia.org/wiki/Spanning_tree">Arborele de acoperire</a> al unei rețele.</li>
+<li>v.net.steiner: Creează <a class="reference external" href="https://en.wikipedia.org/wiki/Steiner_tree_problem">un arbore Steiner</a> pentru rețeaua și pentru nodurile date.</li>
+<li>v.net.visibility: Execută construirea grafului de vizibilitate.</li>
+</ul>
+<p>Utilizați fila „Ajutor” pentru fiecare dintre algoritmii de procesare v.net, pentru a citi direct <a class="reference external" href="https://grass.osgeo.org/grass70/manuals/topic_network.html">Documentația oficială GRASS7</a>, și pentru a afla mai multe informatii.</p>
+<p><img alt="image67" src="../../../_images/655bbfccc4997a5a3e3d1f5c709da5277eef6000.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="https://medspx.fr">Médéric Ribreux</a></p>
+</div>
+</div>
+<div class="section" id="programmability">
+<h2><a class="toc-backref" href="#id60">Programabilitatea</a><a class="headerlink" href="#programmability" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-redesign-expression-function-editor">
+<h3><a class="toc-backref" href="#id61">Caracteristică: S-a reproiectat editorul de expresii</a><a class="headerlink" href="#feature-redesign-expression-function-editor" title="Link permanent la acest titlu">¶</a></h3>
+<p>Cu auto salvare</p>
+<p><img alt="image68" src="../../../_images/b42e959476310932713777f75f5eced4826df20a.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-store-python-init-code-into-the-project">
+<h3><a class="toc-backref" href="#id62">Caracteristică: Stocarea în proiect a codului init Python</a><a class="headerlink" href="#feature-store-python-init-code-into-the-project" title="Link permanent la acest titlu">¶</a></h3>
+<p>S-a adăugat opțiunea de stocare în proiect a codului de inițializare pentru formularele python (sau într-o bază de date, atunci când stilul este salvat în baza de date)</p>
+<p><img alt="image69" src="../../../_images/67bad1306d40aa9b32b64f4d025b77649ae2f775.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-new-filtering-and-sorting-options-for-qgsfeaturerequest">
+<h3><a class="toc-backref" href="#id63">Caracteristică: Noi opțiuni de sortare și filtrare pentru QgsFeatureRequest</a><a class="headerlink" href="#feature-new-filtering-and-sorting-options-for-qgsfeaturerequest" title="Link permanent la acest titlu">¶</a></h3>
+<p>QgsFeatureRequest acceptă de acum setarea unei limite maxime pentru numărul de entități returnate. În multe cazuri, această limită este transmisă furnizorului, având ca rezultat creșterea semnificativă a performanței.</p>
+<p>În plus, QgsFeatureRequest suportă de acum setarea ordinii pentru entitățile returnate. Din nou, în multe cazuri, această ordonare este delegată furnizorului, astfel încât să se efectueze „pe parte de server”, pentru performanțe optime.</p>
+<p><img alt="image70" src="../../../_images/6e136c8a4bdf4361b9307f88175369b62d4648d6.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-custom-feature-form-python-code-options">
+<h3><a class="toc-backref" href="#id64">Caracteristică: Opțiuni pentru codul Python din formularele personalizabile</a><a class="headerlink" href="#feature-custom-feature-form-python-code-options" title="Link permanent la acest titlu">¶</a></h3>
+<p>Această funcționalitate adaugă mai multe opțiuni codului Python pentru formularele personalizabile</p>
+<ul class="simple">
+<li>încărcarea din fișier (cu ajutorul controlului grafic pentru selectarea fișierelor)</li>
+<li>încărcarea din mediul de lucru (cum ar fi un plugin sau o funcție de inițializare Python)</li>
+<li>introducerea directă a codului, într-un control grafic de intrare (opțiune nouă)</li>
+</ul>
+<p>Opțiunile de configurare, inclusiv codul Python personalizat, introdus în fereastra de dialog, pot fi stocate atât în proiect cât și în setările stilului QML, putând fi exportate/restaurate în/din baza de date.</p>
+<p><img alt="image71" src="../../../_images/65e82ab529ee1287c631712127e1ac75f78d05c6.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="http://www.arpa.piemonte.gov.it/">ARPA Piemonte</a></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://www.itopen.it">Alessandro Pasotti (ItOpen)</a></p>
+</div>
+<div class="section" id="feature-new-pyqgis-classes-in-2-14">
+<h3><a class="toc-backref" href="#id65">Caracteristică: Noi clase PyQGIS în 2.14</a><a class="headerlink" href="#feature-new-pyqgis-classes-in-2-14" title="Link permanent la acest titlu">¶</a></h3>
+</div>
+<div class="section" id="new-core-classes">
+<h3><a class="toc-backref" href="#id66">Noi clase de baze</a><a class="headerlink" href="#new-core-classes" title="Link permanent la acest titlu">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://qgis.org/api/classQgsAttributeEditorElement.html">QgsAttributeEditorElement</a>
+- abstract base class for any elements of a drag and drop form</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsAttributeEditorContainer.html">QgsAttributeEditorContainer</a>
+- container for attribute editors, used to group them visually in an
+attribute form</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsAttributeEditorField.html">QgsAttributeEditorField</a>
+- element for loading a field’s widget onto a form</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsAttributeEditorRelation.html">QgsAttributeEditorRelation</a>
+- element for loading a relation editor widget onto a form</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsEditFormConfig.html">QgsEditFormConfig</a>
+- stores and sets configuration parameters for attribute editor forms</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsFeatureFilterProvider.html">QgsFeatureFilterProvider</a>
+- provides an interface for modifying a QgsFeatureRequest in place to
+apply additional filters to the request</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsTracer.html">QgsTracer</a> - provides
+graph creation and shortest path search for vector layers</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsTransactionGroup.html">QgsTransactionGroup</a>
+- interface for grouping layers into single edit transactions</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsUnitTypes.html">QgsUnitTypes</a> -
+helper functions for various unit types and conversions between units
+(eg distance and area units)</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsVirtualLayerDefinition.html">QgsVirtualLayerDefinition</a>
+- class for manipulating the definitions of virtual layers</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsVirtualLayerDefinitionUtils.html">QgsVirtualLayerDefinitionUtils</a>
+- helper utilities for working with QgsVirtualLayerDefinition objects</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgs25DRenderer.html">Qgs25DRenderer</a> -
+2.5D symbol renderer</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsGeometryGeneratorSymbolLayerV2.html">QgsGeometryGeneratorSymbolLayerV2</a>
+- geometry generator symbol layer</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsFeatureRequest_1_1OrderByClause.html">QgsFeatureRequest.OrderByClause</a>
+- class for specifying a field sort order for feature requests</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsFeatureRequest_1_1OrderBy.html">QgsFeatureRequest.OrderBy</a>
+- a prioritized list of order by clauses for sorting</li>
+</ul>
+</div>
+<div class="section" id="new-gui-classes">
+<h3><a class="toc-backref" href="#id67">Noi clase GUI</a><a class="headerlink" href="#new-gui-classes" title="Link permanent la acest titlu">¶</a></h3>
+<div class="section" id="reusable-widgets">
+<h4><a class="toc-backref" href="#id68">Controale grafice reutilizabile:</a><a class="headerlink" href="#reusable-widgets" title="Link permanent la acest titlu">¶</a></h4>
+<ul class="simple">
+<li><a class="reference external" href="https://qgis.org/api/classQgsExternalResourceWidget.html">QgsExternalResourceWidget</a>
+- widget for displaying a file path with a push button for an „open
+file” dialog, and optional display of pictures or HTML files</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsFileWidget.html">QgsFileWidget</a> -
+widget for selecting a file or a folder</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsLegendFilterButton.html">QgsLegendFilterButton</a>
+- tool button widget that allows enabling or disabling legend filter
+by contents of the map</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsMapCanvasTracer.html">QgsMapCanvasTracer</a>
+- an extension of QgsTracer that provides extra functionality for
+interacting with map canvases</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgs25DRendererWidget.html">Qgs25DRendererWidget</a>
+- widget for setting properties for a 2.5D renderer</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsColorWidgetAction.html">QgsColorWidgetAction</a>
+- widget action for embedding a color picker inside a menu</li>
+</ul>
+</div>
+<div class="section" id="reusable-dialogs">
+<h4><a class="toc-backref" href="#id69">Dialoguri reutilizabile:</a><a class="headerlink" href="#reusable-dialogs" title="Link permanent la acest titlu">¶</a></h4>
+<ul class="simple">
+<li><a class="reference external" href="https://qgis.org/api/classQgsStyleV2GroupSelectionDialog.html">QgsStyleV2GroupSelectionDialog</a>
+- dialog for grouping selections in a style</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsGroupWMSDataDialog.html">QgsGroupWMSDataDialog</a>
+- dialog for setting properties for a WMS group</li>
+<li><a class="reference external" href="https://qgis.org/api/classQgsOrderByDialog.html">QgsOrderByDialog</a>
+- dialog for specifying sort ordering of fields</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="qgis-server">
+<h2><a class="toc-backref" href="#id70">Serverul QGIS</a><a class="headerlink" href="#qgis-server" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-startindex-param-in-wfs-getfeature-request">
+<h3><a class="toc-backref" href="#id71">Caracteristică: Parametrul STARTINDEX în cererea WMS GetFeature</a><a class="headerlink" href="#feature-startindex-param-in-wfs-getfeature-request" title="Link permanent la acest titlu">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">STARTINDEX</span></code> este standard în WFS 2.0, dar reprezintă o extensie pentru WFS 1.0 din QGIS Server.</p>
+<p><code class="docutils literal"><span class="pre">STARTINDEX</span></code> se poate folosi pentru a sări peste anumite entități din setul de rezultate, iar în combinație cu <code class="docutils literal"><span class="pre">MAXFEATURES</span></code> oferă posibilitatea de a utiliza WFS GetFeature, în scopul paginării rezultatelor. Rețineți că <code class="docutils literal"><span class="pre">STARTINDEX=0</span></code> înseamnă că se începe cu prima entitate, fără a omite vreo entitate.</p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://3liz.com">3Liz</a></p>
+</div>
+<div class="section" id="feature-showfeaturecount-in-getlegendgraphic">
+<h3><a class="toc-backref" href="#id72">Caracteristică: showFeatureCount în GetLegendGraphic</a><a class="headerlink" href="#feature-showfeaturecount-in-getlegendgraphic" title="Link permanent la acest titlu">¶</a></h3>
+<p>Adăugați parametrul de bază, non standard, <strong>showFeatureCount</strong>, pentru a atașa numărul de entități în legendă. Pentru a-l activa,<strong>showFeatureCount</strong> va fi <em>TRUE</em> sau <em>1</em>.</p>
+<p>Această caracteristică are nevoie de un server fals de X.</p>
+<p><img alt="image72" src="../../../_images/95f13aa3a1f4cb4ca8cbf7ce30e6bb278e6b9cd8.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://3liz.com">3Liz</a></p>
+</div>
+<div class="section" id="feature-option-to-avoid-rendering-artefacts-at-edges-of-tiles">
+<h3><a class="toc-backref" href="#id73">Caracteristică: Opțiune de evitare a randării artefactelor, la marginile plăcuțelor</a><a class="headerlink" href="#feature-option-to-avoid-rendering-artefacts-at-edges-of-tiles" title="Link permanent la acest titlu">¶</a></h3>
+<p><img alt="image73" src="../../../_images/1ded32aa2bb962fde1b9f00b891b2a04406be621.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-configuration-checker-in-project-properties">
+<h3><a class="toc-backref" href="#id74">Caracteristică: Verificator de configurare, în Proprietățile Proiectului</a><a class="headerlink" href="#feature-configuration-checker-in-project-properties" title="Link permanent la acest titlu">¶</a></h3>
+<p>Pentru a ajuta la configurarea pentru QGIS Server a unui proiect, a fost adăugat un nou verificator de configurare în proprietățile proiectului.</p>
+<p>Verificatorul depistează următoarele erori:</p>
+<ul class="simple">
+<li>numele duplicate, sau scurte, folosite ca denumiri OWS</li>
+<li>nume OWS nevalide</li>
+<li>lipsă codificărilor pentru straturile vectoriale</li>
+</ul>
+<p><img alt="image74" src="../../../_images/c548fc562785f400d3000e7ae1f61705c333026c.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost finanțată de <a class="reference external" href="http://wwz.ifremer.fr/institut_eng/">Ifremer</a></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://3liz.com">3Liz</a></p>
+</div>
+<div class="section" id="feature-wms-inspire-capabilities">
+<h3><a class="toc-backref" href="#id75">Caracteristică: Capabilităţi WMS INSPIRE</a><a class="headerlink" href="#feature-wms-inspire-capabilities" title="Link permanent la acest titlu">¶</a></h3>
+<p>În proprietățile proiectului, utilizatorul poate:</p>
+<ul class="simple">
+<li>să activeze capabilităţile INSPIRE</li>
+<li>să selecteze limba pentru serviciu, de la 24 de limbi oficiale ale UE + 5 limbi regionale</li>
+<li>să aleagă scenariul pentru metadatele serviciului și să specifice parametrii lor</li>
+</ul>
+<p>Capabilitățile WMS 1.3.0 reflectă configurația INSPIRE.</p>
+<p><img alt="image75" src="../../../_images/4ee445bcb5e9eab3fb9bf2eda8f9b1b81bbe21c0.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://3liz.com">3Liz</a></p>
+</div>
+<div class="section" id="feature-add-short-name-to-layers-groups-and-project">
+<h3><a class="toc-backref" href="#id76">Caracteristică: Adăugarea unor nume scurte pentru straturi, grupuri și proiecte</a><a class="headerlink" href="#feature-add-short-name-to-layers-groups-and-project" title="Link permanent la acest titlu">¶</a></h3>
+<p>O serie de elemente au atât un <strong>Name</strong> cât și un <strong>Titlu</strong>. Numele este reprezentat printr-un șir de caractere, care este utilizat pentru comunicarea de-la-mașină-la-mașină, în timp ce titlul este folosit pentru comunicarea între utilizatori. De exemplu, un set de date poate avea Titlul descriptiv <em>Temperatura Atmosferică Maximă</em> și să fie solicitat cu ajutorul Numelui abreviat <em>ATMAX</em>.</p>
+<p>Utilizatorul poate seta deja un titlu pentru straturi și pentru proiect. Numele serviciilor Web OpenGeospatial, OWS (WMS, WFS, WCS) se bazează pe numele utilizat în arborele straturilor. Acest nume este mai mult o etichetă pentru uzul utilizatorului, nicidecum un nume pentru comunicarea de-la-mașină-la-mașină.</p>
+<p>Pentru a adăuga utilizatorilor capacitatea de a defini Numele ca pe un șir de caractere pentru comunicarea de-la-mașină-la-mașină, această caracteristică adaugă:</p>
+<ul class="simple">
+<li>linii editabile, pentru nume scurte, în proprietățile straturilor</li>
+<li>fereastră de dialog pentru datele WMS în grupul care conține arborele straturilor (nume scurt, titlu, rezumat)</li>
+<li>linii editabile, pentru nume scurte, în proprietățile proiectului</li>
+<li>un validator regex „^[A-Za-z][A-Za-z0-9._-]*”, pentru liniile de editare a numelor scurte, accesibil printr-o metodă statică</li>
+<li>un element TreeName în fullProjectSettings</li>
+</ul>
+<p>În cazul în care un nume scurt a fost stabilit pentru straturi, grupuri și proiect, acesta va fi utilizat de QGIS Sever pentru numele stratului.</p>
+<p><img alt="image76" src="../../../_images/e2345455bda9f0ed3da5e1c2750d6e2239ab8a86.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="http://3liz.com">3Liz</a></p>
+</div>
+</div>
+<div class="section" id="symbology">
+<h2><a class="toc-backref" href="#id77">Simbologie</a><a class="headerlink" href="#symbology" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-size-assistant-for-varying-line-width">
+<h3><a class="toc-backref" href="#id78">Caracteristică: Asistent pentru ajustarea lățimii liniei</a><a class="headerlink" href="#feature-size-assistant-for-varying-line-width" title="Link permanent la acest titlu">¶</a></h3>
+<p><img alt="image77" src="../../../_images/1d891425b0e1b9927ced6aab3e0353aed92608de.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-support-for-transparency-in-svg-color-parameters">
+<h3><a class="toc-backref" href="#id79">Caracteristică: Suport pentru transparență în parametrii de culoare SVG</a><a class="headerlink" href="#feature-support-for-transparency-in-svg-color-parameters" title="Link permanent la acest titlu">¶</a></h3>
+<p>SVG-urile care nu sunt încorporate au nevoie de:</p>
+<p><code class="docutils literal"><span class="pre">fill-opacity=&quot;param(fill-opacity)&quot;</span></code></p>
+<p>și</p>
+<p><code class="docutils literal"><span class="pre">stroke-opacity=&quot;param(outline-opacity)&quot;</span></code></p>
+<p>pentru activarea transparenței.</p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-easy-duplication-of-symbol-layers">
+<h3><a class="toc-backref" href="#id80">Caracteristică: Duplicarea facilă a straturilor pentru simboluri</a><a class="headerlink" href="#feature-easy-duplication-of-symbol-layers" title="Link permanent la acest titlu">¶</a></h3>
+<p>Un nou buton pentru „duplicare” a fost adăugat în dialogul proprietăților pentru simboluri, în scopul duplicării cu ușurință a straturilor pentru simboluri.</p>
+<p><img alt="image78" src="../../../_images/a6e2ad682852a2fb8b635395ec75f83ef584621d.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-2-5d-renderer">
+<h3><a class="toc-backref" href="#id81">Caracteristică: Render 2.5D</a><a class="headerlink" href="#feature-2-5d-renderer" title="Link permanent la acest titlu">¶</a></h3>
+<p>S-a adăugat o interfață de configurare și un render care ușurează operațiunile necesare obținerii un efect 2.5D.</p>
+<p>Acest lucru permite configurarea unora dintre stiluri, fiind menit să creeze o configurație ușor de utilizat.</p>
+<p>Din moment ce fiecare parte a sistemului este construită în jurul motorului intern QGIS de randare și simbolizare, există multe reglaje fine. Pentru a beneficia de toate posibilitățile, puteți schimba renderul cu unul organizat pe clase, pe categorii sau cu unul cu simbol unic, și veți avea acces deplin la îmbunătățiri conforme cerințelor dumneavoastră.</p>
+<p><strong>Această funcționalitate a fost dezvoltată de</strong>:</p>
+<ul class="simple">
+<li>Matthias Kuhn de la <a class="reference external" href="https://opengis.ch">OPENGIS.ch</a></li>
+</ul>
+<p><strong>Această facilitate a fost finanțată de</strong>:</p>
+<ul class="simple">
+<li>Consiliul Regional din Picardia</li>
+<li>ADUGA</li>
+<li>Orașul Nyon</li>
+<li>Wetu GIT cc</li>
+</ul>
+<p><img alt="image79" src="../../../_images/8d66f8838011e7bc8fae540d56bf9ef6db20db68.jpg.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-allow-definition-of-rendering-order-for-features">
+<h3><a class="toc-backref" href="#id82">Caracteristică: Este permisă definirea ordinii de randare a entităților</a><a class="headerlink" href="#feature-allow-definition-of-rendering-order-for-features" title="Link permanent la acest titlu">¶</a></h3>
+<p>Atunci când este necesară randarea într-o anumită ordine a entităților, acest lucru poate fi specificat cu ajutorul unei expresii arbitrare.</p>
+<p>Aceasta poate fi configurată în fereastra de configurare a simbologiei stratului, și poate consta într-un simplu câmp sau o expresie complexă.</p>
+<p>De asemenea, există control asupra ordinii crescătoare sau descrescătoare, precum și în cazul în care prima sau ultima entitate au valoarea NULL.</p>
+<p>În cazul în care este posibil, cererea va fi trimisă bazei de date (acest lucru depinde de complexitatea expresiei și de furnizorul stratului). În cazul în care nu este posibilă transmiterea cererii către baza de date, ordonarea se va efectua pe mașina locală.</p>
+<p>Această funcționalitate este utilizată de către renderul 2.5D, pentru a randa entitățile în funcție de distanța lor față de „cameră”.</p>
+<p>De asemenea, este disponibilă și pentru plugin-uri:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">layer</span><span class="o">.</span><span class="n">getFeatures</span><span class="p">(</span> <span class="n">QgsFeatureRequest</span><span class="p">()</span><span class="o">.</span><span class="n">setOrderBy</span><span class="p">(</span> <span class="s1">&#39;name&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="o">--</span> <span class="n">alphabetical</span> <span class="n">by</span> <span class="n">name</span>
+</pre></div>
+</div>
+<p><strong>Această funcționalitate a fost dezvoltată de:</strong> Matthias Kuhn de la <a class="reference external" href="https://opengis.ch">OPENGIS.ch</a> <strong>Această funcționalitate a fost finanțată de</strong>: Consiliul Regional Picardy, ADUGA, Orașul Nyon, Wetu GIT cc</p>
+<p><img alt="image80" src="../../../_images/e06cf21a35e070a28ce5b3b98c92f2fb1c1b881d.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="https://opengis.ch">Matthias Kuhn, OPENGIS.ch</a></p>
+</div>
+<div class="section" id="feature-geometry-generator-symbols">
+<h3><a class="toc-backref" href="#id83">Caracteristică: Simboluri pentru generatorul de geometrie</a><a class="headerlink" href="#feature-geometry-generator-symbols" title="Link permanent la acest titlu">¶</a></h3>
+<p>Simbolurile generatorului de geometrii permit utilizarea motorului de expresii pentru a modifica geometria înainte de randare, sau chiar crearea de noi geometrii în timp ce are loc randarea bazată pe atributele entităților.</p>
+<p>Acest lucru poate fi folosit pentru a utiliza toate tipurile de operatori spațiali, cum ar fi buffer, translate, intersect sau extrude, cu parametri bazați numai pe atributele de randare, fără a modifica efectiv datele sursei.</p>
+</div>
+<div class="section" id="examples">
+<h3><a class="toc-backref" href="#id84">Exemple</a><a class="headerlink" href="#examples" title="Link permanent la acest titlu">¶</a></h3>
+<div class="section" id="translate-a-geometry">
+<h4><a class="toc-backref" href="#id85">Translația unei geometrii</a><a class="headerlink" href="#translate-a-geometry" title="Link permanent la acest titlu">¶</a></h4>
+<p>Se utilizează pentru acoperiș, de către renderul 2.5D</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>translate( $geometry, 10, 10 )
+</pre></div>
+</div>
+</div>
+<div class="section" id="fill-style-for-polygon-border">
+<h4><a class="toc-backref" href="#id86">Stilul umplerii pentru conturul poligoanelor</a><a class="headerlink" href="#fill-style-for-polygon-border" title="Link permanent la acest titlu">¶</a></h4>
+<p>Acest lucru generează un poligon care reprezintă conturul poligonului original (Imaginea exemplu)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>difference( buffer( $geometry , 250 ), buffer( $geometry, -250 ) )
+</pre></div>
+</div>
+<p>Diversele straturi pentru simboluri pot conține diferite generatoare de geometrii, acest lucru permițând afișarea de versiuni diferite ale unei geometrii, în același timp. Renderul 2.5D servește drept exemplu.</p>
+<p><img alt="image81" src="../../../_images/b06b6bc93644c051c13de162b45d9486b7af769a.png.400x300_q85_crop.png" /></p>
+<p>Această funcționalitate a fost finanțată de Consiliul Regional Picardy, ADUGA, Orașul Nyon, Wetu GIT cc</p>
+<p>Această funcționalitate a fost dezvoltată de <a class="reference external" href="https://opengis.ch">Matthias Kuhn, OPENGIS.ch</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="user-interface">
+<h2><a class="toc-backref" href="#id87">Interfața cu Utilizatorul</a><a class="headerlink" href="#user-interface" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="feature-attribute-table-can-be-refreshed">
+<h3><a class="toc-backref" href="#id88">Caracteristică: Tabela de atribute poate fi actualizată</a><a class="headerlink" href="#feature-attribute-table-can-be-refreshed" title="Link permanent la acest titlu">¶</a></h3>
+<p>De acum, este disponibilă opțiunea de reîncărcare a atributelor din tabelul de atribute.</p>
+<p><img alt="image82" src="../../../_images/4623399cb1f63e2c6fa80c72a6aea17b6c63bb3e.png.400x300_q85_crop.jpg" /></p>
+</div>
+<div class="section" id="feature-directly-set-renderer-and-class-symbol-colors-from-context-menu-in-legend">
+<h3><a class="toc-backref" href="#id89">Caracteristică: Setarea directă a renderului și a clasei de culori pentru simbol, din meniul contextual al legendei,</a><a class="headerlink" href="#feature-directly-set-renderer-and-class-symbol-colors-from-context-menu-in-legend" title="Link permanent la acest titlu">¶</a></h3>
+<p>Deschide un control grafic de tip roată de culoare direct din meniu, ceea ce vă va permite să editați interactiv culoarea unui simbol, fără a fi nevoie să deschideți măcar un singur dialog!</p>
+<p><img alt="image83" src="../../../_images/3159457a414ea61f8f40659af5c9561882a44fe1.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-edit-legend-symbols-directly-from-layer-tree">
+<h3><a class="toc-backref" href="#id90">Caracteristică: Editarea simbolurilor legendei direct din arborele straturilor</a><a class="headerlink" href="#feature-edit-legend-symbols-directly-from-layer-tree" title="Link permanent la acest titlu">¶</a></h3>
+<p>Adaugă un nou element de „editare simbol” în meniul care apare după un clic-dreapta pe un element prezent în legenda renderului (cum ar fi categoriile randării clasificate). Selectându-l, se va deschide dialogul pentru editarea directă a claselor simbolului. Este mult mai rapid decât deschiderea proprietăților stratului, urmată de apăsarea pe fila stilului. Puteți efectua un dublu-clic pe un element, pentru deschiderea imediată a editorului de simboluri.</p>
+<p><img alt="image84" src="../../../_images/e7b2447e329507f0b27e855111ffa038b1ccc353.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+<div class="section" id="feature-show-hide-all-legend-items-via-the-context-menu">
+<h3><a class="toc-backref" href="#id91">Caracteristică: Afișarea/ascunderea tuturor elementelor din legendă, prin intermediul meniului contextual</a><a class="headerlink" href="#feature-show-hide-all-legend-items-via-the-context-menu" title="Link permanent la acest titlu">¶</a></h3>
+<p>Prin intermediul meniului care apare după efectuarea unui click dreapta pe un element, se pot afișa/ascunde toate elementele de simboluri pentru straturi organizate pe categorii/grade/în funcție de reguli. Înainte, trebuia să comutați manual fiecare element, unul câte unul.</p>
+<p><img alt="image85" src="../../../_images/c526cf9c28c92dde193490a2707c1fe2e0a58ea6.png.400x300_q85_crop.jpg" /></p>
+<p>Această funcționalitate a fost dezvoltată de: <a class="reference external" href="http://nyalldawson.net">Nyall Dawson</a></p>
+</div>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             >index</a></li>
+        <li class="right" >
+          <a href="../visualchangelog212/index.html" title="Jurnalul schimbărilor pentru QGIS 2.12"
+             >următor</a> |</li>
+        <li class="right" >
+          <a href="../visualchangelog216/index.html" title="Jurnalul schimbărilor pentru QGIS 2.16"
+             >precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Pentru utilizatori</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../visualchangelogs.html" >Jurnalul Schimbărilor Vizuale</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">În cazul în care nu se prevede altfel, tot conținutul este licențiat sub <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Elemente grafice preluate de la <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Pagină netradusă? Sau ați observat o eroare de traducere:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">remediere</a>
+        <br/>
+        Eroare contextuală, text lipsă sau știți dvs. mai bine:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">remediere</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

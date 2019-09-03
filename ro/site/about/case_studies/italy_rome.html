@@ -1,0 +1,604 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Modelul QGIS de geoprocesare pentru simplificarea primului nivel de analiză a microzonării seismice</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Căutare" href="../../../search.html" />
+    <link rel="next" title="Folosirea setului de instrumente de procesare la automatizarea clasificării zăpezii" href="australia_snowyhydro.html" />
+    <link rel="prev" title="Sistemul de Informații și Observare a Apelor: Utilizarea datelor de observare a Pământului în Managementul Integrat al Resurselor de Apă din Africa" href="africa_tiger.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="australia_snowyhydro.html" title="Folosirea setului de instrumente de procesare la automatizarea clasificării zăpezii"
+             accesskey="N">următor</a> |</li>
+        <li class="right" >
+          <a href="africa_tiger.html" title="Sistemul de Informații și Observare a Apelor: Utilizarea datelor de observare a Pământului în Managementul Integrat al Resurselor de Apă din Africa"
+             accesskey="P">precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Descoperiți QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Studii de caz</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Engleză">English</option>
+  <option value="ca" title="Catalană">Català</option>
+  <option value="da" title="Daneză">Dansk</option>
+  <option value="de" title="Germană">Deutsch</option>
+  <option value="es" title="Spaniolă">Español</option>
+  <option value="fa" title="Persană">فارسی</option>
+  <option value="fi" title="Finlandeză">Suomi</option>
+  <option value="fr" title="Franceză">Français</option>
+  <option value="gl" title="Galiciană">Galego</option>
+  <option value="id" title="Indoneziană">Bahasa Indonesia</option>
+  <option value="it" title="Italiană">Italiano</option>
+  <option value="hu" title="Maghiară">Magyar</option>
+  <option value="ja" title="Japoneză">日本語</option>
+  <option value="km_KH" title="Khmeră">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coreeană">한국어</option>
+  <option value="lt" title="Lituaniană">Lietuvių</option>
+  <option value="nl" title="Olandeză">Nederlands</option>
+  <option value="pl" title="Poloneză">Polski</option>
+  <option value="pt_BR" title="Portugheză (Brazilia)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portugheză">Português</option>
+  <option value="ro" title="Română">Română</option>
+  <option value="tr" title="Turcă">Türkçe</option>
+  <option value="ru" title="Rusă">Русский</option>
+  <option value="uk" title="Ucrainiană">Українська</option>
+  <option value="zh-Hans" title="Cineză (Simplificată)">簡体中文</option>
+  <option value="zh-Hant" title="Chineză (Tradițională)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/about/case_studies/italy_rome.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Donați Acum</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Vă mulțumim pentru donație!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS fiind gratuit, sperăm că vă place să-l folosiți; totodată, vă încurajăm să partajați și altora copia descărcată, astfel încât și ei să o poată utiliza. Vă mulțumim!</p>'+
+            '<p id="stripeerr" style="display:none;">Din păcate, a apărut o eroare în procesarea donației. Reîncercați mai târziu sau contactați-ne la adresa finance@qgis.org</p>'+
+            '<p>Echipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Închideți acest mesaj</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">Descoperiți QGIS</a></li>
+            <li><a href="../../forusers/index.html">Pentru utilizatori</a></li>
+            <li><a href="../../getinvolved/index.html">Implicați-vă</a></li>
+            <li><a href="../../../docs/index.html">Documentație</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Căutare" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="africa_tiger.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="australia_snowyhydro.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Descoperiți QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Aplicații</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html">Exemple de Hărți</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html#screenshots">Capturi de ecran</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Studii de caz</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">2017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">2016</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id4">2015</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="europe_lynx.html">[2015/08] Lynx habitat analysis in the Southern Carpathians by Angela Dichte, Luca Ehrminger, Silvana Garcia Travesi Reyes, Tobias Hoppe and David Winger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="africa_tiger.html">[2015/04] Water Observation and Information System: Enabling the Use of Earth Observation Data for Integrated Water Resource Management in Africa by Radoslaw Guzinski</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">[2015/03] QGIS geoprocessing model to simplify first level seismic microzonation analysis by Giuseppe Cosentino and Francesco Pennica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="australia_snowyhydro.html">[2015/02] Using the processing toolbox to automate snow classification by Andrew Jeffrey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="china_hydro.html">[2015/02] Producing an arcHYDRO like output with QGIS by Robert Ward</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id5">2014</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">2013</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">2012</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id8">2011</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id9">2010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id10">2009</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members.html">Sustaining members, sponsors and Donors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shop_goodies.html">Magazin</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://planet.qgis.org">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Pentru utilizatori</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Implicați-vă / Dezvoltare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentație</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="qgis-geoprocessing-model-to-simplify-first-level-seismic-microzonation-analysis">
+<h1>Modelul QGIS de geoprocesare pentru simplificarea primului nivel de analiză a microzonării seismice<a class="headerlink" href="#qgis-geoprocessing-model-to-simplify-first-level-seismic-microzonation-analysis" title="Link permanent la acest titlu">¶</a></h1>
+<p>Institutul de Geologie și de Geoinginerie a Mediului (IGAG) al Consiliului Național de Cercetare (CNR) este situat în Roma, în Zona de Cercetare „Roma 1”. Acesta a fost înființat în anul 2002 prin regruparea a cinci foste Institute și Centre de cercetare care au fost active pentru mai mult de 40 de ani în domeniul lor de expertiză. IGAG acoperă o gamă largă de subiecte științifice din domeniul Științelor Pământului, axându-se în principal pe studiul:</p>
+<ul class="simple">
+<li>Geochimia mediului și refacerea solurilor și a apelor contaminate;</li>
+<li>Depozitele de minerale și prelucrarea mineralelor, inclusiv tratarea apelor uzate;</li>
+<li>Geoingineria și siguranța excavațiilor;</li>
+<li>Evoluțiile geologice recente;</li>
+<li>Reducerea riscurilor naturale;</li>
+<li>Geoarheologia și arheometria.</li>
+<li>Geologie Marină</li>
+<li>Geomatică, analiză și dezvoltare GIS.</li>
+</ul>
+<p>Nivelul 1 al studiului de microzonare seismică pentru zona Pietramontecorvino (Apulia, sudul Italiei, de-a lungul lanțului central-sudic al Apeninilor) este parte a unui proiect, în colaborare cu Autoritatea Bazinului Apulia (Puglia AdB) și Departamentul de Geologie și Geofizică (DGG) de la Universitatea din Bari, care vizează microzonarea seismică a 63 municipalități din zona Foggia. Activitatea a fost promovată de către Departamentul italian de protecție civilă (DPC) și finanțată de Comitetul Interministerial pentru Planificare Economica (CIPE n. 20/2004).</p>
+<div class="section" id="qgis-geoprocessing-tool-for-first-level-seismic-microzonation-studies">
+<h2>Instrumentul QGIS de geoprocesare pentru primul nivel al studiilor microzonării seismice<a class="headerlink" href="#qgis-geoprocessing-tool-for-first-level-seismic-microzonation-studies" title="Link permanent la acest titlu">¶</a></h2>
+<p>Microzonarea seismică a evaluat riscul seismic la scară locală, propunându-și să identifice suprafețele din teritoriu caracterizate printr-un comportament seismic omogen. Primul nivel de microzonare seismică are scopul de a defini proprietățile litologice și geometria unităților geologice care caracterizează aceste porțiuni ale teritoriului (microzone).</p>
+<p>Observarea prejudiciului cauzat de un cutremur prezintă, de multe ori, variații la nivel local cauzate nu numai de structurile geologice, ci, de asemenea, de diferitele calități și tipuri de structuri construite, care au ca rezultat diferite pericole seismice.</p>
+<p>Microzonarea seismică evaluează riscul seismic local, prin identificarea zonelor din teritoriu caracterizate prin comportament seismic omogen.</p>
+<p>Liniile directoare și criteriile pentru microzonarea seismică 2008 (<a class="reference external" href="http://www.protezionecivile.gov.it/jcms/it/view_pub.wp?contentId=PUB1137">http://www.protezionecivile.gov.it/jcms/it/view_pub.wp?contentId=PUB1137</a>) prezintă standarde pentru studiile de microzonare seismică de pe teritoriul italian; distingându-se trei niveluri de adâncime (crescând de la 1 la 3).</p>
+<p>Primul nivel de microzonare seismică constă în crearea a trei hărți tematice:</p>
+<ol class="arabic simple">
+<li>Harta oservațiilor care conține datele prelevate pentru studiile de microzonare seismică;</li>
+<li>Harta geo-litologică, obținută din hărțile geologice și geomorfologice detaliate, la scară, care integrează, datele litologice, stratigrafice și geotehnice aferente observațiilor;</li>
+<li>Hartade microzonare seismică, de nivelul 1 (produsul principal al nivelului 1 de microzonare), identificând microzone în trei categorii de pericole locale:<ul>
+<li>Zone stabile;</li>
+<li>Zonele stabile predispuse la amplificare la nivelul solului;</li>
+<li>Zone instabile.</li>
+</ul>
+</li>
+</ol>
+<p>Domeniul de aplicare al acestei lucrări este de a contribui la crearea unei metodologii de procesare a datelor topografice, geologice, geofizice și geo-tehnice care vizează schițarea  hărții de microzonare seismică de nivelul 1, cu ajutorul instrumentelor open source.</p>
+<p>Instrumentul de Modelare Grafică integrat în cea mai recentă versiune a QGIS (2.8.1 la momentul scrierii acestui articol) a fost folosit pentru crearea unui model de geoprocesare simplu. Acest instrument este util pentru automatizarea uneia din analizele efectuate de obicei pentru crearea hărților de microzonare seismică de nivel 1, în special pentru a reprezenta zonele instabile ca entități de tip poligon.</p>
+<p>Modelul face uz de diferite aplicații și biblioteci cu sursă deschisă (GRASS, GDAL, QGIS), demonstrând utilitatea QGIS ca interfață simplificată și unificată pentru instrumentele eterogene GFOSS (Software Geospațial Gratuit și Cu Sursă Deschisă) (Fig. 1).</p>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/italy_igag1.png"><img alt="Geoprocessing model" src="../../../_images/italy_igag1.png" style="width: 720.0px; height: 504.90000000000003px;" /></a>
+<p class="caption"><span class="caption-text">(Fig. 1) Captură de ecran a modelului de geoprocesare.</span></p>
+</div>
+<p>Modelul folosește ca intrare (Fig. 2):</p>
+<ul class="simple">
+<li>Un fișier shape al curbelor de nivel, care conține un câmp cu valorile elevației;</li>
+<li>Numele câmpului care conține valorile elevației;</li>
+<li>Rezoluția raster dorită în metri pentru DEM și Slope (implicit 10);</li>
+<li>Un fișier shape de tip poligon din care vor fi extrase entitățile care se intersectează cu zonele cu pantă mai mare de 15 de grade;</li>
+<li>Numele stratului poligonal rezultat.</li>
+</ul>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../_images/italy_igag2.png"><img alt="Model input form (left) and execution log (right)" src="../../../_images/italy_igag2.png" style="width: 720.0px; height: 266.40000000000003px;" /></a>
+<p class="caption"><span class="caption-text">(Fig. 2) Formularul de intrare al modelului (stânga) și jurnalul de execuție (dreapta).</span></p>
+</div>
+<p>Când se lansează, modelul efectuează următoarele operațiuni:</p>
+<ul class="simple">
+<li>Instrumentul GRASS v.to.rast.attribute convertește curbele de nivel în raster, pornind de la fișierul shape al curbelor, numele câmpului z și rezoluția rasterului;</li>
+<li>Instrumentul GRASS r.surf.contour generează modelul de elevație, primind ca date de intrare rezultatul temporar rasterizat din etapa anterioară și rezoluția rasterului;</li>
+<li>Instrumentul GDAL “gdaldem” generează panta exprimată în grade, din modelul de elevație;</li>
+<li>Instrumentul GRASS r.mapcalculator este utilizat pentru a genera un raster de 1 bit, identificând zonele cu pantă mai mare de 15 de grade (această valoare fiind codată în liniile directoare de microzonare, fiind astfel fixă), cu ajutorul expresiei:</li>
+</ul>
+<p>if(A&gt;15,1,null())</p>
+<p>unde A este rasterul temporar al pantei, generat de gdaldem;</p>
+<ul class="simple">
+<li>Instrumentul GDAL “gdal_polygonize” convertește rasterul de 1 bit în poligoane;</li>
+<li>Instrumentul QGIS “Intersection” este folosit pentru a suprapune zonele cu panta mai mare de 15 grade cu stratul de intersectare dorit.</li>
+</ul>
+<p>Rezultatul constă într-un strat poligonal cu zone predispuse la instabilitate, datorită unei pante mai mari de 15 de grade extrasă automat dintr-o hartă tematică, cum ar fi un strat poligonal al terenurilor surpate  (Fig. 3) sau o hartă litologică.</p>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../_images/italy_igag3.png"><img alt="The model output (in red) shows highly unstable areas extracted from a landslides layer (orange)" src="../../../_images/italy_igag3.png" style="width: 720.0px; height: 417.6px;" /></a>
+<p class="caption"><span class="caption-text">(Fig. 3) Modelul de ieșire (în roșu) arată zone extrem de instabile extrase dintr-un strat al alunecărilor de teren (portocaliu).</span></p>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Concluzii<a class="headerlink" href="#conclusions" title="Link permanent la acest titlu">¶</a></h2>
+<p>Acest lucru demonstrează clar că instrumente GIS cu sursă deschisă, cum ar fi QGIS, GRASS, GDAL/OGR, pot fi folosite cu succes în analiza spațială și în prelucrarea datelor în scopul studierii microzonării seismice de primul nivel. În acest exemplu, QGIS a fost folosit ca o interfață simplificată și unificată pentru diverse instrumente GFOSS de înaltă calitate; Modelatorul Grafic permite construirea intuitivă a modelelor de geoprocesare ce pot fi ușor partajate ca instrumente portabile și pe diferite platforme, care nu necesită licențe software costisitoare. Instrumentul folosește capabilitățile de modelare QGIS pentru a înlănțui grafic diverși algoritmi, definind parametrii de intrare și de ieșire și lăsând software-ului sarcina de a gestiona datele de ieșire intermediare. Utilizarea unor algoritmi GRASS nu presupune definirea și utilizarea unei baze și a unui set de hărți GRASS, simplificând mult designul modelului. Evoluțiile viitoare includ crearea unui pachet de instrumente și modele, bazate pe software-ul open source, care poate fi folosit pentru a simplifica și accelera activitățile de analiză spațială necesare pentru studiile de microzonare seismică.</p>
+</div>
+<div class="section" id="references">
+<h2>Referințe<a class="headerlink" href="#references" title="Link permanent la acest titlu">¶</a></h2>
+<ul class="simple">
+<li>Baldassarre; Gallicchio, S.; Giannandrea, P. &amp; Tropeano, M.: „Raport Final Geolitic referitor la nivelul 1 de micro-zonare seismică a municipalităților din provincia Foggia, Departamentul de Geologie și Geofizică, Universitatea din Bari, 2011”</li>
+<li>Cavinato,G.P.; Cavuoto, G.; Coltella, M.; Cosentino, G.; Paolucci, E.; Peronace, E. &amp; Simionato, M.: „Studiu de fezabilitate pentru monitorizarea și protejarea zonelor urbane cu risc de stabilitate statică și a vulnerabilității structurale a orașului și provincia Foggia - CIPE 20/2004, Consiliul Național de Cercetare - Institutul de Geologie de Mediu și Geoinginerie, 2013, 526”</li>
+<li>Contribuție la actualizarea „Liniilor directoare și a criteriilor de micro-zonare seismică” 2008. Inginerie seismică, Editura Bologna, 2011 (<a class="reference external" href="http://www.protezionecivile.gov.it/jcms/it/view_pub.wp?contentId=PUB28083">http://www.protezionecivile.gov.it/jcms/it/view_pub.wp?contentId=PUB28083</a>)</li>
+<li>Grupul de lucru MS, 2008. Direcții și criterii de micro-zonare seismică. Conferința Regiunilor și Provincii Autonome - Departamentul de Protecție Civilă, Roma, 3 vol. și DVD, Președinția și Consiliul de Miniștri, Departamentul de Protecție Civilă, 2008, 424. (<a class="reference external" href="http://www.protezionecivile.gov.it/jcms/it/view_pub.wp?contentId=PUB1137">http://www.protezionecivile.gov.it/jcms/it/view_pub.wp?contentId=PUB1137</a>)</li>
+</ul>
+</div>
+<div class="section" id="authors">
+<h2>Autori<a class="headerlink" href="#authors" title="Link permanent la acest titlu">¶</a></h2>
+<p>Acest articol a fost transmis în martie 2015 de Giuseppe Cosentino și Francesco Pennica (www.igag.cnr.it).</p>
+<div class="figure align-left" id="id4">
+<a class="reference internal image-reference" href="../../../_images/guiseppe_cosentino.png"><img alt="Giuseppe Cosentino" src="../../../_images/guiseppe_cosentino.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-text">Giuseppe Cosentino</span></p>
+</div>
+<p>Giuseppe Cosentino &lt;<a class="reference external" href="mailto:g&#46;cosentino&#37;&#52;&#48;igag&#46;cnr&#46;it">g<span>&#46;</span>cosentino<span>&#64;</span>igag<span>&#46;</span>cnr<span>&#46;</span>it</a>&gt; este un geolog și tehnolog specializat în Sisteme Informatice Geografice pentru gestionarea pericolelor geologice și de inginerie. În prezent lucrează în domeniul microzonării seismice și caracterizarea de mediu a terenurilor din siturile contaminate. Domenii de interes: pericole geologice și de mediu, cartografie, geologie structurală, foraje explorative.</p>
+<div class="figure align-left" id="id5">
+<a class="reference internal image-reference" href="../../../_images/francesco_pennica.png"><img alt="Francesco Pennica" src="../../../_images/francesco_pennica.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-text">Francesco Pennica</span></p>
+</div>
+<p>Francesco Pennica folosește pentru dezvoltarea și gestionarea datelor GIS: GeoServer, MapServer, ArcGIS Server, servicii standard WebGIS bazate pe GeoNetwork OGC, limbajele Java, HTML, CSS, Javascript, Python și PHP,  dezvoltare front-end WebGIS cu OpenLayers, ExtJS, analiză și scripting GeoExt, JQuery, GWT, Ext-GWT, Google Maps API SQL, gestiune geodatabase, PostgreSQL, PostGIS, analize și scriptare GIS (ArcGIS, GRASS, instrumente GFOSS), configurarea softurilor și management pentru desktop-uri și servere Linux sau Windows.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigare</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Index General"
+             >index</a></li>
+        <li class="right" >
+          <a href="australia_snowyhydro.html" title="Folosirea setului de instrumente de procesare la automatizarea clasificării zăpezii"
+             >următor</a> |</li>
+        <li class="right" >
+          <a href="africa_tiger.html" title="Sistemul de Informații și Observare a Apelor: Utilizarea datelor de observare a Pământului în Managementul Integrat al Resurselor de Apă din Africa"
+             >precedent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Descoperiți QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Studii de caz</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">În cazul în care nu se prevede altfel, tot conținutul este licențiat sub <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a></p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Elemente grafice preluate de la <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>
+        
+        
+      </p>
+      <p class="credit">
+        Pagină netradusă? Sau ați observat o eroare de traducere:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">remediere</a>
+        <br/>
+        Eroare contextuală, text lipsă sau știți dvs. mai bine:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">remediere</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
