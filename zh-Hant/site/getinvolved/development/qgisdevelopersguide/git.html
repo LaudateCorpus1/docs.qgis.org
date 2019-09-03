@@ -1,0 +1,756 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GIT Access</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '3.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../../../search.html" />
+    <link rel="next" title="Unit Testing" href="unittesting.html" />
+    <link rel="prev" title="QGIS Coding Standards" href="codingstandards.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="unittesting.html" title="Unit Testing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="codingstandards.html" title="QGIS Coding Standards"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >參與其中 / 開發</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >開發</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">QGIS 開發者指南</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.0.3 ​ <br/> 2.18.20 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英語">English</option>
+  <option value="ca" title="加泰隆語">Català</option>
+  <option value="da" title="丹麥語">Dansk</option>
+  <option value="de" title="德語">Deutsch</option>
+  <option value="es" title="西班牙語">Español</option>
+  <option value="fa" title="波斯語">فارسی</option>
+  <option value="fi" title="芬蘭語">Suomalainen</option>
+  <option value="fr" title="法語">Français</option>
+  <option value="gl" title="加利西亞語">Galego</option>
+  <option value="id" title="印尼語">Bahasa Indonesia</option>
+  <option value="it" title="義大利語">Italiano</option>
+  <option value="hu" title="匈牙利語">Magyar</option>
+  <option value="ja" title="日語">日本語</option>
+  <option value="km_KH" title="高棉語">ភាសាខ្មែរ    </option>
+  <option value="ko" title="韓語">한국어</option>
+  <option value="lt" title="立陶宛語">Lietuvos</option>
+  <option value="nl" title="荷蘭語">Nederlands</option>
+  <option value="pl" title="波蘭語">Polski</option>
+  <option value="pt_BR" title="葡萄牙語 (巴西)">Português (Brasil)</option>
+  <option value="pt_PT" title="葡萄牙語">Português</option>
+  <option value="ro" title="羅馬尼亞語">Română</option>
+  <option value="tr" title="土耳其語">Turkish</option>
+  <option value="ru" title="俄語">Русский</option>
+  <option value="uk" title="烏克蘭語">Українська</option>
+  <option value="zh-Hans" title="Chinese (Simplified)">簡体中文</option>
+  <option value="zh-Hant" title="Chinese (Traditional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/development/qgisdevelopersguide/git.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>感謝您！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>您新鮮出爐的 QGIS 副本正在下載。QGIS 免費且永久免費，如果您從 QGIS.org 下載的話。如果您支付得起支援此項目及其背後的人們，請考慮進行<a href="http://qgis.org/zh-Hant/site/getinvolved/donations.html">小額捐款</a>支援我們的努力。無論您是否捐獻，我們希望您用得開心、並且歡迎您將您下載的副本廣而告之，這樣別人也能享受到 QGIS。祝安好！</p>'+
+            '<p>QGIS 團隊</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">現在捐贈</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">關閉此訊息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Thank you for your donation!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is free of charge and we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p id="stripeerr" style="display:none;">Unfortunately there was an error processing your Donation. Please try again later, or contact us via finance@qgis.org</p>'+
+            '<p>QGIS 團隊</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">關閉此訊息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+
+    });
+
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+
+            });
+            $(holder).append(html);
+        });
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../../about/index.html">發掘 QGIS</a></li>
+            <li><a href="../../../forusers/index.html">供使用者</a></li>
+            <li><a href="../../index.html">參與其中</a></li>
+            <li><a href="../../../../docs/index.html">說明文件</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="搜尋" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="codingstandards.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="unittesting.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">發現 QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forusers/index.html">供使用者</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">參與其中 / 開發</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../document.html">撰寫文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate.html">翻譯</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">開發</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../contributor_requirements.html">Requirements for new contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../roadmap.html">Road Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bugreporting.html">Bugs, Features and Issues</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">QGIS 開發者指南</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="codingstandards.html">QGIS Coding Standards</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">GIT Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unittesting.html">Unit Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qtcreator.html">Getting up and running with QtCreator and QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hig.html">HIG (Human Interface Guidelines)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ogcconformancetesting.html">OGC Conformance Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugindevelopment.html">Plugin Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../addinggrasstools.html">Adding GRASS Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tests.html">測試</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mailinglists.html">郵寄清單</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance/index.html">專案組織</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meetings/index.html">聚會</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../donations.html">捐助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq/index.html">常見問題</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../styleguide.html">視覺樣式指南</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/index.html">說明文件</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="git-access">
+<span id="id1"></span><h1>GIT Access<a class="headerlink" href="#git-access" title="Permalink to this headline">¶</a></h1>
+<p>This section describes how to get started using the QGIS GIT repository. Before you can do this, you need to first have a git client installed on your system.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-git-for-gnu-linux">
+<h3>Install git for GNU/Linux<a class="headerlink" href="#install-git-for-gnu-linux" title="Permalink to this headline">¶</a></h3>
+<p>Debian based distro users can do:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo apt-get install git
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-git-for-windows">
+<h3>Install git for Windows<a class="headerlink" href="#install-git-for-windows" title="Permalink to this headline">¶</a></h3>
+<p>Windows users can obtain <a class="reference external" href="http://code.google.com/p/msysgit/">msys git</a> or use git distributed with <a class="reference external" href="http://cygwin.com">cygwin</a>.</p>
+</div>
+<div class="section" id="install-git-for-osx">
+<h3>Install git for OSX<a class="headerlink" href="#install-git-for-osx" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="http://git-scm.com/">git project</a> has a downloadable build of git.
+Make sure to get the package matching your processor (x86_64 most likely, only the first Intel Macs need the i386 package).</p>
+<p>Once downloaded open the disk image and run the installer.</p>
+<p>PPC/source note</p>
+<p>The git site does not offer PPC builds. If you need a PPC build, or you just want
+a little more control over the installation, you need to compile it yourself.</p>
+<p>Download the source from <a class="reference external" href="http://git-scm.com/">http://git-scm.com/</a>. Unzip it, and in a Terminal cd to the source folder, then:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>make <span class="nv">prefix</span><span class="o">=</span>/usr/local
+sudo make <span class="nv">prefix</span><span class="o">=</span>/usr/local install
+</pre></div>
+</div>
+<p>If you don't need any of the extras, Perl, Python or TclTk (GUI), you can disable them before running make with:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">NO_PERL</span><span class="o">=</span>
+<span class="nb">export</span> <span class="nv">NO_TCLTK</span><span class="o">=</span>
+<span class="nb">export</span> <span class="nv">NO_PYTHON</span><span class="o">=</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-the-repository">
+<h2>Accessing the Repository<a class="headerlink" href="#accessing-the-repository" title="Permalink to this headline">¶</a></h2>
+<p>To clone QGIS master:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git clone git://github.com/qgis/QGIS.git
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-out-a-branch">
+<h2>Check out a branch<a class="headerlink" href="#check-out-a-branch" title="Permalink to this headline">¶</a></h2>
+<p>To check out a branch, for example the release 2.6.1 branch do:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> QGIS
+git fetch
+git branch --track origin release-2_6_1
+git checkout release-2_6_1
+</pre></div>
+</div>
+<p>To check out the master branch:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> QGIS
+git checkout master
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In QGIS we keep our most stable code in the current release branch.
+Master contains code for the so called 'unstable' release series. Periodically
+we will branch a release off master, and then continue stabilisation and selective
+incorporation of new features into master.</p>
+<p class="last">See the INSTALL file in the source tree for specific instructions on building
+development versions.</p>
+</div>
+</div>
+<div class="section" id="qgis-documentation-sources">
+<h2>QGIS documentation sources<a class="headerlink" href="#qgis-documentation-sources" title="Permalink to this headline">¶</a></h2>
+<p>If you're interested in checking out QGIS documentation sources:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git clone git@github.com:qgis/QGIS-Documentation.git
+</pre></div>
+</div>
+<p>You can also take a look at the readme included with the documentation repo for more information.</p>
+</div>
+<div class="section" id="qgis-website-sources">
+<h2>QGIS website sources<a class="headerlink" href="#qgis-website-sources" title="Permalink to this headline">¶</a></h2>
+<p>If you're interested in checking out QGIS website sources:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git clone git@github.com:qgis/QGIS-Website.git
+</pre></div>
+</div>
+<p>You can also take a look at the readme included with the website repo for more information.</p>
+</div>
+<div class="section" id="git-documentation">
+<h2>GIT Documentation<a class="headerlink" href="#git-documentation" title="Permalink to this headline">¶</a></h2>
+<p>See the following sites for information on becoming a GIT master.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://gitref.org">http://gitref.org</a></li>
+<li><a class="reference external" href="http://progit.org">http://progit.org</a></li>
+<li><a class="reference external" href="http://gitready.com">http://gitready.com</a></li>
+</ul>
+</div>
+<div class="section" id="development-in-branches">
+<h2>Development in branches<a class="headerlink" href="#development-in-branches" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>The complexity of the QGIS source code has increased considerably during the
+last years. Therefore it is hard to anticipate the side effects that the
+addition of a feature will have. In the past, the QGIS project had very long
+release cycles because it was a lot of work to reetablish the stability of the
+software system after new features were added. To overcome these problems, QGIS
+switched to a development model where new features are coded in GIT branches
+first and merged to master (the main branch) when they are finished and stable.
+This section describes the procedure for branching and merging in the QGIS
+project.</p>
+</div>
+<div class="section" id="procedure">
+<h3>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Initial announcement on mailing list:</dt>
+<dd>Before starting, make an announcement on the developer mailing list to see if
+another developer is already working on the same feature. Also contact the
+technical advisor of the project steering committee (PSC). If the new feature
+requires any changes to the QGIS architecture, a request for comment (RFC) is
+needed.</dd>
+</dl>
+</li>
+</ul>
+<p>Create a branch:
+Create a new GIT branch for the development of the new feature.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git checkout -b newfeature
+</pre></div>
+</div>
+<p>Now you can start developing. If you plan to do extensive on that branch, would
+like to share the work with other developers, and have write access to the
+upstream repo, you can push your repo up to the QGIS official repo by doing:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git push origin newfeature
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If the branch already exists your changes will be pushed into it.</p>
+<p class="last">Rebase to master regularly:
+It is recommended to rebase to incorporate the changes in master to the
+branch on a regular basis. This makes it easier to merge the branch back to
+master later. After a rebase you need to <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span></code> to your forked repo.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Never <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span></code> to the origin repository! Only use this for your working branch.</p>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git rebase master
+</pre></div>
+</div>
+</div>
+<div class="section" id="documentation-on-wiki">
+<h3>Documentation on wiki<a class="headerlink" href="#documentation-on-wiki" title="Permalink to this headline">¶</a></h3>
+<p>It is also recommended to document the intended changes and the current status
+of the work on a wiki page.</p>
+</div>
+<div class="section" id="testing-before-merging-back-to-master">
+<h3>Testing before merging back to master<a class="headerlink" href="#testing-before-merging-back-to-master" title="Permalink to this headline">¶</a></h3>
+<p>When you are finished with the new feature and happy with the stability, make
+an announcement on the developer list. Before merging back, the changes will
+be tested by developers and users.</p>
+</div>
+</div>
+<div class="section" id="submitting-patches-and-pull-requests">
+<span id="submit-patch"></span><h2>Submitting Patches and Pull Requests<a class="headerlink" href="#submitting-patches-and-pull-requests" title="Permalink to this headline">¶</a></h2>
+<p>There are a few guidelines that will help you to get your patches and pull
+requests into QGIS easily, and help us deal with the patches that are sent to
+use easily.</p>
+<div class="section" id="pull-requests">
+<h3>Pull Requests<a class="headerlink" href="#pull-requests" title="Permalink to this headline">¶</a></h3>
+<p>In general it is easier for developers if you submit GitHub pull
+requests. We do not describe Pull Requests here, but rather refer you to the
+<a class="reference external" href="https://help.github.com/articles/using-pull-requests">GitHub pull request documentation</a>.</p>
+<p>If you make a pull request we ask that you please merge master to your PR
+branch regularly so that your PR is always mergable to the upstream master
+branch.</p>
+<p>If you are a developer and wish to evaluate the pull request queue, there is a
+very nice <a class="reference external" href="http://thechangelog.com/git-pulls-command-line-tool-for-github-pull-requests/">tool that lets you do this from the command line</a></p>
+<p>Please see the section below on 'getting your patch noticed'. In general when
+you submit a PR you should take the responsibility to follow it through to
+completion - respond to queries posted by other developers, seek out a
+'champion' for your feature and give them a gentle reminder occasionally if you
+see that your PR is not being acted on. Please bear in mind that the QGIS
+project is driven by volunteer effort and people may not be able to attend to
+your PR instantaneously. If you feel the PR is not receiving the attention it
+deserves your options to accelerate it should be (in order of priority):</p>
+<ul class="simple">
+<li>Send a message to the mailing list 'marketing' your PR and how wonderful it
+will be to have it included in the code base.</li>
+<li>Send a message to the person your PR has been assigned to in the PR queue.</li>
+<li>Send a message to Marco Hugentobler (who manages the PR queue).</li>
+<li>Send a message to the project steering committee asking them to help see your
+PR incorporated into the code base.</li>
+</ul>
+<div class="section" id="best-practice-for-creating-a-pull-request">
+<h4>Best practice for creating a pull request<a class="headerlink" href="#best-practice-for-creating-a-pull-request" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Always start a feature branch from current master.</li>
+<li>If you are coding a feature branch, don't &quot;merge&quot; anything into that branch,
+rather rebase as described in the next point to keep your history clean.</li>
+<li>Before you create a pull request do <code class="docutils literal"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">origin</span></code> and <code class="docutils literal"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">origin/master</span></code>
+(given origin is the remote for upstream   and not your own remote, check your
+<code class="docutils literal"><span class="pre">.git/config</span></code> or do <code class="docutils literal"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">github.com/qgis</span></code>).</li>
+<li>You may do a git rebase like in the last line repeatedly without doing any
+damage (as long as the only purpose of your branch is to get merged into
+master).</li>
+<li>Attention: After a rebase you need to <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span></code> to your forked repo.
+<strong>CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!</strong></li>
+</ul>
+</div>
+<div class="section" id="special-labels-to-notify-documentors">
+<h4>Special labels to notify documentors<a class="headerlink" href="#special-labels-to-notify-documentors" title="Permalink to this headline">¶</a></h4>
+<p>Besides common tags you can add to classify your PR, there are special ones
+you can use to automatically generate issue reports in QGIS-Documentation
+repository as soon as your pull request is merged:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">[needs-docs]</span></code> to instruct doc writers to please add some extra documentation
+after a fix or addition to an already existing functionality.</li>
+<li><code class="docutils literal"><span class="pre">[feature]</span></code> in case of new functionnality. Filling a good description in your
+PR will be a good start.</li>
+</ul>
+<p>Please devs use these labels (case insensitive) so doc writers have issues to
+work on and have an overview of things to do. BUT please also take time to add
+some text: either in the commit OR in the docs itself.</p>
+</div>
+<div class="section" id="for-merging-a-pull-request">
+<h4>For merging a pull request<a class="headerlink" href="#for-merging-a-pull-request" title="Permalink to this headline">¶</a></h4>
+<p>Option A:</p>
+<ul class="simple">
+<li>click the merge button (Creates a non-fast-forward merge)</li>
+</ul>
+<p>Option B:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://gist.github.com/piscisaureus/3342247">Checkout the pull request</a></li>
+<li>Test (Also required for option A, obviously)</li>
+<li>checkout master, git merge pr/1234</li>
+<li>Optional: <code class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">--rebase</span></code>: Creates a fast-forward, no &quot;merge commit&quot; is
+made. Cleaner history, but it is harder to revert the merge.</li>
+<li><code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span></code> (NEVER EVER use the -f option here)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="patch-file-naming">
+<h2>Patch file naming<a class="headerlink" href="#patch-file-naming" title="Permalink to this headline">¶</a></h2>
+<p>If the patch is a fix for a specific bug, please name the file with the bug
+number in it e.g. bug777fix.patch, and attach it to the <a class="reference external" href="https://issues.qgis.org/projects/qgis">original bug report in trac</a>.</p>
+<p>If the bug is an enhancement or new feature, its usually a good idea to create
+a <a class="reference external" href="https://issues.qgis.org/projects/qgis">ticket in trac</a>
+first and then attach your patch.</p>
+</div>
+<div class="section" id="create-your-patch-in-the-top-level-qgis-source-dir">
+<h2>Create your patch in the top level QGIS source dir<a class="headerlink" href="#create-your-patch-in-the-top-level-qgis-source-dir" title="Permalink to this headline">¶</a></h2>
+<p>This makes it easier for us to apply the patches since we don't need to
+navigate to a specific place in the source tree to apply the patch. Also when I
+receive patches I usually evaluate them using merge, and having the patch
+from the top level dir makes this much easier. Below is an example of how you
+can include multiple changed files into your patch from the top level
+directory:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> QGIS
+git checkout master
+git pull origin master
+git checkout newfeature
+git format-patch master --stdout &gt; bug777fix.patch
+</pre></div>
+</div>
+<p>This will make sure your master branch is in sync with the upstream repository,
+and then generate a patch which contains the delta between your feature branch
+and what is in the master branch.</p>
+<div class="section" id="getting-your-patch-noticed">
+<h3>Getting your patch noticed<a class="headerlink" href="#getting-your-patch-noticed" title="Permalink to this headline">¶</a></h3>
+<p>QGIS developers are busy folk. We do scan the incoming patches on bug reports
+but sometimes we miss things. Don't be offended or alarmed. Try to identify a
+developer to help you - using the <a class="reference external" href="http://qgis.org/en/site/getinvolved/governance/organisation/governance.html#community-resources">Technical Resources</a>
+and contact them
+asking them if they can look at your patch. If you don't get any response, you
+can escalate your query to one of the Project Steering Committee members
+(contact details also available in the Technical Resources).</p>
+</div>
+<div class="section" id="due-diligence">
+<h3>Due Diligence<a class="headerlink" href="#due-diligence" title="Permalink to this headline">¶</a></h3>
+<p>QGIS is licensed under the GPL. You should make every effort to ensure you only
+submit patches which are unencumbered by conflicting intellectual property
+rights. Also do not submit code that you are not happy to have made available
+under the GPL.</p>
+</div>
+</div>
+<div class="section" id="obtaining-git-write-access">
+<h2>Obtaining GIT Write Access<a class="headerlink" href="#obtaining-git-write-access" title="Permalink to this headline">¶</a></h2>
+<p>Write access to QGIS source tree is by invitation. Typically when a person
+submits several (there is no fixed number here) substantial patches that
+demonstrate basic competence and understanding of C++ and QGIS coding
+conventions, one of the PSC members or other existing developers can nominate
+that person to the PSC for granting of write access. The nominator should give
+a basic promotional paragraph of why they think that person should gain write
+access. In some cases we will grant write access to non C++ developers e.g. for
+translators and documentors. In these cases, the person should still have
+demonstrated ability to submit patches and should ideally have submitted several
+substantial patches that demonstrate their understanding of modifying the code
+base without breaking things, etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since moving to GIT, we are less likely to grant write access to new
+developers since it is trivial to share code within github by forking QGIS and
+then issuing pull requests.</p>
+</div>
+<p>Always check that everything compiles before making any commits / pull
+requests. Try to be aware of possible breakages your commits may cause for
+people building on other platforms and with older / newer versions of
+libraries.</p>
+<p>When making a commit, your editor (as defined in $EDITOR environment variable)
+will appear and you should make a comment at the top of the file (above the
+area that says 'don't change this'). Put a descriptive comment and rather do
+several small commits if the changes across a number of files are unrelated.
+Conversely we prefer you to group related changes into a single commit.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="unittesting.html" title="Unit Testing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="codingstandards.html" title="QGIS Coding Standards"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >參與其中 / 開發</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >開發</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >QGIS 開發者指南</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">若無另行說明，所有內容均按<a href="http://creativecommons.org/licenses/by-sa/3.0/">創用 CC 姓名標示-相同方式分享 3.0 協定 (CC BY-SA)</a>授權</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        從 <a href="http://thenounproject.com" target="_blank">The Noun Project 彙編</a>中選擇 
+        
+        
+      </p>
+      <p class="credit">
+        未翻譯的頁面？或者發現了翻譯錯誤：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">請把我修好</a>
+        <br/>
+        文本的錯誤、缺失文本或您知道更好的寫法：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">請把我修好</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

@@ -1,0 +1,788 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGIS Coding Standards</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '3.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="搜尋" href="../../../../search.html" />
+    <link rel="next" title="GIT Access" href="git.html" />
+    <link rel="prev" title="QGIS 開發者指南" href="index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="git.html" title="GIT Access"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="QGIS 開發者指南"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >參與其中 / 開發</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >開發</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">QGIS 開發者指南</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.0.3 ​ <br/> 2.18.20 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英語">English</option>
+  <option value="ca" title="加泰隆語">Català</option>
+  <option value="da" title="丹麥語">Dansk</option>
+  <option value="de" title="德語">Deutsch</option>
+  <option value="es" title="西班牙語">Español</option>
+  <option value="fa" title="波斯語">فارسی</option>
+  <option value="fi" title="芬蘭語">Suomalainen</option>
+  <option value="fr" title="法語">Français</option>
+  <option value="gl" title="加利西亞語">Galego</option>
+  <option value="id" title="印尼語">Bahasa Indonesia</option>
+  <option value="it" title="義大利語">Italiano</option>
+  <option value="hu" title="匈牙利語">Magyar</option>
+  <option value="ja" title="日語">日本語</option>
+  <option value="km_KH" title="高棉語">ភាសាខ្មែរ    </option>
+  <option value="ko" title="韓語">한국어</option>
+  <option value="lt" title="立陶宛語">Lietuvos</option>
+  <option value="nl" title="荷蘭語">Nederlands</option>
+  <option value="pl" title="波蘭語">Polski</option>
+  <option value="pt_BR" title="葡萄牙語 (巴西)">Português (Brasil)</option>
+  <option value="pt_PT" title="葡萄牙語">Português</option>
+  <option value="ro" title="羅馬尼亞語">Română</option>
+  <option value="tr" title="土耳其語">Turkish</option>
+  <option value="ru" title="俄語">Русский</option>
+  <option value="uk" title="烏克蘭語">Українська</option>
+  <option value="zh-Hans" title="Chinese (Simplified)">簡体中文</option>
+  <option value="zh-Hant" title="Chinese (Traditional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/development/qgisdevelopersguide/codingstandards.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>感謝您！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>您新鮮出爐的 QGIS 副本正在下載。QGIS 免費且永久免費，如果您從 QGIS.org 下載的話。如果您支付得起支援此項目及其背後的人們，請考慮進行<a href="http://qgis.org/zh-Hant/site/getinvolved/donations.html">小額捐款</a>支援我們的努力。無論您是否捐獻，我們希望您用得開心、並且歡迎您將您下載的副本廣而告之，這樣別人也能享受到 QGIS。祝安好！</p>'+
+            '<p>QGIS 團隊</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">現在捐贈</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">關閉此訊息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Thank you for your donation!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is free of charge and we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p id="stripeerr" style="display:none;">Unfortunately there was an error processing your Donation. Please try again later, or contact us via finance@qgis.org</p>'+
+            '<p>QGIS 團隊</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">關閉此訊息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+
+    });
+
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+
+            });
+            $(holder).append(html);
+        });
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../../about/index.html">發掘 QGIS</a></li>
+            <li><a href="../../../forusers/index.html">供使用者</a></li>
+            <li><a href="../../index.html">參與其中</a></li>
+            <li><a href="../../../../docs/index.html">說明文件</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="搜尋" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="git.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">發現 QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forusers/index.html">供使用者</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">參與其中 / 開發</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../document.html">撰寫文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate.html">翻譯</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">開發</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../contributor_requirements.html">Requirements for new contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../roadmap.html">Road Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bugreporting.html">Bugs, Features and Issues</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">QGIS 開發者指南</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">QGIS Coding Standards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git.html">GIT Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unittesting.html">Unit Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qtcreator.html">Getting up and running with QtCreator and QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hig.html">HIG (Human Interface Guidelines)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ogcconformancetesting.html">OGC Conformance Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugindevelopment.html">Plugin Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../addinggrasstools.html">Adding GRASS Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tests.html">測試</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mailinglists.html">郵寄清單</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance/index.html">專案組織</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meetings/index.html">聚會</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../donations.html">捐助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq/index.html">常見問題</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../styleguide.html">視覺樣式指南</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/index.html">說明文件</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="qgis-coding-standards">
+<span id="coding-standards"></span><h1>QGIS Coding Standards<a class="headerlink" href="#qgis-coding-standards" title="Permalink to this headline">¶</a></h1>
+<p>These standards should be followed by all QGIS developers.</p>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="names">
+<h3>Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h3>
+<p>Class in QGIS begin with Qgs and are formed using camel case.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">QgsPoint</span></code></li>
+<li><code class="docutils literal"><span class="pre">QgsMapCanvas</span></code></li>
+<li><code class="docutils literal"><span class="pre">QgsRasterLayer</span></code></li>
+</ul>
+</div>
+<div class="section" id="members">
+<h3>Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h3>
+<p>Class member names begin with a lower case m and are formed using mixed
+case.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">mMapCanvas</span></code></li>
+<li><code class="docutils literal"><span class="pre">mCurrentExtent</span></code></li>
+</ul>
+<p>All class members should be private.
+Public class members are STRONGLY discouraged</p>
+</div>
+<div class="section" id="accessor-functions">
+<h3>Accessor Functions<a class="headerlink" href="#accessor-functions" title="Permalink to this headline">¶</a></h3>
+<p>Class member values should be obtained through accesssor functions. The
+function should be named without a get prefix. Accessor functions for the
+two private members above would be:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">mapCanvas()</span></code></li>
+<li><code class="docutils literal"><span class="pre">currentExtent()</span></code></li>
+</ul>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<p>Function names begin with a lowercase letter and are formed using mixed case.
+The function name should convey something about the purpose of the function.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">updateMapExtent()</span></code></li>
+<li><code class="docutils literal"><span class="pre">setUserOptions()</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="qt-designer">
+<h2>Qt Designer<a class="headerlink" href="#qt-designer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generated-classes">
+<h3>Generated Classes<a class="headerlink" href="#generated-classes" title="Permalink to this headline">¶</a></h3>
+<p>QGIS classes that are generated from Qt Designer (ui) files should have a
+Base suffix. This identifies the class as a generated base class.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">QgsPluginManagerBase</span></code></li>
+<li><code class="docutils literal"><span class="pre">QgsUserOptionsBase</span></code></li>
+</ul>
+</div>
+<div class="section" id="dialogs">
+<h3>Dialogs<a class="headerlink" href="#dialogs" title="Permalink to this headline">¶</a></h3>
+<p>All dialogs should implement the following:</p>
+<ul class="simple">
+<li>Tooltip help for all toolbar icons and other relevant widgets</li>
+<li>WhatsThis help for all widgets on the dialog</li>
+<li><dl class="first docutils">
+<dt>An optional (though highly recommended) context sensitive Help button</dt>
+<dd>that directs the user to the appropriate help page by launching their web
+browser</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="c-files">
+<h2>C++ Files<a class="headerlink" href="#c-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Names<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>C++ implementation and header files should have a .cpp and .h extension
+respectively. Filename should be all lowercase and, in the case of classes,
+match the class name.</p>
+<p>Example:
+Class <code class="docutils literal"><span class="pre">QgsFeatureAttribute</span></code> source files are
+<code class="docutils literal"><span class="pre">qgsfeatureattribute.cpp</span></code> and <code class="docutils literal"><span class="pre">qgsfeatureattribute.h</span></code></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In case it is not clear from the statement above, for a filename
+to match a class name it implicitly means that each class should be declared
+and implemented in its own file. This makes it much easier for newcomers to
+identify where the code is relating to specific class.</p>
+</div>
+</div>
+<div class="section" id="standard-header-and-license">
+<h3>Standard Header and License<a class="headerlink" href="#standard-header-and-license" title="Permalink to this headline">¶</a></h3>
+<p>Each source file should contain a header section patterned after the following
+example:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/***************************************************************************</span>
+<span class="cm">  qgsfield.cpp - Describes a field in a layer or table</span>
+<span class="cm">  --------------------------------------</span>
+<span class="cm">  Date : 01-Jan-2004</span>
+<span class="cm">  Copyright: (C) 2004 by Gary E.Sherman</span>
+<span class="cm">  Email: sherman at mrcc.com</span>
+<span class="cm">/***************************************************************************</span>
+<span class="cm"> *</span>
+<span class="cm"> * This program is free software; you can redistribute it and/or modify</span>
+<span class="cm"> * it under the terms of the GNU General Public License as published by</span>
+<span class="cm"> * the Free Software Foundation; either version 2 of the License, or</span>
+<span class="cm"> * (at your option) any later version.</span>
+<span class="cm"> *</span>
+<span class="cm"> ***************************************************************************/</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is a template for Qt Creator in git. To use it, copy it from
+<code class="docutils literal"><span class="pre">doc/qt_creator_license_template</span></code> to a local location, adjust the
+mail address and - if required - the name and configure QtCreator to use it:
+<code class="docutils literal"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal"><span class="pre">Options</span></code> -&gt; <code class="docutils literal"><span class="pre">C++</span></code> -&gt; <code class="docutils literal"><span class="pre">File</span> <span class="pre">Naming</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="variable-names">
+<h2>Variable Names<a class="headerlink" href="#variable-names" title="Permalink to this headline">¶</a></h2>
+<p>Local variable names begin with a lower case letter and are formed using mixed case.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">mapCanvas</span></code></li>
+<li><code class="docutils literal"><span class="pre">currentExtent</span></code></li>
+</ul>
+</div>
+<div class="section" id="enumerated-types">
+<h2>Enumerated Types<a class="headerlink" href="#enumerated-types" title="Permalink to this headline">¶</a></h2>
+<p>Enumerated types should be named in CamelCase with a leading capital e.g.:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">enum</span> <span class="n">UnitType</span>
+<span class="p">{</span>
+  <span class="n">Meters</span><span class="p">,</span>
+  <span class="n">Feet</span><span class="p">,</span>
+  <span class="n">Degrees</span><span class="p">,</span>
+  <span class="n">UnknownUnit</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Do not use generic type names that will conflict with other types. e.g. use
+<code class="docutils literal"><span class="pre">UnkownUnit</span></code> rather than <code class="docutils literal"><span class="pre">Unknown</span></code></p>
+</div>
+<div class="section" id="global-constants-macros">
+<h2>Global Constants &amp; Macros<a class="headerlink" href="#global-constants-macros" title="Permalink to this headline">¶</a></h2>
+<p>Global constants and macros should be written in upper case underscore separated e.g.:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">long</span> <span class="n">GEOCRS_ID</span> <span class="o">=</span> <span class="mi">3344</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="editing">
+<h2>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
+<p>Any text editor/IDE can be used to edit QGIS code, providing the following
+requirements are met.</p>
+<div class="section" id="tabs">
+<h3>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h3>
+<p>Set your editor to emulate tabs with spaces. Tab spacing should be set to 2
+spaces.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In vim this is done with <code class="docutils literal"><span class="pre">set</span> <span class="pre">expandtab</span> <span class="pre">ts=2</span></code></p>
+</div>
+</div>
+<div class="section" id="indentation">
+<h3>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h3>
+<p>Source code should be indented to improve readability. There is a
+<code class="docutils literal"><span class="pre">scripts/prepare-commit.sh</span></code> that looks up the changed files and reindents them
+using astyle. This should be run before committing. You can also use
+<code class="docutils literal"><span class="pre">scripts/astyle.sh</span></code> to indent individual files.</p>
+<p>As newer versions of astyle indent differently than the version used to do a
+complete reindentation of the source, the script uses an old astyle version,
+that we include in our repository (enable WITH_ASTYLE in cmake to include it in
+the build).</p>
+</div>
+<div class="section" id="braces">
+<h3>Braces<a class="headerlink" href="#braces" title="Permalink to this headline">¶</a></h3>
+<p>Braces should start on the line following the expression:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">foo</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// do stuff</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+  <span class="c1">// do something else</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="api-compatibility">
+<h2>API Compatibility<a class="headerlink" href="#api-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>There is <a class="reference external" href="http://qgis.org/api/">API documentation</a> for C++.</p>
+<p>We try to keep the API stable and backwards compatible. Cleanups to the API
+should be done in a manner similar to the Qt sourcecode e.g.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="cm">/** This method will be deprecated, you are encouraged to use</span>
+<span class="cm">     *  doSomethingBetter() rather.</span>
+<span class="cm">     *  @deprecated doSomethingBetter()</span>
+<span class="cm">     */</span>
+    <span class="n">Q_DECL_DEPRECATED</span> <span class="kt">bool</span> <span class="n">doSomething</span><span class="p">();</span>
+
+    <span class="cm">/** Does something a better way.</span>
+<span class="cm">     *  @note added in 1.1</span>
+<span class="cm">     */</span>
+    <span class="kt">bool</span> <span class="nf">doSomethingBetter</span><span class="p">();</span>
+
+  <span class="nl">signals</span><span class="p">:</span>
+    <span class="cm">/** This signal will be deprecated, you are encouraged to</span>
+<span class="cm">     *  connect to somethingHappenedBetter() rather.</span>
+<span class="cm">     * @deprecated use somethingHappenedBetter()</span>
+<span class="cm">     */</span>
+<span class="cp">#ifndef Q_MOC_RUN</span>
+    <span class="n">Q_DECL_DEPRECATED</span>
+<span class="cp">#endif</span>
+    <span class="kt">bool</span> <span class="n">somethingHappened</span><span class="p">();</span>
+
+    <span class="cm">/** Something happened</span>
+<span class="cm">     *  @note added in 1.1</span>
+<span class="cm">     */</span>
+    <span class="kt">bool</span> <span class="nf">somethingHappenedBetter</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="coding-style">
+<h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<p>Here are described some programming hints and tips that will hopefully reduce
+errors, development time and maintenance.</p>
+<div class="section" id="where-ever-possible-generalize-code">
+<h3>Where-ever Possible Generalize Code<a class="headerlink" href="#where-ever-possible-generalize-code" title="Permalink to this headline">¶</a></h3>
+<p>If you are cut-n-pasting code, or otherwise writing the same thing more than
+once, consider consolidating the code into a single function.</p>
+<p>This will:</p>
+<ul class="simple">
+<li>allow changes to be made in one location instead of in multiple places</li>
+<li>help prevent code bloat</li>
+<li>make it more difficult for multiple copies to evolve differences over time,
+thus making it harder to understand and maintain for others</li>
+</ul>
+</div>
+<div class="section" id="prefer-having-constants-first-in-predicates">
+<h3>Prefer Having Constants First in Predicates<a class="headerlink" href="#prefer-having-constants-first-in-predicates" title="Permalink to this headline">¶</a></h3>
+<p>Prefer to put constants first in predicates.</p>
+<p><code class="docutils literal"><span class="pre">0</span> <span class="pre">==</span> <span class="pre">value</span></code> instead of <code class="docutils literal"><span class="pre">value</span> <span class="pre">==</span> <span class="pre">0</span></code></p>
+<p>This will help prevent programmers from accidentally using <code class="docutils literal"><span class="pre">=</span></code> when they meant
+to use <code class="docutils literal"><span class="pre">==</span></code>, which can introduce very subtle logic bugs.The compiler will
+generate an error if you accidentally use <code class="docutils literal"><span class="pre">=</span></code> instead of <code class="docutils literal"><span class="pre">==</span></code> for comparisons
+since constants inherently cannot be assigned values.</p>
+</div>
+<div class="section" id="whitespace-can-be-your-friend">
+<h3>Whitespace Can Be Your Friend<a class="headerlink" href="#whitespace-can-be-your-friend" title="Permalink to this headline">¶</a></h3>
+<p>Adding spaces between operators, statements, and functions makes it easier for
+humans to parse code.</p>
+<p>Which is easier to read, this:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span><span class="o">&amp;&amp;</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or this:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">scripts/prepare-commit.sh</span></code> will take care of this.</p>
+</div>
+</div>
+<div class="section" id="put-commands-on-separate-lines">
+<h3>Put commands on separate lines<a class="headerlink" href="#put-commands-on-separate-lines" title="Permalink to this headline">¶</a></h3>
+<p>When reading code it's easy to miss commands, if they are not at the beginning
+of the line. When quickly reading through code, it's common to skip lines
+if they don't look like what you are looking for in the first few characters.
+It's also common to expect a command after a conditional like <code class="docutils literal"><span class="pre">if</span></code>.</p>
+<p>Consider:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">foo</span><span class="p">)</span> <span class="n">bar</span><span class="p">();</span>
+
+<span class="n">baz</span><span class="p">();</span> <span class="n">bar</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>It's very easy to miss part of what the flow of control.
+Instead use</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+  <span class="n">bar</span><span class="p">();</span>
+
+<span class="n">baz</span><span class="p">();</span>
+<span class="n">bar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indent-access-modifiers">
+<h3>Indent access modifiers<a class="headerlink" href="#indent-access-modifiers" title="Permalink to this headline">¶</a></h3>
+<p>Access modifiers structure a class into sections of public API, protected API and
+private API. Access modifiers themselves group the code into this structure.
+Indent the access modifier and declarations.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QgsStructure</span>
+<span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Constructor</span>
+<span class="cm">     */</span>
+     <span class="k">explicit</span> <span class="n">QgsStructure</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="book-recommendations">
+<h3>Book recommendations<a class="headerlink" href="#book-recommendations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://shop.oreilly.com/product/0636920033707.do">Effective Modern C++</a>, Scott Meyers</li>
+<li><a class="reference external" href="http://www.informit.com/store/more-effective-c-plus-plus-35-new-ways-to-improve-your-9780201633719">More Effective C++</a>, Scott Meyers</li>
+<li><a class="reference external" href="http://www.informit.com/store/effective-stl-50-specific-ways-to-improve-your-use-9780201749625">Effective STL</a>, Scott Meyers</li>
+<li><a class="reference external" href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">Design Patterns</a>, GoF</li>
+</ul>
+<p>You should also really read this article from Qt Quarterly on
+<a class="reference external" href="https://doc.qt.io/archives/qq/qq13-apis.html">designing Qt style (APIs)</a></p>
+</div>
+</div>
+<div class="section" id="credits-for-contributions">
+<h2>Credits for contributions<a class="headerlink" href="#credits-for-contributions" title="Permalink to this headline">¶</a></h2>
+<p>Contributors of new functions are encouraged to let people know about their contribution by:</p>
+<ul>
+<li><p class="first">adding a note to the changelog for the first version where
+the code has been incorporated, of the type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">feature</span> <span class="n">was</span> <span class="n">funded</span> <span class="n">by</span><span class="p">:</span> <span class="n">Olmiomland</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">olmiomland</span><span class="o">.</span><span class="n">ol</span>
+<span class="n">This</span> <span class="n">feature</span> <span class="n">was</span> <span class="n">developed</span> <span class="n">by</span><span class="p">:</span> <span class="n">Chuck</span> <span class="n">Norris</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">chucknorris</span><span class="o">.</span><span class="n">kr</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">writing an article about the new feature on a blog,
+and add it to the QGIS planet <a class="reference external" href="http://plugins.qgis.org/planet/">http://plugins.qgis.org/planet/</a></p>
+</li>
+<li><p class="first">adding their name to:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS">https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS</a></li>
+<li><a class="reference external" href="https://github.com/qgis/QGIS/blob/master/doc/AUTHORS">https://github.com/qgis/QGIS/blob/master/doc/AUTHORS</a></li>
+<li><a class="reference external" href="https://github.com/qgis/QGIS/blob/master/doc/contributors.json">https://github.com/qgis/QGIS/blob/master/doc/contributors.json</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="git.html" title="GIT Access"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="QGIS 開發者指南"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >參與其中 / 開發</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >開發</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >QGIS 開發者指南</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">若無另行說明，所有內容均按<a href="http://creativecommons.org/licenses/by-sa/3.0/">創用 CC 姓名標示-相同方式分享 3.0 協定 (CC BY-SA)</a>授權</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        從 <a href="http://thenounproject.com" target="_blank">The Noun Project 彙編</a>中選擇 
+        
+        
+      </p>
+      <p class="credit">
+        未翻譯的頁面？或者發現了翻譯錯誤：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">請把我修好</a>
+        <br/>
+        文本的錯誤、缺失文本或您知道更好的寫法：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">請把我修好</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
