@@ -1,0 +1,554 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_PT">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGIS e Cartografia de Perigosidade e Risco de Incêndio Florestal em Portugal</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../../../search.html" />
+    <link rel="next" title="A utilização do QGIS para Mapear as Áreas Hotspot para a Biodiversidade e Serviços de Ecossistema (HABEaS)" href="portugal_lisbon.html" />
+    <link rel="prev" title="Criando o Mapa de Trilhos do Fundy Footpath com QGIS" href="canada_brunswick.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice Geral"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="portugal_lisbon.html" title="A utilização do QGIS para Mapear as Áreas Hotspot para a Biodiversidade e Serviços de Ecossistema (HABEaS)"
+             accesskey="N">próximo</a> |</li>
+        <li class="right" >
+          <a href="canada_brunswick.html" title="Criando o Mapa de Trilhos do Fundy Footpath com QGIS"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Descobrir o QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Casos de Estudo</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Inglês">English</option>
+  <option value="ca" title="Catalão">Català</option>
+  <option value="da" title="Dinamarquês">Dansk</option>
+  <option value="de" title="Alemão">Deutsch</option>
+  <option value="es" title="Espanhol">Español</option>
+  <option value="fa" title="Persa">فارسی</option>
+  <option value="fi" title="Finlandês">Suomi</option>
+  <option value="fr" title="Francês">Français</option>
+  <option value="gl" title="Galego">Galego</option>
+  <option value="id" title="Indonésio">Bahasa Indonesia</option>
+  <option value="it" title="Italiano">Italiano</option>
+  <option value="hu" title="Húngaro">Magyar</option>
+  <option value="ja" title="Japonês">日本語</option>
+  <option value="km_KH" title="Cambojiano">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coreano">한국어</option>
+  <option value="lt" title="Lituano">Lietuvių</option>
+  <option value="nl" title="Holandês">Nederlands</option>
+  <option value="pl" title="Polaco">Polski</option>
+  <option value="pt_BR" title="Português (Brasil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Português">Português</option>
+  <option value="ro" title="Romeno">Română</option>
+  <option value="tr" title="Turco">Türkçe</option>
+  <option value="ru" title="Russo">Русский</option>
+  <option value="uk" title="Ucraniano">Українська</option>
+  <option value="zh-Hans" title="Chinês (Simplificado)">簡体中文</option>
+  <option value="zh-Hant" title="Chinês (Tradicional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/about/case_studies/portugal_pinhel.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Obrigado!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>A Equipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Doar Agora</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fechar Esta Mensagem</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Obrigado pelo seu donativo!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">O QGIS é gratuito e esperamos que você goste de usar o nosso trabalho e o encoraje a compartilhar e divulgar sua cópia baixada em todos os lugares para que outros também possam aproveitar. Os nossos melhores cumprimentos!</p>'+
+            '<p id="stripeerr" style="display:none;">Infelizmente ocorreu um erro no processamento do seu Donativo. Por favor tente mais tarde, ou contacte-nos através de finance@qgis.org</p>'+
+            '<p>A Equipa QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fechar Esta Mensagem</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../index.html">Descubra o QGIS</a></li>
+            <li><a href="../../forusers/index.html">Para Utilizadores</a></li>
+            <li><a href="../../getinvolved/index.html">Participe</a></li>
+            <li><a href="../../../docs/index.html">Documentação</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Pesquisar" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="canada_brunswick.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="portugal_lisbon.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Descobrir o QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Aplicações</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html">Exemplos de Mapas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screenshots.html#screenshots">Capturas de ecrã</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Casos de Estudo</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">2017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">2015</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id5">2014</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">2013</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id7">2012</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">[2012/10] QGIS and Forest Fire Risk Mapping in Portugal, by Pedro Venâncio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portugal_lisbon.html">[2012/10] Using QGIS to Map Hotspot Areas for Biodiversity and Ecosystem Services (HABEaS), by Filipe Dias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portugal_ribeira.html">[2012/07] QGIS and GRASS for modelling ecological corridors for wolves in North Portugal by Monica Almeida</a></li>
+<li class="toctree-l4"><a class="reference internal" href="india_hyderabad.html">[2012/07] QGIS Trainings at NIRD Jaipur Centre, India by Harish Kumar Solanki</a></li>
+<li class="toctree-l4"><a class="reference internal" href="italy_vicenza.html">[2012/05] Using QGIS for urban planning in the municipality of Montecchio Maggiore, Vicenza, Italy by Flavio Rigolon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nigeria_jos.html">[2012/03] Amurum forest reserve habitat and avifauna mapping with QGIS, Nigeria by Eelke Folmer et. al.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tanzania_udzungwa.html">[2012/03] Using QGIS for wildlife training in Tanzania by Nick McWilliam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="malaysia_kuala.html">[2012/01] The growth of QGIS at the Federal Department of Town and Country Planning, Peninsular Malaysia by Abbas Abdul Wahab</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id8">2011</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id9">2010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id10">2009</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sustaining_members.html">Sustaining members, sponsors and Donors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shop_goodies.html">Loja</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://planet.qgis.org">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Para Utilizadores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getinvolved/index.html">Participe / Desenvolvimento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentação</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="qgis-and-forest-fire-risk-mapping-in-portugal">
+<h1>QGIS e Cartografia de Perigosidade e Risco de Incêndio Florestal em Portugal<a class="headerlink" href="#qgis-and-forest-fire-risk-mapping-in-portugal" title="Link permanente para este título">¶</a></h1>
+<p>Todos os anos, centenas de incêndios consomem vastas áreas de floresta e mato em Portugal, traduzindo-se esta realidade em enormes perdas económicas, sociais e ambientais. Para fazer face a este risco, o governo português, através da Autoridade Florestal Nacional (AFN), decidiu criar gabinetes técnicos nas autarquias locais com a finalidade de, entre outras atribuições, elaborar Planos Municipais de Defesa da Floresta Contra Incêndios e Planos Operacionais Municipais.</p>
+<p>Para suportar a elaboração destes documentos, a AFN fornece guias técnicos com a metodologia para calcular e criar o mapa de Risco de Incêndio Florestal. Mais ainda, foram disponíveis tutoriais a elaboração da metodologia usando software proprietário. Contudo, os custos de aquisição e licenciamento desse software são insuportáveis para a maioria das pequenas administrações locais e portanto, foi decidido criar uma guia disponível com a metodologia para o desenvolvimento da cartografia de Risco e Perigo usando apenas software gratuito e código aberto [<a class="reference external" href="http://goo.gl/TSv2E">http://goo.gl/TSv2E</a>].</p>
+<p>Assim, decidiu criar-se e disponibilizar-se um guia com uma metodologia para a produção de cartografia de Perigosidade e Risco de Incêndio Florestal com recurso, em exclusivo, a software livre e de código aberto, nomeadamente: QGIS, GRASS GIS, gvSIG e bibliotecas GDAL/OGR. O guia descreve todas as tarefas de geoprocessamento necessárias à elaboração do Plano Operacional Municipal, segundo a metodologia da AFN. Grande parte das tarefas foram levadas a efeito com o QGIS, tendo-se utilizado o GRASS para as rotinas de análise espacial no modelo raster. O gvSIG foi utilizado essencialmente para o cálculo de tempos de deslocação e análise de redes, por intermédio da sua extensão Network Analysis, e as bibliotecas GDAL/OGR permitiram fazer transformações entre diversos sistemas de referência.</p>
+<p>Após um vasto conjunto de testes à metodologia, e de três anos de aplicação real à elaboração do Plano Operacional Municipal do concelho de Pinhel, pode dizer-se que as alternativas propostas permitem substituir, com muitas vantagens, os softwares proprietários que geralmente são utilizados para essa tarefa.
+A validação dos resultados tem permitido concluir que, apesar da relativa simplicidade do modelo conceptual, a metodologia possui uma capacidade preditiva bastante boa, e que a sua implementação em software Open Source não interfere de forma negativa com os resultados obtidos, bem pelo contrário.</p>
+<blockquote>
+<div><div class="figure align-right">
+<a class="reference internal image-reference" href="../../../_images/portugal_pinhel1.jpg"><img alt="Forest Fire Hazard and Risk Maps of Pinhel" src="../../../_images/portugal_pinhel1.jpg" style="width: 454.40000000000003px; height: 585.2px;" /></a>
+</div>
+</div></blockquote>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/portugal_pinhel2.jpg"><img alt="Forest Fire Hazard and Risk Maps of Pinhel" src="../../../_images/portugal_pinhel2.jpg" style="width: 454.8px; height: 586.4px;" /></a>
+<p class="caption"><span class="caption-text">Mapas de Perigosidade e Risco de Incêndio Florestal do concelho de Pinhel, elaborados com software de código aberto.</span></p>
+</div>
+<p>Numa segunda fase, procurou agilizar-se este processo, através da sua automatização, com recurso a modelos que estabelecem um fluxo de trabalho e que executam um vasto conjunto de tarefas, praticamente sem necessidade de intervenção humana.
+Esta segunda fase consistiu, essencialmente, na automatização de todo o processo descrito no guia prático que resultou da primeira fase. Esta automatização poderá significar a redução de várias horas de intenso trabalho por parte do técnico que pretende elaborar anualmente o Plano Operacional Municipal, para apenas alguns minutos, nos quais a intervenção humana se resume à selecção dos dados de entrada e à indicação do local onde se pretendem guardar os dados de saída.</p>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../_images/portugal_pinhel3.png"><img alt="Interface of the Sextante Model" src="../../../_images/portugal_pinhel3.png" style="width: 391.8px; height: 285.0px;" /></a>
+<p class="caption"><span class="caption-text">Interface do modelo do Sextante para calcular a Probabilidade de Incêndio Florestal.</span></p>
+</div>
+<p>Para cumprir a segunda fase, nós usámos a versão Python do software Sextante, que trabalha integrado no QGIS e adicionámos um conjunto de aplicações independentes  (GRASS GIS, SAGA GIS, OTB, R, GDAL/OGR, Pymorph, LASTools, scripts Python, etc..) numa interface única, fornecendo uma ferramenta de geoprocessamento extensa para os utilizadores QGIS. Para além da integração das aplicações no QGIS, Sextante tem uma ferramenta de criação de modelos, tomado vantagem dos módulos oferecidos por qualquer software agregado. Portanto, nós criámos um modelo para automatizar o processo de produção dos mapas de Perigos e Risco de Incêndio Florestal, usando o GRASS, SAGA, fTools e as ferramentas MMQGIS.</p>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../_images/portugal_pinhel4.png"><img alt="Part of the model developed for automation of the production" src="../../../_images/portugal_pinhel4.png" style="width: 2400.0px; height: 748.8px;" /></a>
+<p class="caption"><span class="caption-text">Parte do modelo que foi desenvolvido para automação da produção da cartografia de Perigo e Risco de Incêndio Florestal.</span></p>
+</div>
+<p>Os resultados conseguidos até ao momento são bastante promissores, na medida em que já se consegue chegar, de forma automática, à criação das cartas finais de Perigosidade e Risco [2].
+Tendo em conta que a versão Python do Sextante é ainda muito recente e se encontra em fase de desenvolvimento, existem alguns problemas que necessitam de ser corrigidos para que os modelos sejam concluídos, o que certamente acontecerá muito em breve, dada a vitalidade do projecto Sextante.</p>
+<div class="section" id="conclusions">
+<h2>Conclusões<a class="headerlink" href="#conclusions" title="Link permanente para este título">¶</a></h2>
+<p>As alternativas estudadas revelaram-se de enorme qualidade, permitindo realizar todas as operações recomendadas nos Guias Técnicos da AFN, em muitos pontos, de forma até mais eficiente do que com softwares proprietários.
+Em termos de facilidade de utilização constatou-se, também, que este tipo de software não é, de forma nenhuma, mais complexo que o proprietário, exigindo apenas mais conhecimentos técnicos dos modelos e algoritmos implementados que, contudo, permitem um grau de liberdade muito superior, possibilitando explorar e afinar os modelos a cada situação em particular. O processo de produção de cartografia de Perigosidade e Risco de Incêndio Florestal com recurso, em exclusivo, a software Open Source está perfeitamente consolidado, após vários anos de testes e aplicação na elaboração do Plano Operacional Municipal de Pinhel.</p>
+<p>O facto do software Código Aberto se basear em standards e de suportar a maioria dos formatos de dados, permite uma completa interoperabilidade entre softwares, possibilitando optar pelo que mais convier ao utilizador em cada momento. Apesar da proposta apontar um conjunto específico de softwares, nada impede que sejam substituídos por quaisquer alternativas existentes no vasto leque de propostas de software de código aberto para Sistemas de Informação Geográfica. Contudo, o QGIS apresenta-se cada vez mais como a solução FOSS4G de código aberto para SIG mais completa, estável e fácil de usar, e cujo projecto é mais dinâmico, com uma rápida correção de erros e uma implementação quase diária de novos plugins que adicionam funcionalidades específicas para as mais diversas áreas de actuação.</p>
+</div>
+<div class="section" id="author">
+<h2>Autor<a class="headerlink" href="#author" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-left" id="id4">
+<a class="reference internal image-reference" href="../../../_images/portugal_pinhelaut.png"><img alt="Pedro Venâncio" src="../../../_images/portugal_pinhelaut.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-text">Pedro Venâncio</span></p>
+</div>
+<p>Pedro Venâncio, Licenciado em Geologia, Pós-graduado em Software Livre e Mestre em Sistemas de Informação Geográfica. Foi investigador no Centro de Geofísica da Universidade de Coimbra, no Laboratório Nacional de Engenharia Civil e é actualmente responsável pelo Serviço de Cartografia e Sistemas de Informação Geográfica do Município de Pinhel.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice Geral"
+             >índice</a></li>
+        <li class="right" >
+          <a href="portugal_lisbon.html" title="A utilização do QGIS para Mapear as Áreas Hotspot para a Biodiversidade e Serviços de Ecossistema (HABEaS)"
+             >próximo</a> |</li>
+        <li class="right" >
+          <a href="canada_brunswick.html" title="Criando o Mapa de Trilhos do Fundy Footpath com QGIS"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Descobrir o QGIS</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Casos de Estudo</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Se não for mencionado o contrário, todos os conteúdos são disponibilizados segundo a licença <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Atribuição-Compartilha Igual 3.0 (CC BY-SA) </a> </p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Selecionar gráficos a partir da <a href="http://thenounproject.com" target="_blank">coleção do Projeto The Noun</a>.
+        
+        
+      </p>
+      <p class="credit">
+        Página sem tradução? Se encontrou um erro na tradução:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">corrija-me</a>
+        <br/>
+        Erro textual, texto em falta ou tem um termo melhor:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">corrija-me</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
