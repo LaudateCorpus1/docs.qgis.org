@@ -1,0 +1,901 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Roteiro</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../../../search.html" />
+    <link rel="next" title="Erros, características e problemas" href="bugreporting.html" />
+    <link rel="prev" title="Requisitos para novos contribuidores" href="contributor_requirements.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice Geral"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="bugreporting.html" title="Erros, características e problemas"
+             accesskey="N">próximo</a> |</li>
+        <li class="right" >
+          <a href="contributor_requirements.html" title="Requisitos para novos contribuidores"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Participe /Desenvolvimento</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Desenvolvimento</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.8.2 ​ <br/> 3.4.11 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="Inglês">English</option>
+  <option value="ca" title="Catalão">Català</option>
+  <option value="da" title="Dinamarquês">Dansk</option>
+  <option value="de" title="Alemão">Deutsch</option>
+  <option value="es" title="Espanhol">Español</option>
+  <option value="fa" title="Persa">فارسی</option>
+  <option value="fi" title="Finlandês">Suomi</option>
+  <option value="fr" title="Francês">Français</option>
+  <option value="gl" title="Galician">Galego</option>
+  <option value="id" title="Indonésio">Bahasa Indonesia</option>
+  <option value="it" title="Italiano">Italiano</option>
+  <option value="hu" title="Húngaro">Magyar</option>
+  <option value="ja" title="Japonês">日本語</option>
+  <option value="km_KH" title="Cambojiano">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Coreano">한국어</option>
+  <option value="lt" title="Lituano">Lietuvių</option>
+  <option value="nl" title="Holandês">Nederlands</option>
+  <option value="pl" title="Polaco">Polski</option>
+  <option value="pt_BR" title="Português (Brasil)">Português (Brasil)</option>
+  <option value="pt_PT" title="Português">Português</option>
+  <option value="ro" title="Romeno">Română</option>
+  <option value="tr" title="Turco">Türkçe</option>
+  <option value="ru" title="Russo">Русский</option>
+  <option value="uk" title="Ucraniano ">Українська</option>
+  <option value="zh-Hans" title="Chinês (Simplificado)">簡体中文</option>
+  <option value="zh-Hant" title="Chinês (Tradicional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/development/roadmap.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/about/sustaining_members.html" || currentPage.indexOf("visualchangelog")>0){
+            // crontab is pulling url's below and copy to /feed at qgis.org
+            // http://changelog.qgis.org/en/qgis/sponsors/json/
+            json2html('/feeds/qgissponsors.json', '#qgissustainingmembersatom', 1000, true, 'span3');
+            // http://changelog.qgis.org/en/qgis/past-sponsors/json/?years_limit=2
+            json2html('/feeds/qgispastsponsors.json', '#qgispastsustainingmembersatom', 1000, true, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Obrigado!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>Your freshly baked copy of QGIS is downloading. QGIS is free of charge, and will always be free of charge if downloaded from QGIS.org. If you can afford to support the project and people making this software, please consider making <a href="https://qgis.org/en/site/getinvolved/donations.html">a small donation to support</a> our efforts. Whether you choose to donate or not, we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p>Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">Faça já a sua doação!</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fechar essa mensagem</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+	    replacesha('qgis-rel-dev-x86');
+	    replacesha('qgis-rel-dev-x86_64');
+	    replacesha('qgis-ltr-dev-x86');
+	    replacesha('qgis-ltr-dev-x86_64');
+	    replacesha('qgis-dev-x86');
+	    replacesha('qgis-dev-x86_64');
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Obrigado por sua doação!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS é gratuito. Esperamos que você aproveite o uso de nosso dedicado trabalho, e te encorajamos a compartilhar e divulgar cópias do programa baixado em todos os lugares, de modo que outras pessoas também possam aproveitar. Nossos melhores cumprimentos!</p>'+
+            '<p id="stripeerr" style="display:none;">Infelizmente, ocorreu um erro ao processar sua doação. Por favor, tente novamente mais tarde ou entre em contato pelo email finance@qgis.org</p>'+
+            '<p>Equipe QGIS</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">Fechar essa mensagem</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+    });
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+    //
+    // function to load a json (feed) and create html for it
+    // currently only used for sustaining members
+    //
+    function json2html(url, holder, count, showcont, spanclass){
+        var html = '';
+        $.getJSON(url, function (data) {
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+
+            $.each( data.rss.channel.item, function( key, val ){
+              var item = val;
+              var imglink = '#';
+              var link = '#';
+              var content = '';
+              var sponsor_level = 'Bronze';
+              if (item.sponsor_url){link=item.sponsor_url};
+              if (item.image_url){imglink=item.image_url};
+              if (item.sponsor_level){sponsor_level=item.sponsor_level};
+              var title = item.title;
+              content = '<div><img class="sponsor_img '+sponsor_level.toLowerCase()+'" src="'+imglink+'" width="300px"></div>'+
+                '<p class="sponsor_body '+sponsor_level.toLowerCase()+'">'+item.sponsor_country+'<br/>Sponsorship level: '+sponsor_level+'<br/>'+
+                '('+item.start_date+' - '+item.end_date+')</p>';
+              html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+              html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+              html+=content;
+              html+='</div></a></div>';
+            })
+          $(holder).append(html);
+        })
+    }
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgissustainingmembersatom' || holder == '#qgissustainingmembersatom'){
+                        html+='<div class="clearfix"><a  class="clearfix" href="'+link+'">';
+                        html+='<div class="sponsordiv"><h4>'+title+'</h4>';
+                        html+=content;
+                        html+='</div></a></div>';
+                        addit = false; // we are building html ourselves!!
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+            });
+            $(holder).append(html);
+        });
+    }
+
+    //
+    // function to replace a item
+    //
+    function replacesha(id) {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+	var sha = this.responseText.substring(this.responseText.indexOf(':')+1);
+        document.getElementById(id).innerHTML = "<a target=\"_new\" href=\"http://github.com/qgis/QGIS/commit/" + sha + "\">" + sha + "</a>";
+      };
+      xhr.open('GET', '/downloads/' + id + '.sha');
+      xhr.send();
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../about/index.html">Descubra o QGIS</a></li>
+            <li><a href="../../forusers/index.html">Para usuários</a></li>
+            <li><a href="../index.html">Participe</a></li>
+            <li><a href="../../../docs/index.html">Documentação</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Pesquisar" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="contributor_requirements.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="bugreporting.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Descubra o QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../forusers/index.html">Para usuários</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Participe /Desenvolvimento</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../document.html">Escrever documentação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translate.html">Tradução</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Desenvolvimento</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="contributor_requirements.html">Requisitos para novos contribuidores</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Roteiro</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#development-phase">Fase de desenvolvimento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feature-freeze">Congelamento de atualizações</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#release">Lançamento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#release-schedule">Calendário de lançamento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#location-of-prereleases-nightly-builds">Localização de pré-lançamentos /nightly builds</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bugreporting.html">Erros, características e problemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development.html">Development in QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addinggrasstools.html">Adicionando ferramentas GRASS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tests.html">Testes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../daily_reports/index.html">Reportagens diárias</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mailinglists.html">Listas de e-mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../governance/index.html">Organização do Projeto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meetings/index.html">Encontros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../governance/sustaining_members/index.html">Sustaining Membership Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../donations.html">Doações</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../certification.html">Certificação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../styleguide.html">Guia de Estilo Visual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/index.html">Documentação</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="road-map">
+<span id="qgis-roadmap"></span><h1>Roteiro<a class="headerlink" href="#road-map" title="Link permanente para este título">¶</a></h1>
+<p>lançamentos e desenvolvimento para QGIS seguir um cronograma de tempo base.</p>
+<ul class="simple">
+<li>Os números pares da versão (2.18, 3.2 etc) são versões de lançamento.</li>
+<li>Os números ímpares da versão (2.99, 3.1 etc) são versões de desenvolvimento.</li>
+</ul>
+<p>O lançamento  irá acontece de quatro em quatro meses. Os primeiros três meses são dedicados ao novo desenvolvimento. No último mês anterior ao lançamento,  de paralisar feição é convocado no mês final é usado para testar, correção de erros, tradução e preparações para o lançamento. Quando é feito o lançamento, um ramo com o número par de lançamento é criado e o ramo master avança para a próxima versão ímpar. Após o lançamento  é feito a chamada para o empacotando.</p>
+<p>Sempre a cada terceiro lançamento (iniciando na versão 2.8), teremos uma versão de longo tempo de lançamento (LTR) que será mantida até a próxima edição LTR.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Durante o desenvolvimento do QGIS 3.0 e 3.2, uma exceção a esse cronograma foi implementada. Visto o roteiro abaixo para informações ajustadas</p>
+</div>
+<div class="section" id="development-phase">
+<h2>Fase de desenvolvimento<a class="headerlink" href="#development-phase" title="Link permanente para este título">¶</a></h2>
+<p>Na fase de desenvolvimento, os programadores trabalham em novas funcionalidades para o próximo lançamento. Os usuários podem usar compilações nightly para a maioria das plataformas para ver o progresso de desenvolvimento, faça um teste preliminar e fornece um relatório de erros e os pensamentos para ajudar no desenvolvimento.</p>
+</div>
+<div class="section" id="feature-freeze">
+<h2>Congelamento de atualizações<a class="headerlink" href="#feature-freeze" title="Link permanente para este título">¶</a></h2>
+<p>Na fase de congelamento de atualizações, novas funcionalidades não são mais permitidas e o foco dos programadores se torna a estabilização da versão do QGIS. Isto também torna as versões “nightly builds” em  <a class="reference internal" href="#qgis-prereleases"><span class="std std-ref">pré-lançamentos</span></a>.</p>
+<p><strong>Usuários</strong> devem iniciar testes intensivos destes pré-lançamentos para verificar o aparecimento de erros que devam ser corrigidos na versão a ser lançada. Todos erros devem ser reportados (veja  <a class="reference internal" href="bugreporting.html#qgis-bugreporting"><span class="std std-ref">Bugs, Features and Issues</span></a>). Tudo que não for notado continuará na próxima versão. Apenas em casos de problemas muito sérios serão feitos ajustes antes de uma nova versão. Dessa forma, testes dos pré-lançamentos e reporte de erros são muito importantes.</p>
+<p>In the feature freeze <strong>developers</strong> monitor the bugtracker and start working on
+fixing the reported issues and update the <strong>visual changelog</strong> with the features
+they added.</p>
+<p>Com o início da paragem de novas funcionalidades os ficheiros de tradução são actualizados para que os <strong>tradutores</strong> possam começar o seu trabalho. Note que poderá ser um trabalho incremental, apesar da paragem das novas funcionalidades, a correcção dos erros podem introduzir alterações nas cadeias de texto da tradução.</p>
+<p>Two weeks before the release a hard freeze is initiated, after which only fixes
+to severe problems and regressions introduced after the feature freeze are
+allowed in.</p>
+<p>O gerente de lançamento anuncia isso em paralisar feição.</p>
+</div>
+<div class="section" id="release">
+<h2>Lançamento<a class="headerlink" href="#release" title="Link permanente para este título">¶</a></h2>
+<p>On major and minor release dates the release branch is created and the release
+is tagged and tar balls are prepared.  Point releases are just tagged and tar
+balls are created.</p>
+<p>Os empacotadores são notificados de que a embalagem pode começar.</p>
+<p>Uma vez que alguns pacotes estejam disponíveis, o lançamento pode ser anunciado e o site é atualizado de acordo.</p>
+</div>
+<div class="section" id="release-schedule">
+<span id="qgis-release-schedule"></span><h2>Calendário de lançamento<a class="headerlink" href="#release-schedule" title="Link permanente para este título">¶</a></h2>
+<p>O cronograma está alinhado para produzir aproximadamente as mesmas datas  todos os anos tendo em visto os nossos lançamentos a cada quatro meses e a versão LTR no final de fevereiro.</p>
+<p>Iniciados após 2,12 a fase de desenvolvimento é sempre 12 semanas e a fase de congelamento é de pelo menos 5 semanas. Remanescentes são usados para estender a fase de congelamento da liberação da LTR.</p>
+<p>Point releases will happen every month on the latest release branch and the LTR
+branch, if there are backports.</p>
+<p>Nos primeiros quatro meses após o lançamento, um novo LTR é também o atual LR. Nesta fase, o novo LTR não substitui o anterior LTR nos repositórios LTR. Isso acontece assim que um novo LR é lançado.</p>
+<p>The 2.18 release will replace the 2.14 release as LTR, but not replace 2.14 in
+the LTR package repositories before 3.0 is released.</p>
+<p>Cronograma:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="13%" />
+<col width="17%" />
+<col width="15%" />
+<col width="19%" />
+<col width="8%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Evento</th>
+<th class="head">Últimas Novidades</th>
+<th class="head">Versão Longo Prazo</th>
+<th class="head">Freeze</th>
+<th class="head">Data</th>
+<th class="head">Semana</th>
+<th class="head">Semanas</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>LTR</strong>/PR</td>
+<td>3.4.0</td>
+<td>2.18.25</td>
+<td>&#160;</td>
+<td>2018-10-26</td>
+<td>43</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>EPR</td>
+<td>3.4.1</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>2018-11-02</td>
+<td>44</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR</td>
+<td>3.4.2</td>
+<td>2.18.26</td>
+<td>&#160;</td>
+<td>2018-11-23</td>
+<td>47</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.4.3</td>
+<td>2.18.27</td>
+<td>&#160;</td>
+<td>2018-12-21</td>
+<td>51</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR/FF</td>
+<td>3.4.4</td>
+<td>2.18.28</td>
+<td>3.5</td>
+<td>2019-01-18</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td><strong>LR</strong>/PR</td>
+<td>3.6.0</td>
+<td>3.4.5</td>
+<td>&#160;</td>
+<td>2019-02-22</td>
+<td>8</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR</td>
+<td>3.6.1</td>
+<td>3.4.6</td>
+<td>&#160;</td>
+<td>2019-03-22</td>
+<td>12</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.6.2</td>
+<td>3.4.7</td>
+<td>&#160;</td>
+<td>2019-04-19</td>
+<td>16</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR/FF</td>
+<td>3.6.3</td>
+<td>3.4.8</td>
+<td>3.7</td>
+<td>2019-05-17</td>
+<td>20</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td><strong>LR</strong>/PR</td>
+<td>3.8.0</td>
+<td>3.4.9</td>
+<td>&#160;</td>
+<td>2019-06-21</td>
+<td>25</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR</td>
+<td>3.8.1</td>
+<td>3.4.10</td>
+<td>&#160;</td>
+<td>2019-07-19</td>
+<td>29</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.8.2</td>
+<td>3.4.11</td>
+<td>&#160;</td>
+<td>2019-08-16</td>
+<td>33</td>
+<td>3</td>
+</tr>
+<tr class="row-even"><td>FF</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>3.9</td>
+<td>2019-09-06</td>
+<td>36</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.8.3</td>
+<td>3.4.12</td>
+<td>&#160;</td>
+<td>2019-09-13</td>
+<td>37</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>HF</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>2019-10-11</td>
+<td>41</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td><strong>LTR</strong>/PR</td>
+<td>3.10.0</td>
+<td>3.4.13</td>
+<td>&#160;</td>
+<td>2019-10-25</td>
+<td>43</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR</td>
+<td>3.10.1</td>
+<td>3.4.14</td>
+<td>&#160;</td>
+<td>2019-11-22</td>
+<td>47</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.10.2</td>
+<td>3.4.15</td>
+<td>&#160;</td>
+<td>2019-12-20</td>
+<td>51</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR/FF</td>
+<td>3.10.3</td>
+<td>3.4.16</td>
+<td>3.11</td>
+<td>2020-01-17</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td><strong>LR</strong>/PR</td>
+<td>3.12.0</td>
+<td>3.10.4</td>
+<td>&#160;</td>
+<td>2020-02-21</td>
+<td>8</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR</td>
+<td>3.12.1</td>
+<td>3.10.5</td>
+<td>&#160;</td>
+<td>2020-03-20</td>
+<td>12</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.12.2</td>
+<td>3.10.6</td>
+<td>&#160;</td>
+<td>2020-04-17</td>
+<td>16</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR/FF</td>
+<td>3.12.3</td>
+<td>3.10.7</td>
+<td>3.13</td>
+<td>2020-05-15</td>
+<td>20</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td><strong>LR</strong>/PR</td>
+<td>3.14.0</td>
+<td>3.10.8</td>
+<td>&#160;</td>
+<td>2020-06-19</td>
+<td>25</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR</td>
+<td>3.14.1</td>
+<td>3.10.9</td>
+<td>&#160;</td>
+<td>2020-07-17</td>
+<td>29</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.14.2</td>
+<td>3.10.10</td>
+<td>&#160;</td>
+<td>2020-08-14</td>
+<td>33</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR/FF</td>
+<td>3.14.3</td>
+<td>3.10.11</td>
+<td>3.15</td>
+<td>2020-09-11</td>
+<td>37</td>
+<td>6</td>
+</tr>
+<tr class="row-odd"><td><strong>LTR</strong>/PR</td>
+<td>3.16.0</td>
+<td>3.10.12</td>
+<td>&#160;</td>
+<td>2020-10-23</td>
+<td>43</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR</td>
+<td>3.16.1</td>
+<td>3.10.13</td>
+<td>&#160;</td>
+<td>2020-11-20</td>
+<td>47</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>3.16.2</td>
+<td>3.10.14</td>
+<td>&#160;</td>
+<td>2020-12-18</td>
+<td>51</td>
+<td>4</td>
+</tr>
+<tr class="row-even"><td>PR/FF</td>
+<td>3.16.3</td>
+<td>3.10.15</td>
+<td>3.17</td>
+<td>2021-01-15</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td><strong>LR</strong>/PR</td>
+<td>3.18.0</td>
+<td>3.16.4</td>
+<td>&#160;</td>
+<td>2021-02-19</td>
+<td>8</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Legenda do evento:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="91%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Evento</th>
+<th class="head">Descrição</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>LTR</td>
+<td>Lançamento a longo prazo, começo da nova fase de desenvolvimento</td>
+</tr>
+<tr class="row-odd"><td>LR</td>
+<td>Lançamento regular, começar de novo fase de desenvolvimento</td>
+</tr>
+<tr class="row-even"><td>FF</td>
+<td>Congelamento de recursos, o fim da fase de desenvolvimento</td>
+</tr>
+<tr class="row-odd"><td>HF</td>
+<td>hard freeze</td>
+</tr>
+<tr class="row-even"><td>SF</td>
+<td>Soft freeze with bi-monthly vote</td>
+</tr>
+<tr class="row-odd"><td>PR</td>
+<td>Lançamento pontual da versão mais recente e ramo LTR</td>
+</tr>
+<tr class="row-even"><td>EPR</td>
+<td>Lançamento de ponto extra</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="location-of-prereleases-nightly-builds">
+<span id="qgis-prereleases"></span><h2>Localização de pré-lançamentos /nightly builds<a class="headerlink" href="#location-of-prereleases-nightly-builds" title="Link permanente para este título">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="91%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Plataforma</th>
+<th class="head">Localização</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Windows</td>
+<td><a class="reference internal" href="../../forusers/alldownloads.html#qgis-windows-weekly"><span class="std std-ref">Lançamento candidato semanal</span></a> (instalador standalone)</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><a class="reference internal" href="../../forusers/alldownloads.html#qgis-windows-testing"><span class="std std-ref">OSGeo4W</span></a></td>
+</tr>
+<tr class="row-even"><td>Linux</td>
+<td><a class="reference internal" href="../../forusers/alldownloads.html#qgis-debian-testing"><span class="std std-ref">Debian/Ubuntu</span></a></td>
+</tr>
+<tr class="row-odd"><td>MacOS</td>
+<td><a class="reference internal" href="../../forusers/alldownloads.html#qgis-macos-testing"><span class="std std-ref">Mac OS</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice Geral"
+             >índice</a></li>
+        <li class="right" >
+          <a href="bugreporting.html" title="Erros, características e problemas"
+             >próximo</a> |</li>
+        <li class="right" >
+          <a href="contributor_requirements.html" title="Requisitos para novos contribuidores"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Participe /Desenvolvimento</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Desenvolvimento</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">Se não for mencionado o contrário, todos os conteúdos licenciados estão sob licença <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Atribuição-Compartilha Igual 3.0 (CC BY-SA) </a> </p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        Imagens de seleção do <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>.
+        
+        
+      </p>
+      <p class="credit">
+        Página não traduzida? Você encontrou algum erro na tradução:
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">Corrija</a>
+        <br/>
+        Erro textual, texto faltando ou você sabe melhor:
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">Corrija</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
