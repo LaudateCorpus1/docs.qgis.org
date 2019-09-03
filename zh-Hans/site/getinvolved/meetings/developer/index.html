@@ -1,0 +1,621 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>QGIS 开发者会议</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '3.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../search.html" />
+    <link rel="next" title="QGIS User Meetings" href="../user/index.html" />
+    <link rel="prev" title="Meetings" href="../index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../user/index.html" title="QGIS User Meetings"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Meetings"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Get Involved / Development</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">Meetings</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.0.3 ​ <br/> 2.18.20 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英语">English</option>
+  <option value="ca" title="加泰隆语">Català</option>
+  <option value="da" title="丹麦语">Dansk</option>
+  <option value="de" title="德语">Deutsch</option>
+  <option value="es" title="西班牙语">Español</option>
+  <option value="fa" title="波斯语">فارسی</option>
+  <option value="fi" title="Finnish">Suomalainen</option>
+  <option value="fr" title="French">Français</option>
+  <option value="gl" title="Galician">Galego</option>
+  <option value="id" title="印尼语">Bahasa Indonesia</option>
+  <option value="it" title="意大利语">Italiano</option>
+  <option value="hu" title="匈牙利语">Magyar</option>
+  <option value="ja" title="日语">日本語</option>
+  <option value="km_KH" title="高棉语">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Korean">한국어</option>
+  <option value="lt" title="立陶宛语">Lietuvos</option>
+  <option value="nl" title="荷兰语">Nederlands</option>
+  <option value="pl" title="波兰语">Polski</option>
+  <option value="pt_BR" title="葡萄牙语 (巴西)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portuguese">Português</option>
+  <option value="ro" title="Romanian">Română</option>
+  <option value="tr" title="土耳其语">Turkish</option>
+  <option value="ru" title="Russian">Русский</option>
+  <option value="uk" title="乌克兰语">Українська</option>
+  <option value="zh-Hans" title="Chinese (Simplified)">簡体中文</option>
+  <option value="zh-Hant" title="Chinese (Traditional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/meetings/developer/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>感谢您！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>您新鲜出炉的 QGIS 副本正在下载。QGIS 免费且永久免费，如果您从 QGIS.org 下载的话。如果您支付得起支持此项目及其背后的人们，请考虑进行<a href="http://qgis.org/zh-Hant/site/getinvolved/donations.html">小额捐款</a>支持我们的努力。无论您是否捐献，我们希望您用得开心、并且欢迎您将您下载的副本广而告之，这样别人也能享受到 QGIS。祝安好！</p>'+
+            '<p>QGIS 团队</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">现在捐赠</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">关闭此消息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Thank you for your donation!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is free of charge and we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p id="stripeerr" style="display:none;">Unfortunately there was an error processing your Donation. Please try again later, or contact us via finance@qgis.org</p>'+
+            '<p>QGIS 团队</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">关闭此消息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+
+    });
+
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+
+            });
+            $(holder).append(html);
+        });
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../../about/index.html">探索 QGIS</a></li>
+            <li><a href="../../../forusers/index.html">用户资源</a></li>
+            <li><a href="../../index.html">加入</a></li>
+            <li><a href="../../../../docs/index.html">帮助文档</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="搜索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="../user/index.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">探索 QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forusers/index.html">用户资源</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Get Involved / Development</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../document.html">Write Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate.html">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development/index.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tests.html">Tests</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mailinglists.html">Mailing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance/index.html">Project Organisation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Meetings</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QGIS 开发者会议</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-bonn">2016 年 - 波恩第 16 届 QGIS 开发者会议</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-girona">2016 年 - 赫罗纳第 15 届 QGIS 开发者会议</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-las-palmas">2015 年 - 拉斯帕尔马斯第 14 届 QGIS 开发者会议</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-nodebo">2015 - 13th QGIS Developer Meeting in Nodebo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-essen">2014 - 12th QGIS Developer Meeting in Essen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-vienna">2014 - 11th QGIS Developer Meeting in Vienna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-brighton">2013 - 10th QGIS Developer Meeting in Brighton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-valmiera">2013 - 9th QGIS Developer Meeting in Valmiera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2012 - 8th QGIS Developer Meeting in Essen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-lyon">2012 - 7th QGIS Developer Meeting in Lyon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-zurich">2011 - 6th QGIS Developer Meeting in Zurich</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-lisbon">2011 - 5th QGIS Developer Meeting in Lisbon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#th-qgis-developer-meeting-in-wroclaw">2010 - 4th QGIS Developer Meeting in Wroclaw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rd-qgis-developer-meeting-in-pisa">2010 - 3rd QGIS Developer Meeting in Pisa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nd-qgis-developer-meeting-in-vienna">2009 - 2nd QGIS Developer Meeting in Vienna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#st-qgis-developer-meeting-in-hannover">2009 - 1st QGIS Developer Meeting in Hannover</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../user/index.html">QGIS User Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../donations.html">Donations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../styleguide.html">Visual Style Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/index.html">帮助文档</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="qgis-developer-meetings">
+<h1>QGIS 开发者会议<a class="headerlink" href="#qgis-developer-meetings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="th-qgis-developer-meeting-in-bonn">
+<h2>2016 年 - 波恩第 16 届 QGIS 开发者会议<a class="headerlink" href="#th-qgis-developer-meeting-in-bonn" title="Permalink to this headline">¶</a></h2>
+<p>第 16 届 QGIS 开发者会议于 8 月 21 - 23 日以及 27 - 28 日，与开源地理信息大会 FOSS4G 2016 Code Sprint 共同在德国波恩举行。</p>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-girona">
+<h2>2016 年 - 赫罗纳第 15 届 QGIS 开发者会议<a class="headerlink" href="#th-qgis-developer-meeting-in-girona" title="Permalink to this headline">¶</a></h2>
+<p>第 15 届 QGIS 开发者会议于 2016 年 5 月 27 - 29 日，跟着第二次国际 QGIS 用户与开发者大会以及自由地理信息系统会议 Jornadas SLG Libre 在西班牙赫罗纳举行。</p>
+<p>如需查阅会议纪要，请浏览http://blog.qgis.org/2016/06/30/report-back-15th-qgis-hackfest-in-girona-spain/</p>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-las-palmas">
+<h2>2015 年 - 拉斯帕尔马斯第 14 届 QGIS 开发者会议<a class="headerlink" href="#th-qgis-developer-meeting-in-las-palmas" title="Permalink to this headline">¶</a></h2>
+<p>第 14 届 QGIS 开发者会议于 2015 年 11 月 5-8日举行，主办方：</p>
+<ul class="simple">
+<li>加那利群岛拉斯帕尔马斯大学</li>
+<li>加那利群岛拉斯帕尔马斯大学自由软件办公室</li>
+<li>加那利群岛拉斯帕尔马斯市政厅</li>
+</ul>
+<p>感谢以上机构！并向巴勃罗·费尔南多·莫尼斯及其团队成员致敬，由于他们的努力才促成了这次伟大的编程马拉松。</p>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-nodebo">
+<h2>2015 - 13th QGIS Developer Meeting in Nodebo<a class="headerlink" href="#th-qgis-developer-meeting-in-nodebo" title="Permalink to this headline">¶</a></h2>
+<p>The 13th QGIS Developer Meeting from 18 -22 May 2015 organized in
+conjunction with the first <a class="reference external" href="https://qgis2015.wordpress.com">QGIS User Conference 2015</a>.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li>University of Copenhagen</li>
+<li><a class="reference external" href="http://www.ku.dk/english">http://www.ku.dk/english</a></li>
+<li><a class="reference external" href="https://www.lifa.dk/">https://www.lifa.dk/</a></li>
+<li><a class="reference external" href="http://www.dge.dk/">http://www.dge.dk/</a></li>
+<li><a class="reference external" href="http://www.gisgroup.dk/">http://www.gisgroup.dk/</a></li>
+<li><a class="reference external" href="http://www.septima.dk/">http://www.septima.dk/</a></li>
+<li>OSGeo</li>
+</ul>
+<p>See also:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://kartoza.com/report-back-on-the-first-qgis-user-conference-in-nodebo-denmark/">Tim Sutton's Report back on the first QGIS User Conference in Nødebo, Denmark</a></li>
+<li><a class="reference external" href="http://www.opengis.ch/2015/05/27/tak-nodebo/">Matthias Kuhn's Tak Nødebo</a></li>
+<li><a class="reference external" href="https://storify.com/anitagraser/qgis-2015-conference-and-developer-meeting">Anita Graser's QGIS 2015 Conference and Developer Meeting Storify</a></li>
+</ul>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-essen">
+<h2>2014 - 12th QGIS Developer Meeting in Essen<a class="headerlink" href="#th-qgis-developer-meeting-in-essen" title="Permalink to this headline">¶</a></h2>
+<p>The 12th QGIS Developer Meeting from 02 - 05 October 2014 was organised
+by <a class="reference external" href="http://www.gbd-consult.de">Geoinformatikbüro Dassau</a> and held for
+the second time at the <a class="reference external" href="http://www.linuxhotel.de/">Linuxhotel</a> in
+Essen, Germany. The Linuxhotel provided the venue, internet,
+accommodation and breakfast with very moderate conditions. It is a
+wonderful place and we are extremely grateful to them for organising
+and helping us to make the whole event went very smoothly.</p>
+<p>We also want to thank our gold sponsor`ASIA AIR SURVEY &lt;<a class="reference external" href="http://www.asiaairsurvey.com/">http://www.asiaairsurvey.com/</a>&gt;`_,
+our silver sponsors <a class="reference external" href="http://www.gaia-mbh.de">G.A.I.A. mbH</a>, and
+<a class="reference external" href="http://www.vorarlberg.at/">State of Vorarlberg</a>, the German
+<a class="reference external" href="http://www.fossgis.de/">FOSSGIS e.V.</a> for sponsoring this event
+explicitly with 1500 Euros and the many people who have donated sums
+large and small to the QGIS project.</p>
+<p>See also:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.flickr.com/photos/45502883&#64;N06/sets/72157648185718289/">Pictures from the QGIS Hackfest in Essen 2014 by Alessandro Pasotti</a></li>
+<li><a class="reference external" href="https://www.flickr.com/groups/2286344&#64;N25/">Pictures from the QGIS Hackfest in Essen 2014 collected by Anita Graser</a></li>
+</ul>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-vienna">
+<h2>2014 - 11th QGIS Developer Meeting in Vienna<a class="headerlink" href="#th-qgis-developer-meeting-in-vienna" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-brighton">
+<h2>2013 - 10th QGIS Developer Meeting in Brighton<a class="headerlink" href="#th-qgis-developer-meeting-in-brighton" title="Permalink to this headline">¶</a></h2>
+<p>The 10th QGIS Developer Meeting from 12 - 16 September 2013 was
+organised by <a class="reference external" href="http://www.lutraconsulting.co.uk/">Lutra Consulting</a>
+and held at <a class="reference external" href="http://www.sussex.ac.uk/">University of Sussex</a> in
+Brighton, Great Britain. The University sponsored the venue and
+internet access. We are extremely grateful to them for organising and
+helping us to make the whole event went very smoothly.</p>
+<p>We also want to thank our gold sponsor <a class="reference external" href="http://www.asiaairsurvey.com/">ASIA AIR SURVEY</a>,
+our silver sponsors <a class="reference external" href="http://www.gaia-mbh.de">G.A.I.A. mbH</a>, and
+<a class="reference external" href="http://www.vorarlberg.at/">State of Vorarlberg</a>, the German
+<a class="reference external" href="http://www.fossgis.de/">FOSSGIS e.V.</a> for sponsoring this event
+explicitly with 1500 Euros and the many people who have donated sums
+large and small to the QGIS project.</p>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-valmiera">
+<h2>2013 - 9th QGIS Developer Meeting in Valmiera<a class="headerlink" href="#th-qgis-developer-meeting-in-valmiera" title="Permalink to this headline">¶</a></h2>
+<p>The 9th QGIS Developer Meeting from 11 - 14 April, 2013 was held in Valmiera
+Latvia.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.vbii.lv/en/">Valmiera Business and Innovation Incubator (VBII)</a></li>
+<li><a class="reference external" href="http://www.sungis.lv/">SunGIS</a></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>2012 - 8th QGIS Developer Meeting in Essen<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>The 8th QGIS Developer Meeting from 3 - 7 October 2012, was held in Essen,
+Germany.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.gbd-consult.de">Geoinformatikbüro Dassau</a></li>
+<li><a class="reference external" href="http://www.linuxhotel.de/">Linuxhotel</a></li>
+</ul>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-lyon">
+<h2>2012 - 7th QGIS Developer Meeting in Lyon<a class="headerlink" href="#th-qgis-developer-meeting-in-lyon" title="Permalink to this headline">¶</a></h2>
+<p>The 7th QGIS Developer Meeting from 12 - 16 April 2012, was held in Lyon,
+France.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.3liz.com">3Liz</a></li>
+<li><a class="reference external" href="http://www.camptocamp.com">Camptocamp</a></li>
+<li><a class="reference external" href="http://www.oslandia.com">Oslandia</a></li>
+<li><a class="reference external" href="http://servicesgeographiques.com">Services geographiques</a></li>
+<li>QGIS Swiss user group</li>
+</ul>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-zurich">
+<h2>2011 - 6th QGIS Developer Meeting in Zurich<a class="headerlink" href="#th-qgis-developer-meeting-in-zurich" title="Permalink to this headline">¶</a></h2>
+<p>The 6th QGIS Developer Meeting from 10 - 14 November 2011 was organised
+by QGIS Swiss User Group and and held at
+<a class="reference external" href="http://www.karto.ethz.ch/about/howtofind/index_EN">Institute of Cartography, ETH Zurich</a>
+The Institute sponsored the venue and internet access. We are extremely
+grateful to them for organising and helping us to make the whole event
+went very smoothly.</p>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-lisbon">
+<h2>2011 - 5th QGIS Developer Meeting in Lisbon<a class="headerlink" href="#th-qgis-developer-meeting-in-lisbon" title="Permalink to this headline">¶</a></h2>
+<p>The 5th QGIS Developer Meeting from 14 - 18 April 2011 was held in
+Lisbon, Portugal. This meeting was organized by Vânia Neves and Giovanni
+Manghi (<a class="reference external" href="http://www.faunalia.pt/">Faunalia.pt</a>) and <a class="reference external" href="http://www.municipia.pt/">MUNICIPIA</a>.
+The event was be partially supported by <a class="reference external" href="http://www.municipia.pt/">MUNICIPIA</a>
+and by the local OSGeo chapter.</p>
+<p>University of Lisbon, <a class="reference external" href="http://www.igot.ul.pt/portal/page?_pageid=407,1&amp;_dad=portal&amp;_schema=PORTAL">Institute of Geography and Land Management</a> provided the venue.</p>
+</div>
+<div class="section" id="th-qgis-developer-meeting-in-wroclaw">
+<h2>2010 - 4th QGIS Developer Meeting in Wroclaw<a class="headerlink" href="#th-qgis-developer-meeting-in-wroclaw" title="Permalink to this headline">¶</a></h2>
+<p>The 4th QGIS Developer Meeting from 11 - 15 November 2010 was held in
+Wroclaw, Poland.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.meteo.uni.wroc.pl/">Department of Climatology and Atmosphere Protection</a> of the University of Wroclaw provided the venue</li>
+</ul>
+</div>
+<div class="section" id="rd-qgis-developer-meeting-in-pisa">
+<h2>2010 - 3rd QGIS Developer Meeting in Pisa<a class="headerlink" href="#rd-qgis-developer-meeting-in-pisa" title="Permalink to this headline">¶</a></h2>
+<p>The 3rd QGIS Developer Meeting from 18- 22 March 2010 was held in Pisa,
+Tuscany, Italy.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://gfoss.it/">GFOSS.it</a> added an euro for each euro of donations and manages all the expenses without overhead</li>
+<li>The <a class="reference external" href="http://www.parcosanrossore.it/">Parco Naturale di San Rossore</a> generously allowed us to use its facilities</li>
+<li>The <a class="reference external" href="http://www.gulp.linux.it/">GULP, Gruppo Utenti Linux Pisa</a>, helped organizing the event</li>
+</ul>
+</div>
+<div class="section" id="nd-qgis-developer-meeting-in-vienna">
+<h2>2009 - 2nd QGIS Developer Meeting in Vienna<a class="headerlink" href="#nd-qgis-developer-meeting-in-vienna" title="Permalink to this headline">¶</a></h2>
+<p>The 2nd QGIS Developer Meeting from 5 - 9 November 2009 was held in
+Vienna, Austria.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.rali.boku.ac.at/ivfl.html?&amp;L=1">Institute of Surveying, Remote Sensing and Land Information</a> provided the venue</li>
+<li><a class="reference external" href="http://www.fossgis.de/">FOSSGIS e.V.</a> for donating 500€ to support the developers</li>
+</ul>
+</div>
+<div class="section" id="st-qgis-developer-meeting-in-hannover">
+<h2>2009 - 1st QGIS Developer Meeting in Hannover<a class="headerlink" href="#st-qgis-developer-meeting-in-hannover" title="Permalink to this headline">¶</a></h2>
+<p>The 1st QGIS Developer Meeting from 19 - 22 March 2009 was held in
+Hannover, Germany.</p>
+<p>Many thanks to our sponsors!</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.fossgis.de/">German FOSSGIS e.V.</a> sponsors the meeting with 500 Euro.</li>
+<li><a class="reference external" href="http://www.umwelt.uni-hannover.de/umweltplanung.html?&amp;L=1">Institute of Environmental Planning, Hannover</a> provided the venue</li>
+<li><cite>nature-consult &lt;http://www.nature-consult.de/&gt;_</cite> provides technical equipment</li>
+</ul>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../user/index.html" title="QGIS User Meetings"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Meetings"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Get Involved / Development</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Meetings</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">若无另行说明，所有内容均按<a href="http://creativecommons.org/licenses/by-sa/3.0/">创用 CC 姓名标示-相同方式分享	3.0 协定 (CC BY-SA)</a>授权</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        从 <a href="http://thenounproject.com" target="_blank">The Noun Project 汇编</a>中选择 
+        
+        
+      </p>
+      <p class="credit">
+        未翻译的页面？或者发现了翻译错误：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">请把我修好</a>
+        <br/>
+        文本的错误、缺失文本或您知道更好的写法：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">请把我修好</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

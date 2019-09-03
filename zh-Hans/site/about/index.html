@@ -1,0 +1,572 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>探索 QGIS</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="应用（Applications）" href="features.html" />
+    <link rel="prev" title="欢迎访问 QGIS 项目！" href="../index.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="features.html" title="应用（Applications）"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="欢迎访问 QGIS 项目！"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.0.3 ​ <br/> 2.18.20 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英语">English</option>
+  <option value="ca" title="加泰隆语">Català</option>
+  <option value="da" title="丹麦语">Dansk</option>
+  <option value="de" title="德语">Deutsch</option>
+  <option value="es" title="西班牙语">Español</option>
+  <option value="fa" title="波斯语">فارسی</option>
+  <option value="fi" title="Finnish">Suomalainen</option>
+  <option value="fr" title="French">Français</option>
+  <option value="gl" title="Galician">Galego</option>
+  <option value="id" title="印尼语">Bahasa Indonesia</option>
+  <option value="it" title="意大利语">Italiano</option>
+  <option value="hu" title="匈牙利语">Magyar</option>
+  <option value="ja" title="日语">日本語</option>
+  <option value="km_KH" title="高棉语">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Korean">한국어</option>
+  <option value="lt" title="立陶宛语">Lietuvos</option>
+  <option value="nl" title="荷兰语">Nederlands</option>
+  <option value="pl" title="波兰语">Polski</option>
+  <option value="pt_BR" title="葡萄牙语 (巴西)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portuguese">Português</option>
+  <option value="ro" title="Romanian">Română</option>
+  <option value="tr" title="土耳其语">Turkish</option>
+  <option value="ru" title="Russian">Русский</option>
+  <option value="uk" title="乌克兰语">Українська</option>
+  <option value="zh-Hans" title="Chinese (Simplified)">簡体中文</option>
+  <option value="zh-Hant" title="Chinese (Traditional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/about/index.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>感谢您！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>您新鲜出炉的 QGIS 副本正在下载。QGIS 免费且永久免费，如果您从 QGIS.org 下载的话。如果您支付得起支持此项目及其背后的人们，请考虑进行<a href="http://qgis.org/zh-Hant/site/getinvolved/donations.html">小额捐款</a>支持我们的努力。无论您是否捐献，我们希望您用得开心、并且欢迎您将您下载的副本广而告之，这样别人也能享受到 QGIS。祝安好！</p>'+
+            '<p>QGIS 团队</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">现在捐赠</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">关闭此消息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Thank you for your donation!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is free of charge and we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p id="stripeerr" style="display:none;">Unfortunately there was an error processing your Donation. Please try again later, or contact us via finance@qgis.org</p>'+
+            '<p>QGIS 团队</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">关闭此消息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+
+    });
+
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+
+            });
+            $(holder).append(html);
+        });
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="#">探索 QGIS</a></li>
+            <li><a href="../forusers/index.html">用户资源</a></li>
+            <li><a href="../getinvolved/index.html">加入</a></li>
+            <li><a href="../../docs/index.html">帮助文档</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="搜索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="../index.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="features.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">探索 QGIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features.html">应用（Applications）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html">Map Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshots.html#screenshots">Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case_studies/index.html">案例分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sponsorship.html">Sponsors and Donors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shop_goodies.html">Shop</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://planet.qgis.org">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../forusers/index.html">用户资源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getinvolved/index.html">Get Involved / Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/index.html">帮助文档</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="about" id="color-identifier"></div>
+
+<section class="sub-landing-page" id="top">
+    <div class="container-fluid banner">
+        <div class="row-fluid">
+            <div >
+                <h2>QGIS - 领军式的开源桌面式地理信息系统软件</h2>
+                     <p>QGIS is a professional GIS application that is built on top of and
+                         proud to be itself Free and Open Source Software (FOSS). </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sub-landing-page menu">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div>
+                <nav class="subnav">
+                    <header>
+                        <h3>探索</h3>
+                    </header>
+<!--
+                    <ul id="subnav">
+                        <li>
+                            <a href="#tour">QGIS 特性</a>
+                        </li>
+                        <li>
+                            <a href="#screenshots">QGIS 截图</a>
+                        </li>
+                        <li>
+                            <a href="#casestudies">QGIS 案例分析</a>
+                        </li>
+                        <li>
+                            <a href="#organization">支持组织</a>
+                        </li>
+                        <li>
+                            <a href="#commercial">商业支持</a>
+                        </li>
+                    </ul>
+-->
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sub-landing-page main">
+    <div class="container-fluid">
+
+        <div class="row-fluid">
+            <div>
+                <h3>关于 QGIS</h3>
+                <img src="../../_static/images/about-screenshot.png" class="text-center background-mask non-mobile-image" alt="QGIS screenshot" />
+                <p>QGIS 是一个方便使用的开源地理信息系统 (GIS)，根据 GNU 通用公共许可授权。QGIS 是地理空间开源基金会 (OSGeo) 的一个正式专案。它可运行与 Linux、Unix、Mac OS X 和 Android，并支持众多矢量、栅格、和数据库格式及功能。</p>
+                <p class="text-center">我们的最新版本是 QGIS 3.0</p>
+                <p class="text-center"><a href="../forusers/index.html" class="btn btn-large btn-success btn-flat">开始</a></p>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row-fluid">
+            <div>
+                <h3>The Community</h3>
+                <img src="../../_static/images/about-community.jpeg" alt="QGIS community" />
+                <p>QGIS is a volunteer driven project. We welcome contributions in the form of code contributions, bug fixes, bug reports, contributed documentation, advocacy and supporting other users on our mailing lists and gis.stackexchange.com. If you are interested in actively supporting the project, you can find more information under the development menu and on the QGIS Wiki.</p>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row-fluid" id="tour">
+            <div class="span3">
+                <img src="../../_static/images/about-features.png" alt="features icon" class="background-mask non-mobile-image wd" />
+            </div>
+            <div class="offset1 span8">
+                <h3>特性</h3>
+                <p>QGIS提供由核心功能和插件提供的不断增长的功能。 您可以可视化，管理，编辑，分析数据，并撰写可打印地图。通过更详细的功能列表获取最初印象。
+                </p>
+                <h4>
+                    <a href="http://docs.qgis.org/latest/zh-Hans/docs/user_manual/preamble/features.html" target="_blank" >开始浏览 QGIS 的特性</a>
+                </h4>
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="screenshots">
+            <div class="span8">
+                <h3>截图</h3>
+                <p>To see QGIS in action, check out the community-based</p>
+                <h4>
+                    <a href="screenshots.html">QGIS screenshots</a>
+                </h4>
+            </div>
+            <div class="span1"></div>
+            <div class="span3">
+                <img src="../../_static/images/about-screenshots.png" alt="screenshots icon" class="background-mask non-mobile-image wd" />
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="casestudies">
+            <div class="span3">
+                <img src="../../_static/images/about-casestudies.png" alt="casestudies icon" class="background-mask non-mobile-image wd" />
+            </div>
+            <div class="span1"></div>
+            <div class="span8">
+                <h3>案例分析</h3>
+                <p>We also collect case studies of how people all over the world use QGIS for their GIS work.</p>
+                <h4>
+                    <a href="case_studies/index.html">See our QGIS case studies</a>
+                </h4>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row-fluid" id="organization">
+            <div class="span8">
+                <h3>支持组织</h3>
+                <p>We welcome financial contributions in the form of sponsoring and funding.</p>
+                <h4>
+                    <a href="sponsorship.html">支持 QGIS 的组织</a>
+                </h4>
+            </div>
+            <div class="span1"></div>
+            <div class="span3">
+                <img src="../../_static/images/about-supporting.png" alt="supporting organizations icon" class="background-mask non-mobile-image wd" />
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid" id="commercial">
+            <div class="span3">
+                <img src="../../_static/images/about-commercial.png" alt="commercial support icon" class="background-mask non-mobile-image wd" />
+            </div>
+            <div class="span1"></div>
+            <div class="span8">
+                <h3>商业支持</h3>
+                <p>想在公司或机构使用 QGIS，但又担心是否有可用的商业支持？这里是按字母顺序排列的分类支持提供者清单。
+                </p>
+                <h4>
+                    <a href="../forusers/commercial_support.html">了解 QGIS 的商业支持</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sub-landing-page">
+    <div class="container-fluid banner">
+        <div class="row-fluid">
+            <div class="offset5 span2">
+                <h5 class="text-center">
+                    <a href="#top"> <i class="icon-arrow-up"></i>
+                        回到顶部
+                    </a>
+                </h5>
+            </div>
+            <div class="span5"></div>
+        </div>
+    </div>
+</section>
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="features.html" title="应用（Applications）"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="欢迎访问 QGIS 项目！"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html"></a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../getinvolved/index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">若无另行说明，所有内容均按<a href="http://creativecommons.org/licenses/by-sa/3.0/">创用 CC 姓名标示-相同方式分享	3.0 协定 (CC BY-SA)</a>授权</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        从 <a href="http://thenounproject.com" target="_blank">The Noun Project 汇编</a>中选择 
+        
+        
+      </p>
+      <p class="credit">
+        未翻译的页面？或者发现了翻译错误：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">请把我修好</a>
+        <br/>
+        文本的错误、缺失文本或您知道更好的写法：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">请把我修好</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>

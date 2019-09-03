@@ -1,0 +1,945 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unit Testing</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/qgis-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '3.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/qgis-site.js"></script>
+    <script type="text/javascript" src="../../../../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.countdown-2.0.4/jquery.countdown.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/images/favicon.ico?1322140996"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../search.html" />
+    <link rel="next" title="Getting up and running with QtCreator and QGIS" href="qtcreator.html" />
+    <link rel="prev" title="GIT Access" href="git.html" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="qtcreator.html" title="Getting up and running with QtCreator and QGIS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="git.html" title="GIT Access"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Get Involved / Development</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Development</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Developers guide for QGIS</a> &#187;</li> 
+      </ul>
+    </div>
+
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../../../index.html">QGIS</a>
+        <span class="navbar-text pull-left"><p><b>3.0.3 ​ <br/> 2.18.20 LTR</b></p></span>
+        
+          <select id="languages">
+  <!-- note on the options here: the 'title' string is to be translated in your
+  language, but the element text is supposed to stay in native lang/txt -->
+  <option value="en" title="英语">English</option>
+  <option value="ca" title="加泰隆语">Català</option>
+  <option value="da" title="丹麦语">Dansk</option>
+  <option value="de" title="德语">Deutsch</option>
+  <option value="es" title="西班牙语">Español</option>
+  <option value="fa" title="波斯语">فارسی</option>
+  <option value="fi" title="Finnish">Suomalainen</option>
+  <option value="fr" title="French">Français</option>
+  <option value="gl" title="Galician">Galego</option>
+  <option value="id" title="印尼语">Bahasa Indonesia</option>
+  <option value="it" title="意大利语">Italiano</option>
+  <option value="hu" title="匈牙利语">Magyar</option>
+  <option value="ja" title="日语">日本語</option>
+  <option value="km_KH" title="高棉语">ភាសាខ្មែរ    </option>
+  <option value="ko" title="Korean">한국어</option>
+  <option value="lt" title="立陶宛语">Lietuvos</option>
+  <option value="nl" title="荷兰语">Nederlands</option>
+  <option value="pl" title="波兰语">Polski</option>
+  <option value="pt_BR" title="葡萄牙语 (巴西)">Português (Brasil)</option>
+  <option value="pt_PT" title="Portuguese">Português</option>
+  <option value="ro" title="Romanian">Română</option>
+  <option value="tr" title="土耳其语">Turkish</option>
+  <option value="ru" title="Russian">Русский</option>
+  <option value="uk" title="乌克兰语">Українська</option>
+  <option value="zh-Hans" title="Chinese (Simplified)">簡体中文</option>
+  <option value="zh-Hant" title="Chinese (Traditional)">正體中文</option>
+</select>
+
+<script>
+    var currentPage = 'site/getinvolved/development/qgisdevelopersguide/unittesting.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // TODO: links should come from conf.py
+        // TODO: all template pages have the actual translation in sphinc.conf
+        // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
+        // code in scripts/create_transifex_resources.sh !!
+        // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+            currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
+        if ('/en/' != currentLang) {
+            $('#fix_translation_link').attr('href', fix_translation_link);
+        }
+        fix_text_link = 'https://github.com/qgis/QGIS-Website/edit/master/source/' +
+            currentPage.replace(/.html/g, ".rst")
+        // TODO: only on rst pages, here a list of pages which are actual templates?
+        if (true){
+            $('#fix_text_link').attr('href', fix_text_link);
+        }
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+        if (currentPage == "site/about/screenshots.html"){
+            atom('/feeds/qgisflickrscreenshots.atom', '#qgisflickrscreenshotsatom', 30, false, 'span3');
+            atom('/feeds/qgisflickrmaps.atom', '#qgisflickrmapsatom', 30, false, 'span3');
+        }
+        else if (currentPage == "site/forusers/download.html" || currentPage == "site/forusers/alldownloads.html"){
+            $($('section.content')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>感谢您！</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p>您新鲜出炉的 QGIS 副本正在下载。QGIS 免费且永久免费，如果您从 QGIS.org 下载的话。如果您支付得起支持此项目及其背后的人们，请考虑进行<a href="http://qgis.org/zh-Hant/site/getinvolved/donations.html">小额捐款</a>支持我们的努力。无论您是否捐献，我们希望您用得开心、并且欢迎您将您下载的副本广而告之，这样别人也能享受到 QGIS。祝安好！</p>'+
+            '<p>QGIS 团队</p>'+
+            '</div><div class="container">'+
+            '<div class="span4"><p><a class="btn btn-large btn-success btn-flat" href="../getinvolved/donations.html">现在捐赠</a></p><p class="muted"></p></div>'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">关闭此消息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+            $('a.reference').click(function(){
+                $('#thankyou').show();
+                return true;
+            });
+        }
+        else if (currentPage == "site/getinvolved/donations.html"){
+            // inject the stripeform into this page
+            $.get( "/stripe/form", function( data ) { $( "#stripe" ).html( data ); });
+            // create thankyou and error page
+            $($('div.container')[0]).append('<div id="thankyou"> <div id="thankyoucontent">'+
+            '<h2>Thank you for your donation!</h2> <p/>'+
+            '<div class="container"><div class="span8">'+
+            '<p id="stripemsg">QGIS is free of charge and we hope that you enjoy using our labour of love and encourage you to share and spread your downloaded copy far and wide so that others may enjoy it too. Our very best regards!</p>'+
+            '<p id="stripeerr" style="display:none;">Unfortunately there was an error processing your Donation. Please try again later, or contact us via finance@qgis.org</p>'+
+            '<p>QGIS 团队</p>'+
+            '</div><div class="container">'+
+            '<div class="span5"><p><a id="closethankyou"class="btn btn-large btn-success btn-flat" href="#">关闭此消息</a></p><p class="muted"></p></div>'+
+            '</div>'+
+            '<br/><p><img src="../../../../_static/images/splash.png"/></p></div>');
+            $('#thankyou').click(function(){ $('#thankyou').hide(); });
+            $('#closethankyou').click(function(){ $('#thankyou').hide(); });
+        }
+
+    });
+
+
+    //
+    // load current page in a different language
+    //
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+
+    //
+    // function to load an atom feed, an put it in an element
+    //
+    function atom(url, holder, count, showcont, spanclass){
+        $.get(url, function (data) {
+            var html = "";
+            if (spanclass == undefined){
+                spanclass = "span2"
+            }
+            var maxitems = 7;
+            if(count)maxitems=count;
+            var showcontent = false;
+            if(showcont)showcontent=showcont;
+            var counter = 0;
+            $(data).find("entry").each(function () {
+                var el = $(this);
+                var title = el.find('title').text();
+                var author = el.find('name').text();
+                var content = el.find('content').text();
+                if (content.length==0){
+                    // try summary
+                    content = el.find('summary').text();
+                }
+                var imglink='#';
+                var link='#';
+                el.find('link').each(
+                    function(){
+                        // flickr image for maps and qgis screenshots
+                        if ($(this).attr('rel') == 'enclosure'){
+                            //    s - Specifies the small square size of 75x75 pixels.
+                            //    t - Specifies the thumbnail size with 100 pixels on the longest side.
+                            //    m - Specifies the medium size with 240 pixels on the longest side.
+                            //    z - Specifies the medium size with 640 pixels on the longest side.
+                            //    b - Specifies the large size with 1024 pixels on the longest side.
+                            //    q - square 
+                            imglink = $(this).attr('href').replace('_b.jpg','_q.jpg');
+                        }
+                        // links
+                        else if ($(this).attr('rel') == 'alternate'){
+                            link = $(this).attr('href');
+                        }
+                    }
+                )
+                counter++;
+
+                if (counter<=maxitems && 
+                    (holder == '#qgisflickrmapsatom' || holder == '#qgisflickrscreenshotsatom') ){
+                    // html for flickr maps
+                    html+='<div class="'+spanclass+'"><p><a class="external" href="'+link+'">';
+                    if(imglink!='#'){ html+='<img class="flickrimg" src="'+imglink+'"/>'; }
+                    html+='</a></p></div>\n';
+                }
+                else if (counter<=maxitems){
+                    // visual changelogs, qugs feed and planet feed
+                    var addit = true;
+                    if (holder == '#qgisplanetatom'){
+                        var s = title.split(':');
+                        title = s[0];
+                        content = s[1];
+                        // skip blog.qgis.org posts
+                        if (link.indexOf('blog.qgis.org')>=0){
+                            addit = false;
+                            counter --;
+                        }
+                    }
+                    else if (holder == '#qgisblogatom'){
+                        var s = title.split(':');
+                        if (s[0] != 'QGIS Project blog'){
+                            addit = false;
+                            counter--;
+                        }
+                        // trying to extract date from link
+                        // http://blog.qgis.org/2017/09/02/do-you-want-to-host-a-qgis-developer-meeting/
+                        d = link.split('/').slice(3,6);  // 2017,09,02
+                        title = '<img src="../_static/logo.png" style="width:30px;"/> - ' + d[0] + '/' + d[1] + '/' + d[2] + ' - ' + s[1];
+                        content = '';
+                    }
+                    if (addit){
+                        html+='<a class="external" href="'+link+'">';
+                        html+='<div class="info-box" style="padding:10px;color:#666;"><b>'+title+'</b><br/>';
+                        if (showcontent) { html+=content; };
+                        html+='</div></a>\n';
+                    }
+                }
+
+            });
+            $(holder).append(html);
+        });
+    }
+</script>
+        
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <li><a href="../../../about/index.html">探索 QGIS</a></li>
+            <li><a href="../../../forusers/index.html">用户资源</a></li>
+            <li><a href="../../index.html">加入</a></li>
+            <li><a href="../../../../docs/index.html">帮助文档</a></li>
+            <li>
+          
+<form class="navbar-search" action="../../../../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="搜索" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div style="display:none;" class="container" id="nextprev" >
+    
+    <a accesskey="p" href="git.html">&lt;&lt; prev</a>
+    
+    
+    <a accesskey="n" href="qtcreator.html">next &gt;&gt;</a>
+    
+    </div>
+
+
+
+
+    
+        <div class="container">
+            <div class="row">
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">探索 QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../forusers/index.html">用户资源</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Get Involved / Development</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../document.html">Write Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../translate.html">Translation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Development</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../contributor_requirements.html">Requirements for new contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../roadmap.html">Road Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bugreporting.html">Bugs, Features and Issues</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Developers guide for QGIS</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="codingstandards.html">QGIS Coding Standards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git.html">GIT Access</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Unit Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qtcreator.html">Getting up and running with QtCreator and QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hig.html">HIG (Human Interface Guidelines)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ogcconformancetesting.html">OGC Conformance Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugindevelopment.html">Plugin Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../addinggrasstools.html">Adding GRASS Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tests.html">Tests</a></li>
+<li class="toctree-l2"><a class="reference external" href="http://plugins.qgis.org">Plugins website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mailinglists.html">Mailing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../governance/index.html">Project Organisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meetings/index.html">Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../donations.html">Donations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../styleguide.html">Visual Style Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/index.html">帮助文档</a></li>
+</ul>
+
+        </div>
+      </div>
+                <div class="span8">
+                    
+                        
+                            <div class="section" id="unit-testing">
+<span id="qgis-unittesting"></span><h1>Unit Testing<a class="headerlink" href="#unit-testing" title="Permalink to this headline">¶</a></h1>
+<p>As of November 2007 we require all new features going into master to be
+accompanied with a unit test. Initially we have limited this requirement to
+qgis_core, and we will extend this requirement to other parts of the code base
+once people are familiar with the procedures for unit testing explained in the
+sections that follow.</p>
+<div class="section" id="the-qgis-testing-framework-an-overview">
+<h2>The QGIS testing framework - an overview<a class="headerlink" href="#the-qgis-testing-framework-an-overview" title="Permalink to this headline">¶</a></h2>
+<p>Unit testing is carried out using a combination of QTestLib (the Qt testing
+library) and CTest (a framework for compiling and running tests as part of the
+CMake build process). Lets take an overview of the process before I delve into
+the details:</p>
+<ul class="simple">
+<li>There is some code you want to test, e.g. a class or function. Extreme
+programming advocates suggest that the code should not even be written yet
+when you start building your tests, and then as you implement your code you can
+immediately validate each new functional part you add with your test. In
+practive you will probably need to write tests for pre-existing code in QGIS
+since we are starting with a testing framework well after much application
+logic has already been implemented.</li>
+<li>You create a unit test. This happens under <code class="docutils literal"><span class="pre">&lt;QGIS</span> <span class="pre">Source</span> <span class="pre">Dir&gt;/tests/src/core</span></code>
+in the case of the core lib. The test is basically a client that creates an
+instance of a class and calls some methods on that class. It will check the
+return from each method to make sure it matches the expected value. If any
+one of the calls fails, the unit will fail.</li>
+<li>You include QtTestLib macros in your test class. This macro is processed by
+the Qt meta object compiler (moc) and expands your test class into a
+runnable application.</li>
+<li>You add a section to the CMakeLists.txt in your tests directory that will
+build your test.</li>
+<li>You ensure you have <code class="docutils literal"><span class="pre">ENABLE_TESTING</span></code> enabled in ccmake / cmakesetup. This
+will ensure your tests actually get compiled when you type make.</li>
+<li>You optionally add test data to <code class="docutils literal"><span class="pre">&lt;QGIS</span> <span class="pre">Source</span> <span class="pre">Dir&gt;/tests/testdata</span></code> if your
+test is data driven (e.g. needs to load a shapefile). These test data should
+be as small as possible and wherever possible you should use the existing
+datasets already there. Your tests should never modify this data in situ,
+but rather may a temporary copy somewhere if needed.</li>
+<li>You compile your sources and install. Do this using normal
+<code class="docutils literal"><span class="pre">make</span> <span class="pre">&amp;&amp;</span> <span class="pre">(sudo)</span>&#160; <span class="pre">make</span> <span class="pre">install</span></code> procedure.</li>
+<li>You run your tests. This is normally done simply by doing <code class="docutils literal"><span class="pre">make</span> <span class="pre">test</span></code>
+after the <code class="docutils literal"><span class="pre">make</span> <span class="pre">install</span></code> step, though I will explain other aproaches that offer
+more fine grained control over running tests.</li>
+</ul>
+<p>Right with that overview in mind, I will delve into a bit of detail. I've
+already done much of the configuration for you in CMake and other places in the
+source tree so all you need to do are the easy bits - writing unit tests!</p>
+</div>
+<div class="section" id="creating-a-unit-test">
+<h2>Creating a unit test<a class="headerlink" href="#creating-a-unit-test" title="Permalink to this headline">¶</a></h2>
+<p>Creating a unit test is easy - typically you will do this by just creating a
+single .cpp file (not .h file is used) and implement all your test methods as
+public methods that return void. I'll use a simple test class for
+QgsRasterLayer throughout the section that follows to illustrate. By convention
+we will name our test with the same name as the class they are testing but
+prefixed with 'Test'. So our test implementation goes in a file called
+testqgsrasterlayer.cpp and the class itself will be TestQgsRasterLayer. First
+we add our standard copyright banner:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/***************************************************************************</span>
+<span class="cm"> testqgsvectorfilewriter.cpp</span>
+<span class="cm"> --------------------------------------</span>
+<span class="cm">  Date : Friday, Jan 27, 2015</span>
+<span class="cm">  Copyright: (C) 2015 by Tim Sutton</span>
+<span class="cm">  Email: tim@kartoza.com</span>
+<span class="cm"> ***************************************************************************</span>
+<span class="cm"> *</span>
+<span class="cm"> * This program is free software; you can redistribute it and/or modify</span>
+<span class="cm"> * it under the terms of the GNU General Public License as published by</span>
+<span class="cm"> * the Free Software Foundation; either version 2 of the License, or</span>
+<span class="cm"> * (at your option) any later version.</span>
+<span class="cm"> *</span>
+<span class="cm"> ***************************************************************************/</span>
+</pre></div>
+</div>
+<p>Next we use start our includes needed for the tests we plan to run. There is
+one special include all tests should have:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;QtTest/QtTest&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>Beyond that you just continue implementing your class as per normal, pulling
+in whatever headers you may need:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">//Qt includes...</span>
+<span class="cp">#include</span> <span class="cpf">&lt;QObject&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QString&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QObject&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QApplication&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QFileInfo&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QDir&gt;</span><span class="cp"></span>
+
+<span class="c1">//qgis includes...</span>
+<span class="cp">#include</span> <span class="cpf">&lt;qgsrasterlayer.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;qgsrasterbandstats.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;qgsapplication.h&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>Since we are combining both class declaration and implementation in a single
+file the class declaration comes next. We start with our doxygen documentation.
+Every test case should be properly documented. We use the doxygen ingroup
+directive so that all the UnitTests appear as a module in the generated Doxygen
+documentation. After that comes a short description of the unit test and
+the class must inherit from QObject and include the Q_OBJECT macro.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="cm">/** \ingroup UnitTests</span>
+<span class="cm"> * This is a unit test for the QgsRasterLayer class.</span>
+<span class="cm"> */</span>
+
+<span class="k">class</span> <span class="nc">TestQgsRasterLayer</span><span class="o">:</span> <span class="k">public</span> <span class="n">QObject</span>
+<span class="p">{</span>
+    <span class="n">Q_OBJECT</span>
+</pre></div>
+</div>
+<p>All our test methods are implemented as private slots. The QtTest framework
+will sequentially call each private slot method in the test class. There are
+four 'special' methods which if implemented will be called at the start of the
+unit test (initTestCase), at the end of the unit test
+(cleanupTestCase). Before each test method is called, the init()
+method will be called and after each test method is called the cleanup()
+method is called. These methods are handy in that they allow you to allocate
+and cleanup resources prior to running each test, and the test unit as a whole.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">private</span> <span class="nl">slots</span><span class="p">:</span>
+  <span class="c1">// will be called before the first testfunction is executed.</span>
+  <span class="kt">void</span> <span class="n">initTestCase</span><span class="p">();</span>
+  <span class="c1">// will be called after the last testfunction was executed.</span>
+  <span class="kt">void</span> <span class="nf">cleanupTestCase</span><span class="p">(){};</span>
+  <span class="c1">// will be called before each testfunction is executed.</span>
+  <span class="kt">void</span> <span class="nf">init</span><span class="p">(){};</span>
+  <span class="c1">// will be called after every testfunction.</span>
+  <span class="kt">void</span> <span class="nf">cleanup</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Then come your test methods, all of which should take no parameters and
+should return void. The methods will be called in order of declaration. I
+am implementing two methods here which illustrates two types of testing. In the
+first case I want to generally test the various parts of the class are working,
+I can use a functional testing approach. Once again, extreme programmers
+would advocate writing these tests before implementing the class. Then as
+you work your way through your class implementation you iteratively run your
+unit tests. More and more test functions should complete sucessfully as your
+class implementation work progresses, and when the whole unit test passes, your
+new class is done and is now complete with a repeatable way to validate it.</p>
+<p>Typically your unit tests would only cover the public API of your class,
+and normally you do not need to write tests for accessors and mutators. If it
+should happen that an acccessor or mutator is not working as expected you would
+normally implement a regression test to check for this (see lower down).</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// Functional Testing</span>
+<span class="c1">//</span>
+
+<span class="cm">/** Check if a raster is valid. */</span>
+<span class="kt">void</span> <span class="nf">isValid</span><span class="p">();</span>
+
+<span class="c1">// more functional tests here ...</span>
+</pre></div>
+</div>
+<p>Next we implement our regression tests. Regression tests should be
+implemented to replicate the conditions of a particular bug. For example I
+recently received a report by email that the cell count by rasters was off by
+1, throwing off all the statistics for the raster bands. I opened a bug (ticket
+#832) and then created a regression test that replicated the bug using a small
+test dataset (a 10x10 raster). Then I ran the test and ran it, verifying that
+it did indeed fail (the cell count was 99 instead of 100). Then I went to fix
+the bug and reran the unit test and the regression test passed. I committed the
+regression test along with the bug fix. Now if anybody breakes this in the
+source code again in the future, we can immediatly identify that the code has
+regressed. Better yet before committing any changes in the future, running our
+tests will ensure our changes don't have unexpected side effects - like breaking
+existing functionality.</p>
+<p>There is one more benefit to regression tests - they can save you time. If you
+ever fixed a bug that involved making changes to the source, and then running
+the application and performing a series of convoluted steps to replicate the
+issue, it will be immediately apparent that simply implementing your regression
+test before fixing the bug will let you automate the testing for bug
+resolution in an efficient manner.</p>
+<p>To implement your regression test, you should follow the naming convention of
+regression&lt;TicketID&gt; for your test functions. If no redmine ticket exists for the
+regression, you should create one first. Using this approach allows the person
+running a failed regression test easily go and find out more information.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// Regression Testing</span>
+<span class="c1">//</span>
+
+<span class="cm">/** This is our second test case...to check if a raster</span>
+<span class="cm"> *  reports its dimensions properly. It is a regression test</span>
+<span class="cm"> *  for ticket #832 which was fixed with change r7650.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">regression832</span><span class="p">();</span>
+
+<span class="c1">// more regression tests go here ...</span>
+</pre></div>
+</div>
+<p>Finally in our test class declaration you can declare privately any data
+members and helper methods your unit test may need. In our case I will declare
+a QgsRasterLayer * which can be used by any of our test methods. The raster
+layer will be created in the initTestCase() function which is run before any
+other tests, and then destroyed using cleanupTestCase() which is run after all
+tests. By declaring helper methods (which may be called by various test
+functions) privately, you can ensure that they wont be automatically run by the
+QTest executable that is created when we compile our test.</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span>  <span class="k">private</span><span class="o">:</span>
+    <span class="c1">// Here we have any data structures that may need to</span>
+    <span class="c1">// be used in many test cases.</span>
+    <span class="n">QgsRasterLayer</span> <span class="o">*</span> <span class="n">mpLayer</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>That ends our class declaration. The implementation is simply inlined in the
+same file lower down. First our init and cleanup functions:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">TestQgsRasterLayer</span><span class="o">::</span><span class="n">initTestCase</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// init QGIS&#39;s paths - true means that all path will be inited from prefix</span>
+  <span class="n">QString</span> <span class="n">qgisPath</span> <span class="o">=</span> <span class="n">QCoreApplication</span><span class="o">::</span><span class="n">applicationDirPath</span> <span class="p">();</span>
+  <span class="n">QgsApplication</span><span class="o">::</span><span class="n">setPrefixPath</span><span class="p">(</span><span class="n">qgisPath</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">);</span>
+<span class="cp">#ifdef Q_OS_LINUX</span>
+  <span class="n">QgsApplication</span><span class="o">::</span><span class="n">setPkgDataPath</span><span class="p">(</span><span class="n">qgisPath</span> <span class="o">+</span> <span class="s">&quot;/../share/qgis&quot;</span><span class="p">);</span>
+<span class="cp">#endif</span>
+  <span class="c1">//create some objects that will be used in all tests...</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;PrefixPATH: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">QgsApplication</span><span class="o">::</span><span class="n">prefixPath</span><span class="p">().</span><span class="n">toLocal8Bit</span><span class="p">().</span><span class="n">data</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;PluginPATH: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">QgsApplication</span><span class="o">::</span><span class="n">pluginPath</span><span class="p">().</span><span class="n">toLocal8Bit</span><span class="p">().</span><span class="n">data</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;PkgData PATH: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">QgsApplication</span><span class="o">::</span><span class="n">pkgDataPath</span><span class="p">().</span><span class="n">toLocal8Bit</span><span class="p">().</span><span class="n">data</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;User DB PATH: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">QgsApplication</span><span class="o">::</span><span class="n">qgisUserDbFilePath</span><span class="p">().</span><span class="n">toLocal8Bit</span><span class="p">().</span><span class="n">data</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="c1">//create a raster layer that will be used in all tests...</span>
+  <span class="n">QString</span> <span class="nf">myFileName</span> <span class="p">(</span><span class="n">TEST_DATA_DIR</span><span class="p">);</span> <span class="c1">//defined in CmakeLists.txt</span>
+  <span class="n">myFileName</span> <span class="o">=</span> <span class="n">myFileName</span> <span class="o">+</span> <span class="n">QDir</span><span class="o">::</span><span class="n">separator</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;tenbytenraster.asc&quot;</span><span class="p">;</span>
+  <span class="n">QFileInfo</span> <span class="nf">myRasterFileInfo</span> <span class="p">(</span> <span class="n">myFileName</span> <span class="p">);</span>
+  <span class="n">mpLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QgsRasterLayer</span> <span class="p">(</span> <span class="n">myRasterFileInfo</span><span class="p">.</span><span class="n">filePath</span><span class="p">(),</span>
+  <span class="n">myRasterFileInfo</span><span class="p">.</span><span class="n">completeBaseName</span><span class="p">()</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">TestQgsRasterLayer</span><span class="o">::</span><span class="n">cleanupTestCase</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">delete</span> <span class="n">mpLayer</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The above init function illustrates a couple of interesting things.</p>
+<ol class="arabic simple">
+<li>I needed to manually set the QGIS application data path so that
+resources such as srs.db can be found properly.</li>
+<li>Secondly, this is a data driven test so we needed to provide a
+way to generically locate the <code class="docutils literal"><span class="pre">tenbytenraster.asc</span></code> file. This was
+achieved by using the compiler define <code class="docutils literal"><span class="pre">TEST_DATA_PATH</span></code>. The
+define is created in the <code class="docutils literal"><span class="pre">CMakeLists.txt</span></code> configuration file under
+<code class="docutils literal"><span class="pre">&lt;QGIS</span> <span class="pre">Source</span> <span class="pre">Root&gt;/tests/CMakeLists.txt</span></code> and is available to all
+QGIS unit tests. If you need test data for your test, commit it
+under <code class="docutils literal"><span class="pre">&lt;QGIS</span> <span class="pre">Source</span> <span class="pre">Root&gt;/tests/testdata</span></code>. You should only commit
+very small datasets here. If your test needs to modify the test
+data, it should make a copy of it first.</li>
+</ol>
+<p>Qt also provides some other interesting mechanisms for data driven
+testing, so if you are interested to know more on the topic, consult
+the Qt documentation.</p>
+<p>Next lets look at our functional test. The isValid() test simply checks the
+raster layer was correctly loaded in the initTestCase. QVERIFY is a Qt macro
+that you can use to evaluate a test condition. There are a few other use
+macros Qt provide for use in your tests including:</p>
+<ul class="simple">
+<li><cite>QCOMPARE ( actual, expected )</cite></li>
+<li><cite>QEXPECT_FAIL ( dataIndex, comment, mode )</cite></li>
+<li><cite>QFAIL ( message )</cite></li>
+<li><cite>QFETCH ( type, name )</cite></li>
+<li><cite>QSKIP ( description, mode )</cite></li>
+<li><cite>QTEST ( actual, testElement )</cite></li>
+<li><cite>QTEST_APPLESS_MAIN ( TestClass )</cite></li>
+<li><cite>QTEST_MAIN ( TestClass )</cite></li>
+<li><cite>QTEST_NOOP_MAIN ()</cite></li>
+<li><cite>QVERIFY2 ( condition, message )</cite></li>
+<li><cite>QVERIFY ( condition )</cite></li>
+<li><cite>QWARN ( message )</cite></li>
+</ul>
+<p>Some of these macros are useful only when using the Qt framework for data
+driven testing (see the Qt docs for more detail).</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">TestQgsRasterLayer</span><span class="o">::</span><span class="n">isValid</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">QVERIFY</span> <span class="p">(</span> <span class="n">mpLayer</span><span class="o">-&gt;</span><span class="n">isValid</span><span class="p">()</span> <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Normally your functional tests would cover all the range of functionality of
+your classes public API where feasible. With our functional tests out the way,
+we can look at our regression test example.</p>
+<p>Since the issue in bug #832 is a misreported cell count, writing our test is
+simply a matter of using QVERIFY to check that the cell count meets the
+expected value:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">TestQgsRasterLayer</span><span class="o">::</span><span class="n">regression832</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">QVERIFY</span> <span class="p">(</span> <span class="n">mpLayer</span><span class="o">-&gt;</span><span class="n">getRasterXDim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">);</span>
+  <span class="n">QVERIFY</span> <span class="p">(</span> <span class="n">mpLayer</span><span class="o">-&gt;</span><span class="n">getRasterYDim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">10</span> <span class="p">);</span>
+  <span class="c1">// regression check for ticket #832</span>
+  <span class="c1">// note getRasterBandStats call is base 1</span>
+  <span class="n">QVERIFY</span> <span class="p">(</span> <span class="n">mpLayer</span><span class="o">-&gt;</span><span class="n">getRasterBandStats</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">elementCountInt</span> <span class="o">==</span> <span class="mi">100</span> <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With all the unit test functions implemented, there one final thing we need to
+add to our test class:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">QTEST_MAIN</span><span class="p">(</span><span class="n">TestQgsRasterLayer</span><span class="p">)</span>
+<span class="cp">#include</span> <span class="cpf">&quot;testqgsrasterlayer.moc&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p>The purpose of these two lines is to signal to Qt's moc that his is a QtTest
+(it will generate a main method that in turn calls each test funtion.The last
+line is the include for the MOC generated sources. You should replace
+'testqgsrasterlayer' with the name of your class in lower case.</p>
+</div>
+<div class="section" id="adding-your-unit-test-to-cmakelists-txt">
+<h2>Adding your unit test to CMakeLists.txt<a class="headerlink" href="#adding-your-unit-test-to-cmakelists-txt" title="Permalink to this headline">¶</a></h2>
+<p>Adding your unit test to the build system is simply a matter of editing the
+CMakeLists.txt in the test directory, cloning one of the existing test blocks,
+and then replacing your test class name into it. For example:</p>
+<div class="highlight-cmake"><div class="highlight"><pre><span></span><span class="c"># QgsRasterLayer test</span>
+<span class="nb">ADD_QGIS_TEST</span><span class="p">(</span><span class="s">rasterlayertest</span> <span class="s">testqgsrasterlayer.cpp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-add-qgis-test-macro-explained">
+<h2>The ADD_QGIS_TEST macro explained<a class="headerlink" href="#the-add-qgis-test-macro-explained" title="Permalink to this headline">¶</a></h2>
+<p>I'll run through these lines briefly to explain what they do, but if you are
+not interested, just do the step explained in the above section and section.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>MACRO <span class="o">(</span>ADD_QGIS_TEST testname testsrc<span class="o">)</span>
+SET<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>_SRCS <span class="si">${</span><span class="nv">testsrc</span><span class="si">}</span> <span class="si">${</span><span class="nv">util_SRCS</span><span class="si">}</span><span class="o">)</span>
+SET<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>_MOC_CPPS <span class="si">${</span><span class="nv">testsrc</span><span class="si">}</span><span class="o">)</span>
+QT4_WRAP_CPP<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>_MOC_SRCS <span class="si">${</span><span class="nv">qgis_</span><span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="nv">_MOC_CPPS</span><span class="si">}</span><span class="o">)</span>
+ADD_CUSTOM_TARGET<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>moc ALL DEPENDS <span class="si">${</span><span class="nv">qgis_</span><span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="nv">_MOC_SRCS</span><span class="si">}</span><span class="o">)</span>
+ADD_EXECUTABLE<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">qgis_</span><span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="nv">_SRCS</span><span class="si">}</span><span class="o">)</span>
+ADD_DEPENDENCIES<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>moc<span class="o">)</span>
+TARGET_LINK_LIBRARIES<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">QT_LIBRARIES</span><span class="si">}</span> qgis_core<span class="o">)</span>
+SET_TARGET_PROPERTIES<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>
+PROPERTIES
+<span class="c1"># skip the full RPATH for the build tree</span>
+SKIP_BUILD_RPATHTRUE
+<span class="c1"># when building, use the install RPATH already</span>
+<span class="c1"># (so it doesn&#39;t need to relink when installing)</span>
+BUILD_WITH_INSTALL_RPATH TRUE
+<span class="c1"># the RPATH to be used when installing</span>
+INSTALL_RPATH <span class="si">${</span><span class="nv">QGIS_LIB_DIR</span><span class="si">}</span>
+<span class="c1"># add the automatically determined parts of the RPATH</span>
+<span class="c1"># which point to directories outside the build tree to the install RPATH</span>
+INSTALL_RPATH_USE_LINK_PATH <span class="nb">true</span><span class="o">)</span>
+IF <span class="o">(</span>APPLE<span class="o">)</span>
+<span class="c1"># For Mac OS X, the executable must be at the root of the bundle&#39;s executable folder</span>
+INSTALL<span class="o">(</span>TARGETS qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> RUNTIME DESTINATION <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span><span class="o">)</span>
+ADD_TEST<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span>/qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="o">)</span>
+ELSE <span class="o">(</span>APPLE<span class="o">)</span>
+INSTALL<span class="o">(</span>TARGETS qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> RUNTIME DESTINATION <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span>/bin<span class="o">)</span>
+ADD_TEST<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span>/bin/qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="o">)</span>
+ENDIF <span class="o">(</span>APPLE<span class="o">)</span>
+ENDMACRO <span class="o">(</span>ADD_QGIS_TEST<span class="o">)</span>
+</pre></div>
+</div>
+<p>Lets look a little more in detail at the individual lines. First we define the
+list of sources for our test. Since we have only one source file (following the
+methodology I described above where class declaration and definition are in the
+same file) its a simple statement:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>SET<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>_SRCS <span class="si">${</span><span class="nv">testsrc</span><span class="si">}</span> <span class="si">${</span><span class="nv">util_SRCS</span><span class="si">}</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Since our test class needs to be run through the Qt meta object compiler (moc)
+we need to provide a couple of lines to make that happen too:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>SET<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>_MOC_CPPS <span class="si">${</span><span class="nv">testsrc</span><span class="si">}</span><span class="o">)</span>
+QT4_WRAP_CPP<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>_MOC_SRCS <span class="si">${</span><span class="nv">qgis_</span><span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="nv">_MOC_CPPS</span><span class="si">}</span><span class="o">)</span>
+ADD_CUSTOM_TARGET<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>moc ALL DEPENDS <span class="si">${</span><span class="nv">qgis_</span><span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="nv">_MOC_SRCS</span><span class="si">}</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Next we tell cmake that it must make an executable from the test class.
+Remember in the previous section on the last line of the class implementation I
+included the moc outputs directly into our test class, so that will give it
+(among other things) a main method so the class can be compiled as an
+executable:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ADD_EXECUTABLE<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">qgis_</span><span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="nv">_SRCS</span><span class="si">}</span><span class="o">)</span>
+ADD_DEPENDENCIES<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>moc<span class="o">)</span>
+</pre></div>
+</div>
+<p>Next we need to specify any library dependencies. At the moment, classes have
+been implemented with a catch-all QT_LIBRARIES dependency, but I will be
+working to replace that with the specific Qt libraries that each class needs
+only. Of course you also need to link to the relevant qgis libraries as
+required by your unit test.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>TARGET_LINK_LIBRARIES<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">QT_LIBRARIES</span><span class="si">}</span> qgis_core<span class="o">)</span>
+</pre></div>
+</div>
+<p>Next I tell cmake to install the tests to the same place as the qgis binaries
+itself. This is something I plan to remove in the future so that the tests can
+run directly from inside the source tree.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>SET_TARGET_PROPERTIES<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span>
+PROPERTIES
+<span class="c1"># skip the full RPATH for the build tree</span>
+SKIP_BUILD_RPATHTRUE
+<span class="c1"># when building, use the install RPATH already</span>
+<span class="c1"># (so it doesn&#39;t need to relink when installing)</span>
+BUILD_WITH_INSTALL_RPATH TRUE
+<span class="c1"># the RPATH to be used when installing</span>
+INSTALL_RPATH <span class="si">${</span><span class="nv">QGIS_LIB_DIR</span><span class="si">}</span>
+<span class="c1"># add the automatically determined parts of the RPATH</span>
+<span class="c1"># which point to directories outside the build tree to the install RPATH</span>
+INSTALL_RPATH_USE_LINK_PATH <span class="nb">true</span><span class="o">)</span>
+IF <span class="o">(</span>APPLE<span class="o">)</span>
+<span class="c1"># For Mac OS X, the executable must be at the root of the bundle&#39;s executable folder</span>
+INSTALL<span class="o">(</span>TARGETS qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> RUNTIME DESTINATION <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span><span class="o">)</span>
+ADD_TEST<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span>/qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="o">)</span>
+ELSE <span class="o">(</span>APPLE<span class="o">)</span>
+INSTALL<span class="o">(</span>TARGETS qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> RUNTIME DESTINATION <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span>/bin<span class="o">)</span>
+ADD_TEST<span class="o">(</span>qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span> <span class="si">${</span><span class="nv">CMAKE_INSTALL_PREFIX</span><span class="si">}</span>/bin/qgis_<span class="si">${</span><span class="nv">testname</span><span class="si">}</span><span class="o">)</span>
+ENDIF <span class="o">(</span>APPLE<span class="o">)</span>
+</pre></div>
+</div>
+<p>Finally the above uses <code class="docutils literal"><span class="pre">ADD_TEST</span></code> to register the test with cmake / ctest.
+Here is where the best magic happens - we register the class with ctest. If you
+recall in the overview I gave in the beginning of this section, we are using
+both QtTest and CTest together. To recap, QtTest adds a main method to your
+test unit and handles calling your test methods within the class. It also
+provides some macros like <code class="docutils literal"><span class="pre">QVERIFY</span></code> that you can use as to test for
+failure of the tests using conditions. The output from a QtTest unit test is an
+executable which you can run from the command line. However when you have a
+suite of tests and you want to run each executable in turn, and better yet
+integrate running tests into the build process, the CTest is what we use.</p>
+</div>
+<div class="section" id="building-your-unit-test">
+<h2>Building your unit test<a class="headerlink" href="#building-your-unit-test" title="Permalink to this headline">¶</a></h2>
+<p>To build the unit test you need only to make sure that <code class="docutils literal"><span class="pre">ENABLE_TESTS=true</span></code>
+in the cmake configuration. There are two ways to do this:</p>
+<ol class="arabic simple">
+<li>Run <code class="docutils literal"><span class="pre">ccmake</span> <span class="pre">..</span></code> ( or <code class="docutils literal"><span class="pre">cmakesetup</span> <span class="pre">..</span></code> under windows) and interactively set
+the <code class="docutils literal"><span class="pre">ENABLE_TESTS</span></code> flag to <code class="docutils literal"><span class="pre">ON</span></code>.</li>
+<li>Add a command line flag to cmake e.g. <code class="docutils literal"><span class="pre">cmake</span> <span class="pre">-DENABLE_TESTS=true</span> <span class="pre">..</span></code></li>
+</ol>
+<p>Other than that, just build QGIS as per normal and the tests should build too.</p>
+</div>
+<div class="section" id="run-your-tests">
+<h2>Run your tests<a class="headerlink" href="#run-your-tests" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way to run the tests is as part of your normal build process:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>make <span class="o">&amp;&amp;</span> make install <span class="o">&amp;&amp;</span> make <span class="nb">test</span>
+</pre></div>
+</div>
+<p>The make test command will invoke CTest which will run each test that was
+registered using the ADD_TEST CMake directive described above. Typical output
+from make test will look like this:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>Running tests...
+Start processing tests
+Test project /Users/tim/dev/cpp/qgis/build
+<span class="c1">## 13 Testing qgis_applicationtest***Exception: Other</span>
+<span class="c1">## 23 Testing qgis_filewritertest *** Passed</span>
+<span class="c1">## 33 Testing qgis_rasterlayertest*** Passed</span>
+
+<span class="c1">## 0 tests passed, 3 tests failed out of 3</span>
+
+The following tests FAILED:
+<span class="c1">## 1- qgis_applicationtest (OTHER_FAULT)</span>
+Errors <span class="k">while</span> running CTest
+make: *** <span class="o">[</span>test<span class="o">]</span> Error <span class="m">8</span>
+</pre></div>
+</div>
+<p>If a test fails, you can use the ctest command to examine more closely why it
+failed. Use the <code class="docutils literal"><span class="pre">-R</span></code> option to specify a regex for which tests you want to run
+and <code class="docutils literal"><span class="pre">-V</span></code> to get verbose output:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ctest -R appl -V
+
+Start processing tests
+Test project /Users/tim/dev/cpp/qgis/build
+Constructing a list of tests
+Done constructing a list of tests
+Changing directory into /Users/tim/dev/cpp/qgis/build/tests/src/core
+<span class="c1">## 13 Testing qgis_applicationtest</span>
+Test command: /Users/tim/dev/cpp/qgis/build/tests/src/core/qgis_applicationtest
+********* Start testing of TestQgsApplication *********
+Config: Using QTest library <span class="m">4</span>.3.0, Qt <span class="m">4</span>.3.0
+PASS : TestQgsApplication::initTestCase<span class="o">()</span>
+PrefixPATH: /Users/tim/dev/cpp/qgis/build/tests/src/core/../
+PluginPATH: /Users/tim/dev/cpp/qgis/build/tests/src/core/..//lib/qgis
+PkgData PATH: /Users/tim/dev/cpp/qgis/build/tests/src/core/..//share/qgis
+User DB PATH: /Users/tim/.qgis/qgis.db
+PASS : TestQgsApplication::getPaths<span class="o">()</span>
+PrefixPATH: /Users/tim/dev/cpp/qgis/build/tests/src/core/../
+PluginPATH: /Users/tim/dev/cpp/qgis/build/tests/src/core/..//lib/qgis
+PkgData PATH: /Users/tim/dev/cpp/qgis/build/tests/src/core/..//share/qgis
+User DB PATH: /Users/tim/.qgis/qgis.db
+QDEBUG : TestQgsApplication::checkTheme<span class="o">()</span> Checking <span class="k">if</span> a theme icon exists:
+QDEBUG : TestQgsApplication::checkTheme<span class="o">()</span>
+/Users/tim/dev/cpp/qgis/build/tests/src/core/..//share/qgis/themes/default//mIconProjectionDisabled.png
+FAIL!: TestQgsApplication::checkTheme<span class="o">()</span> <span class="s1">&#39;!myPixmap.isNull()&#39;</span> returned FALSE. <span class="o">()</span>
+Loc: <span class="o">[</span>/Users/tim/dev/cpp/qgis/tests/src/core/testqgsapplication.cpp<span class="o">(</span><span class="m">59</span><span class="o">)]</span>
+PASS : TestQgsApplication::cleanupTestCase<span class="o">()</span>
+Totals: <span class="m">3</span> passed, <span class="m">1</span> failed, <span class="m">0</span> skipped
+********* Finished testing of TestQgsApplication *********
+-- Process completed
+***Failed
+
+<span class="c1">## 0 tests passed, 1 tests failed out of 1</span>
+
+The following tests FAILED:
+<span class="c1">## 1- qgis_applicationtest (Failed)</span>
+Errors <span class="k">while</span> running CTest
+</pre></div>
+</div>
+<p>Well that concludes this section on writing unit tests in QGIS. We hope you
+will get into the habit of writing test to test new functionality and to check
+for regressions. Some aspects of the test system (in particular the
+CMakeLists.txt parts) are still being worked on so that the testing framework
+works in a truly platform way. I will update this document as things
+progress.</p>
+</div>
+</div>
+
+                        
+                    
+                </div>
+                  
+            </div>
+        </div>
+    
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="qtcreator.html" title="Getting up and running with QtCreator and QGIS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="git.html" title="GIT Access"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html"></a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Get Involved / Development</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Development</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Developers guide for QGIS</a> &#187;</li> 
+      </ul>
+    </div>
+  <footer class="footer">
+
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="../../index.html"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">若无另行说明，所有内容均按<a href="http://creativecommons.org/licenses/by-sa/3.0/">创用 CC 姓名标示-相同方式分享	3.0 协定 (CC BY-SA)</a>授权</p>
+    </div>
+    <div class="container">
+      <p class="credit">
+        从 <a href="http://thenounproject.com" target="_blank">The Noun Project 汇编</a>中选择 
+        
+        
+      </p>
+      <p class="credit">
+        未翻译的页面？或者发现了翻译错误：
+        <a id="fix_translation_link" target="_blank" href="https://www.transifex.com/projects/p/qgis-website/">请把我修好</a>
+        <br/>
+        文本的错误、缺失文本或您知道更好的写法：
+        <a id="fix_text_link" target="_blank" href="https://github.com/qgis/QGIS-Website">请把我修好</a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
